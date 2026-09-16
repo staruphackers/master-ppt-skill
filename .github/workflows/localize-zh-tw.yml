@@ -1,0 +1,60 @@
+name: Localize Traditional Chinese (Taiwan)
+
+on:
+  push:
+    branches: [localize/zh-tw]
+    paths:
+      - tools/localize-zh-tw.cjs
+      - .github/workflows/localize-zh-tw.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: localize-zh-tw
+  cancel-in-progress: false
+
+jobs:
+  localize:
+    if: github.repository == 'staruphackers/master-ppt-skill' && github.ref == 'refs/heads/localize/zh-tw'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout the translation branch only
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: localize/zh-tw
+          fetch-depth: 1
+      - name: Install isolated maintenance dependencies (no lifecycle scripts)
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --version
+          npm install --prefix "$RUNNER_TEMP/zh-tw-tools" --registry=https://registry.npmjs.org --ignore-scripts --no-audit --no-fund opencc-js@1.0.5 @babel/parser@7.26.10 yaml@2.7.0
+      - name: Translate text, preserve compatibility, and validate syntax
+        shell: bash
+        env:
+          ZH_TW_TOOLS: ${{ runner.temp }}/zh-tw-tools
+          NODE_OPTIONS: --max-old-space-size=6144
+        run: |
+          set -euo pipefail
+          node --check tools/localize-zh-tw.cjs
+          node tools/localize-zh-tw.cjs
+          git diff --check
+      - name: Commit translated files to the isolated branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = 'localize/zh-tw'
+          git add -u
+          git add docs/zh-TW-localization.md docs/zh-TW-localization-report.json
+          if git diff --cached --quiet; then
+            echo 'No localization changes to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'feat(i18n): localize documentation, editor and bundled themes to zh-TW'
+          git push origin HEAD:refs/heads/localize/zh-tw
