@@ -12,7 +12,7 @@ git clone --branch localize/zh-tw --single-branch https://github.com/staruphacke
 
 ## 涵蓋範圍
 
-已修改 126 個檔案；通過 161 項 JavaScript／JSX／TypeScript、JSON、YAML 或 HTML 內嵌腳本解析檢查。JavaScript 的程式結構、識別名稱、數值與運算子保持一致。中英字典新增 8193 個繁體查找別名，保留原有簡體鍵值及英文翻譯。另有 0 筆別名碰撞，採既有翻譯優先，完整記錄見 JSON 報告。
+已修改 126 個檔案；通過 161 項 JavaScript／JSX／TypeScript、JSON、YAML 或 HTML 內嵌腳本解析檢查。JavaScript 的程式結構、識別名稱、數值與運算子保持一致。中英字典新增 8204 個繁體查找別名，保留原有簡體鍵值及英文翻譯。另有 0 筆別名碰撞，採既有翻譯優先，完整記錄見 JSON 報告。
 
 ## 相容性與限制
 
@@ -23,3 +23,7 @@ PNG／JPG／GIF／影片、圖示中的向量外框文字、遠端示範素材�
 ## 維護與回復
 
 轉換工具為 `tools/localize-zh-tw.cjs`，只在維護期間使用 OpenCC 與解析器，不增加應用程式 runtime 依賴。完整檔案清單與檢查結果見 [JSON 報告](zh-TW-localization-report.json)。合併前回復只需切回 `main`；合併後以 Git revert 回復本次合併，不使用強制推送。
+
+## 用語複核
+
+已額外統一「控制台、控制項、平台、復盤、像素」等用語，並將安裝文件中原指中國大陸的「國內」改為明確地區名稱。README 的文字徽章也已改為繁體中文；遠端示範影像網址維持不變。

@@ -447,7 +447,7 @@ export function normalizeOptionLabel(label, value = label, index = 0) {
   return normalized
     .replace(/\bYES\b/g, '是')
     .replace(/\bNO\b/g, '否')
-    .replace(/\b8-bit\b/gi, '畫素');
+    .replace(/\b8-bit\b/gi, '像素');
 }
 
 function optionLabelForValue(value) {

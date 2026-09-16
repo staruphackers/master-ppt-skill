@@ -6,7 +6,7 @@
 ![GitHub stars](https://img.shields.io/github/stars/chuspeeism/dashi-ppt-skill?style=flat-square)
 ![Skill](https://img.shields.io/badge/Skill-Agent-111111?style=flat-square)
 ![HTML Deck](https://img.shields.io/badge/HTML-Deck-0A7CFF?style=flat-square)
-![PPTX Export](https://img.shields.io/badge/PPTX-%E5%8F%AF%E7%BC%96%E8%BE%91%E5%AF%BC%E5%87%BA-D24726?style=flat-square)
+![PPTX Export](https://img.shields.io/badge/PPTX-%E5%8F%AF%E7%B7%A8%E8%BC%AF%E5%8C%AF%E5%87%BA-D24726?style=flat-square)
 ![Claude Code](https://img.shields.io/badge/Claude%20Code-Supported-6B5B95?style=flat-square)
 ![Codex](https://img.shields.io/badge/Codex-Supported-222222?style=flat-square)
 ![豆包](https://img.shields.io/badge/%E8%B1%86%E5%8C%85-Supported-3370FF?style=flat-square)
@@ -18,11 +18,11 @@
 
 [English](./README.en.md) · [繁體中文](README.md)
 
-一個真正適合職場人的 PPT Skill。把檔案丟給你的 AI Agent，每一頁都自帶編輯控制檯的 PPT Skill——不滿意的地方直接在瀏覽器裡改，改完還能一鍵匯出成真實的、可編輯的 PPTX。
+一個真正適合職場人的 PPT Skill。把檔案丟給你的 AI Agent，每一頁都自帶編輯控制台的 PPT Skill——不滿意的地方直接在瀏覽器裡改，改完還能一鍵匯出成真實的、可編輯的 PPTX。
 
 - 12 套視覺主題
 - 1020 個版式頁面
-- 8576 個可調控制元件
+- 8576 個可調控制項
 
 ![生成效果展示](https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/hero-result.gif)
 
@@ -41,12 +41,20 @@ Skill 會展示預覽讓你選擇主題，可以隨時讓 Agent 整套換掉。�
 
 ## 快速開始
 
-**一鍵安裝/更新**：
+**安裝此繁體中文 fork（建議）**：
+
+```bash
+git clone --branch localize/zh-tw --single-branch https://github.com/staruphackers/master-ppt-skill.git
+```
+
+先備份既有 skill，再將本專案的 `skills/dashi-ppt` 資料夾放入 Agent 使用的 skill 目錄，重新開啟工作階段。請保留同一個 fork 作為更新來源。
+
+**以下為上游原版的安裝方式，不會安裝此繁體中文 fork**：
 
 ```bash
 npx dashi-ppt-skill@latest
 ```
-國內網路:
+中國大陸網路:
 ```bash
 npx --registry=https://registry.npmmirror.com dashi-ppt-skill@latest
 ```
@@ -54,7 +62,7 @@ npx --registry=https://registry.npmmirror.com dashi-ppt-skill@latest
 讓 AI Agent 幫你安裝：
 
 ```text
-幫我安裝 skill：npx dashi-ppt-skill@latest，國內映象 npx --registry=https://registry.npmmirror.com dashi-ppt-skill@latest
+幫我安裝 skill：npx dashi-ppt-skill@latest，中國大陸鏡像 npx --registry=https://registry.npmmirror.com dashi-ppt-skill@latest
 ```
 
 環境要求：Node.js 20+ 和 npm；匯出 PPTX / PDF 需要本機裝有 Chrome / Chromium / Edge。
@@ -64,21 +72,21 @@ npx --registry=https://registry.npmmirror.com dashi-ppt-skill@latest
 - **12套主題**：覆蓋多種 PPT 使用場景和風格
 - **1020個版式**：每套主題獨立的頁面結構和視覺語言，20 種頁面角色（封面、目錄、指標、趨勢、對比、流程、風險、結尾……）
 - **圖表與分析模型**：雷達圖、瀑布圖、矩形樹圖、漏斗、熱力圖、桑基圖、甘特圖，以及 SWOT、波特五力、PEST、商業模式畫布、雙鑽模型等分析模型版式
-- **自帶控制檯**：滑桿、開關、下拉——換佈局、調模組數量、換配色、換頁面重點
+- **自帶控制台**：滑桿、開關、下拉——換佈局、調模組數量、換配色、換頁面重點
 - **文字可編輯**：點選任意文字就地修改
 - **媒體替換**：點選或拖曳替換媒體槽，文字資料也會自動預留圖片佔位符
 - **一鍵匯出**：HTML離線包 / PDF / 可編輯 PPTX
 
 ## 適用場景
 
-**合適**：行業研究 / 融資覆盤 / 競品分析 / 趨勢報告 / 專案彙報 / 方案展示 / 路演材料 / 內部培訓——需要快速形成結構完整、視覺統一、還能繼續改的簡報
+**合適**：行業研究 / 融資復盤 / 競品分析 / 趨勢報告 / 專案彙報 / 方案展示 / 路演材料 / 內部培訓——需要快速形成結構完整、視覺統一、還能繼續改的簡報
 
-**不合適**：需要逐畫素手工定製視覺的場景
+**不合適**：需要逐像素手工定製視覺的場景
 
 ## HTML 與匯出能力
 
-- **適用 Agent 能力**：HTML / Agent 能直接讀、改、校驗；每一頁由"版式 + 文案欄位"構成
-- **表現力更高**：入場動畫、翻頁動畫、互動控制元件、明暗模式切換等
+- **方便 Agent 操作**：HTML / Agent 能直接讀、改、校驗；每一頁由"版式 + 文案欄位"構成
+- **表現力更高**：入場動畫、翻頁動畫、互動控制項、明暗模式切換等
 - **產物即編輯器**：結果為網頁版 PPT 編輯器——翻頁、改字、換圖、調版式，開啟就能用
 - **匯出PPTX**：一鍵匯出成真實的 PPTX——逐節點還原、文字保持可編輯
 
@@ -86,11 +94,11 @@ HTML 版與匯出 PPTX 版的逐頁對比：
 
 ![HTML 與匯出 PPTX 逐頁對比](https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/html-vs-pptx.gif)
 
-## 平臺支援
+## 平台支援
 
-> 下表只列出已實測的平臺，不代表"僅限這些"。
+> 下表只列出已實測的平台，不代表"僅限這些"。
 
-| 平臺 | 狀態 | 說明 |
+| 平台 | 狀態 | 說明 |
 |------|------|------|
 | Claude Code | 支援 ||
 | Codex | 支援 | 可呼叫生圖能力補充配圖 |
@@ -115,7 +123,7 @@ HTML 版與匯出 PPTX 版的逐頁對比：
 
 > 生成之後如何編輯，比生成本身更重要
 
-設計調節：每頁都附帶一個控制檯，20 多個維度的編輯空間——內容、佈局、模組數量、頁面重點、預設配色、翻頁動畫；
+設計調節：每頁都附帶一個控制台，20 多個維度的編輯空間——內容、佈局、模組數量、頁面重點、預設配色、翻頁動畫；
 文字編輯:任意文字點選即可編輯；
 圖片、影片槽：點選或拖曳即可替換，上傳自動壓縮。
 
@@ -123,9 +131,9 @@ HTML 版與匯出 PPTX 版的逐頁對比：
 |---|---|
 | ![點選文字就地編輯，裝飾元素隨字數自適應](https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/text-edit.gif) | ![向頁面插入圖片](https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/add-image.gif) |
 
-### 控制檯改：佈局、模組數量、圖表、配色
+### 控制台改：佈局、模組數量、圖表、配色
 
-拖曳控制檯右側的滑桿，就能自訂頁面中模組的數量；頁面的邏輯重點也可以透過滑桿調換，幫你把握演講節奏。
+拖曳控制台右側的滑桿，就能自訂頁面中模組的數量；頁面的邏輯重點也可以透過滑桿調換，幫你把握演講節奏。
 
 | 拖滑桿增減模組 | 換佈局 |
 |---|---|

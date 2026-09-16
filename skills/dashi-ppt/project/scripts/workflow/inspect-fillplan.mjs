@@ -176,7 +176,7 @@ export function inspectLayout(layout, { compact = false } = {}) {
   const resolvedBindings = (countBindings || []).map(binding => ({ ...binding, arrays: resolveBindingArrays(binding, defaultProps, controls) }));
   // propShapes 提前算出,供 arrayMeta 過濾掉未進入可填契約的私有視覺欄位(如顏色)。
   const propShapesForArrayMeta = buildFillablePropShapes(defaultProps, copyKeys, [...copyKeyRoots, ...arrayKeys]);
-  // JAD-213:arrayMeta 含語義 role;JAD-212:覆蓋 copy 內陣列並匹配其 count 控制元件。
+  // JAD-213:arrayMeta 含語義 role;JAD-212:覆蓋 copy 內陣列並匹配其 count 控制項。
   const arrayMeta = buildArrayMeta(defaultProps, countBindings, controls, { withItemRoles: true, propShapes: propShapesForArrayMeta });
   const copyRoles = buildCopyRoles(copyKeys);
   const fieldContracts = buildFieldContracts({ copyKeys, copyRoles, arrayMeta, decorativeKeys, mediaSlots });
@@ -1467,7 +1467,7 @@ function isDistributionMetricFieldName(field) {
   return DISTRIBUTION_METRIC_FIELD_RE.test(normalizeName(field));
 }
 
-// 非媒體的數量控制元件(供 copy 內/無宣告陣列按長度匹配 count 控制元件)。
+// 非媒體的數量控制項(供 copy 內/無宣告陣列按長度匹配 count 控制項)。
 function nonMediaCountControls(controls = []) {
   return (controls || []).filter(control => {
     const key = String(control.key || '');
@@ -1478,7 +1478,7 @@ function nonMediaCountControls(controls = []) {
   });
 }
 
-// JAD-212:陣列路徑(頂層或 copy 內)→ count 控制元件。只能來自已解析 countBindings。
+// JAD-212:陣列路徑(頂層或 copy 內)→ count 控制項。只能來自已解析 countBindings。
 function countMetaForArray(pathName, resolvedBindings) {
   const binding = (resolvedBindings || []).find(item => (item.arrays || []).includes(pathName));
   if (binding) {
@@ -1544,7 +1544,7 @@ function collectNumbers(value) {
   return [];
 }
 
-// 每個內容陣列的填充後設資料:預設條目數、繫結的 count 控制元件、範圍、預設配色、語義角色、欄位角色。
+// 每個內容陣列的填充後設資料:預設條目數、繫結的 count 控制項、範圍、預設配色、語義角色、欄位角色。
 function buildArrayMeta(defaultProps = {}, countBindings = [], controls = [], { withItemRoles = false, propShapes = null } = {}) {
   const paths = discoverContentArrayPaths(defaultProps);
   const resolvedBindings = (countBindings || []).map(binding => ({ ...binding, arrays: resolveBindingArrays(binding, defaultProps, controls) }));
@@ -1589,7 +1589,7 @@ function buildArrayMeta(defaultProps = {}, countBindings = [], controls = [], { 
 }
 
 // JAD-212:正文是否完全由元件硬編碼不可填。
-// 條件:存在指向陣列的 count 控制元件,但其陣列在 defaultProps/copy 全部缺席,
+// 條件:存在指向陣列的 count 控制項,但其陣列在 defaultProps/copy 全部缺席,
 // 且無可發現的內容陣列,且剩餘 copyKeys 僅 eyebrow/serial 類(無 title/paragraph/metric 正文)。
 function detectContentLocked({ copyKeys, copyRoles, arrayMeta, resolvedBindings, defaultProps }) {
   if (arrayMeta.length) return null;
@@ -1601,7 +1601,7 @@ function detectContentLocked({ copyKeys, copyRoles, arrayMeta, resolvedBindings,
   const hasBodyCopy = (copyKeys || []).some(key => !['eyebrow', 'serial'].includes(copyRoles[key]));
   if (hasBodyCopy) return null;
   const arr = countTowardAbsent.map(binding => (binding.arrays || []).join('/')).join(', ');
-  return `正文陣列(${arr})由元件硬編碼,不在 props/copy 中,正文不可由 props 定製;只能改 count 控制元件數量`;
+  return `正文陣列(${arr})由元件硬編碼,不在 props/copy 中,正文不可由 props 定製;只能改 count 控制項數量`;
 }
 
 function inferRoles(page, mediaSlots = []) {

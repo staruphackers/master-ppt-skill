@@ -2218,7 +2218,7 @@ export const pages = [
           "sub": "Enterprise"
         },
         {
-          "label": "資料平臺",
+          "label": "資料平台",
           "sub": "Data"
         },
         {
@@ -3048,7 +3048,7 @@ export const pages = [
             "Grok"
           ],
           "accent": "#7aa0ff",
-          "quote": "背靠 X 平臺海量實時資料，與特斯拉自動駕駛協同。",
+          "quote": "背靠 X 平台海量實時資料，與特斯拉自動駕駛協同。",
           "who": "Grok · 實時 · 差異化"
         },
         {
@@ -4842,7 +4842,7 @@ export const pages = [
         },
         {
           "name": "Databricks",
-          "en": "Data + AI 平臺",
+          "en": "Data + AI 平台",
           "value": 100,
           "meta": "J 輪",
           "tag": "基礎設施"
@@ -4887,7 +4887,7 @@ export const pages = [
       "headCn": "資本排行榜 · 頭部玩家",
       "concentrationLabel": "頭部集中度",
       "concentrationCaption": "資本流向榜單前三",
-      "insightText": "融資額呈現極端「馬太效應」—— 少數大模型與資料平臺公司虹吸了絕大多數資金，長尾標的獲取資本難度顯著上升。"
+      "insightText": "融資額呈現極端「馬太效應」—— 少數大模型與資料平台公司虹吸了絕大多數資金，長尾標的獲取資本難度顯著上升。"
     }
   },
   {
@@ -5067,7 +5067,7 @@ export const pages = [
           ]
         },
         {
-          "label": "資料平臺",
+          "label": "資料平台",
           "ranks": [
             6,
             5,
@@ -9336,7 +9336,7 @@ export const pages = [
           "value": 120
         },
         {
-          "label": "資料平臺",
+          "label": "資料平台",
           "sub": "Data",
           "value": 90
         },
@@ -10862,7 +10862,7 @@ export const pages = [
         },
         {
           "name": "Databricks",
-          "sector": "資料平臺",
+          "sector": "資料平台",
           "val": 620,
           "round": "Series J"
         },
@@ -10898,7 +10898,7 @@ export const pages = [
         },
         {
           "name": "Scale AI",
-          "sector": "資料平臺",
+          "sector": "資料平台",
           "val": 138,
           "round": "戰略融資"
         },
@@ -10921,7 +10921,7 @@ export const pages = [
       "shareLabel": "佔樣本總估值",
       "asideTag": "版圖讀法",
       "insightPre": "方塊面積代表估值體量 —— 少數",
-      "insightBold": "基礎模型與資料平臺",
+      "insightBold": "基礎模型與資料平台",
       "insightPost": "公司幾乎佔滿整張版圖，應用層公司數量多但單體面積小，「頭部吞噬版圖」的格局一目瞭然。估值取年內最新公開口徑。"
     }
   },
@@ -15708,7 +15708,7 @@ export const pages = [
       },
       "outcome": {
         "tag": "閉環",
-        "text": "四步形成可複用的投資決策閉環——從機會發現到覆盤迭代，持續校準。"
+        "text": "四步形成可複用的投資決策閉環——從機會發現到復盤迭代，持續校準。"
       },
       "steps": [
         {
@@ -15724,8 +15724,8 @@ export const pages = [
           "desc": "按確定性分層下注，預留週期回撥的彈藥。"
         },
         {
-          "title": "跟蹤覆盤",
-          "desc": "定期覆盤兌現進度，動態調整持倉權重。"
+          "title": "跟蹤復盤",
+          "desc": "定期復盤兌現進度，動態調整持倉權重。"
         },
         {
           "title": "退出兌現",

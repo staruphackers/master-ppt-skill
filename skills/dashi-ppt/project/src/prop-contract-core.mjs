@@ -405,7 +405,7 @@ function isVisualSlotCountBinding(binding) {
 }
 
 export function isAllowedMediaCountShortage(binding, derived) {
-  // 判據看繫結陣列本身是否媒體陣列(source),不看控制元件名模式——真實控制元件名有
+  // 判據看繫結陣列本身是否媒體陣列(source),不看控制項名模式——真實控制項名有
   // imgCount/mediaSlotCount 等變體,名字模式(imageCount/mediaCount)接不住它們。
   return isMediaArrayPath(derived?.source);
 }
@@ -1614,7 +1614,7 @@ function resolveControlValue(value, defaults) {
 
 export function serializeValue(value) {
   // 數值統一 12 位有效數字:Math.sin/cos 生成的 defaults 在 macOS/Linux libm 上
-  // 最後一位 ulp 不同,會讓生成物平臺不確定(CI committed-artifacts 校驗失敗)。
+  // 最後一位 ulp 不同,會讓生成物平台不確定(CI committed-artifacts 校驗失敗)。
   if (typeof value === 'number') return Number.isFinite(value) ? Number(value.toPrecision(12)) : value;
   if (value == null || ['string', 'boolean'].includes(typeof value)) return value;
   if (isSerializedReactElementLike(value)) return reactElementText(value);

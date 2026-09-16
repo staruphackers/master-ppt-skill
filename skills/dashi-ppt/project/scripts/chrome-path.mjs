@@ -100,7 +100,7 @@ export function getChromeExecutablePath() {
   );
 }
 
-// Playwright 瀏覽器快取根目錄(按平臺;PLAYWRIGHT_BROWSERS_PATH 顯式覆蓋優先)。
+// Playwright 瀏覽器快取根目錄(按平台;PLAYWRIGHT_BROWSERS_PATH 顯式覆蓋優先)。
 function playwrightCacheRoots() {
   if (process.env.PLAYWRIGHT_BROWSERS_PATH && process.env.PLAYWRIGHT_BROWSERS_PATH !== '0') {
     return [process.env.PLAYWRIGHT_BROWSERS_PATH];
@@ -115,9 +115,9 @@ function playwrightCacheRoots() {
 // "Failed to create a ProcessSingleton"),而 headless shell 沒有這套機制,同一沙箱下
 // 可正常啟動——匯出(headless 截圖/CDP)場景優先使用它。
 export function resolveHeadlessShellPath() {
-  // 平臺目錄/可執行名差異:macOS 是 chrome-headless-shell-mac-*/chrome-headless-shell,
+  // 平台目錄/可執行名差異:macOS 是 chrome-headless-shell-mac-*/chrome-headless-shell,
   // Linux 是 chrome-linux/headless_shell,Windows 是 chrome-win/*.exe——
-  // 必須按候選集匹配,只按單一平臺命名過濾會漏掉 Linux(曾致匯出零瀏覽器可用)。
+  // 必須按候選集匹配,只按單一平台命名過濾會漏掉 Linux(曾致匯出零瀏覽器可用)。
   const shellBinaries = process.platform === 'win32'
     ? ['chrome-headless-shell.exe', 'headless_shell.exe']
     : ['chrome-headless-shell', 'headless_shell'];

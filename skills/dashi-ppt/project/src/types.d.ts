@@ -1,7 +1,7 @@
 // JAD-169:核心物件的型別契約。配合 `// @ts-check` + JSDoc,把「讀了物件上不存在的欄位」
 // 這類靜默失效變成 CI typecheck 失敗(見 jsconfig.json / npm run typecheck)。
 
-/** 主題頁控制元件(generated-metadata 裡 page.controls[] 的元素)。 */
+/** 主題頁控制項(generated-metadata 裡 page.controls[] 的元素)。 */
 export interface ControlRecord {
   key?: string;
   prop?: string;

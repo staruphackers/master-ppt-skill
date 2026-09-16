@@ -5,7 +5,7 @@ export const theme = {
   "displayName": "色譜圖表風",
   "label": "色譜圖表風",
   "name": "色譜圖表風",
-  "scenario": "資料包告、市場分析、KPI 覆盤、行業研究",
+  "scenario": "資料包告、市場分析、KPI 復盤、行業研究",
   "audience": "資料分析師、諮詢顧問、研究員、業務負責人",
   "mode": "new"
 };
@@ -175,7 +175,7 @@ export const pages = [
       "copy": {
         "top": "PULSE® BRAND LAB · FULL-FUNNEL MARKETING",
         "number": "NO. 02",
-        "caption": "2026 年度全平臺品牌整合行銷方案",
+        "caption": "2026 年度全平台品牌整合行銷方案",
         "titleTop": "創意破圈",
         "titleBottom": "流量賦能",
         "banner": "內容驅動傳播 · 創意引爆市場",
@@ -1964,7 +1964,7 @@ export const pages = [
               ],
               [
                 "資料",
-                "X 平臺"
+                "X 平台"
               ],
               [
                 "方向",
@@ -2443,7 +2443,7 @@ export const pages = [
           },
           {
             "name": "Databricks",
-            "cat": "資料平臺",
+            "cat": "資料平台",
             "v": 5
           },
           {
@@ -2597,7 +2597,7 @@ export const pages = [
             "note": "高熱度 · 高兌現",
             "items": [
               "基礎設施",
-              "資料平臺"
+              "資料平台"
             ],
             "dots": [
               [
@@ -3126,7 +3126,7 @@ export const pages = [
                 "note": "長週期硬科技，看供應鏈與量產能力"
               },
               {
-                "name": "資料平臺",
+                "name": "資料平台",
                 "note": "存量客戶優勢，商業化路徑更短"
               }
             ]
@@ -8610,7 +8610,7 @@ export const pages = [
           },
           {
             "en": "SIMULATION",
-            "zh": "模擬平臺",
+            "zh": "模擬平台",
             "num": "9",
             "unit": "億美元",
             "c": "#3c9a52"
@@ -9954,7 +9954,7 @@ export const pages = [
         "number": "118",
         "unit": "%",
         "caption": "淨收入留存 · NRR",
-        "message": "低程式碼 AI 平臺幫助企業把模型能力嵌入內部流程。",
+        "message": "低程式碼 AI 平台幫助企業把模型能力嵌入內部流程。",
         "aux": [
           [
             "融資額",
@@ -9972,9 +9972,9 @@ export const pages = [
             "家"
           ]
         ],
-        "galleryCap": "平臺圖示",
+        "galleryCap": "平台圖示",
         "galleryUnit": "DROP IMAGES",
-        "conclusion": "能被業務團隊使用的平臺更容易擴散。"
+        "conclusion": "能被業務團隊使用的平台更容易擴散。"
       }
     }
   },
@@ -10332,7 +10332,7 @@ export const pages = [
         "stages": [
           {
             "en": "EVALUATION",
-            "zh": "評測平臺",
+            "zh": "評測平台",
             "v": 8,
             "c": "#2c44a0"
           },
@@ -13772,7 +13772,7 @@ export const pages = [
         "hubNote": "以實時資料與馬斯克生態為差異化中樞",
         "nodes": [
           {
-            "zh": "X 平臺",
+            "zh": "X 平台",
             "en": "DATA GATEWAY",
             "role": "資料入口",
             "c": "#d8402e"
@@ -14575,7 +14575,7 @@ export const pages = [
         "max": 4,
         "step": 1,
         "publicKey": "tierCount",
-        "desc": "平臺架構的層級（tier）數量。"
+        "desc": "平台架構的層級（tier）數量。"
       },
       {
         "key": "focusEnabled",
@@ -14722,12 +14722,12 @@ export const pages = [
       "showSheetLabel": true,
       "copy": {
         "eyebrow": "DATABRICKS CASE",
-        "title": "資料平臺延展",
+        "title": "資料平台延展",
         "sheet": "CASE · 68 / 80",
         "en": "DATABRICKS",
-        "zh": "資料平臺 → AI 平臺",
+        "zh": "資料平台 → AI 平台",
         "sub": "Databricks 案例",
-        "lead": "已有資料平臺更容易把 AI 能力賣給現有企業客戶 —— 存量客戶基礎是 AI 商業化捷徑。",
+        "lead": "已有資料平台更容易把 AI 能力賣給現有企業客戶 —— 存量客戶基礎是 AI 商業化捷徑。",
         "ledger": [
           [
             "最大單筆融資",
@@ -14746,11 +14746,11 @@ export const pages = [
           ],
           [
             "賽道",
-            "資料平臺",
+            "資料平台",
             ""
           ]
         ],
-        "stackCap": "平臺架構",
+        "stackCap": "平台架構",
         "stackUnit": "DATA → AI EXTENSION",
         "tiers": [
           {
@@ -14763,7 +14763,7 @@ export const pages = [
             ]
           },
           {
-            "zh": "ML / AI 平臺",
+            "zh": "ML / AI 平台",
             "en": "ML PLATFORM",
             "items": [
               "模型訓練",
@@ -16819,7 +16819,7 @@ export const pages = [
           },
           {
             "en": "DATA",
-            "k": "資料平臺",
+            "k": "資料平台",
             "tag": "資料治理 · 長期鎖定",
             "color": "#2c44a0"
           },

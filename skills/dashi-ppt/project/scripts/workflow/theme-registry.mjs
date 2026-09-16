@@ -174,7 +174,7 @@ function arrayHeadExists(defaultProps, pathName) {
   return Array.isArray(valueAtPath(defaultProps, pathName));
 }
 
-// 把 count 控制元件解析到 defaultProps 裡真實存在的陣列鍵;命不中時只保留可由命名或長度證明的陣列。
+// 把 count 控制項解析到 defaultProps 裡真實存在的陣列鍵;命不中時只保留可由命名或長度證明的陣列。
 export function resolveBindingArrays(binding, defaultProps = {}, controls = []) {
   const explicit = explicitCountArraysForBinding(binding, controls);
   if (explicit.length) {

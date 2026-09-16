@@ -735,7 +735,7 @@ function getEntryContract(entry) {
 
 // 把一批待應用的外部改動餵給契約校驗;超出邊界(如 count 超出陣列長度)時不整體作廢這次
 // 編輯,而是逐欄位回退到"改動前"的取值,把真正違規的那個欄位單獨丟棄——使用者拖壞一個滑桿
-// 不該連坐同一頁的其它控制元件,也不該讓這次渲染直接丟擲、把上層呼叫鏈的收尾程式碼一起沖掉。
+// 不該連坐同一頁的其它控制項,也不該讓這次渲染直接丟擲、把上層呼叫鏈的收尾程式碼一起沖掉。
 function safeNormalizeContractValues(entry, contract, contractValues, baselineAuthored) {
   try {
     return { values: normalizeSlidePropsForContract(entry.key, contractValues, contract) };
@@ -816,7 +816,7 @@ function normalizeExternalValues(entry, defaults, values) {
   return { ...normalizedValues, ...passthroughValues };
 }
 
-// contractValues 只裝「與 baseline 不同」的欄位(見 changedExternalValues)。一個 count 控制元件
+// contractValues 只裝「與 baseline 不同」的欄位(見 changedExternalValues)。一個 count 控制項
 // 拖到和當頁 baseline(佈局設計預設值)恰好相同的檔位時(常見於拖到靜態 max——很多頁面的
 // defaultProps 陣列長度正好等於 max),count 欄位本身會被判定為"沒變"而被這裡漏掉,只留下
 // 真正變了的內容陣列。normalizeSlidePropsForContract 一旦發現 count 欄位缺失,會按"未顯式
@@ -1033,7 +1033,7 @@ function isPlainObject(value) {
   return !!value && typeof value === 'object' && !Array.isArray(value);
 }
 
-// count 控制元件的靜態 max 是佈局設計的完整檔位(參見 prop-contract-core.mjs 的
+// count 控制項的靜態 max 是佈局設計的完整檔位(參見 prop-contract-core.mjs 的
 // clampCountControlLimits——它保證 max 永遠不超過該 layout defaultProps 裡對應陣列的長度),
 // 所以把 count 拖到比當前 authored 陣列長時,defaultProps 同名陣列裡永遠有足夠的條目可以
 // 補足。這裡只補渲染用的 props,不改 entry/view-model 本身——使用者沒編輯過的補足條目因此不會
@@ -1053,7 +1053,7 @@ function withPaddedCountArrays(entry, props) {
   }
   // 同長繫結組(如圖表 series[].values 必須和 categories 同長):count 補足只直接觸達
   // countBindings.arrays 裡登記的陣列,anchor 陣列補長之後,單靠 lengthBindings 關聯、自己不
-  // 掛 count 控制元件的 dependent 陣列不會跟著變——這裡按 anchor 補足後的實際長度再補一次 dependent,
+  // 掛 count 控制項的 dependent 陣列不會跟著變——這裡按 anchor 補足後的實際長度再補一次 dependent,
   // 避免"categories 變長了但 values 還是老長度"這種渲染期錯位。
   for (const binding of contract.lengthBindings || []) {
     if ((binding.relation || 'same-length') !== 'same-length' || !binding.anchor || !binding.dependent) continue;

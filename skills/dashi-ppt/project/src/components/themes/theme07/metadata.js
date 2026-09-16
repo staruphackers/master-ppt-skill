@@ -1634,7 +1634,7 @@ export const pages = [
           "pos": "高熱度 · 高兌現",
           "dirs": [
             "基礎設施",
-            "資料平臺"
+            "資料平台"
           ],
           "tone": "accent",
           "col": 2,
@@ -1978,7 +1978,7 @@ export const pages = [
             },
             {
               "name": "基礎設施",
-              "note": "GPU 雲與資料平臺，剛性預算"
+              "note": "GPU 雲與資料平台，剛性預算"
             },
             {
               "name": "具身智慧",
@@ -6211,7 +6211,7 @@ export const pages = [
           "note": "感知到控制一體化"
         },
         {
-          "label": "模擬平臺",
+          "label": "模擬平台",
           "value": 9,
           "note": "資料閉環與虛擬測試"
         },
@@ -6951,7 +6951,7 @@ export const pages = [
           "dim": "質檢與培訓",
           "tier": "擴充套件",
           "val": "15",
-          "note": "全量對話質檢與覆盤"
+          "note": "全量對話質檢與復盤"
         }
       ],
       "rowCount": 4,
@@ -7299,12 +7299,12 @@ export const pages = [
     ],
     "defaultProps": {
       "eyebrow": "Low-Code AI",
-      "segment": "低程式碼 AI 平臺",
+      "segment": "低程式碼 AI 平台",
       "title": "企業流程嵌入",
-      "titleTail": "低程式碼 AI 平臺",
-      "lead": "低程式碼 AI 平臺幫助企業把模型能力嵌入內部流程；關鍵不是模型能力，而是交付速度和治理能力。",
+      "titleTail": "低程式碼 AI 平台",
+      "lead": "低程式碼 AI 平台幫助企業把模型能力嵌入內部流程；關鍵不是模型能力，而是交付速度和治理能力。",
       "statLine": "融資額 19 億美元 · 6 筆事件",
-      "closing": "能被業務團隊使用的平臺更容易擴散。",
+      "closing": "能被業務團隊使用的平台更容易擴散。",
       "badge": "低程式碼",
       "flowTitle": "流程編排 · Orchestration",
       "metricTitle": "客戶與留存 · Retention",
@@ -7699,7 +7699,7 @@ export const pages = [
       "shieldLabel": "可信 AI 防線",
       "segments": [
         {
-          "name": "評測平臺",
+          "name": "評測平台",
           "value": 8,
           "note": "能力與風險基準"
         },
@@ -8114,7 +8114,7 @@ export const pages = [
           "avg": 0.53,
           "themes": [
             "雲資源",
-            "平臺卡位"
+            "平台卡位"
           ],
           "note": "生態繫結"
         }
@@ -9492,7 +9492,7 @@ export const pages = [
             "開發者工具",
             "企業 AI",
             "雲服務",
-            "資料平臺"
+            "資料平台"
           ],
           "metrics": [
             {
@@ -11324,7 +11324,7 @@ export const pages = [
           "certainty": 92
         },
         {
-          "name": "資料平臺",
+          "name": "資料平台",
           "en": "Data Platform",
           "note": "訓練與評測的資料底座，複用性強。",
           "certainty": 84
@@ -11697,7 +11697,7 @@ export const pages = [
         },
         {
           "name": "Databricks",
-          "sector": "資料平臺",
+          "sector": "資料平台",
           "note": "老牌營收驗證 AI 溢價"
         },
         {
@@ -12155,7 +12155,7 @@ export const pages = [
         {
           "label": "基礎設施資本確定性",
           "value": 124,
-          "note": "GPU 雲與資料平臺"
+          "note": "GPU 雲與資料平台"
         },
         {
           "label": "平均單筆規模",

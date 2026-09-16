@@ -1,9 +1,9 @@
-// JAD-182:theme03 的 per-theme 控制元件特例描述符(與主題同目錄,index.jsx 通用消費)。
+// JAD-182:theme03 的 per-theme 控制項特例描述符(與主題同目錄,index.jsx 通用消費)。
 import { ICONS as DECOR_ICONS } from './source/src/icons.js';
 import { PRESET_3D } from './source/src/preset3d.js';
 
 export const overrides = {
-  // 注入的裝飾控制元件 + 全域性強調色控制元件(順序與原內聯一致)
+  // 注入的裝飾控制項 + 全域性強調色控制項(順序與原內聯一致)
   injectControls: [
     { key: 'showDecor', label: '裝飾圖片', type: 'toggle', default: false },
     {
@@ -25,7 +25,7 @@ export const overrides = {
       ],
     },
   ],
-  // 注入前先剔除原頁面裡同 key 的控制元件
+  // 注入前先剔除原頁面裡同 key 的控制項
   replaceKeys: ['accent', 'theme', 'showDecor', 'decorSrc', 'decorScale'],
   injectDefaults: { showDecor: false, decorSrc: null, decorScale: 1, accent: 'blue' },
   preset3dBySlot: PRESET_3D,

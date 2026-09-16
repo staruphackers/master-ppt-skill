@@ -1855,10 +1855,10 @@
 <div id="hint" aria-hidden="true"></div>
 <div id="deck-save-status" role="status" aria-live="polite" hidden>更改僅儲存在本瀏覽器,分發前請匯出</div>
 
-<header id="deck-topbar" aria-label="展示控制檯工具欄">
+<header id="deck-topbar" aria-label="展示控制台工具欄">
   <div class="pp-topbar-brand">
     <span class="pp-topbar-dot" aria-hidden="true"></span>
-    <span class="pp-topbar-title">展示控制檯</span>
+    <span class="pp-topbar-title">展示控制台</span>
     <span class="pp-topbar-count" id="preview-slide-count">0/0頁</span>
   </div>
   <div class="pp-topbar-actions">
@@ -1979,7 +1979,7 @@
 <script>
 /* =============== Deck UI Language (i18n) =============== */
 // 雙語只存在於詞典層:metadata 詞典子集(preview-options.i18n,渲染時按 deck 裁剪注入)
-// 翻控制元件 label/desc/選項/頁面名;UI_STRINGS_EN 翻 template 自身的介面文案。
+// 翻控制項 label/desc/選項/頁面名;UI_STRINGS_EN 翻 template 自身的介面文案。
 // 查不到的詞條一律回退中文,保證詞典缺失只是顯示降級,不產生任何功能差異。
 (function(){
   // 介面語言解析優先順序:使用者手動選擇(localStorage)> 系統語言(zh* → 中文,
@@ -2015,8 +2015,8 @@
   const UI_STRINGS_EN = {
     // Topbar / shell
     '更改僅儲存在本瀏覽器,分發前請匯出': 'Changes are saved only in this browser. Export before sharing.',
-    '展示控制檯工具欄': 'Presenter console toolbar',
-    '展示控制檯': 'Presenter console',
+    '展示控制台工具欄': 'Presenter console toolbar',
+    '展示控制台': 'Presenter console',
     '0/0頁': '0/0',
     '{current}/{total}頁': '{current}/{total}',
     '播放預覽': 'Start presentation',
@@ -2088,7 +2088,7 @@
     '{label} 頁面已準備完成': '{label}: pages ready',
     // Export pipeline
     'HTML 已準備下載': 'HTML ready to download',
-    'HTML 匯出失敗，請在瀏覽器控制檯檢視錯誤。': 'HTML export failed. Check the browser console for details.',
+    'HTML 匯出失敗，請在瀏覽器控制台檢視錯誤。': 'HTML export failed. Check the browser console for details.',
     'HTML 打包素材 {done} / {total}': 'Bundling assets {done} / {total}',
     '沒有可匯出的頁面。': 'No pages to export.',
     '瀏覽器內擷取第 {current}/{total} 頁...': 'Capturing page {current}/{total} in the browser...',
@@ -2104,14 +2104,14 @@
     'PPTX 已開始下載': 'PPTX download started',
     'PPTX 已生成：{name}': 'PPTX generated: {name}',
     'PPTX 已生成：\n{name}': 'PPTX generated:\n{name}',
-    'PPTX 瀏覽器內匯出失敗,請在瀏覽器控制檯檢視錯誤。': 'In-browser PPTX export failed. Check the browser console for details.',
+    'PPTX 瀏覽器內匯出失敗,請在瀏覽器控制台檢視錯誤。': 'In-browser PPTX export failed. Check the browser console for details.',
     '合成 PDF...': 'Assembling PDF...',
     'PDF 已開始下載(瀏覽器內匯出)': 'PDF download started (in-browser export)',
     'PDF 已開始下載': 'PDF download started',
     'PDF 已生成：{name}': 'PDF generated: {name}',
     'PDF 已生成：\n{name}': 'PDF generated:\n{name}',
-    'PDF 瀏覽器內匯出失敗，請在瀏覽器控制檯檢視錯誤。': 'In-browser PDF export failed. Check the browser console for details.',
-    'PDF 匯出失敗，請在瀏覽器控制檯檢視錯誤。': 'PDF export failed. Check the browser console for details.',
+    'PDF 瀏覽器內匯出失敗，請在瀏覽器控制台檢視錯誤。': 'In-browser PDF export failed. Check the browser console for details.',
+    'PDF 匯出失敗，請在瀏覽器控制台檢視錯誤。': 'PDF export failed. Check the browser console for details.',
     '提交截圖 PDF 生成任務...': 'Submitting PDF render job...',
     '提交可編輯 PPTX 生成任務...': 'Submitting editable PPTX job...',
     '正在生成截圖 PDF': 'Generating PDF screenshots',
@@ -3078,7 +3078,7 @@
   }
 
   // 防禦性鉗制:localStorage 裡儲存的 range 類 prop 可能帶著舊版本寫入的越界值
-  // (例如聯動 count 收窄後殘留的舊 index),啟動時按當前控制元件邊界夾回合法範圍。
+  // (例如聯動 count 收窄後殘留的舊 index),啟動時按當前控制項邊界夾回合法範圍。
   function normalizeRestoredSlideProps(slideId, rawValues){
     if(!rawValues || typeof rawValues !== 'object' || Array.isArray(rawValues)) return {};
     const controls = getSlidePropControls(slideId);
@@ -7742,7 +7742,7 @@ refreshRailCatalog();
     const labels = ENGLISH_PROP_OPTION_LABELS || {};
     const exact = labels[raw.toLowerCase()] || labels[valueText.toLowerCase()];
     if(exact && (raw === valueText || /^[A-Za-z0-9_./ -]+$/.test(raw))) return exact;
-    return raw.replace(/\bYES\b/g, '是').replace(/\bNO\b/g, '否').replace(/\b8-bit\b/gi, '畫素');
+    return raw.replace(/\bYES\b/g, '是').replace(/\bNO\b/g, '否').replace(/\b8-bit\b/gi, '像素');
   }
 
   function propOptions(control){
@@ -8160,7 +8160,7 @@ refreshRailCatalog();
       if(isDeckExportCancelledError(error)) return null;
       if(!owns) throw error;
       console.error('[export pptx][browser-capture]', error);
-      alert(error?.message || window.__deckI18n.ui('PPTX 瀏覽器內匯出失敗,請在瀏覽器控制檯檢視錯誤。'));
+      alert(error?.message || window.__deckI18n.ui('PPTX 瀏覽器內匯出失敗,請在瀏覽器控制台檢視錯誤。'));
       return null;
     } finally {
       if(owns) endDeckExport(exportUi);
@@ -8207,7 +8207,7 @@ refreshRailCatalog();
       if(isDeckExportCancelledError(error)) return null;
       if(!owns) throw error;
       console.error('[export pdf][browser-capture]', error);
-      alert(error?.message || window.__deckI18n.ui('PDF 瀏覽器內匯出失敗，請在瀏覽器控制檯檢視錯誤。'));
+      alert(error?.message || window.__deckI18n.ui('PDF 瀏覽器內匯出失敗，請在瀏覽器控制台檢視錯誤。'));
       return null;
     } finally {
       if(owns) endDeckExport(exportUi);
@@ -8284,7 +8284,7 @@ refreshRailCatalog();
     } catch (error) {
       if(isDeckExportCancelledError(error)) return;
       console.error('[export pdf]', error);
-      alert(error?.message || window.__deckI18n.ui('PDF 匯出失敗，請在瀏覽器控制檯檢視錯誤。'));
+      alert(error?.message || window.__deckI18n.ui('PDF 匯出失敗，請在瀏覽器控制台檢視錯誤。'));
     } finally {
       progressPoll?.stop?.();
       endDeckExport(exportUi);
@@ -8582,7 +8582,7 @@ refreshRailCatalog();
     } catch (error) {
       if(isDeckExportCancelledError(error)) return;
       console.error('[export html]', error);
-      alert(window.__deckI18n.ui('HTML 匯出失敗，請在瀏覽器控制檯檢視錯誤。'));
+      alert(window.__deckI18n.ui('HTML 匯出失敗，請在瀏覽器控制台檢視錯誤。'));
     } finally {
       restoreExportViewState(viewState);
       endDeckExport(exportUi);
@@ -9210,7 +9210,7 @@ refreshRailCatalog();
       frame.dataset.unicornReady = 'true';
       frame.dataset.unicornActiveSource = sourceKey;
       // dpi 按實際顯示尺寸自適應:deck 縮放 0.7 時無需按全尺寸 1.5x 超取樣渲染,
-      // GPU 畫素量隨視窗縮放線性下降(unicorn 頁「進入即卡」的主要來源)。
+      // GPU 像素量隨視窗縮放線性下降(unicorn 頁「進入即卡」的主要來源)。
       const declaredDpi = Number(frame.dataset.unicornDpi || 1.5);
       const deckScale = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--deck-scale')) || 1;
       const adaptiveDpi = Math.max(0.75, Math.min(declaredDpi, (window.devicePixelRatio || 1) * deckScale));

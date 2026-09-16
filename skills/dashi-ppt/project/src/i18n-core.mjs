@@ -23,7 +23,7 @@ export function loadI18nDictionary() {
 
 const hasCJK = (value) => /[一-鿿]/.test(String(value ?? ''));
 
-// 收集頁面/主題包後設資料裡全部使用者可見中文文案(控制元件 label/desc/unit/選項、頁面名、
+// 收集頁面/主題包後設資料裡全部使用者可見中文文案(控制項 label/desc/unit/選項、頁面名、
 // 主題名/場景)。執行時按 deck 裁剪詞典用它,scripts/build/extract-i18n-strings.mjs
 // 的全量提取/覆蓋率檢查也複用它——共享實現必須住 src/(安裝版 project/ 只帶 src 與
 // 白名單 scripts,執行時程式碼不得 import scripts/build/)。

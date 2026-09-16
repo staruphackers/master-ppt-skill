@@ -1478,7 +1478,7 @@ export const pages = [
           "title": "AI 基礎設施",
           "amount": "158 億",
           "share": "16.3%",
-          "note": "「賣鏟子」邏輯，算力雲與資料平臺稀缺。",
+          "note": "「賣鏟子」邏輯，算力雲與資料平台稀缺。",
           "tags": [
             "確定性強",
             "賣鏟子"
@@ -10252,7 +10252,7 @@ export const pages = [
       "taglineLead": "馬斯克的",
       "taglineKeyword": "第三次創業",
       "taglineTail": "",
-      "body": "背靠 X 平臺海量實時社交資料，協同特斯拉自動駕駛團隊——Grok 主打「幽默、實時、無審查」，從成立到躋身頭部梯隊僅用 18 個月。",
+      "body": "背靠 X 平台海量實時社交資料，協同特斯拉自動駕駛團隊——Grok 主打「幽默、實時、無審查」，從成立到躋身頭部梯隊僅用 18 個月。",
       "mediaPlaceholder": "拖入整屏背景圖",
       "stats": [
         {
@@ -11896,7 +11896,7 @@ export const pages = [
           "等高"
         ],
         "default": "ascend",
-        "desc": "逐級抬高 / 等高平臺",
+        "desc": "逐級抬高 / 等高平台",
         "publicKey": "layoutVariant"
       },
       {

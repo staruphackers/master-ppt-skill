@@ -5,7 +5,7 @@ export const theme = {
   "displayName": "高能增長風",
   "label": "高能增長風",
   "name": "高能增長風",
-  "scenario": "增長覆盤、商業計劃、融資路演、市場擴張方案",
+  "scenario": "增長復盤、商業計劃、融資路演、市場擴張方案",
   "audience": "創業者、增長團隊、銷售團隊、VC/PE 路演團隊",
   "mode": "new"
 };
@@ -4643,7 +4643,7 @@ export const pages = [
             "付費投放代運營",
             "每週 A/B 測試迭代",
             "專屬增長策略師",
-            "雙週覆盤會"
+            "雙週復盤會"
           ]
         },
         {
@@ -6558,7 +6558,7 @@ export const pages = [
       "para2": "我們做的事情相反：把搜尋、內容、轉化、效能擰成一條能複利的鏈路。每一次曝光都沉澱成資產，每一處最佳化都抬高下一次的起點。慢，但是越跑越快。",
       "bylineHtml": "燃點增長團隊 · <b>策略札記</b>",
       "imagePlaceholder": "配圖 · 4:5",
-      "capText": "現場 · 增長覆盤會",
+      "capText": "現場 · 增長復盤會",
       "metaLeft": "IGNIS — 燃點 · 增長札記",
       "metaMid": "越跑越快的那種慢"
     }
@@ -9262,7 +9262,7 @@ export const pages = [
           "mono": "A"
         },
         {
-          "q": "14 天就出了首批訊號，季度覆盤直接超了 KPI。",
+          "q": "14 天就出了首批訊號，季度復盤直接超了 KPI。",
           "nm": "陳思",
           "rl": "NIMBUS · 增長負責人",
           "mono": "N"
@@ -10246,7 +10246,7 @@ export const pages = [
           "mb": "全鏈路可見"
         },
         {
-          "mn": "增長覆盤",
+          "mn": "增長復盤",
           "me": "REVIEW",
           "cad": "月度",
           "dl": "結論沉澱 · 下階段路線圖",
@@ -11642,7 +11642,7 @@ export const pages = [
       "lines": [
         {
           "k": "P.182",
-          "t": "一年增長 182% 的覆盤"
+          "t": "一年增長 182% 的復盤"
         },
         {
           "k": "P.58",
@@ -12200,7 +12200,7 @@ export const pages = [
           "tx": "內容投放，同時起跑"
         },
         {
-          "ph": "覆盤",
+          "ph": "復盤",
           "tx": "看板對齊，持續加註"
         },
         {
@@ -13191,7 +13191,7 @@ export const pages = [
           "ph": "複利沉澱"
         },
         {
-          "nm": "覆盤與擴量",
+          "nm": "復盤與擴量",
           "en": "Scale",
           "start": 5,
           "span": 2,
@@ -15548,7 +15548,7 @@ export const pages = [
         "label": "資訊組",
         "default": true,
         "publicKey": "showContact",
-        "desc": "排版化的資訊清單（非按鈕控制元件）。"
+        "desc": "排版化的資訊清單（非按鈕控制項）。"
       },
       {
         "key": "contactCount",

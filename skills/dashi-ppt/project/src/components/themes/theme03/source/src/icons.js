@@ -5,7 +5,7 @@ export const ICONS = [
   { id: "04", src: "assets/3d/04.png", label: "8-bit 幽靈" },
   { id: "05", src: "assets/3d/05.png", label: "YES 氣泡" },
   { id: "06", src: "assets/3d/06.png", label: "掌機圖表" },
-  { id: "07", src: "assets/3d/07.png", label: "畫素顯示器" },
+  { id: "07", src: "assets/3d/07.png", label: "像素顯示器" },
   { id: "08", src: "assets/3d/08.png", label: "復古電腦" },
   { id: "09", src: "assets/3d/09.png", label: "拍立得" },
   { id: "10", src: "assets/3d/10.png", label: "獎盃" },

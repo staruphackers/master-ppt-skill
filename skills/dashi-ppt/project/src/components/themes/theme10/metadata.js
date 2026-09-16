@@ -4876,12 +4876,12 @@ export const pages = [
           "desc": "按規則自動再平衡"
         },
         {
-          "label": "覆盤",
+          "label": "復盤",
           "desc": "記錄歸因反饋模型"
         },
         {
           "label": "最佳化",
-          "desc": "據覆盤微調引數"
+          "desc": "據復盤微調引數"
         },
         {
           "label": "彙報",
@@ -6594,8 +6594,8 @@ export const pages = [
       ],
       "overline": "現場 · ON LOCATION",
       "title": "把紀律，建在看得見的地方",
-      "note": "從配置臺到風控屏，每一次再平衡都留痕、可回溯、可覆盤。",
-      "insetCaption": "配置控制檯 · 實時",
+      "note": "從配置臺到風控屏，每一次再平衡都留痕、可回溯、可復盤。",
+      "insetCaption": "配置控制台 · 實時",
       "idPrefix": "inset"
     }
   },
@@ -9990,7 +9990,7 @@ export const pages = [
         "客戶面談",
         "研究臺",
         "路演現場",
-        "團隊覆盤",
+        "團隊復盤",
         "頒獎之夜"
       ],
       "idPrefix": "collage",
@@ -12261,7 +12261,7 @@ export const pages = [
         },
         {
           "name": "騰訊控股",
-          "role": "平臺 · 現金流"
+          "role": "平台 · 現金流"
         },
         {
           "name": "長江電力",

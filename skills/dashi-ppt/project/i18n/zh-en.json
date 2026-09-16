@@ -16136,5 +16136,16 @@
  "x 軸上的類別分組數量。": "Number of category groups on the x-axis.",
  "X/Y 軸標題顯隱": "Toggle the X/Y axis titles.",
  "X/Y 軸線與軸標題。": "X/Y axis lines and axis titles.",
- "Δ 升降徽標列": "Δ change badge column."
+ "Δ 升降徽標列": "Δ change badge column.",
+ "數據報告、市場分析、KPI 復盤、行業研究": "Data reports, market analysis, KPI reviews, industry research",
+ "資料包告、市場分析、KPI 復盤、行業研究": "Data reports, market analysis, KPI reviews, industry research",
+ "增長復盤、商業計劃、融資路演、市場擴張方案": "Growth reviews, business plans, fundraising pitches, market expansion plans",
+ "56 · 數據平台延展 / DATABRICKS": "56 · Data platform expansion / DATABRICKS",
+ "56 · 資料平台延展 / DATABRICKS": "56 · Data platform expansion / DATABRICKS",
+ "排版化的資訊清單（非按鈕控制項）。": "Typographic information list (not a button control).",
+ "排行展示的平台條目數量": "Number of platform entries shown in the ranking.",
+ "平台層帶數量(2–5)": "Number of platform tier bands (2-5).",
+ "平台架構的層級（tier）數量。": "Number of tiers in the platform architecture.",
+ "是否突出某一個平台層帶": "Whether to emphasize a specific platform tier band.",
+ "逐級抬高 / 等高平台": "Stepped-up tiers / equal-height platforms."
 }

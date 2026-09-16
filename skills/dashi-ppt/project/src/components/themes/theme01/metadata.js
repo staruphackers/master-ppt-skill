@@ -4916,7 +4916,7 @@ export const pages = [
           "title": "明星兌現區",
           "en": "PROVEN STARS",
           "tone": "green",
-          "desc": "算力雲、資料平臺兼具融資熱度與收入確定性，“賣鏟子”邏輯，需求來自訓練與企業 AI 化。",
+          "desc": "算力雲、資料平台兼具融資熱度與收入確定性，“賣鏟子”邏輯，需求來自訓練與企業 AI 化。",
           "chips": [
             "CoreWeave",
             "Databricks",
@@ -7272,7 +7272,7 @@ export const pages = [
       ],
       "points": [
         {
-          "h": "X 平臺資料",
+          "h": "X 平台資料",
           "d": "背靠 X（原 Twitter），擁有海量實時社交資料"
         },
         {
@@ -10090,7 +10090,7 @@ export const pages = [
           "span": 3,
           "status": "active",
           "milestone": "預計掛牌",
-          "meta": "資料 + AI 平臺"
+          "meta": "資料 + AI 平台"
         },
         {
           "label": "xAI",
@@ -11648,7 +11648,7 @@ export const pages = [
           "tone": "light"
         }
       ],
-      "sub": "十二個詞，覆盤這一年 AI 融資的全部敘事",
+      "sub": "十二個詞，復盤這一年 AI 融資的全部敘事",
       "meta": "2025 · WORD WALL",
       "tags": [
         {
@@ -11717,7 +11717,7 @@ export const pages = [
       ],
       "takeaway": "一句話 —— 錢，正在向少數共識快速收口。",
       "takeawayHighlight": "少數共識",
-      "caption": "標籤牆 · 十二個熱詞，一頁覆盤全年敘事",
+      "caption": "標籤牆 · 十二個熱詞，一頁復盤全年敘事",
       "itemCount": 10,
       "highlight": true,
       "highlightIndex": 0,

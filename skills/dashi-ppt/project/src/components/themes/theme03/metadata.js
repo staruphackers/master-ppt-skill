@@ -111,7 +111,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -126,7 +126,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -293,7 +293,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -308,7 +308,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -556,7 +556,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -571,7 +571,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -774,7 +774,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -789,7 +789,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -1017,7 +1017,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -1032,7 +1032,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -1247,7 +1247,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -1262,7 +1262,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -1593,7 +1593,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -1608,7 +1608,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -1833,7 +1833,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -1848,7 +1848,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -2067,7 +2067,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -2082,7 +2082,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -2341,7 +2341,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -2356,7 +2356,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -2588,7 +2588,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -2603,7 +2603,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -2847,7 +2847,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -2862,7 +2862,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -2978,7 +2978,7 @@ export const pages = [
         {
           "co": "Databricks",
           "amt": 5,
-          "sector": "AI 基礎設施 · 資料平臺",
+          "sector": "AI 基礎設施 · 資料平台",
           "layer": "下游"
         },
         {
@@ -3112,7 +3112,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -3127,7 +3127,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -3361,7 +3361,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -3376,7 +3376,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -3451,7 +3451,7 @@ export const pages = [
         {
           "name": "明星兌現區",
           "tag": "熱度高 · 兌現高",
-          "desc": "基礎設施、算力雲、資料平臺兼具融資熱度與收入確定性，典型的「賣鏟子」邏輯。",
+          "desc": "基礎設施、算力雲、資料平台兼具融資熱度與收入確定性，典型的「賣鏟子」邏輯。",
           "chips": [
             "CoreWeave",
             "Databricks",
@@ -3597,7 +3597,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -3612,7 +3612,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -3871,7 +3871,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -3886,7 +3886,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -4186,7 +4186,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -4201,7 +4201,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -4270,7 +4270,7 @@ export const pages = [
         "t013Placeholder": "應用 / 產品介面配圖 / DROP IMAGE",
         "t014Placeholder": "應用 / 產品介面配圖 / DROP IMAGE",
         "t015Placeholder": "純文字版式 · 無配圖",
-        "t016": "↗ 企業搜尋 · 工作流 · 資料平臺介面"
+        "t016": "↗ 企業搜尋 · 工作流 · 資料平台介面"
       },
       "chips": [
         "落地路徑清晰 · 已驗證 PMF",
@@ -4403,7 +4403,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -4418,7 +4418,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -4648,7 +4648,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -4663,7 +4663,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -4725,7 +4725,7 @@ export const pages = [
         "t005": "「第三次創業」",
         "t006": "2023 年由埃隆·馬斯克創立，2024 年 11 月完成 50 億美元融資、估值達 500 億美元。 體量雖不及 OpenAI / Anthropic，但增速驚人——從成立到躋身頭部梯隊僅用 18 個月。",
         "t007": "↳ 差異化優勢",
-        "t008": "背靠 X（原 Twitter）平臺的海量實時社交資料，並與特斯拉自動駕駛團隊協同； Grok 模型主打「幽默 · 實時 · 無審查」，差異化定位明顯。",
+        "t008": "背靠 X（原 Twitter）平台的海量實時社交資料，並與特斯拉自動駕駛團隊協同； Grok 模型主打「幽默 · 實時 · 無審查」，差異化定位明顯。",
         "t009Placeholder": "案例配圖 / DROP IMAGE",
         "t010Placeholder": "案例配圖 / DROP IMAGE",
         "t011Placeholder": "純文字案例 · 無配圖",
@@ -4903,7 +4903,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -4918,7 +4918,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -5139,7 +5139,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -5154,7 +5154,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -5388,7 +5388,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -5403,7 +5403,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -5615,7 +5615,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -5630,7 +5630,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -5871,7 +5871,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -5886,7 +5886,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -6134,7 +6134,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -6149,7 +6149,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -6355,7 +6355,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -6370,7 +6370,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -6642,7 +6642,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -6657,7 +6657,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -6873,7 +6873,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -6888,7 +6888,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -7113,7 +7113,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -7128,7 +7128,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -7336,7 +7336,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -7351,7 +7351,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -7586,7 +7586,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -7601,7 +7601,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -7788,7 +7788,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -7803,7 +7803,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -8039,7 +8039,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -8054,7 +8054,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -8268,7 +8268,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -8283,7 +8283,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -8504,7 +8504,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -8519,7 +8519,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -8753,7 +8753,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -8768,7 +8768,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -8982,7 +8982,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -8997,7 +8997,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -9254,7 +9254,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -9269,7 +9269,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -9466,7 +9466,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -9481,7 +9481,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -9681,7 +9681,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -9696,7 +9696,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -9936,7 +9936,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -9951,7 +9951,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -10238,7 +10238,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -10253,7 +10253,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -10542,7 +10542,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -10557,7 +10557,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -10827,7 +10827,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -10842,7 +10842,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -11076,7 +11076,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -11091,7 +11091,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -11346,7 +11346,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -11361,7 +11361,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -11592,7 +11592,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -11607,7 +11607,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -11683,7 +11683,7 @@ export const pages = [
           "en": "KEY ACTIVITIES",
           "g": 0,
           "items": [
-            "平臺研發",
+            "平台研發",
             "運營履約"
           ]
         },
@@ -11896,7 +11896,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -11911,7 +11911,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -12151,7 +12151,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -12166,7 +12166,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -12402,7 +12402,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -12417,7 +12417,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -12708,7 +12708,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -12723,7 +12723,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -12957,7 +12957,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -12972,7 +12972,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -13259,7 +13259,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -13274,7 +13274,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -13526,7 +13526,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -13541,7 +13541,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -13777,7 +13777,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -13792,7 +13792,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -14016,7 +14016,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -14031,7 +14031,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -14280,7 +14280,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -14295,7 +14295,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -14586,7 +14586,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -14601,7 +14601,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -14674,7 +14674,7 @@ export const pages = [
         },
         {
           "name": "Databricks",
-          "note": "資料平臺",
+          "note": "資料平台",
           "gx": 0.78,
           "gy": 0.83,
           "w": 0.82
@@ -14861,7 +14861,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -14876,7 +14876,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -15108,7 +15108,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -15123,7 +15123,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -15350,7 +15350,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -15365,7 +15365,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -15601,7 +15601,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -15616,7 +15616,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -15862,7 +15862,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -15877,7 +15877,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -16092,7 +16092,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -16107,7 +16107,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -16374,7 +16374,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -16389,7 +16389,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -16468,7 +16468,7 @@ export const pages = [
         },
         {
           "name": "Databricks",
-          "seg": "下游 · 資料平臺",
+          "seg": "下游 · 資料平台",
           "heat": 5,
           "deliver": 5,
           "moat": 4,
@@ -16650,7 +16650,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -16665,7 +16665,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -16904,7 +16904,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -16919,7 +16919,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -17126,7 +17126,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -17141,7 +17141,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -17365,7 +17365,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -17380,7 +17380,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -17617,7 +17617,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -17632,7 +17632,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -17883,7 +17883,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -17898,7 +17898,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -18101,7 +18101,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -18116,7 +18116,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -18352,7 +18352,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -18367,7 +18367,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -18452,7 +18452,7 @@ export const pages = [
           "type": "資料 × 協同",
           "depth": 3,
           "points": [
-            "背靠 X 平臺海量實時社交資料",
+            "背靠 X 平台海量實時社交資料",
             "與特斯拉自動駕駛團隊協同多模態感知",
             "Grok 主打「幽默 · 實時 · 無審查」差異化"
           ]
@@ -18603,7 +18603,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -18618,7 +18618,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -18842,7 +18842,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -18857,7 +18857,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -19066,7 +19066,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -19081,7 +19081,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -19261,7 +19261,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -19276,7 +19276,7 @@ export const pages = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {

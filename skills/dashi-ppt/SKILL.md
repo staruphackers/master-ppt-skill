@@ -73,7 +73,7 @@ node <skill-root>/scripts/check_latest_version.mjs
   - `theme08` 黑金實驗風 | 適合: 高階釋出 / 品牌提案 | 人群: 高階品牌 / 創意總監
   - `theme09` 深藍雜誌風 | 適合: 品牌故事 / 人物訪談 | 人群: 公關團隊 / 媒體編輯
   - `theme10` 金色指數風 | 適合: 金融資料 / 投資報告 | 人群: 投資機構 / 金融分析師
-  - `theme11` 高能增長風 | 適合: 增長覆盤 / 商業計劃 | 人群: 創業者 / 增長團隊
+  - `theme11` 高能增長風 | 適合: 增長復盤 / 商業計劃 | 人群: 創業者 / 增長團隊
   - `theme12` 聲波霓虹風 | 適合: 音樂娛樂 / 潮流活動 | 人群: 娛樂品牌 / 活動策劃
 <!-- theme-choice-hints:end -->
 - 不使用舊 token、舊主題、舊媒體槽、舊風格分支或舊入場動畫控制。
@@ -143,7 +143,7 @@ node <skill-root>/scripts/check_latest_version.mjs
 9. 渲染後核對素材路徑,缺失時補最終 `ppt/assets`。
 10. 確認指令碼完成 `validate:swiss` 和 `validate:goal-copy` 校驗。
 11. 渲染指令碼會啟動本地 HTTP 預覽服務並輸出 `http://127.0.0.1:<port>/`;需要指定埠時設定 `DASHI_PPT_PREVIEW_PORT` 後再執行指令碼(埠用 5200-5999 段,4178/4300/4400 為使用者保留埠不可用)。只能用該預覽服務,不得用 `python -m http.server`、`npx serve` 等靜態伺服器替代:靜態伺服器沒有匯出和自動儲存介面。預覽服務下編輯自動儲存到 `index.html` 本體;`file://` 開啟的本地檔案不自動儲存,交付前需匯出。
-12. 對最終產物執行成果驗收:預設 comparison 應按邏輯頁連續輸出全部 4N 頁,selected-only 輸出 N 頁;逐組核對 4 個方案內容一致、構圖不同,並確認 v4 無模板屬性控制元件但可選擇、儲存和匯出。
+12. 對最終產物執行成果驗收:預設 comparison 應按邏輯頁連續輸出全部 4N 頁,selected-only 輸出 N 頁;逐組核對 4 個方案內容一致、構圖不同,並確認 v4 無模板屬性控制項但可選擇、儲存和匯出。
 13. 狀態為“待修正”時定位不合格頁,修改文案/資料/媒體,必要時更換 layout 或重新生成對應頁;重新渲染、執行全部校驗並複驗。
 14. 執行 `node <skill-root>/scripts/check_latest_version.mjs` 做靜默版本檢查。
 15. 驗收透過後按交付格式回覆:HTML 只給 `http://127.0.0.1:<port>/`;PPTX 呼叫 `/api/export-editable-pptx` 後只給檔案路徑或下載結果。
