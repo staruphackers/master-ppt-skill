@@ -5,7 +5,6 @@ on:
     branches: [localize/zh-tw]
     paths:
       - .github/workflows/qa-zh-tw.yml
-      - tools/refine-zh-tw.cjs
       - skills/dashi-ppt/**
 
 permissions:
@@ -17,29 +16,20 @@ concurrency:
 
 jobs:
   browser-smoke:
-    if: github.repository == 'staruphackers/master-ppt-skill' && github.ref == 'refs/heads/localize/zh-tw'
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
-          ref: localize/zh-tw
           persist-credentials: false
-      - name: Install locked project and isolated maintenance dependencies
+      - name: Prepare the isolated test environment
         shell: bash
         run: |
           set -euo pipefail
           npm ci --prefix skills/dashi-ppt/project --registry=https://registry.npmjs.org --ignore-scripts --no-audit --no-fund
-          npm install --prefix "$RUNNER_TEMP/zh-tw-tools" --registry=https://registry.npmjs.org --ignore-scripts --no-audit --no-fund @babel/parser@7.26.10 yaml@2.7.0
-      - name: Apply reviewed Taiwan terminology and check syntax
-        env:
-          ZH_TW_TOOLS: ${{ runner.temp }}/zh-tw-tools
-        run: |
-          node --check tools/refine-zh-tw.cjs
-          node tools/refine-zh-tw.cjs
-          git diff --check
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-noto-cjk
+          fc-match -f '%{family}\n' 'Noto Sans CJK TC'
       - name: Render all themes and verify browser interactions
         shell: bash
         env:
@@ -71,10 +61,12 @@ jobs:
           const dictionary = loadI18nDictionary();
           for (const theme of themes) assert.equal(typeof dictionary[THEME_PACK_OPTIONS[theme].label], 'string');
           const results = { browserPath: 'Playwright; Browser plugin not available in this session',
+            environment: 'Ubuntu; preinstalled Chrome; Noto CJK fonts installed only in the test runner',
             viewports: [{ width: 1440, height: 900 }, { width: 390, height: 844 }],
             themes: themes.length, layouts: THEME_PAGES.length,
             controls: THEME_PAGES.reduce((n, p) => n + (p.controls?.length || 0), 0),
-            dictionaryEntries: Object.keys(dictionary).length, checks: [], status: 'running' };
+            dictionaryEntries: Object.keys(dictionary).length, checks: [], status: 'running',
+            limitations: ['Two layouts per theme are sampled, not all 1020 layouts.', 'Actual PPTX/PDF export is not exercised.', 'External requests are blocked; raster demo images are not translated.'] };
           for (const theme of themes) {
             const pages = THEME_PAGES.filter(p => p.themeKey === theme).slice(0, 2);
             const outFile = path.join(output, theme, 'index.html');
@@ -113,15 +105,16 @@ jobs:
             const context = await browser.newContext({ locale: 'zh-TW', viewport: { width: 1440, height: 900 } });
             await isolate(context);
             const page = await context.newPage();
-            let errors = [];
+            let errors = [], consoleErrors = [];
             page.on('pageerror', error => errors.push(error.message));
+            page.on('console', message => { if (message.type() === 'error') consoleErrors.push(message.text()); });
             const snapshot = () => page.evaluate(() => JSON.stringify({
               deck: document.querySelector('#deck')?.getAttribute('style'),
               slides: [...document.querySelectorAll('#deck .slide')].map(e => ({
                 cls: e.className, x: Math.round(e.getBoundingClientRect().x), display: getComputedStyle(e).display,
                 opacity: getComputedStyle(e).opacity, hidden: e.getAttribute('aria-hidden') })) }));
             for (const theme of themes) {
-              errors = [];
+              errors = []; consoleErrors = [];
               await page.goto(`${origin}/${theme}/index.html`, { waitUntil: 'load' });
               await page.waitForSelector('.imported-theme-root > *', { timeout: 30000 });
               await page.waitForTimeout(1000);
@@ -131,6 +124,7 @@ jobs:
               assert.ok(visible.trim().length > 30, `${theme}: page is not blank`);
               assert.doesNotMatch(visible, /导出|保存|视频|设置|编辑|点击|模块|默认|缩略|简体中文/, `${theme}: simplified UI text`);
               assert.equal(errors.length, 0, `${theme}: ${errors.join('; ')}`);
+              assert.equal(await page.locator('vite-error-overlay,nextjs-portal').count(), 0);
               const before = await snapshot();
               await page.keyboard.press('ArrowRight');
               await page.waitForTimeout(1000);
@@ -139,8 +133,7 @@ jobs:
                 await page.locator('#preview-lang-toggle').click();
                 await page.waitForFunction(() => document.documentElement.lang === 'en');
                 assert.match(await page.locator('#preview-export-main').innerText(), /export/i);
-                const expectedTheme = dictionary[THEME_PACK_OPTIONS[theme].label];
-                assert.equal((await page.locator('#preview-theme-pack').innerText()).trim(), expectedTheme);
+                assert.equal((await page.locator('#preview-theme-pack').innerText()).trim(), dictionary[THEME_PACK_OPTIONS[theme].label]);
                 await page.screenshot({ path: path.join(output, 'english-ui.png'), fullPage: false });
                 await page.reload({ waitUntil: 'load' });
                 await page.waitForFunction(() => document.documentElement.lang === 'en');
@@ -154,9 +147,11 @@ jobs:
                 await page.screenshot({ path: path.join(output, 'mobile-zh-TW.png'), fullPage: false });
                 await page.setViewportSize({ width: 1440, height: 900 });
               }
-              results.checks.push({ theme, sampledLayouts: 2, language: 'zh-TW', nonBlank: true, noCommonSimplifiedUI: true, pageErrors: errors, nextSlide: true });
+              const unexpectedConsoleErrors = consoleErrors.filter(s => !/Failed to load resource: net::ERR_FAILED|Failed to load resource: the server responded with a status of 404/.test(s));
+              assert.equal(unexpectedConsoleErrors.length, 0, unexpectedConsoleErrors.join('; '));
+              results.checks.push({ theme, sampledLayouts: 2, language: 'zh-TW', nonBlank: true, noCommonSimplifiedUI: true,
+                pageErrors: errors, unexpectedConsoleErrors, ignoredResourceErrors: consoleErrors.length - unexpectedConsoleErrors.length, nextSlide: true });
             }
-            // UI language follows the browser or persisted user choice, independently of deck copy.
             const englishContext = await browser.newContext({ locale: 'en-US', viewport: { width: 1440, height: 900 } });
             await isolate(englishContext);
             const english = await englishContext.newPage();
@@ -179,20 +174,6 @@ jobs:
           }
           JS
           "$PROJECT/node_modules/.bin/tsx" "$QA_OUTPUT/check.mjs"
-      - name: Commit reviewed terminology only after successful tests
-        shell: bash
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          test "$(git branch --show-current)" = 'localize/zh-tw'
-          git add -u -- README.md README.en.md .claude-plugin .github/ISSUE_TEMPLATE npm-dist skills docs
-          if git diff --cached --quiet; then exit 0; fi
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'fix(i18n): polish Taiwan terminology after browser verification'
-          header="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
-          git -c "http.https://github.com/.extraheader=$header" push origin HEAD:refs/heads/localize/zh-tw
       - name: Preserve screenshots and test evidence (no source or font files)
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
