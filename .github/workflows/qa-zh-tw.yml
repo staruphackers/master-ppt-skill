@@ -103,6 +103,13 @@ jobs:
             const text = document.querySelector('#preview-export-main')?.textContent || '';
             return document.documentElement.lang === lang && (lang === 'en' ? /export/i.test(text) : text.includes('匯出'));
           }, lang, { timeout: 15000 });
+          async function capture(page, name) {
+            await page.waitForLoadState('load');
+            await page.waitForSelector('.imported-theme-root > *');
+            await page.evaluate(() => document.fonts.ready);
+            await page.waitForTimeout(1800);
+            await page.screenshot({ path: path.join(output, name), fullPage: false });
+          }
           let activePage;
           try {
             const page = activePage = await newPage('zh-TW');
@@ -134,16 +141,21 @@ jobs:
                 await waitLanguage(page, 'en');
                 await page.waitForFunction(expected => document.querySelector('#preview-theme-pack')?.textContent.trim() === expected,
                   dictionary[THEME_PACK_OPTIONS[theme].label]);
-                await page.screenshot({ path: path.join(output, 'english-ui.png'), fullPage: false });
+                await capture(page, 'english-ui.png');
                 await page.reload({ waitUntil: 'load' });
                 await waitLanguage(page, 'en');
                 await page.locator('#preview-lang-toggle').click();
                 await waitLanguage(page, 'zh-TW');
                 results.languageToggle = { toEnglish: true, englishThemeLabel: true, persistedAcrossReload: true, backToTraditional: true };
-                await page.screenshot({ path: path.join(output, 'desktop-zh-TW.png'), fullPage: false });
+                await capture(page, 'desktop-zh-TW.png');
                 await page.setViewportSize({ width: 390, height: 844 });
-                await page.waitForTimeout(500);
-                await page.screenshot({ path: path.join(output, 'mobile-zh-TW.png'), fullPage: false });
+                await capture(page, 'mobile-zh-TW.png');
+                await page.locator('#preview-panel-collapse').click();
+                await page.waitForFunction(() => document.body.classList.contains('editor-panels-collapsed'));
+                await capture(page, 'mobile-canvas-zh-TW.png');
+                results.mobilePanelCollapse = true;
+                await page.locator('#preview-panel-collapse').click();
+                await page.waitForFunction(() => !document.body.classList.contains('editor-panels-collapsed'));
                 await page.setViewportSize({ width: 1440, height: 900 });
               }
               assert.equal(errors.length, 0, `${theme}: ${errors.join('; ')}`);
