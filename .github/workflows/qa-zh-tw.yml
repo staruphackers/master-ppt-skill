@@ -105,7 +105,7 @@ jobs:
           }, lang, { timeout: 15000 });
           async function capture(page, name) {
             await page.waitForLoadState('load');
-            await page.waitForSelector('.imported-theme-root > *');
+            await page.waitForSelector('.imported-theme-root > *:visible');
             await page.evaluate(() => document.fonts.ready);
             await page.waitForTimeout(1800);
             await page.screenshot({ path: path.join(output, name), fullPage: false });
@@ -124,7 +124,7 @@ jobs:
             for (const theme of themes) {
               errors = []; consoleErrors = [];
               await page.goto(`${origin}/${theme}/index.html`, { waitUntil: 'load' });
-              await page.waitForSelector('.imported-theme-root > *', { timeout: 30000 });
+              await page.waitForSelector('.imported-theme-root > *:visible', { timeout: 30000 });
               await waitLanguage(page, 'zh-TW');
               await page.waitForTimeout(1000);
               assert.match(await page.title(), /繁體中文介面驗證/);
@@ -167,7 +167,7 @@ jobs:
             const english = activePage = await newPage('en-US'), englishErrors = [];
             english.on('pageerror', error => englishErrors.push(error.message));
             await english.goto(`${origin}/english/index.html`, { waitUntil: 'load' });
-            await english.waitForSelector('.imported-theme-root > *', { timeout: 30000 });
+            await english.waitForSelector('.imported-theme-root > *:visible', { timeout: 30000 });
             await waitLanguage(english, 'en');
             assert.equal(englishErrors.length, 0, englishErrors.join('; '));
             results.englishBrowserMode = true;
