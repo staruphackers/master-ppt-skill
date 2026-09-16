@@ -5,24 +5,41 @@ on:
     branches: [localize/zh-tw]
     paths:
       - .github/workflows/qa-zh-tw.yml
+      - tools/refine-zh-tw.cjs
       - skills/dashi-ppt/**
 
 permissions:
   contents: read
 
+concurrency:
+  group: zh-tw-browser-qa
+  cancel-in-progress: false
+
 jobs:
   browser-smoke:
+    if: github.repository == 'staruphackers/master-ppt-skill' && github.ref == 'refs/heads/localize/zh-tw'
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
+          ref: localize/zh-tw
           persist-credentials: false
-      - name: Install locked project dependencies without lifecycle scripts
+      - name: Install locked project and isolated maintenance dependencies
         shell: bash
         run: |
           set -euo pipefail
           npm ci --prefix skills/dashi-ppt/project --registry=https://registry.npmjs.org --ignore-scripts --no-audit --no-fund
+          npm install --prefix "$RUNNER_TEMP/zh-tw-tools" --registry=https://registry.npmjs.org --ignore-scripts --no-audit --no-fund @babel/parser@7.26.10 yaml@2.7.0
+      - name: Apply reviewed Taiwan terminology and check syntax
+        env:
+          ZH_TW_TOOLS: ${{ runner.temp }}/zh-tw-tools
+        run: |
+          node --check tools/refine-zh-tw.cjs
+          node tools/refine-zh-tw.cjs
+          git diff --check
       - name: Render all themes and verify browser interactions
         shell: bash
         env:
@@ -39,8 +56,7 @@ jobs:
           import assert from 'node:assert/strict';
           import { createRequire } from 'node:module';
           import { pathToFileURL } from 'node:url';
-          const project = process.env.PROJECT;
-          const output = process.env.QA_OUTPUT;
+          const project = process.env.PROJECT, output = process.env.QA_OUTPUT;
           const req = createRequire(path.join(project, 'package.json'));
           const { chromium } = req('playwright-core');
           const { renderDeck } = await import(pathToFileURL(path.join(project, 'src/renderDeck.jsx')));
@@ -53,14 +69,12 @@ jobs:
           assert.equal(normalizeDeckLanguage('zh-CN'), 'zh');
           assert.equal(normalizeDeckLanguage('en-US'), 'en');
           const dictionary = loadI18nDictionary();
-          for (const theme of themes) {
-            assert.equal(typeof dictionary[THEME_PACK_OPTIONS[theme].label], 'string');
-          }
+          for (const theme of themes) assert.equal(typeof dictionary[THEME_PACK_OPTIONS[theme].label], 'string');
           const results = { browserPath: 'Playwright; Browser plugin not available in this session',
+            viewports: [{ width: 1440, height: 900 }, { width: 390, height: 844 }],
             themes: themes.length, layouts: THEME_PAGES.length,
             controls: THEME_PAGES.reduce((n, p) => n + (p.controls?.length || 0), 0),
-            dictionaryEntries: Object.keys(dictionary).length, checks: [] };
-          const roots = new Map();
+            dictionaryEntries: Object.keys(dictionary).length, checks: [], status: 'running' };
           for (const theme of themes) {
             const pages = THEME_PAGES.filter(p => p.themeKey === theme).slice(0, 2);
             const outFile = path.join(output, theme, 'index.html');
@@ -68,12 +82,12 @@ jobs:
               slides: pages.map((p, i) => ({ id: `qa-${theme}-${i}`, layout: p.key, props: {} })) },
               { outFile, includeThemeSwitcher: true });
             assert.match(fs.readFileSync(outFile, 'utf8'), /<html lang="zh-TW"/);
-            roots.set(theme, path.dirname(outFile));
           }
           const englishFile = path.join(output, 'english', 'index.html');
           renderDeck({ title: 'English UI verification', language: 'en', themePack: themes[0],
             slides: THEME_PAGES.filter(p => p.themeKey === themes[0]).slice(0, 2).map(p => ({ layout: p.key, props: {} })) },
             { outFile: englishFile, includeThemeSwitcher: true });
+          assert.match(fs.readFileSync(englishFile, 'utf8'), /<html lang="en"/);
           const types = { '.html': 'text/html; charset=utf-8', '.js': 'application/javascript', '.mjs': 'application/javascript',
             '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png',
             '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.woff2': 'font/woff2' };
@@ -91,12 +105,13 @@ jobs:
           const chrome = ['/usr/bin/google-chrome', '/usr/bin/google-chrome-stable', '/usr/bin/chromium', '/usr/bin/chromium-browser'].find(fs.existsSync);
           assert.ok(chrome, 'A preinstalled Chrome/Chromium is required; no browser install is performed');
           const browser = await chromium.launch({ headless: true, executablePath: chrome, args: ['--no-sandbox'] });
+          const isolate = context => context.route('**/*', route => {
+            const url = route.request().url();
+            return url.startsWith(origin) || /^(data:|blob:)/.test(url) ? route.continue() : route.abort();
+          });
           try {
             const context = await browser.newContext({ locale: 'zh-TW', viewport: { width: 1440, height: 900 } });
-            await context.route('**/*', route => {
-              const url = route.request().url();
-              return url.startsWith(origin) || /^(data:|blob:)/.test(url) ? route.continue() : route.abort();
-            });
+            await isolate(context);
             const page = await context.newPage();
             let errors = [];
             page.on('pageerror', error => errors.push(error.message));
@@ -109,7 +124,7 @@ jobs:
               errors = [];
               await page.goto(`${origin}/${theme}/index.html`, { waitUntil: 'load' });
               await page.waitForSelector('.imported-theme-root > *', { timeout: 30000 });
-              await page.waitForTimeout(1500);
+              await page.waitForTimeout(1000);
               assert.match(await page.title(), /繁體中文介面驗證/);
               assert.equal(await page.locator('html').getAttribute('lang'), 'zh-TW');
               const visible = await page.locator('body').innerText();
@@ -118,31 +133,44 @@ jobs:
               assert.equal(errors.length, 0, `${theme}: ${errors.join('; ')}`);
               const before = await snapshot();
               await page.keyboard.press('ArrowRight');
-              await page.waitForTimeout(1200);
-              const after = await snapshot();
-              assert.notEqual(after, before, `${theme}: next-slide interaction must change page state`);
+              await page.waitForTimeout(1000);
+              assert.notEqual(await snapshot(), before, `${theme}: next-slide interaction must change page state`);
               if (theme === themes[0]) {
+                await page.locator('#preview-lang-toggle').click();
+                await page.waitForFunction(() => document.documentElement.lang === 'en');
+                assert.match(await page.locator('#preview-export-main').innerText(), /export/i);
+                const expectedTheme = dictionary[THEME_PACK_OPTIONS[theme].label];
+                assert.equal((await page.locator('#preview-theme-pack').innerText()).trim(), expectedTheme);
+                await page.screenshot({ path: path.join(output, 'english-ui.png'), fullPage: false });
+                await page.reload({ waitUntil: 'load' });
+                await page.waitForFunction(() => document.documentElement.lang === 'en');
+                await page.locator('#preview-lang-toggle').click();
+                await page.waitForFunction(() => document.documentElement.lang === 'zh-TW');
+                assert.match(await page.locator('#preview-export-main').innerText(), /匯出/);
+                results.languageToggle = { toEnglish: true, englishThemeLabel: true, persistedAcrossReload: true, backToTraditional: true };
                 await page.screenshot({ path: path.join(output, 'desktop-zh-TW.png'), fullPage: false });
-                results.controlsSample = await page.locator('button,select').evaluateAll(nodes => nodes.map(n => ({
-                  tag: n.tagName, id: n.id, text: n.textContent.trim().slice(0, 100),
-                  title: n.title, ariaLabel: n.getAttribute('aria-label') })).slice(0, 60));
                 await page.setViewportSize({ width: 390, height: 844 });
-                await page.waitForTimeout(700);
+                await page.waitForTimeout(500);
                 await page.screenshot({ path: path.join(output, 'mobile-zh-TW.png'), fullPage: false });
                 await page.setViewportSize({ width: 1440, height: 900 });
               }
-              results.checks.push({ theme, language: 'zh-TW', nonBlank: true, noSimplifiedUI: true, pageErrors: errors, nextSlide: true });
+              results.checks.push({ theme, sampledLayouts: 2, language: 'zh-TW', nonBlank: true, noCommonSimplifiedUI: true, pageErrors: errors, nextSlide: true });
             }
-            errors = [];
-            await page.goto(`${origin}/english/index.html`, { waitUntil: 'load' });
-            await page.waitForSelector('.imported-theme-root > *', { timeout: 30000 });
-            await page.waitForTimeout(1000);
-            assert.equal(await page.locator('html').getAttribute('lang'), 'en');
-            assert.match(await page.locator('body').innerText(), /export|reset|slide|theme/i);
-            assert.equal(errors.length, 0, errors.join('; '));
-            await page.screenshot({ path: path.join(output, 'english-ui.png'), fullPage: false });
-            results.englishMode = true;
+            // UI language follows the browser or persisted user choice, independently of deck copy.
+            const englishContext = await browser.newContext({ locale: 'en-US', viewport: { width: 1440, height: 900 } });
+            await isolate(englishContext);
+            const english = await englishContext.newPage();
+            const englishErrors = [];
+            english.on('pageerror', error => englishErrors.push(error.message));
+            await english.goto(`${origin}/english/index.html`, { waitUntil: 'load' });
+            await english.waitForSelector('.imported-theme-root > *', { timeout: 30000 });
+            await english.waitForFunction(() => document.documentElement.lang === 'en');
+            assert.match(await english.locator('#preview-export-main').innerText(), /export/i);
+            assert.equal(englishErrors.length, 0, englishErrors.join('; '));
+            results.englishBrowserMode = true;
             results.status = 'passed';
+          } catch (error) {
+            results.status = 'failed'; results.error = error.message; throw error;
           } finally {
             fs.writeFileSync(path.join(output, 'results.json'), JSON.stringify(results, null, 2));
             console.log(JSON.stringify(results, null, 2));
@@ -151,9 +179,23 @@ jobs:
           }
           JS
           "$PROJECT/node_modules/.bin/tsx" "$QA_OUTPUT/check.mjs"
+      - name: Commit reviewed terminology only after successful tests
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = 'localize/zh-tw'
+          git add -u -- README.md README.en.md .claude-plugin .github/ISSUE_TEMPLATE npm-dist skills docs
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'fix(i18n): polish Taiwan terminology after browser verification'
+          header="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          git -c "http.https://github.com/.extraheader=$header" push origin HEAD:refs/heads/localize/zh-tw
       - name: Preserve screenshots and test evidence (no source or font files)
         if: always()
-        uses: actions/upload-artifact@v4.6.2
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: zh-TW-browser-evidence
           path: |
