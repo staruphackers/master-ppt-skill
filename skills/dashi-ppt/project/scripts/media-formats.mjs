@@ -1,4 +1,4 @@
-// 每项的第一个扩展名用于 data: URL 落盘，其余扩展名和 aliases 共享同一格式。
+// 每項的第一個副檔名用於 data: URL 落盤，其餘副檔名和 aliases 共享同一格式。
 export const MEDIA_FORMATS = [
   { kind: 'image', mime: 'image/png', extensions: ['.png'] },
   { kind: 'image', mime: 'image/jpeg', extensions: ['.jpg', '.jpeg'] },

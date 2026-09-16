@@ -78,7 +78,7 @@ export function setRDAccent(value) {
 export function getRDAccent() { return _accent; }
 
 export const FONTS = {
-  sans: '"Archivo","Noto Sans SC",system-ui,sans-serif',
+  sans: '"Archivo","Noto Sans TC",system-ui,sans-serif',
   mono: '"Space Mono",ui-monospace,monospace',
 };
 

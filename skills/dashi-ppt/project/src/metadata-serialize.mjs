@@ -1,7 +1,7 @@
-// 单一规范的「主题页 -> generated-metadata 记录」序列化。
-// JAD-174:此前 update-generated-metadata.mjs(完整:含 clamp + theme09 修正)与
-// import-claude-themes.jsx(只 normalizePublicControls)各写一份 generated-metadata.js,
-// 导致导入产物不经第二遍 metadata:update 就不合 CI。两个 writer 现共用本模块,杜绝漂移。
+// 單一規範的「主題頁 -> generated-metadata 記錄」序列化。
+// JAD-174:此前 update-generated-metadata.mjs(完整:含 clamp + theme09 修正)與
+// import-claude-themes.jsx(只 normalizePublicControls)各寫一份 generated-metadata.js,
+// 導致匯入產物不經第二遍 metadata:update 就不合 CI。兩個 writer 現共用本模組,杜絕漂移。
 import { normalizePublicControls, sanitizeImportedControls } from './control-naming.mjs';
 import {
   clampCountControlLimits,
@@ -60,9 +60,9 @@ function normalizeTheme09LabelTypeControl(control) {
   return {
     ...control,
     options: [
-      { value: 'number', label: '数字' },
-      { value: 'symbol', label: '符号' },
-      { value: 'keyword', label: '关键词' },
+      { value: 'number', label: '數字' },
+      { value: 'symbol', label: '符號' },
+      { value: 'keyword', label: '關鍵詞' },
     ],
   };
 }

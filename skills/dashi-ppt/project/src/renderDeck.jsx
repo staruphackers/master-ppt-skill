@@ -50,9 +50,9 @@ export function renderDeck(deck, { outFile, includeThemeSwitcher = deck.preview?
   const template = fs.readFileSync(path.join(ROOT, RUNTIME_TEMPLATE), 'utf8');
   const slides = renderToStaticMarkup(<>{renderDeckView(viewModel)}</>);
   let html = insertSlides(template, slides);
-  const htmlLang = language === 'en' ? 'en' : 'zh-CN';
-  html = html.replace('<html lang="zh-CN">', `<html lang="${htmlLang}" data-theme-pack="${themePackName}">`);
-  html = html.replace('<title>[必填] 替换为 PPT 标题 · Deck Title</title>', `<title>${escapeHtml(viewModel.model.title)}</title>`);
+  const htmlLang = language === 'en' ? 'en' : 'zh-TW';
+  html = html.replace('<html lang="zh-TW">', `<html lang="${htmlLang}" data-theme-pack="${themePackName}">`);
+  html = html.replace('<title>[必填] 替換為 PPT 標題 · Deck Title</title>', `<title>${escapeHtml(viewModel.model.title)}</title>`);
   html = injectPreviewOptions(html, viewModel.options, { includeThemeSwitcher, language, viewModel });
   html = injectDeckViewModel(html, serializeDeckViewModel(viewModel));
 
@@ -61,7 +61,7 @@ export function renderDeck(deck, { outFile, includeThemeSwitcher = deck.preview?
   copyRuntimeAssets(path.dirname(outFile), { usedThemeKeys: collectUsedThemeKeys(viewModel) });
 }
 
-// JAD-201:从 deck 实际用到的主题(每页 themePack)推导待打包的主题集合。
+// JAD-201:從 deck 實際用到的主題(每頁 themePack)推導待打包的主題集合。
 function collectUsedThemeKeys(viewModel) {
   const keys = new Set();
   for (const slide of viewModel.slides || []) {
@@ -109,12 +109,12 @@ function injectPreviewOptions(html, options, { includeThemeSwitcher = false, lan
   const previewOptions = {
     ...options,
     themePacks: includeThemeSwitcher ? options.themePacks : {},
-    // 多主题调试总览(showcase)不自动保存:它是共享调试产物,浏览器里的试验性编辑
-    // 不应烧回 index.html(会污染 render:themes 与其上运行的其他测试)。
+    // 多主題除錯總覽(showcase)不自動儲存:它是共享除錯產物,瀏覽器裡的試驗性編輯
+    // 不應燒回 index.html(會汙染 render:themes 與其上執行的其他測試)。
     ...(includeThemeSwitcher ? { autosave: false } : {}),
     language,
-    // 词典子集始终注入(按本 deck 用到的页面裁剪,通常几 KB):运行时语言可由
-    // 系统语言/用户手动切换决定,中文 deck 也可能要切到英文界面。
+    // 詞典子集始終注入(按本 deck 用到的頁面裁剪,通常幾 KB):執行時語言可由
+    // 系統語言/使用者手動切換決定,中文 deck 也可能要切到英文介面。
     ...(viewModel ? { i18n: buildDeckI18nDict(viewModel) } : {}),
   };
   const json = escapeScriptJson(JSON.stringify(previewOptions));
@@ -173,11 +173,11 @@ function copyRuntimeAsset(assetPath, outDir) {
   }
 }
 
-// JAD-201/203:打包这份 deck 实际用到主题的浏览器运行时。两条等价路径(见 runtime-build.mjs):
-//   - dev / 有主题源(showcase 全主题、本地迭代):源 esbuild(行为同 JAD-201)。
-//   - 安装版 / 无可读主题源:单主题拷贝预构建自包含 bundle;多主题用预构建模块链接。
-// `DASHI_PPT_THEME_RUNTIME`:auto(默认,有源走源、无源走预构建)| prebuilt(强制预构建,测试用)
-//   | source(强制源)。安装版无主题源时自动走预构建,产出与源路径等价(单一 React,水合一致)。
+// JAD-201/203:打包這份 deck 實際用到主題的瀏覽器執行時。兩條等價路徑(見 runtime-build.mjs):
+//   - dev / 有主題源(showcase 全主題、本地迭代):源 esbuild(行為同 JAD-201)。
+//   - 安裝版 / 無可讀主題源:單主題複製預構建自包含 bundle;多主題用預構建模組連結。
+// `DASHI_PPT_THEME_RUNTIME`:auto(預設,有源走源、無源走預構建)| prebuilt(強制預構建,測試用)
+//   | source(強制源)。安裝版無主題源時自動走預構建,產出與源路徑等價(單一 React,水合一致)。
 function buildImportedThemeRuntime(outFile, usedThemeKeys = []) {
   const normalized = normalizeThemeKeys(usedThemeKeys || []);
   const mode = process.env.DASHI_PPT_THEME_RUNTIME || 'auto';
@@ -185,7 +185,7 @@ function buildImportedThemeRuntime(outFile, usedThemeKeys = []) {
   const wantPrebuilt = mode === 'prebuilt' || (mode === 'auto' && !sourcePresent);
 
   if (wantPrebuilt) {
-    // 单主题(绝大多数 deck):直接拷贝预构建自包含 bundle —— 零 deck 级 esbuild、零主题源。
+    // 單主題(絕大多數 deck):直接複製預構建自包含 bundle —— 零 deck 級 esbuild、零主題源。
     if (normalized.length === 1) {
       const bundle = prebuiltBundlePath(ROOT, normalized[0]);
       if (fs.existsSync(bundle)) {
@@ -193,7 +193,7 @@ function buildImportedThemeRuntime(outFile, usedThemeKeys = []) {
         return;
       }
     }
-    // 多主题(或单主题缺自包含 bundle):用预构建 minified 模块链接(无主题源)。
+    // 多主題(或單主題缺自包含 bundle):用預構建 minified 模組連結(無主題源)。
     if (normalized.length && prebuiltModulesAvailable(normalized)) {
       buildClientRuntimeFromModules({ root: ROOT, outFile, themeKeys: normalized });
       return;
@@ -201,7 +201,7 @@ function buildImportedThemeRuntime(outFile, usedThemeKeys = []) {
     if (mode === 'prebuilt') {
       throw new Error(`prebuilt theme runtime requested but artifacts missing for [${normalized.join(', ')}]; run \`node scripts/build/build-theme-runtime.mjs\`.`);
     }
-    // mode=auto 且无源、无预构建:落到下方报错。
+    // mode=auto 且無源、無預構建:落到下方報錯。
   }
 
   if (sourcePresent && mode !== 'prebuilt') {
@@ -212,7 +212,7 @@ function buildImportedThemeRuntime(outFile, usedThemeKeys = []) {
   throw new Error(`No imported theme runtime available for [${normalized.join(', ')}] (no readable theme source and no prebuilt artifacts).`);
 }
 
-// 源路径(JAD-201):别名指向全主题签入注册表或按 usedThemeKeys 裁剪的源注册表。
+// 源路徑(JAD-201):別名指向全主題簽入登入檔或按 usedThemeKeys 裁剪的源登入檔。
 function buildImportedThemeRuntimeFromSource(outFile, usedThemeKeys = []) {
   const { registryPath, cleanup } = resolveThemeRegistryEntry(usedThemeKeys);
   try {
@@ -222,7 +222,7 @@ function buildImportedThemeRuntimeFromSource(outFile, usedThemeKeys = []) {
   }
 }
 
-// 主题源是否在盘上(dev 仓为真;安装版已删 runtime.jsx + theme-registry.jsx,为假)。
+// 主題源是否在盤上(dev 倉為真;安裝版已刪 runtime.jsx + theme-registry.jsx,為假)。
 function hasThemeSource(normalized) {
   if (!normalized.length) return fs.existsSync(FULL_THEME_REGISTRY);
   return normalized.every(key => fs.existsSync(path.join(ROOT, 'src/components/themes', key, 'runtime.jsx')));
@@ -232,9 +232,9 @@ function prebuiltModulesAvailable(normalized) {
   return normalized.length > 0 && normalized.every(key => fs.existsSync(prebuiltModulePath(ROOT, key)));
 }
 
-// 全主题(或主题集合无法识别时)→ 直接用签入的全主题注册表;
-// 单/少主题 → 生成裁剪版临时注册表(写到 gitignore 的 node_modules/.cache,
-// import 用指向仓库的绝对路径,确保从临时位置也能解析主题源码与 react)。
+// 全主題(或主題集合無法識別時)→ 直接用簽入的全主題登入檔;
+// 單/少主題 → 生成裁剪版臨時登入檔(寫到 gitignore 的 node_modules/.cache,
+// import 用指向倉庫的絕對路徑,確保從臨時位置也能解析主題原始碼與 react)。
 function resolveThemeRegistryEntry(usedThemeKeys) {
   const normalized = normalizeThemeKeys(usedThemeKeys || []);
   if (!normalized.length || isFullThemeSet(normalized)) {
@@ -324,7 +324,7 @@ function copyFileIfExists(from, to) {
   }
 }
 
-// 交付件必需的 vendor 库缺失时立刻失败,不允许静默产出缺脚本的 deck。
+// 交付件必需的 vendor 庫缺失時立刻失敗,不允許靜默產出缺指令碼的 deck。
 function copyRequiredFile(from, to) {
   if (!fs.existsSync(from)) {
     throw new Error(`Required vendor asset missing: ${from}`);

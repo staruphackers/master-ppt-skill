@@ -1,4 +1,4 @@
-// index.js — barrel + registry for the 声浪 / SoundWave slide system.
+// index.js — barrel + registry for the 聲浪 / SoundWave slide system.
 // Import individual components directly, or use `swSlides` to drive a renderer.
 
 import SwSlideManifesto, { controls as manifestoControls, defaultProps as manifestoDefaults, meta as manifestoMeta } from './SwSlideManifesto.jsx';

@@ -46,7 +46,7 @@ export function createLayoutContracts(pages = []) {
   return new Map(pages.map(page => [page.key, createContract(page, page.themeKey)]));
 }
 
-// 与 createLayoutContracts 同接口,但按 key 惰性构建:CLI 单页查询不必为全部主题页付构建成本。
+// 與 createLayoutContracts 同介面,但按 key 惰性構建:CLI 單頁查詢不必為全部主題頁付構建成本。
 export function createLazyLayoutContracts(pages = []) {
   const pageByKey = new Map(pages.map(page => [page.key, page]));
   const cache = new Map();
@@ -95,7 +95,7 @@ export function normalizeSlidePropsForContract(layout, props = {}, contract = nu
     if (!derived) {
       if (Object.prototype.hasOwnProperty.call(next, binding.key)) {
         const currentNumber = Number(next[binding.key]);
-        if (!Number.isFinite(currentNumber)) errors.push(`${binding.key} 不是有效数字`);
+        if (!Number.isFinite(currentNumber)) errors.push(`${binding.key} 不是有效數字`);
         else validateCountRange(binding, currentNumber, binding.key, errors, { props: next, defaults: contract.defaultProps });
       }
       continue;
@@ -115,13 +115,13 @@ export function normalizeSlidePropsForContract(layout, props = {}, contract = nu
 
     const currentNumber = Number(current);
     if (!Number.isFinite(currentNumber)) {
-      errors.push(`${binding.key} 不是有效数字`);
+      errors.push(`${binding.key} 不是有效數字`);
     } else {
-      // count 拖到比当前 authored 数组长——不再是硬错误:渲染合成层(client-runtime.jsx
-      // withPaddedCountArrays)会用该 layout 契约 defaultProps 里的同名数组补足到 count 再渲染,
-      // 用户能看到完整档位下的内容。这里只校验静态声明的 min/max(结构性上限),不再拿
-      // 「当前实际数据条数」倒逼报错——那属于生成侧数据完整度的提示,由 props:safe /
-      // validate:goal-spec 的 warnings 承接(见 scripts/skill-workflow-utils.mjs)。
+      // count 拖到比當前 authored 陣列長——不再是硬錯誤:渲染合成層(client-runtime.jsx
+      // withPaddedCountArrays)會用該 layout 契約 defaultProps 裡的同名陣列補足到 count 再渲染,
+      // 使用者能看到完整檔位下的內容。這裡只校驗靜態宣告的 min/max(結構性上限),不再拿
+      // 「當前實際資料條數」倒逼報錯——那屬於生成側資料完整度的提示,由 props:safe /
+      // validate:goal-spec 的 warnings 承接(見 scripts/skill-workflow-utils.mjs)。
       validateCountRange(binding, currentNumber, binding.key, errors, { props: next, defaults: contract.defaultProps });
     }
   }
@@ -387,8 +387,8 @@ export function isMediaArrayPath(pathName) {
 
 function isMediaCountControlBinding(binding) {
   const text = `${binding?.key || ''} ${binding?.publicKey || ''} ${binding?.label || ''}`;
-  return /image|media|photo|picture|video|logo|slot|图片|图像|视频|媒体|照片|徽标|标志|槽/i.test(text)
-    && /(count|数量)/i.test(text);
+  return /image|media|photo|picture|video|logo|slot|(?:图片|圖片)|(?:图像|圖像|影象)|(?:视频|視頻|影片)|(?:媒体|媒體)|照片|(?:徽标|徽標)|(?:标志|標誌)|槽/i.test(text)
+    && /(count|(?:数量|數量))/i.test(text);
 }
 
 function isMediaCountBinding(binding) {
@@ -400,13 +400,13 @@ function isMediaCountBinding(binding) {
 
 function isVisualSlotCountBinding(binding) {
   const text = `${binding?.key || ''} ${binding?.publicKey || ''} ${binding?.label || ''}`;
-  return /(count|数量)$/i.test(String(binding?.key || ''))
-    && /(frame|image|media|photo|picture|slot|gallery|画框|画格|图片|图像|媒体|照片|相册)/i.test(text);
+  return /(count|(?:数量|數量))$/i.test(String(binding?.key || ''))
+    && /(frame|image|media|photo|picture|slot|gallery|(?:画框|畫框)|(?:画格|畫格)|(?:图片|圖片)|(?:图像|圖像|影象)|(?:媒体|媒體)|照片|(?:相册|相冊|相簿))/i.test(text);
 }
 
 export function isAllowedMediaCountShortage(binding, derived) {
-  // 判据看绑定数组本身是否媒体数组(source),不看控件名模式——真实控件名有
-  // imgCount/mediaSlotCount 等变体,名字模式(imageCount/mediaCount)接不住它们。
+  // 判據看繫結陣列本身是否媒體陣列(source),不看控制元件名模式——真實控制元件名有
+  // imgCount/mediaSlotCount 等變體,名字模式(imageCount/mediaCount)接不住它們。
   return isMediaArrayPath(derived?.source);
 }
 
@@ -649,7 +649,7 @@ function shouldNeutralizeString(field, value) {
 function neutralPlaceholder(value) {
   const length = Array.from(value).length;
   if (!length) return value;
-  const seed = Array.from('请输入文本');
+  const seed = Array.from('請輸入文字');
   return Array.from({ length }, (_, index) => seed[index % seed.length]).join('');
 }
 
@@ -742,7 +742,7 @@ function validateValueShape(value, defaultValue, field, errors, warnings = [], e
             return;
           }
           tuple.items.forEach((itemDefault, itemIndex) => {
-            if (itemIndex >= item.length) return; // 变长元组的短行缺位是合法的
+            if (itemIndex >= item.length) return; // 變長元組的短行缺位是合法的
             validateValueShape(item[itemIndex], itemDefault, `${field}[${index}][${itemIndex}]`, errors, warnings);
           });
         });
@@ -752,8 +752,8 @@ function validateValueShape(value, defaultValue, field, errors, warnings = [], e
       const itemPrimitive = primitiveShape(itemDefault);
       if (itemPrimitive) {
         value.forEach((item, index) => {
-          // 按位对齐:异构标量数组(如评分表 [5,4,5,true,'旗舰'])每列按同位置默认值校验;
-          // 数组内存在与提交值同类型的默认元素时放行(boolean|string 混合列允许勾选格改文字)
+          // 按位對齊:異構標量陣列(如評分表 [5,4,5,true,'旗艦'])每列按同位置預設值校驗;
+          // 陣列記憶體在與提交值同型別的預設元素時放行(boolean|string 混合列允許勾選格改文字)
           const tv = item === null ? 'null' : typeof item;
           if (defaultValue.some(d => (d === null ? 'null' : typeof d) === tv)) return;
           const posDefault = index < defaultValue.length && defaultValue[index] != null ? defaultValue[index] : itemDefault;
@@ -792,9 +792,9 @@ function validateObjectShape(value, shape, field, errors, warnings = [], enumFie
   const allowed = new Set(Object.keys(shape || {}));
   for (const [key, item] of Object.entries(value || {})) {
     if (!allowed.has(key)) {
-      // 同位置默认项自带的键(异构行独有字段)不算 unknown —— 但:私有/非内容字段(颜色、
-      // pos/tone、视觉数值)保持拒绝;shape 外字符串字段多为结构枚举(如象限键 q),改值也拒绝,
-      // 仅允许原值回传与非字符串(数字/坐标数组)修改。
+      // 同位置預設項自帶的鍵(異構行獨有欄位)不算 unknown —— 但:私有/非內容欄位(顏色、
+      // pos/tone、視覺數值)保持拒絕;shape 外字串欄位多為結構列舉(如象限鍵 q),改值也拒絕,
+      // 僅允許原值回傳與非字串(數字/座標陣列)修改。
       if (posDefault && typeof posDefault === 'object' && key in posDefault
         && !isNonContentContractValue(key, posDefault[key])
         && (typeof item !== 'string' || item === posDefault[key])) {
@@ -811,8 +811,8 @@ function validateObjectShape(value, shape, field, errors, warnings = [], enumFie
     }
     const bounds = numberBounds.get(key);
     if (bounds) validateNumberBounds(item, bounds, `${field}.${key}`, bounds.explicit ? errors : warnings);
-    // 双轨校验:先按同位置默认值(本行契约,含 null/异构),不过再按合并样本(跨行联合类型),
-    // 任一通过即视为契约内;两者都不过才报错(取本行轨的错误)。
+    // 雙軌校驗:先按同位置預設值(本行契約,含 null/異構),不過再按合併樣本(跨行聯合型別),
+    // 任一透過即視為契約內;兩者都不過才報錯(取本行軌的錯誤)。
     const hasPos = posDefault && typeof posDefault === 'object' && key in posDefault;
     if (hasPos && posDefault[key] !== shape[key]) {
       const posErrors = [];
@@ -821,8 +821,8 @@ function validateObjectShape(value, shape, field, errors, warnings = [], enumFie
       const mergedErrors = [];
       validateValueShape(item, shape[key], `${field}.${key}`, mergedErrors, warnings);
       if (!mergedErrors.length) continue;
-      // 第三轨:任一兄弟行的同名字段作为校验基准通过 → 跨行联合类型
-      // (勾选表格某行 vals 全 boolean、另一行全 string,单元格级翻转应被允许)
+      // 第三軌:任一兄弟行的同名欄位作為校驗基準透過 → 跨行聯合型別
+      // (勾選表格某行 vals 全 boolean、另一行全 string,單元格級翻轉應被允許)
       if (Array.isArray(siblingRows)) {
         const passedSibling = siblingRows.some(row => {
           if (!row || typeof row !== 'object' || !(key in row) || row[key] === posDefault[key]) return false;
@@ -846,8 +846,8 @@ function primitiveShape(value) {
 }
 
 function validatePrimitiveValue(value, expected, defaultValue, field, errors) {
-  // 默认值证据放行:提交值类型虽与合并 shape 不符,但与同位置默认值同类型(含同为 null)——
-  // 异构默认(勾选列 boolean|string、自定义价 number|null、首段 null)是组件契约的一部分。
+  // 預設值證據放行:提交值型別雖與合併 shape 不符,但與同位置預設值同型別(含同為 null)——
+  // 異構預設(勾選列 boolean|string、自訂價 number|null、首段 null)是元件契約的一部分。
   const tv = value === null ? 'null' : typeof value;
   const td = defaultValue === null ? 'null' : typeof defaultValue;
   if (tv !== expected && tv === td && ['null', 'string', 'number', 'boolean'].includes(tv)) {
@@ -885,8 +885,8 @@ export function enumFieldsForArrayItems(items = [], excludedFields = null) {
     const values = objects
       .map(item => item?.[key])
       .filter(item => typeof item === 'string' && item.trim());
-    // 枚举锁定仅对 token 形值(结构键):值是自然文案(CJK/多词,如分类列「风险投资/战略投资」)
-    // 时按可改写文案对待,不锁死取值集合 —— 用户换领域时这些分类词必须可替换。
+    // 列舉鎖定僅對 token 形值(結構鍵):值是自然文案(CJK/多詞,如分類列「風險投資/戰略投資」)
+    // 時按可改寫文案對待,不鎖死取值集合 —— 使用者換領域時這些分類詞必須可替換。
     if (values.some(v => /[一-龥]/.test(v) || /\S\s+\S/.test(v))) continue;
     const unique = new Set(values);
     if (unique.size) result.set(key, unique);
@@ -931,7 +931,7 @@ export function numberBoundsForArrayItems(items = [], explicitBoundsByField = nu
     }
     if (isPercentDistributionField(key, objects)) {
       // JAD batch-test r5: components render these fields verbatim as "<value>%" (donut/share/mix
-      // labels), so authored values must already BE percentages -- a raw magnitude (e.g. 1520 亿)
+      // labels), so authored values must already BE percentages -- a raw magnitude (e.g. 1520 億)
       // renders as "1520%". Label the intent so inspect:layout surfaces semantics:'percent'
       // alongside the same 0-100 domain this branch has always enforced.
       result.set(key, { min: 0, max: 100, explicit: true, semantics: 'percent' });
@@ -1059,7 +1059,7 @@ function mergeShape(left, right) {
 function mergeShapeValue(left, right) {
   if (Array.isArray(left) && Array.isArray(right)) return mergeObjectShape([...left, ...right]) ? [...left, ...right] : left;
   if (isPlainObject(left) && isPlainObject(right)) return mergeShape(left, right);
-  // null 不压制真实类型:首项为 null 的字段(如漏斗首段 rate/conv)以后续项的实际类型为准
+  // null 不壓制真實型別:首項為 null 的欄位(如漏斗首段 rate/conv)以後續項的實際型別為準
   if (left == null) return right;
   return left;
 }
@@ -1128,29 +1128,29 @@ export function isNonContentContractValue(pathName, value) {
   if (isScatterPointMetricField(pathName, field, value)) return false;
   if (/axesData\[\]\.id$/i.test(String(pathName || '')) && typeof value === 'string') return false;
   if (isMediaArrayKey(field)) {
-    // pins/photos 等媒体名数组:若项内没有任何媒体源字段、却带 CJK 文案(标注点文字、
-    // 始终可见的照片图注),它是内容数组而非媒体数组,不整体剪(theme11 pins、theme08 photos)
+    // pins/photos 等媒體名陣列:若項內沒有任何媒體源欄位、卻帶 CJK 文案(標註點文字、
+    // 始終可見的照片圖注),它是內容陣列而非媒體陣列,不整體剪(theme11 pins、theme08 photos)
     const rows = Array.isArray(value) ? value.filter(isPlainObject) : [];
-    // 项内带 CJK 文本(标注文字、照片图注)即视为内容数组,不整体剪 —— 媒体源字段(src/url)
-    // 由字段级黑名单单独剪除;纯媒体数组(无文本)照旧整体排除。
+    // 項內帶 CJK 文字(標註文字、照片圖注)即視為內容陣列,不整體剪 —— 媒體源欄位(src/url)
+    // 由欄位級黑名單單獨剪除;純媒體陣列(無文字)照舊整體排除。
     const hasCjkCopy = rows.some(row => Object.entries(row).some(([k, v]) =>
       typeof v === 'string' && /[一-龥]/.test(v) && !/^(src|url|image|img|poster|video|href)$/i.test(k)));
     if (rows.length && hasCjkCopy) {
       return isColorArray(value);
     }
     if (Array.isArray(value)) return true;
-    // 媒体名命中但值是单个项对象(photos[] 的递归项):交给下方对象/字段级判定,
-    // 项内文本字段(caption/tag)保留、媒体源字段由字段级黑名单剪除。
+    // 媒體名命中但值是單個項物件(photos[] 的遞迴項):交給下方物件/欄位級判定,
+    // 項內文字欄位(caption/tag)保留、媒體源欄位由欄位級黑名單剪除。
     if (isPlainObject(value)) return NON_CONTENT_FIELD_PATTERN.test(field);
     return true;
   }
   if (Array.isArray(value)) return isColorArray(value) || isVisualContainerPath(pathName);
-  // 数字键变体预设({1:{...},2:{...}},如 theme08 图片槽位布局)不整体剪枝:
-  // 其中混有始终可见的文本字段(label/cap/tag),交给字段级递归逐项判定。
+  // 數字鍵變體預設({1:{...},2:{...}},如 theme08 圖片槽位佈局)不整體剪枝:
+  // 其中混有始終可見的文字欄位(label/cap/tag),交給欄位級遞迴逐項判定。
   if (isPlainObject(value)) return NON_CONTENT_FIELD_PATTERN.test(field);
   if (isColorString(value)) return true;
   if (NON_CONTENT_FIELD_PATTERN.test(field)) {
-    // 字段名撞结构词但值是自然文案(theme07 kind="看好方向"、theme05 src="EXPANDED SLIDE · P61")
+    // 欄位名撞結構詞但值是自然文案(theme07 kind="看好方向"、theme05 src="EXPANDED SLIDE · P61")
     const text = typeof value === 'string' ? value.trim() : '';
     const naturalCopy = /[一-龥]/.test(text) || (/\S\s+\S/.test(text) && !/^[a-z0-9_\-./:]+$/i.test(text));
     return !naturalCopy;
@@ -1481,7 +1481,7 @@ function validateLengthBindings(props = {}, defaults = {}, lengthBindings = [], 
     const dependents = collectArrayCounts(props, binding.dependent);
     for (const dependent of dependents) {
       if (dependent.count !== anchor.count) {
-        errors.push(`${dependent.source} 的数量 ${dependent.count} 必须等于 ${anchor.source} 的数量 ${anchor.count}`);
+        errors.push(`${dependent.source} 的數量 ${dependent.count} 必須等於 ${anchor.source} 的數量 ${anchor.count}`);
       }
     }
   }
@@ -1499,7 +1499,7 @@ function validateControlRanges(props = {}, controls = [], countBindings = [], de
     if (!Object.prototype.hasOwnProperty.call(props, control.key)) continue;
     const value = Number(props[control.key]);
     if (!Number.isFinite(value)) {
-      errors.push(`${control.key} 不是有效数字`);
+      errors.push(`${control.key} 不是有效數字`);
       continue;
     }
     validateCountRange(control, value, control.key, errors, { props, defaults });
@@ -1545,7 +1545,7 @@ function collapseCounts(counts) {
   const unique = [...new Set(counts.map(item => item.count))];
   if (unique.length > 1) {
     return {
-      error: counts.map(item => `${item.source}=${item.count}`).join(', ') + ' 数量不一致',
+      error: counts.map(item => `${item.source}=${item.count}`).join(', ') + ' 數量不一致',
     };
   }
   return {
@@ -1565,10 +1565,10 @@ function validateCountRange(binding, count, source, errors, context = null) {
   const min = Number(binding.min);
   const max = resolveRangeMax(binding, context);
   if (Number.isFinite(min) && count < min) {
-    errors.push(`${source} 的数量 ${count} 小于 ${binding.key} 最小值 ${min}`);
+    errors.push(`${source} 的數量 ${count} 小於 ${binding.key} 最小值 ${min}`);
   }
   if (Number.isFinite(max) && count > max) {
-    errors.push(`${source} 的数量 ${count} 大于最大值 ${max}`);
+    errors.push(`${source} 的數量 ${count} 大於最大值 ${max}`);
   }
 }
 
@@ -1613,8 +1613,8 @@ function resolveControlValue(value, defaults) {
 }
 
 export function serializeValue(value) {
-  // 数值统一 12 位有效数字:Math.sin/cos 生成的 defaults 在 macOS/Linux libm 上
-  // 最后一位 ulp 不同,会让生成物平台不确定(CI committed-artifacts 校验失败)。
+  // 數值統一 12 位有效數字:Math.sin/cos 生成的 defaults 在 macOS/Linux libm 上
+  // 最後一位 ulp 不同,會讓生成物平臺不確定(CI committed-artifacts 校驗失敗)。
   if (typeof value === 'number') return Number.isFinite(value) ? Number(value.toPrecision(12)) : value;
   if (value == null || ['string', 'boolean'].includes(typeof value)) return value;
   if (isSerializedReactElementLike(value)) return reactElementText(value);

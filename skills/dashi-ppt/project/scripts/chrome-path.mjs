@@ -49,8 +49,8 @@ function macChromeCandidates() {
   ];
 }
 
-// Windows 的 Chrome/Edge 默认不在 PATH 里(issue #12:用户装着 Edge 却报
-// "Chrome executable not found"),按固定安装位置探测;Edge 是系统自带,几乎必中。
+// Windows 的 Chrome/Edge 預設不在 PATH 裡(issue #12:使用者裝著 Edge 卻報
+// "Chrome executable not found"),按固定安裝位置探測;Edge 是系統自帶,幾乎必中。
 function windowsChromeCandidates() {
   if (process.platform !== 'win32') return [];
   const programFiles = process.env.ProgramFiles || 'C:\\Program Files';
@@ -100,7 +100,7 @@ export function getChromeExecutablePath() {
   );
 }
 
-// Playwright 浏览器缓存根目录(按平台;PLAYWRIGHT_BROWSERS_PATH 显式覆盖优先)。
+// Playwright 瀏覽器快取根目錄(按平臺;PLAYWRIGHT_BROWSERS_PATH 顯式覆蓋優先)。
 function playwrightCacheRoots() {
   if (process.env.PLAYWRIGHT_BROWSERS_PATH && process.env.PLAYWRIGHT_BROWSERS_PATH !== '0') {
     return [process.env.PLAYWRIGHT_BROWSERS_PATH];
@@ -110,14 +110,14 @@ function playwrightCacheRoots() {
   return [path.join(os.homedir(), '.cache', 'ms-playwright')];
 }
 
-// chromium headless shell:无 ProcessSingleton 的无头专用二进制。沙箱型宿主(如豆包)
-// 的 seatbelt 会拦完整版 Chrome 在 confstr 临时目录创建单例锁 socket(报
-// "Failed to create a ProcessSingleton"),而 headless shell 没有这套机制,同一沙箱下
-// 可正常启动——导出(headless 截图/CDP)场景优先使用它。
+// chromium headless shell:無 ProcessSingleton 的無頭專用二進位制。沙箱型宿主(如豆包)
+// 的 seatbelt 會攔完整版 Chrome 在 confstr 臨時目錄建立單例鎖 socket(報
+// "Failed to create a ProcessSingleton"),而 headless shell 沒有這套機制,同一沙箱下
+// 可正常啟動——匯出(headless 截圖/CDP)場景優先使用它。
 export function resolveHeadlessShellPath() {
-  // 平台目录/可执行名差异:macOS 是 chrome-headless-shell-mac-*/chrome-headless-shell,
+  // 平臺目錄/可執行名差異:macOS 是 chrome-headless-shell-mac-*/chrome-headless-shell,
   // Linux 是 chrome-linux/headless_shell,Windows 是 chrome-win/*.exe——
-  // 必须按候选集匹配,只按单一平台命名过滤会漏掉 Linux(曾致导出零浏览器可用)。
+  // 必須按候選集匹配,只按單一平臺命名過濾會漏掉 Linux(曾致匯出零瀏覽器可用)。
   const shellBinaries = process.platform === 'win32'
     ? ['chrome-headless-shell.exe', 'headless_shell.exe']
     : ['chrome-headless-shell', 'headless_shell'];
@@ -150,7 +150,7 @@ export function resolveHeadlessShellPath() {
   return '';
 }
 
-// 导出链路的浏览器解析:CHROME_PATH 显式覆盖 > headless shell > 常规完整版链路。
+// 匯出鏈路的瀏覽器解析:CHROME_PATH 顯式覆蓋 > headless shell > 常規完整版鏈路。
 export function getExportBrowserPath() {
   if (process.env.CHROME_PATH) {
     const explicit = resolveExistingPath(process.env.CHROME_PATH);

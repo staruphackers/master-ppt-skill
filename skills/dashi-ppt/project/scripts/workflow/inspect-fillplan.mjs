@@ -1,5 +1,5 @@
 // @ts-check
-// inspect + fillPlan 域:inspectLayout/normalizeProps 契约装配,数组元数据与 fillPlan 生成。
+// inspect + fillPlan 域:inspectLayout/normalizeProps 契約裝配,陣列後設資料與 fillPlan 生成。
 import { getDecorativeKeys } from '../../src/components/themes/decorative-overrides.mjs';
 import {
   resolvePublicPropAliases,
@@ -55,32 +55,32 @@ import {
 } from './copy-contract.mjs';
 
 export const ROLE_KEYWORDS = {
-  // 模糊意图词(批测高频):宽命中到所有数据/汇报类版式。
-  data: ['metric', 'stat', 'number', 'chart', 'trend', 'curve', 'rank', 'waterfall', 'donut', 'heatmap', 'matrix', 'funnel', 'monthly', 'deal', 'ticket', '指标', '数据', '图表', '排行', '走势', '占比'],
-  report: ['market', 'context', 'industry', 'metric', 'stat', 'overview', 'summary', 'monthly', 'outlook', '全景', '背景', '行业', '指标', '汇报', '总览', '展望'],
-  cover: ['cover', '封面', '首页'],
-  statement: ['statement', 'summary', 'overview', 'manifesto', 'quote', '摘要', '主张', '观点', '结论'],
-  breakdown: ['contents', 'agenda', 'index', 'directory', '目录', '结构', '纲目'],
-  transition: ['section', 'chapter', 'divider', '章节', '序章', '篇章'],
-  context: ['market', 'method', 'context', 'industry', '全景', '背景', '方法', '行业'],
-  metrics: ['metric', 'stat', 'number', 'score', 'gauge', 'meter', '指标', '数字', '大势', '仪表'],
-  trend: ['trend', 'timeline', 'curve', 'area', 'slope', 'stream', '走势', '趋势', '时间', '曲线', '季度'],
-  comparison: ['compare', 'versus', 'matrix', 'quadrant', 'delta', 'dumbbell', '对比', '矩阵', '象限', '差距'],
-  distribution: ['donut', 'treemap', 'heatmap', 'ranking', 'rank', 'waterfall', 'funnel', 'allocation', 'share', '分布', '占比', '排行', '瀑布', '漏斗'],
-  relationship: ['chain', 'flow', 'sankey', 'network', 'orbit', 'ecosystem', 'map', '关系', '链', '流向', '生态', '网络'],
-  case: ['case', 'spotlight', 'profile', 'story', '案例', '聚焦', '档案'],
-  image: ['image', 'gallery', 'mosaic', 'photo', 'film', 'album', 'poster', 'showcase', '影像', '图景', '图集', '图片', '海报'],
-  process: ['process', 'roadmap', 'journey', 'steps', 'gantt', '路径', '流程', '路线', '进程'],
-  risks: ['risk', 'faq', 'checklist', '风险', '异议', '问答', '清单'],
-  observation: ['quote', 'insight', 'takeaway', 'conclusion', 'statement', 'manifesto', '观点', '洞察', '要点', '结论'],
-  ambient: ['ambient', 'atmosphere', 'background', 'immersive', 'poster', 'hero', '氛围', '背景', '沉浸', '海报'],
-  actions: ['action', 'roadmap', 'plan', 'join', 'contact', 'next', '行动', '策略', '计划', '套餐'],
-  result: ['result', 'outcome', 'score', 'closing', 'conclusion', '成果', '结果', '完成', '结论'],
-  team: ['team', 'roster', 'testimonial', 'voice', '团队', '人物', '见证', '证言'],
-  closing: ['closing', 'contact', 'join', 'end', 'colophon', '结语', '封底', '行动'],
+  // 模糊意圖詞(批測高頻):寬命中到所有資料/彙報類版式。
+  data: ['metric', 'stat', 'number', 'chart', 'trend', 'curve', 'rank', 'waterfall', 'donut', 'heatmap', 'matrix', 'funnel', 'monthly', 'deal', 'ticket', '指標', '資料', '圖表', '排行', '走勢', '佔比'],
+  report: ['market', 'context', 'industry', 'metric', 'stat', 'overview', 'summary', 'monthly', 'outlook', '全景', '背景', '行業', '指標', '彙報', '總覽', '展望'],
+  cover: ['cover', '封面', '首頁'],
+  statement: ['statement', 'summary', 'overview', 'manifesto', 'quote', '摘要', '主張', '觀點', '結論'],
+  breakdown: ['contents', 'agenda', 'index', 'directory', '目錄', '結構', '綱目'],
+  transition: ['section', 'chapter', 'divider', '章節', '序章', '篇章'],
+  context: ['market', 'method', 'context', 'industry', '全景', '背景', '方法', '行業'],
+  metrics: ['metric', 'stat', 'number', 'score', 'gauge', 'meter', '指標', '數字', '大勢', '儀表'],
+  trend: ['trend', 'timeline', 'curve', 'area', 'slope', 'stream', '走勢', '趨勢', '時間', '曲線', '季度'],
+  comparison: ['compare', 'versus', 'matrix', 'quadrant', 'delta', 'dumbbell', '對比', '矩陣', '象限', '差距'],
+  distribution: ['donut', 'treemap', 'heatmap', 'ranking', 'rank', 'waterfall', 'funnel', 'allocation', 'share', '分佈', '佔比', '排行', '瀑布', '漏斗'],
+  relationship: ['chain', 'flow', 'sankey', 'network', 'orbit', 'ecosystem', 'map', '關係', '鏈', '流向', '生態', '網路'],
+  case: ['case', 'spotlight', 'profile', 'story', '案例', '聚焦', '檔案'],
+  image: ['image', 'gallery', 'mosaic', 'photo', 'film', 'album', 'poster', 'showcase', '影像', '圖景', '圖集', '圖片', '海報'],
+  process: ['process', 'roadmap', 'journey', 'steps', 'gantt', '路徑', '流程', '路線', '程序'],
+  risks: ['risk', 'faq', 'checklist', '風險', '異議', '問答', '清單'],
+  observation: ['quote', 'insight', 'takeaway', 'conclusion', 'statement', 'manifesto', '觀點', '洞察', '要點', '結論'],
+  ambient: ['ambient', 'atmosphere', 'background', 'immersive', 'poster', 'hero', '氛圍', '背景', '沉浸', '海報'],
+  actions: ['action', 'roadmap', 'plan', 'join', 'contact', 'next', '行動', '策略', '計劃', '套餐'],
+  result: ['result', 'outcome', 'score', 'closing', 'conclusion', '成果', '結果', '完成', '結論'],
+  team: ['team', 'roster', 'testimonial', 'voice', '團隊', '人物', '見證', '證言'],
+  closing: ['closing', 'contact', 'join', 'end', 'colophon', '結語', '封底', '行動'],
 };
 
-export const NEUTRAL_PLACEHOLDERS = ['请输入文本', '请输入', '请输'];
+export const NEUTRAL_PLACEHOLDERS = ['請輸入文字', '請輸入', '請輸'];
 
 function buildFillablePropShapes(defaultProps = {}, copyKeys = [], roots = []) {
   const rootFilter = roots?.length ? new Set(roots.map(rootPropKey)) : null;
@@ -93,7 +93,7 @@ function buildFillablePropShapes(defaultProps = {}, copyKeys = [], roots = []) {
     shapes[root] = shape;
   }
   for (const key of copyKeys || []) {
-    if (String(key).endsWith('[][]')) continue; // 元组路径:root 已建 [[...]] 形状,扁平展开会产生脏键
+    if (String(key).endsWith('[][]')) continue; // 元組路徑:root 已建 [[...]] 形狀,扁平展開會產生髒鍵
     const root = rootPropKey(key);
     if (rootFilter && !rootFilter.has(root)) continue;
     const type = simpleValueType(sampleValueForCopyPath(defaultProps, key));
@@ -166,23 +166,23 @@ export function inspectLayout(layout, { compact = false } = {}) {
   const publicControlKeys = publicControls.map(control => control.publicKey).filter(Boolean);
   const mediaSlots = getMediaSlots(record);
   const decorativeKeys = getDecorativeKeys(page.key);
-  // copyKeyRoots:顶层文案根(对象 copy 仍是单键),用于 propShapes/copyBudgets 的递归。
+  // copyKeyRoots:頂層文案根(物件 copy 仍是單鍵),用於 propShapes/copyBudgets 的遞迴。
   const copyKeyRoots = getCopyKeyRoots(defaultProps, controls, mediaSlots, decorativeKeys);
-  // JAD-212:copyKeys 扁平化(对象 copy 展开成 copy.eyebrow / copy.points[].t),与扁平主题形态一致。
+  // JAD-212:copyKeys 扁平化(物件 copy 展開成 copy.eyebrow / copy.points[].t),與扁平主題形態一致。
   const copyKeys = expandCopyKeys(defaultProps, copyKeyRoots);
   const arrayKeys = getArrayKeys(defaultProps, mediaSlots);
   const copyBudgets = getCopyBudgets(defaultProps, copyKeyRoots);
-  // count 绑定解析到真实数组键(修正 items/stats/data 等静态错配)。
+  // count 繫結解析到真實陣列鍵(修正 items/stats/data 等靜態錯配)。
   const resolvedBindings = (countBindings || []).map(binding => ({ ...binding, arrays: resolveBindingArrays(binding, defaultProps, controls) }));
-  // propShapes 提前算出,供 arrayMeta 过滤掉未进入可填契约的私有视觉字段(如颜色)。
+  // propShapes 提前算出,供 arrayMeta 過濾掉未進入可填契約的私有視覺欄位(如顏色)。
   const propShapesForArrayMeta = buildFillablePropShapes(defaultProps, copyKeys, [...copyKeyRoots, ...arrayKeys]);
-  // JAD-213:arrayMeta 含语义 role;JAD-212:覆盖 copy 内数组并匹配其 count 控件。
+  // JAD-213:arrayMeta 含語義 role;JAD-212:覆蓋 copy 內陣列並匹配其 count 控制元件。
   const arrayMeta = buildArrayMeta(defaultProps, countBindings, controls, { withItemRoles: true, propShapes: propShapesForArrayMeta });
   const copyRoles = buildCopyRoles(copyKeys);
   const fieldContracts = buildFieldContracts({ copyKeys, copyRoles, arrayMeta, decorativeKeys, mediaSlots });
   const fillPlan = buildFillPlan({ copyKeys, copyBudgets, copyRoles, arrayMeta, mediaSlots, defaultProps, controls, countBindings, lengthBindings, numberBoundsConfig: contract?.numberBounds });
   const propShapes = propShapesForArrayMeta;
-  // JAD-212:正文全由组件硬编码(count 指向的数组缺席且无可填正文)时标记 contentLocked。
+  // JAD-212:正文全由元件硬編碼(count 指向的陣列缺席且無可填正文)時標記 contentLocked。
   const contentLockedReason = detectContentLocked({ copyKeys, copyRoles, arrayMeta, resolvedBindings, defaultProps });
   const palette = paletteColorsForLayout(defaultProps);
   const defaultVisibleCounts = Object.fromEntries(countBindings
@@ -368,8 +368,8 @@ function validateAuthoredFillableProps(props = {}, record, mediaSlots = getMedia
   return { errors, warnings };
 }
 
-// 逐下标期望长度:与 inspect:layout 暴露的 fixedLength/fixedLengths 同一来源
-// (arraysAtPath 按父级数组原始顺序取每项的嵌套数组长度),供报错时一次性列出。
+// 逐下標期望長度:與 inspect:layout 暴露的 fixedLength/fixedLengths 同一來源
+// (arraysAtPath 按父級陣列原始順序取每項的巢狀陣列長度),供報錯時一次性列出。
 function buildNestedArrayLensMap(defaultProps, allowedNestedArrays) {
   const map = new Map();
   for (const pathName of allowedNestedArrays) {
@@ -390,9 +390,9 @@ function validateFillableValueShape(value, shape, field, errors, warnings = [], 
     const contractPath = contractPathForField(field);
     const countBound = countBoundLengths.get(contractPath);
     if (countBound != null && value.length < countBound.count) {
-      // count 拖到比当前 authored 数组长不再是硬错误——渲染合成层会用该 layout 契约
-      // defaultProps 里的同名数组补足到 count 再显示,这里只提醒生成侧最好把数组写全。
-      warnings.push(`countBinding shortfall ${countBound.key}=${countBound.count}; ${String(field).replace(/^props\./, '')} has ${value.length} (渲染会用默认内容补足,建议补全数组)`);
+      // count 拖到比當前 authored 陣列長不再是硬錯誤——渲染合成層會用該 layout 契約
+      // defaultProps 裡的同名陣列補足到 count 再顯示,這裡只提醒生成側最好把陣列寫全。
+      warnings.push(`countBinding shortfall ${countBound.key}=${countBound.count}; ${String(field).replace(/^props\./, '')} has ${value.length} (渲染會用預設內容補足,建議補全陣列)`);
     } else if (countBound != null && value.length > countBound.count) {
       errors.push(`countBinding mismatch ${countBound.key}=${countBound.count}; ${String(field).replace(/^props\./, '')} has ${value.length}`);
       return;
@@ -451,9 +451,9 @@ function validateFillableValueShape(value, shape, field, errors, warnings = [], 
       if (!allowed.has(key)) {
         if (!isPrivatePosToneField(key) && isPrivateDefaultRoundTrip(item, defaultValue?.[key])) continue;
         if (isAllowedNestedArrayField(field, key, item, defaultValue?.[key], allowedNestedArrays)) continue;
-        // 同位置默认项自带的键(可填 shape 之外的结构/数值字段,如价格 y、坐标 pins)
-        // 回传或修改都放行 —— 类型正确性由渲染层契约(prop-contract-core)按同位默认校验兜底;
-        // 私有/非内容字段(颜色、pos/tone、视觉数值)仍保持拒绝。
+        // 同位置預設項自帶的鍵(可填 shape 之外的結構/數值欄位,如價格 y、座標 pins)
+        // 回傳或修改都放行 —— 型別正確性由渲染層契約(prop-contract-core)按同位預設校驗兜底;
+        // 私有/非內容欄位(顏色、pos/tone、視覺數值)仍保持拒絕。
         if (isPlainObject(defaultValue) && key in defaultValue
           && !isNonContentContractValue(key, defaultValue[key])
           && (typeof item !== 'string' || item === defaultValue[key])) continue;
@@ -466,9 +466,9 @@ function validateFillableValueShape(value, shape, field, errors, warnings = [], 
     }
     return;
   }
-  // 默认值证据放行:提交值与同位置默认值同类型(含同为 null)即视为契约内 ——
-  // 异构默认(勾选表格 boolean|string 列、自定义价 number|null、漏斗首段 null)本就是组件设计的一部分,
-  // 合并 shape 无法表达联合类型,此处以默认值为准放行(theme09_page103/theme12_page032/041 等病例)。
+  // 預設值證據放行:提交值與同位置預設值同型別(含同為 null)即視為契約內 ——
+  // 異構預設(勾選表格 boolean|string 列、自訂價 number|null、漏斗首段 null)本就是元件設計的一部分,
+  // 合併 shape 無法表達聯合型別,此處以預設值為準放行(theme09_page103/theme12_page032/041 等病例)。
   if (shape === 'number' || shape === 'boolean' || shape === 'string') {
     const tv = value === null ? 'null' : typeof value;
     const td = defaultValue === null ? 'null' : typeof defaultValue;
@@ -539,7 +539,7 @@ function visibleNeutralPlaceholderErrors(record, props = {}, authoredProps = pro
   const visibleProps = visiblePropsForRecord(record, props, authoredProps);
   const findings = collectNeutralPlaceholderFindings(visibleProps).slice(0, 8);
   if (!findings.length) return [];
-  return [`中性占位文案仍在可见 props 中: ${findings.join(', ')}; 请补齐这些可见字段或降低对应 count`];
+  return [`中性佔位文案仍在可見 props 中: ${findings.join(', ')}; 請補齊這些可見欄位或降低對應 count`];
 }
 
 function visiblePropsForRecord(record, props = {}, authoredProps = props) {
@@ -1080,7 +1080,7 @@ function buildFillPlanMedia(mediaSlots = []) {
 
 function fillPlanItemFields(arrayKey, items, copyBudgets, copyRoles, explicitBoundsByField = null) {
   const prunedItems = pruneContractItems(items, arrayKey);
-  // 异质对象数组合并全部项的键,理由同 fillPlanArrayItemShape。
+  // 異質物件陣列合並全部項的鍵,理由同 fillPlanArrayItemShape。
   const objectItems = prunedItems.filter(isPlainObject);
   if (!objectItems.length) return {};
   const shape = {};
@@ -1089,13 +1089,13 @@ function fillPlanItemFields(arrayKey, items, copyBudgets, copyRoles, explicitBou
       if (!(key in shape) || shape[key] == null) shape[key] = value;
     }
   }
-  // 与 validateFillableValueShape 校验时同一推导(numberBoundsForArrayItems,来自
-  // src/prop-contract-core.mjs,单一实现):只有数组项的直接标量字段(无点号的顶层 key)
-  // 才会被数值上下限拦截,深一层嵌套字段目前不在校验范围内,因此这里也只对顶层字段算
-  // numericBounds,避免暴露一个实际并不会被拦的假契约。
+  // 與 validateFillableValueShape 校驗時同一推導(numberBoundsForArrayItems,來自
+  // src/prop-contract-core.mjs,單一實現):只有陣列項的直接標量欄位(無點號的頂層 key)
+  // 才會被數值上下限攔截,深一層巢狀欄位目前不在校驗範圍內,因此這裡也只對頂層欄位算
+  // numericBounds,避免暴露一個實際並不會被攔的假契約。
   const itemNumberBounds = numberBoundsForArrayItems(items.filter(isPlainObject), explicitBoundsByField);
-  // token 枚举字段(如甘特 status: done/active/planned):渲染层会锁定取值集合,
-  // 在 fillPlan 里显式给出 enum,Agent 按集合填而不是当自由文本
+  // token 列舉欄位(如甘特 status: done/active/planned):渲染層會鎖定取值集合,
+  // 在 fillPlan 裡顯式給出 enum,Agent 按集合填而不是當自由文字
   const itemEnumFields = enumFieldsForArrayItems(items.filter(isPlainObject));
   const fields = {};
   function collect(value, fieldPath) {
@@ -1113,11 +1113,11 @@ function fillPlanItemFields(arrayKey, items, copyBudgets, copyRoles, explicitBou
       type: simpleValueType(value),
       ...(enumValues ? { enum: [...enumValues] } : {}),
       ...(simpleValueType(value) === 'number' ? { numericRange: numericRangeForValues(items.map(item => valueAtPath(item, fieldPath))) } : {}),
-      // numericBounds:props:safe/validate:goal-spec/render 实际执行数值上下限校验时的同一
-      // 推导(numberBoundsForArrayItems)。enforced:false 表示这是从默认示例数据反推的提示性
-      // 范围,不是硬限制——真实业务数值可以超出;enforced:true(显式声明或识别出的几何/坐标
-      // 形状)才会被拦截。semantics 标注该字段更像比例(normalized,0-1)还是屏幕坐标
-      // (coordinate),帮助判断该填比例还是真实值。
+      // numericBounds:props:safe/validate:goal-spec/render 實際執行數值上下限校驗時的同一
+      // 推導(numberBoundsForArrayItems)。enforced:false 表示這是從預設示例資料反推的提示性
+      // 範圍,不是硬限制——真實業務數值可以超出;enforced:true(顯式宣告或識別出的幾何/座標
+      // 形狀)才會被攔截。semantics 標註該欄位更像比例(normalized,0-1)還是螢幕座標
+      // (coordinate),幫助判斷該填比例還是真實值。
       ...(bounds ? { numericBounds: roundNumberBounds(bounds) } : {}),
       ...(copyBudgets[pathName]?.maxChars ? { maxChars: copyBudgets[pathName].maxChars } : {}),
     };
@@ -1175,10 +1175,10 @@ function fillPlanNestedArrays(arrayKey, items, copyBudgets, copyRoles, defaultPr
   return nested;
 }
 
-// 与 validateFillableValueShape 的定长嵌套数组判定同口径:只要不是自由列表字段
-// (isFreeListField),该嵌套数组在鉴权时就必须逐下标匹配默认长度——不限于数值内容
-// (如 quadrants[].dirs 是字符串数组,仍会被拦)。之前这里额外要求数值内容
-// (isFixedCapacityArray) 会漏报字符串类的定长嵌套数组,导致契约不透明。
+// 與 validateFillableValueShape 的定長巢狀陣列判定同口徑:只要不是自由列表欄位
+// (isFreeListField),該巢狀陣列在鑑權時就必須逐下標匹配預設長度——不限於數值內容
+// (如 quadrants[].dirs 是字串陣列,仍會被攔)。之前這裡額外要求數值內容
+// (isFixedCapacityArray) 會漏報字串類的定長巢狀陣列,導致契約不透明。
 function lengthLockedArrayLens(field, arrays = []) {
   if (isFreeListField(field)) return null;
   const lengths = arrays.filter(Array.isArray).map(value => value.length);
@@ -1285,9 +1285,9 @@ function countControlForArrayField(field, controls = []) {
 function fillPlanArrayItemShape(items, pathName = '') {
   const prunedItems = pruneContractItems(items, pathName);
   if (!prunedItems.length) return null;
-  // JAD-2xx:异质对象数组(如 bento tilesData 混排 image/stat/quote 三种子形状)只取首项
-  // 会漏掉后续项独有的字段(quote/tail/value/unit/label 等)——与 collectCopyPaths/
-  // fillPlanTupleItemShape 同口径,合并全部对象项的键(首个非 null 值为准)。
+  // JAD-2xx:異質物件陣列(如 bento tilesData 混排 image/stat/quote 三種子形狀)只取首項
+  // 會漏掉後續項獨有的欄位(quote/tail/value/unit/label 等)——與 collectCopyPaths/
+  // fillPlanTupleItemShape 同口徑,合併全部物件項的鍵(首個非 null 值為準)。
   const objectItems = prunedItems.filter(isPlainObject);
   if (objectItems.length) {
     const object = {};
@@ -1317,11 +1317,11 @@ function fillPlanArrayItemShape(items, pathName = '') {
   }
   const tuple = fillPlanTupleShapeForArrayItems(prunedItems);
   if (tuple) return tuple;
-  // 定长异质元组(如 theme11 rows[].us = [boolean, string]):这里的 prunedItems 就是
-  // 元组本身的各个位置(不是多行样本),fillPlanTupleShapeForArrayItems 按"多行转置"
-  // 设计、对本例不适用(位置本身都不是数组)。若各位置标量类型不同,按位置回报元组类型
-  // 数组,而不是坍缩成首个元素的单一标量类型——否则后续的字符串位置会从 itemShape 里
-  // 丢失,deck 构造器就判断不出该元组还有可填文案槽。
+  // 定長異質元組(如 theme11 rows[].us = [boolean, string]):這裡的 prunedItems 就是
+  // 元組本身的各個位置(不是多行樣本),fillPlanTupleShapeForArrayItems 按"多行轉置"
+  // 設計、對本例不適用(位置本身都不是陣列)。若各位置標量型別不同,按位置回報元組型別
+  // 陣列,而不是坍縮成首個元素的單一標量型別——否則後續的字串位置會從 itemShape 裡
+  // 丟失,deck 構造器就判斷不出該元組還有可填文案槽。
   if (prunedItems.length > 1) {
     const positional = prunedItems.map(simpleValueType);
     if (new Set(positional).size > 1) return positional;
@@ -1356,12 +1356,12 @@ function fillPlanArrayValueShape(items, pathName = '') {
   return itemShape == null ? [] : [itemShape];
 }
 
-// 数组字段的 shape:区分"定长异质标量元组"(如 theme11 rows[].us=[boolean,string]——
-// value 本身就是元组的各个位置,不是可重复的多行样本)与"可重复的同形列表"(如
-// tiles[].feats 的字符串列表、cards[].specs 这类多行 [label,value] 元组列表)。前者
-// 直接把 fillPlanArrayItemShape 按位置算出的类型数组当 shape;后者维持
-// fillPlanArrayValueShape 的「每项同形状」外层包装。混用会让 validateFillableValueShape
-// 把元组的标量位置误判成需要是数组,或反过来把列表误判成"元组长度不能超过 N"。
+// 陣列欄位的 shape:區分"定長異質標量元組"(如 theme11 rows[].us=[boolean,string]——
+// value 本身就是元組的各個位置,不是可重複的多行樣本)與"可重複的同形列表"(如
+// tiles[].feats 的字串列表、cards[].specs 這類多行 [label,value] 元組列表)。前者
+// 直接把 fillPlanArrayItemShape 按位置算出的型別陣列當 shape;後者維持
+// fillPlanArrayValueShape 的「每項同形狀」外層包裝。混用會讓 validateFillableValueShape
+// 把元組的標量位置誤判成需要是陣列,或反過來把列表誤判成"元組長度不能超過 N"。
 function arrayFieldShape(value, childPath) {
   const isScalarTuple = Array.isArray(value) && value.length > 1
     && value.every(item => item == null || (typeof item !== 'object' && !Array.isArray(item)))
@@ -1387,7 +1387,7 @@ function fillPlanTupleShapeForArrayItems(items) {
 function fillPlanTupleItemShape(values) {
   const objects = values.filter(isPlainObject);
   if (objects.length) {
-    // 并集全部对象项的键(样本取首个非 null 值),首项缺失的字段(如首段 conv=null)不再丢失
+    // 並集全部物件項的鍵(樣本取首個非 null 值),首項缺失的欄位(如首段 conv=null)不再丟失
     const merged = {};
     for (const obj of objects) {
       for (const [key, value] of Object.entries(obj)) {
@@ -1427,7 +1427,7 @@ function arrayItemRoles(items = [], arrayKey) {
   return Object.keys(roles).length ? roles : undefined;
 }
 
-// JAD-213:数组语义角色枚举。启发式:字段名 → itemShape 兜底(value/unit→metric)→ misc。
+// JAD-213:陣列語義角色列舉。啟發式:欄位名 → itemShape 兜底(value/unit→metric)→ misc。
 const ARRAY_ROLE_KEYWORDS = {
   metric: ['stats', 'stat', 'data', 'metrics', 'metric', 'dials', 'dialsdata', 'dial', 'gauges', 'gauge', 'kpis', 'kpi', 'scores', 'numbers', 'meters'],
   distribution: ['shares', 'share', 'splits', 'split', 'regions', 'region', 'allocations', 'allocation', 'breakdowns', 'breakdown', 'parts', 'part'],
@@ -1451,7 +1451,7 @@ function arrayRole(pathName, items = []) {
   for (const [role, keywords] of Object.entries(ARRAY_ROLE_KEYWORDS)) {
     if (keywords.includes(field)) return role;
   }
-  // itemShape 兜底:含 share/funding/value 等数值字段 + 标签字段 → metric/distribution。
+  // itemShape 兜底:含 share/funding/value 等數值欄位 + 標籤欄位 → metric/distribution。
   const shape = items.find(isPlainObject);
   if (shape) {
     const entries = Object.entries(shape).map(([key, value]) => [normalizeName(key), value]);
@@ -1467,7 +1467,7 @@ function isDistributionMetricFieldName(field) {
   return DISTRIBUTION_METRIC_FIELD_RE.test(normalizeName(field));
 }
 
-// 非媒体的数量控件(供 copy 内/无声明数组按长度匹配 count 控件)。
+// 非媒體的數量控制元件(供 copy 內/無宣告陣列按長度匹配 count 控制元件)。
 function nonMediaCountControls(controls = []) {
   return (controls || []).filter(control => {
     const key = String(control.key || '');
@@ -1478,7 +1478,7 @@ function nonMediaCountControls(controls = []) {
   });
 }
 
-// JAD-212:数组路径(顶层或 copy 内)→ count 控件。只能来自已解析 countBindings。
+// JAD-212:陣列路徑(頂層或 copy 內)→ count 控制元件。只能來自已解析 countBindings。
 function countMetaForArray(pathName, resolvedBindings) {
   const binding = (resolvedBindings || []).find(item => (item.arrays || []).includes(pathName));
   if (binding) {
@@ -1544,7 +1544,7 @@ function collectNumbers(value) {
   return [];
 }
 
-// 每个内容数组的填充元数据:默认条目数、绑定的 count 控件、范围、默认配色、语义角色、字段角色。
+// 每個內容陣列的填充後設資料:預設條目數、繫結的 count 控制元件、範圍、預設配色、語義角色、欄位角色。
 function buildArrayMeta(defaultProps = {}, countBindings = [], controls = [], { withItemRoles = false, propShapes = null } = {}) {
   const paths = discoverContentArrayPaths(defaultProps);
   const resolvedBindings = (countBindings || []).map(binding => ({ ...binding, arrays: resolveBindingArrays(binding, defaultProps, controls) }));
@@ -1588,9 +1588,9 @@ function buildArrayMeta(defaultProps = {}, countBindings = [], controls = [], { 
   });
 }
 
-// JAD-212:正文是否完全由组件硬编码不可填。
-// 条件:存在指向数组的 count 控件,但其数组在 defaultProps/copy 全部缺席,
-// 且无可发现的内容数组,且剩余 copyKeys 仅 eyebrow/serial 类(无 title/paragraph/metric 正文)。
+// JAD-212:正文是否完全由元件硬編碼不可填。
+// 條件:存在指向陣列的 count 控制元件,但其陣列在 defaultProps/copy 全部缺席,
+// 且無可發現的內容陣列,且剩餘 copyKeys 僅 eyebrow/serial 類(無 title/paragraph/metric 正文)。
 function detectContentLocked({ copyKeys, copyRoles, arrayMeta, resolvedBindings, defaultProps }) {
   if (arrayMeta.length) return null;
   const countTowardAbsent = (resolvedBindings || []).filter(binding => {
@@ -1601,7 +1601,7 @@ function detectContentLocked({ copyKeys, copyRoles, arrayMeta, resolvedBindings,
   const hasBodyCopy = (copyKeys || []).some(key => !['eyebrow', 'serial'].includes(copyRoles[key]));
   if (hasBodyCopy) return null;
   const arr = countTowardAbsent.map(binding => (binding.arrays || []).join('/')).join(', ');
-  return `正文数组(${arr})由组件硬编码,不在 props/copy 中,正文不可由 props 定制;只能改 count 控件数量`;
+  return `正文陣列(${arr})由元件硬編碼,不在 props/copy 中,正文不可由 props 定製;只能改 count 控制元件數量`;
 }
 
 function inferRoles(page, mediaSlots = []) {

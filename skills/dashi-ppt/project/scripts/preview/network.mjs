@@ -1,4 +1,4 @@
-// 预览服务器的主机名/局域网 IP 探测。从 scripts/serve-preview-https.mjs 拆出,逻辑逐字节保留。
+// 預覽伺服器的主機名/區域網 IP 探測。從 scripts/serve-preview-https.mjs 拆出,邏輯逐位元組保留。
 import { execFileSync } from 'node:child_process';
 import os from 'node:os';
 

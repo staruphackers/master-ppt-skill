@@ -1,4 +1,4 @@
-// swTheme.js — design tokens for the 声浪 / SoundWave slide system.
+// swTheme.js — design tokens for the 聲浪 / SoundWave slide system.
 // Plain data, no global side effects. Components read these for inline styles
 // so nothing is written to :root. Override any value by passing an `accent`
 // prop (or your own merged theme) — see each slide's `controls`.
@@ -24,7 +24,7 @@ export const swTheme = {
     lineD2: 'rgba(245,225,227,.32)',
   },
   font: {
-    sans: "'Noto Sans SC', system-ui, sans-serif",
+    sans: "'Noto Sans TC', system-ui, sans-serif",
     mono: "'Space Mono', ui-monospace, monospace",
   },
   type: { hero: 124, h1: 74, h2: 64, h3: 33, body: 25, label: 24 },

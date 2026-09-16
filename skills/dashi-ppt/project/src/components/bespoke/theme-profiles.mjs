@@ -1,5 +1,5 @@
-const SANS_CJK = '"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif';
-const DISPLAY_SANS = '"Archivo","Noto Sans SC","PingFang SC",system-ui,sans-serif';
+const SANS_CJK = '"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif';
+const DISPLAY_SANS = '"Archivo","Noto Sans TC","PingFang TC",system-ui,sans-serif';
 const MONO = '"Space Mono","IBM Plex Mono",ui-monospace,SFMono-Regular,monospace';
 const THEME05_SPECTRUM = ['#d8402e', '#e2742c', '#efbe2e', '#3c9a52', '#4da0c6', '#2c44a0', '#7a3c90'];
 
@@ -142,8 +142,8 @@ export const BESPOKE_THEME_PROFILES = Object.freeze({
     accent2: '#2c44a0',
     line: '#c4bfae',
     spectrum: THEME05_SPECTRUM, editorial: true,
-    fontDisplay: '"Arimo","Noto Sans SC","PingFang SC",sans-serif',
-    fontBody: '"Arimo","Noto Sans SC","PingFang SC",sans-serif',
+    fontDisplay: '"Arimo","Noto Sans TC","PingFang TC",sans-serif',
+    fontBody: '"Arimo","Noto Sans TC","PingFang TC",sans-serif',
     fontMono: MONO,
     pad: 72,
     padX: 72, padY: 60,
@@ -231,7 +231,7 @@ export const BESPOKE_THEME_PROFILES = Object.freeze({
     accent: '#d3ad5b',
     accent2: '#f0d59a',
     line: 'rgba(211,173,91,.28)',
-    fontDisplay: '"Cormorant Garamond","Noto Serif SC","Songti SC",serif',
+    fontDisplay: '"Cormorant Garamond","Noto Serif TC","Songti SC",serif',
     fontBody: SANS_CJK,
     fontMono: MONO,
     pad: 94,
@@ -260,7 +260,7 @@ export const BESPOKE_THEME_PROFILES = Object.freeze({
     accent: '#f06c45',
     accent2: '#79a8d8',
     line: 'rgba(217,229,241,.18)',
-    fontDisplay: '"Noto Serif SC","Songti SC",serif',
+    fontDisplay: '"Noto Serif TC","Songti SC",serif',
     fontBody: SANS_CJK,
     fontMono: MONO,
     pad: 92,
@@ -289,8 +289,8 @@ export const BESPOKE_THEME_PROFILES = Object.freeze({
     accent: '#5479e8',
     accent2: '#c79062',
     line: 'rgba(242,243,246,.2)',
-    fontDisplay: '"IBM Plex Sans","Noto Sans SC",system-ui,sans-serif',
-    fontBody: '"IBM Plex Sans","Noto Sans SC",system-ui,sans-serif',
+    fontDisplay: '"IBM Plex Sans","Noto Sans TC",system-ui,sans-serif',
+    fontBody: '"IBM Plex Sans","Noto Sans TC",system-ui,sans-serif',
     fontMono: '"IBM Plex Mono",ui-monospace,SFMono-Regular,monospace',
     pad: 96,
     gap: 20,

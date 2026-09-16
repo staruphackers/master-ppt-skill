@@ -1,5 +1,5 @@
 // @ts-check
-// 媒体判定域:媒体 slot 发现、容量与可写性判定、媒体类型归一化。
+// 媒體判定域:媒體 slot 發現、容量與可寫性判定、媒體型別歸一化。
 import path from 'node:path';
 import { mediaFormatForExtension, mediaFormatForMime } from '../media-formats.mjs';
 import {
@@ -255,7 +255,7 @@ export function isMediaCountControl(control) {
   const key = String(control.key || '');
   const label = String(control.label || '');
   const desc = String(control.desc || control.description || '');
-  if (!/(count|数量)$/i.test(key)) return false;
+  if (!/(count|(?:数量|數量))$/i.test(key)) return false;
   if (!['number', 'range', 'slider'].includes(type)) return false;
   return isMediaCountText(`${key} ${label} ${desc}`);
 }
@@ -289,9 +289,9 @@ function isVisualSlotCountControl(control) {
   const type = String(control?.type || '').toLowerCase();
   const key = String(control?.key || '');
   const text = `${key} ${control?.publicKey || ''} ${control?.label || ''} ${control?.desc || control?.description || ''}`;
-  return /(count|数量)$/i.test(key)
+  return /(count|(?:数量|數量))$/i.test(key)
     && ['number', 'range', 'slider'].includes(type)
-    && /(frame|image|media|photo|picture|slot|gallery|画框|画格|图片|图像|媒体|照片|相册)/i.test(text);
+    && /(frame|image|media|photo|picture|slot|gallery|(?:画框|畫框)|(?:画格|畫格)|(?:图片|圖片)|(?:图像|圖像|影象)|(?:媒体|媒體)|照片|(?:相册|相冊|相簿))/i.test(text);
 }
 
 function defaultArraySupportsInitialMedia(value) {

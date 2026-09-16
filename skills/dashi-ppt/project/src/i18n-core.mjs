@@ -1,6 +1,6 @@
-// Deck 界面语言层的纯函数部分:语言归一化、词典加载、元数据中文文案收集。
-// 本文件不得 import 任何 .jsx——scripts/build/extract-i18n-strings.mjs 等纯 node
-// 工具直接跑它;需要主题注册表的裁剪逻辑住 src/i18n.mjs。
+// Deck 介面語言層的純函式部分:語言歸一化、詞典載入、後設資料中文文案收集。
+// 本檔案不得 import 任何 .jsx——scripts/build/extract-i18n-strings.mjs 等純 node
+// 工具直接跑它;需要主題登入檔的裁剪邏輯住 src/i18n.mjs。
 import { readFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
 
@@ -23,10 +23,10 @@ export function loadI18nDictionary() {
 
 const hasCJK = (value) => /[一-鿿]/.test(String(value ?? ''));
 
-// 收集页面/主题包元数据里全部用户可见中文文案(控件 label/desc/unit/选项、页面名、
-// 主题名/场景)。运行时按 deck 裁剪词典用它,scripts/build/extract-i18n-strings.mjs
-// 的全量提取/覆盖率检查也复用它——共享实现必须住 src/(安装版 project/ 只带 src 与
-// 白名单 scripts,运行时代码不得 import scripts/build/)。
+// 收集頁面/主題包後設資料裡全部使用者可見中文文案(控制元件 label/desc/unit/選項、頁面名、
+// 主題名/場景)。執行時按 deck 裁剪詞典用它,scripts/build/extract-i18n-strings.mjs
+// 的全量提取/覆蓋率檢查也複用它——共享實現必須住 src/(安裝版 project/ 只帶 src 與
+// 白名單 scripts,執行時程式碼不得 import scripts/build/)。
 export function collectMetadataStrings(pages, packs) {
   const entries = new Map(); // 中文 → Set<kind>
   const add = (text, kind) => {

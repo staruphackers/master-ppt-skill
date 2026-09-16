@@ -1,5 +1,5 @@
-// HTTPS 证书自签发 + HTTP/HTTPS 复用端口的 TLS 探测。从 scripts/serve-preview-https.mjs 拆出,
-// 逻辑逐字节保留(仅把闭包捕获的顶层常量改为显式参数)。
+// HTTPS 證書自簽發 + HTTP/HTTPS 複用埠的 TLS 探測。從 scripts/serve-preview-https.mjs 拆出,
+// 邏輯逐位元組保留(僅把閉包捕獲的頂層常量改為顯式引數)。
 import { execFileSync } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import net from 'node:net';

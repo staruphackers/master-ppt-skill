@@ -1,6 +1,6 @@
-// 导出/保存相关 API 路由(editable-pptx / pdf / save-deck-state)。从 scripts/serve-preview-https.mjs
-// 拆出,逻辑逐字节保留:仅把闭包捕获的顶层常量(ROOT/SERVE_ROOT/EXPORT_DIR/PORT/HOST/…)
-// 改为 initExportRoutes() 注入的模块内状态,行为不变。
+// 匯出/儲存相關 API 路由(editable-pptx / pdf / save-deck-state)。從 scripts/serve-preview-https.mjs
+// 拆出,邏輯逐位元組保留:僅把閉包捕獲的頂層常量(ROOT/SERVE_ROOT/EXPORT_DIR/PORT/HOST/…)
+// 改為 initExportRoutes() 注入的模組內狀態,行為不變。
 import { createReadStream, mkdirSync, readFileSync, realpathSync, statSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { scrubLocalPaths } from '../scrub-local-paths.mjs';
@@ -22,8 +22,8 @@ let LAN_IPS;
 const EXPORT_PROGRESS = new Map();
 let activeExportCount = 0;
 
-// 由入口文件在启动时调用一次,注入运行时上下文;所有 handler 与鉴权/URL 解析函数沿用旧版
-// 闭包读取顶层常量的写法,只是把常量来源从模块顶层 const 换成这里的可赋值绑定。
+// 由入口檔案在啟動時呼叫一次,注入執行時上下文;所有 handler 與鑑權/URL 解析函式沿用舊版
+// 閉包讀取頂層常量的寫法,只是把常量來源從模組頂層 const 換成這裡的可賦值繫結。
 export function initExportRoutes(config) {
   ROOT = config.root;
   SERVE_ROOT = config.serveRoot;
@@ -50,12 +50,12 @@ export async function handleEditablePptxExport(req, res) {
     }
     const payload = await readJsonBody(req);
     progressId = safeProgressId(payload.progressId);
-    updateExportProgress(progressId, { stage: 'queued', detail: '服务端接收导出请求', percent: 4 });
+    updateExportProgress(progressId, { stage: 'queued', detail: '伺服器端接收匯出請求', percent: 4 });
     const [{ chromium }, { exportEditablePptxFromUrl }] = await Promise.all([
       import('playwright-core'),
       import('../../packages/html-deck-to-pptx/src/editable.mjs'),
     ]);
-    updateExportProgress(progressId, { stage: 'launching', detail: '启动导出浏览器', percent: 6 });
+    updateExportProgress(progressId, { stage: 'launching', detail: '啟動匯出瀏覽器', percent: 6 });
     const browser = await launchExportBrowser(chromium, {
       fallbackTmpDirs: [path.join(EXPORT_DIR, '.browser-tmp')],
       log: message => console.warn(message),
@@ -75,7 +75,7 @@ export async function handleEditablePptxExport(req, res) {
     } finally {
       await closeBrowser(browser);
     }
-    updateExportProgress(progressId, { stage: 'download-ready', detail: '准备浏览器下载', percent: 100, done: true });
+    updateExportProgress(progressId, { stage: 'download-ready', detail: '準備瀏覽器下載', percent: 100, done: true });
 
     res.writeHead(200, {
       'content-type': 'application/json;charset=utf-8',
@@ -99,10 +99,10 @@ export async function handleEditablePptxExport(req, res) {
   }
 }
 
-// 编辑自动回写:预览运行时(template-swiss.html)每次编辑后防抖 POST 这里,把 view-model
-// state 烧回它自己正在服务的 index.html,并把 state 里的 data: 媒体落盘成 assets/user-media/
-// 文件。同源鉴权复用导出端点那一套(isAllowedExportRequest);不是导出,不计入 activeExportCount
-// / 不产生进度轮询。
+// 編輯自動回寫:預覽執行時(template-swiss.html)每次編輯後防抖 POST 這裡,把 view-model
+// state 燒回它自己正在服務的 index.html,並把 state 裡的 data: 媒體落盤成 assets/user-media/
+// 檔案。同源鑑權複用匯出端點那一套(isAllowedExportRequest);不是匯出,不計入 activeExportCount
+// / 不產生進度輪詢。
 export async function handleSaveDeckState(req, res) {
   if (!isAllowedExportRequest(req)) {
     writeForbiddenExportResponse(res);
@@ -128,9 +128,9 @@ export async function handleSaveDeckState(req, res) {
     const nextHtml = mergeStateIntoIndexHtml(html, resolvedState);
     atomicWriteFileSync(indexFile, nextHtml);
     res.writeHead(200, { 'content-type': 'application/json;charset=utf-8', 'cache-control': 'no-store' });
-    // `state` 回显仅供调试/脚本化调用方核对;template-swiss.html 的运行时不使用它做整体覆盖
-    // (会冲掉保存期间发生的新编辑),只消费 `mediaMap` 做精确字符串替换——见 persist-deck-state.mjs
-    // 顶部注释。
+    // `state` 回顯僅供除錯/指令碼化呼叫方核對;template-swiss.html 的執行時不使用它做整體覆蓋
+    // (會沖掉儲存期間發生的新編輯),只消費 `mediaMap` 做精確字串替換——見 persist-deck-state.mjs
+    // 頂部註釋。
     res.end(JSON.stringify({ ok: true, state: resolvedState, mediaWritten: written, mediaMap }));
   } catch (error) {
     const message = publicErrorMessage(error, 'Save failed');
@@ -150,12 +150,12 @@ export async function handlePdfExport(req, res) {
     }
     const payload = await readJsonBody(req);
     progressId = safeProgressId(payload.progressId);
-    updateExportProgress(progressId, { stage: 'queued', detail: '服务端接收 PDF 导出请求', percent: 4 });
+    updateExportProgress(progressId, { stage: 'queued', detail: '伺服器端接收 PDF 匯出請求', percent: 4 });
     const [{ chromium }, { exportScreenshotPdfFromUrl }] = await Promise.all([
       import('playwright-core'),
       import('../../packages/html-deck-to-pptx/src/screenshot.mjs'),
     ]);
-    updateExportProgress(progressId, { stage: 'launching', detail: '启动截图浏览器', percent: 6 });
+    updateExportProgress(progressId, { stage: 'launching', detail: '啟動截圖瀏覽器', percent: 6 });
     const browser = await launchExportBrowser(chromium, {
       fallbackTmpDirs: [path.join(EXPORT_DIR, '.browser-tmp')],
       log: message => console.warn(message),
@@ -177,7 +177,7 @@ export async function handlePdfExport(req, res) {
     } finally {
       await closeBrowser(browser);
     }
-    updateExportProgress(progressId, { stage: 'download-ready', detail: '准备浏览器下载', percent: 100, done: true });
+    updateExportProgress(progressId, { stage: 'download-ready', detail: '準備瀏覽器下載', percent: 100, done: true });
 
     res.writeHead(200, {
       'content-type': 'application/json;charset=utf-8',
@@ -206,14 +206,14 @@ export async function handlePdfExport(req, res) {
   }
 }
 
-// 浏览器端截图 PDF 的服务端合成端点:沙箱型宿主(如豆包)里,daemonize 的服务进程
-// 无法启动任何 Chromium(Mach 注册/显示服务被宿主 seatbelt 拦截,见
-// launch-export-browser.mjs 的分层说明)。此时前端把每页用 html-to-image 在「用户
-// 自己的浏览器」里截成 dataURL 上传,这里用 pdf-lib(纯 JS,无浏览器依赖)合成 PDF——
-// 用户浏览器是正常桌面进程,不受宿主沙箱影响,这条兜底对任何沙箱形态免疫。
-// 浏览器端可编辑 PPTX 的落盘端点:前端在用户浏览器里完成采集/截图/组装后,把
-// PPTX 二进制 POST 过来,这里只做写盘并返回与常规导出一致的下载结构——服务端全程
-// 不需要浏览器,对宿主沙箱免疫(与 /api/export-pdf-assemble 同一架构)。
+// 瀏覽器端截圖 PDF 的伺服器端合成端點:沙箱型宿主(如豆包)裡,daemonize 的服務程序
+// 無法啟動任何 Chromium(Mach 註冊/顯示服務被宿主 seatbelt 攔截,見
+// launch-export-browser.mjs 的分層說明)。此時前端把每頁用 html-to-image 在「使用者
+// 自己的瀏覽器」裡截成 dataURL 上傳,這裡用 pdf-lib(純 JS,無瀏覽器依賴)合成 PDF——
+// 使用者瀏覽器是正常桌面程序,不受宿主沙箱影響,這條兜底對任何沙箱形態免疫。
+// 瀏覽器端可編輯 PPTX 的落盤端點:前端在使用者瀏覽器裡完成採集/截圖/組裝後,把
+// PPTX 二進位制 POST 過來,這裡只做寫盤並返回與常規匯出一致的下載結構——伺服器端全程
+// 不需要瀏覽器,對宿主沙箱免疫(與 /api/export-pdf-assemble 同一架構)。
 export async function handlePptxStore(req, res, requestUrl) {
   activeExportCount += 1;
   try {
@@ -223,7 +223,7 @@ export async function handlePptxStore(req, res, requestUrl) {
     }
     const bytes = await readBinaryBody(req, 300 * 1024 * 1024);
     if (!bytes.length || bytes.length < 4 || bytes[0] !== 0x50 || bytes[1] !== 0x4b) {
-      throw new Error('请求体不是有效的 PPTX(zip)数据。');
+      throw new Error('請求體不是有效的 PPTX(zip)資料。');
     }
     const fileName = requestUrl.searchParams.get('fileName') || 'presentation';
     const baseName = `${timestampForFile()}-${safeDownloadName(fileName)}`;
@@ -276,7 +276,7 @@ export async function handlePdfAssemble(req, res) {
     const payload = await readJsonBody(req);
     const pages = Array.isArray(payload.pages) ? payload.pages : [];
     if (!pages.length || pages.length > 500) {
-      throw new Error('pages 必须是 1-500 张 png/jpeg dataURL。');
+      throw new Error('pages 必須是 1-500 張 png/jpeg dataURL。');
     }
     const { PDFDocument } = await import('pdf-lib');
     const pdf = await PDFDocument.create();
@@ -287,7 +287,7 @@ export async function handlePdfAssemble(req, res) {
     const PDF_H = 9 * 72;
     for (const dataUrl of pages) {
       const match = /^data:image\/(png|jpeg);base64,([A-Za-z0-9+/=]+)$/.exec(String(dataUrl || ''));
-      if (!match) throw new Error('pages 中存在无法识别的图片数据(仅支持 png/jpeg dataURL)。');
+      if (!match) throw new Error('pages 中存在無法識別的圖片資料(僅支援 png/jpeg dataURL)。');
       const bytes = Buffer.from(match[2], 'base64');
       const image = match[1] === 'png' ? await pdf.embedPng(bytes) : await pdf.embedJpg(bytes);
       const page = pdf.addPage([PDF_W, PDF_H]);
@@ -332,7 +332,7 @@ export function handlePdfProgress(req, res, requestUrl) {
     'content-type': 'application/json;charset=utf-8',
     'cache-control': 'no-store',
   });
-  res.end(JSON.stringify(state || { stage: 'pending', detail: '等待服务端进度', percent: 0, done: false }));
+  res.end(JSON.stringify(state || { stage: 'pending', detail: '等待伺服器端進度', percent: 0, done: false }));
 }
 
 export function handlePdfDownload(req, res, requestUrl) {
@@ -386,7 +386,7 @@ export function handleEditablePptxProgress(req, res, requestUrl) {
     'content-type': 'application/json;charset=utf-8',
     'cache-control': 'no-store',
   });
-  res.end(JSON.stringify(state || { stage: 'pending', detail: '等待服务端进度', percent: 0, done: false }));
+  res.end(JSON.stringify(state || { stage: 'pending', detail: '等待伺服器端進度', percent: 0, done: false }));
 }
 
 export function handleEditablePptxDownload(req, res, requestUrl) {
@@ -583,7 +583,7 @@ function updateExportProgress(id, update = {}) {
   const previous = EXPORT_PROGRESS.get(id) || {};
   const next = {
     stage: update.stage || previous.stage || 'working',
-    detail: scrubLocalPaths(update.detail || previous.detail || '正在生成可编辑 PPTX'),
+    detail: scrubLocalPaths(update.detail || previous.detail || '正在生成可編輯 PPTX'),
     percent: Math.max(0, Math.min(100, Math.round(Number(update.percent ?? previous.percent ?? 0)))),
     done: Boolean(update.done || false),
     error: Boolean(update.error || false),
@@ -595,12 +595,12 @@ function updateExportProgress(id, update = {}) {
   }
 }
 
-// 403 时给可行动的提示,而不是让调用方去猜:说明鉴权要求,并指出脚本化调用的替代路径。
+// 403 時給可行動的提示,而不是讓呼叫方去猜:說明鑑權要求,並指出指令碼化呼叫的替代路徑。
 function writeForbiddenExportResponse(res) {
   res.writeHead(403, { 'content-type': 'application/json;charset=utf-8', 'cache-control': 'no-store' });
   res.end(JSON.stringify({
     error: 'Forbidden export origin',
-    hint: '导出接口要求同源 Origin 或 Referer 头(从预览页面里点导出即可);脚本化/无头调用请改用 `npm run export:pptx -- <deck>/ppt <out.pptx>`(PDF 用 `export:pdf`),无需先起浏览器会话。',
+    hint: '匯出介面要求同源 Origin 或 Referer 頭(從預覽頁面裡點匯出即可);指令碼化/無頭呼叫請改用 `npm run export:pptx -- <deck>/ppt <out.pptx>`(PDF 用 `export:pdf`),無需先起瀏覽器會話。',
   }));
 }
 

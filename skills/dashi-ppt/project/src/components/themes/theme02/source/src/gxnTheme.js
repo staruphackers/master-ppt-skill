@@ -62,8 +62,8 @@ const CSS = `
   --gxn-panel-b: rgba(255,255,255,0.012);
 
   /* ── type ── */
-  --gxn-font-display: 'Space Grotesk','Noto Sans SC',-apple-system,sans-serif;
-  --gxn-font-sans: 'Noto Sans SC','Space Grotesk',-apple-system,sans-serif;
+  --gxn-font-display: 'Space Grotesk','Noto Sans TC',-apple-system,sans-serif;
+  --gxn-font-sans: 'Noto Sans TC','Space Grotesk',-apple-system,sans-serif;
   --gxn-font-mono: 'Space Mono',ui-monospace,'SFMono-Regular',monospace;
   --gxn-fs-display: 82px;
   --gxn-fs-h1: 58px;
@@ -276,7 +276,7 @@ export function cx(...parts) {
  * ──────────────────────────────────────────────────────────────────────── */
 export const GXN_SCHEMES = {
   green: {
-    label: '霓虹绿',
+    label: '霓虹綠',
     vars: {}, // base theme is already green — no overrides needed
     chart: { accent: '#2fe07f', accent2: '#b9f24a', cool: '#4ea2ff', glow: '47,224,127' },
     palette: GXN_PALETTE,

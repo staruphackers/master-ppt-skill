@@ -8,8 +8,8 @@ const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const SKILL_ROOT = path.resolve(SCRIPT_DIR, '..');
 const INSTALLED_PACKAGE = path.join(SKILL_ROOT, 'project/package.json');
 const SOURCE_PACKAGE = path.join(SKILL_ROOT, 'package.json');
-// 端点按国内可达性排序:npmmirror(国内可达)→ npm 官方 → GitHub raw(兜底,
-// 兼容 npm 包尚未发布的过渡期)。任一端点拿到版本即停,全部失败保持静默。
+// 端點按國內可達性排序:npmmirror(國內可達)→ npm 官方 → GitHub raw(兜底,
+// 相容 npm 包尚未釋出的過渡期)。任一端點拿到版本即停,全部失敗保持靜默。
 const REMOTE_VERSION_ENDPOINTS = [
   { url: 'https://registry.npmmirror.com/dashi-ppt-skill/latest', pick: (json) => json.version },
   { url: 'https://registry.npmjs.org/dashi-ppt-skill/latest', pick: (json) => json.version },
@@ -26,7 +26,7 @@ async function main() {
   if (!remoteVersion) return;
   if (compareVersions(remoteVersion, localVersion) <= 0) return;
   process.stdout.write(
-    `发现 Dashi PPT 新版本 ${remoteVersion}（当前 ${localVersion}）。更新方式：npx dashi-ppt-skill@latest（国内加 --registry=https://registry.npmmirror.com），或重新拉取 https://github.com/chuspeeism/dashi-ppt-skill。\n`
+    `發現 Dashi PPT 新版本 ${remoteVersion}（當前 ${localVersion}）。更新方式：npx dashi-ppt-skill@latest（國內加 --registry=https://registry.npmmirror.com），或重新拉取 https://github.com/chuspeeism/dashi-ppt-skill。\n`
   );
 }
 

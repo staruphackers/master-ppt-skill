@@ -28,7 +28,7 @@ import { exportScreenshotPdfFromUrl } from '../packages/html-deck-to-pptx/src/sc
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '..');
-// 相对路径按调用方目录解析:npm run(含 --prefix)会把脚本 cwd 切到项目根,INIT_CWD 才是用户所在目录。
+// 相對路徑按呼叫方目錄解析:npm run(含 --prefix)會把指令碼 cwd 切到專案根,INIT_CWD 才是使用者所在目錄。
 const CALLER_CWD = process.env.INIT_CWD || process.cwd();
 const SERVER_READY_TIMEOUT_MS = 20000;
 

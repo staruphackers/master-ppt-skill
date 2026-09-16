@@ -1,5 +1,5 @@
-// URL -> 相对路径 的无副作用 helper(供预览服务器用)。
-// 单独成模块以便单测,且不触发服务器监听。
+// URL -> 相對路徑 的無副作用 helper(供預覽伺服器用)。
+// 單獨成模組以便單測,且不觸發伺服器監聽。
 export function safePathname(url) {
   let parsed;
   try {
@@ -11,7 +11,7 @@ export function safePathname(url) {
   try {
     decoded = decodeURIComponent(parsed.pathname);
   } catch {
-    // 畸形百分号编码(如 /%、/%zz):返回 null 让调用方回 400,而非抛错崩溃进程。
+    // 畸形百分號編碼(如 /%、/%zz):返回 null 讓呼叫方回 400,而非拋錯崩潰程序。
     return null;
   }
   return decoded.split('/').filter((part) => part && part !== '..').join('/');

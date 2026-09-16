@@ -11,25 +11,25 @@ import {
 } from './variant-contract.mjs';
 
 export const ROLE_KEYWORDS = {
-  cover: ['cover', '封面', '首页'],
-  statement: ['statement', 'summary', 'overview', 'manifesto', 'quote', '摘要', '主张', '观点', '结论'],
-  breakdown: ['contents', 'agenda', 'index', 'directory', '目录', '结构', '纲目'],
-  transition: ['section', 'chapter', 'divider', '章节', '序章', '篇章'],
-  context: ['market', 'method', 'context', 'industry', '全景', '背景', '方法', '行业'],
-  metrics: ['metric', 'stat', 'number', 'score', 'gauge', 'meter', '指标', '数字', '大势', '仪表'],
-  trend: ['trend', 'timeline', 'curve', 'area', 'slope', 'stream', '走势', '趋势', '时间', '曲线', '季度'],
-  comparison: ['compare', 'versus', 'matrix', 'quadrant', 'delta', 'dumbbell', '对比', '矩阵', '象限', '差距'],
-  distribution: ['donut', 'treemap', 'heatmap', 'ranking', 'rank', 'waterfall', 'funnel', 'allocation', 'share', '分布', '占比', '排行', '瀑布', '漏斗'],
-  relationship: ['chain', 'flow', 'sankey', 'network', 'orbit', 'ecosystem', 'map', '关系', '链', '流向', '生态', '网络'],
-  case: ['case', 'spotlight', 'profile', 'story', '案例', '聚焦', '档案'],
-  image: ['image', 'gallery', 'mosaic', 'photo', 'film', 'album', 'poster', 'showcase', '影像', '图景', '图集', '图片', '海报'],
-  process: ['process', 'roadmap', 'journey', 'steps', 'gantt', '路径', '流程', '路线', '进程'],
-  risks: ['risk', 'faq', 'checklist', '风险', '异议', '问答', '清单'],
-  observation: ['quote', 'insight', 'takeaway', 'conclusion', 'statement', 'manifesto', '观点', '洞察', '要点', '结论'],
-  actions: ['action', 'roadmap', 'plan', 'join', 'contact', 'next', '行动', '策略', '计划', '套餐'],
-  result: ['result', 'outcome', 'score', 'closing', 'conclusion', '成果', '结果', '完成', '结论'],
-  team: ['team', 'roster', 'testimonial', 'voice', '团队', '人物', '见证', '证言'],
-  closing: ['closing', 'contact', 'join', 'end', 'colophon', '结语', '封底', '行动'],
+  cover: ['cover', '封面', '首頁'],
+  statement: ['statement', 'summary', 'overview', 'manifesto', 'quote', '摘要', '主張', '觀點', '結論'],
+  breakdown: ['contents', 'agenda', 'index', 'directory', '目錄', '結構', '綱目'],
+  transition: ['section', 'chapter', 'divider', '章節', '序章', '篇章'],
+  context: ['market', 'method', 'context', 'industry', '全景', '背景', '方法', '行業'],
+  metrics: ['metric', 'stat', 'number', 'score', 'gauge', 'meter', '指標', '數字', '大勢', '儀表'],
+  trend: ['trend', 'timeline', 'curve', 'area', 'slope', 'stream', '走勢', '趨勢', '時間', '曲線', '季度'],
+  comparison: ['compare', 'versus', 'matrix', 'quadrant', 'delta', 'dumbbell', '對比', '矩陣', '象限', '差距'],
+  distribution: ['donut', 'treemap', 'heatmap', 'ranking', 'rank', 'waterfall', 'funnel', 'allocation', 'share', '分佈', '佔比', '排行', '瀑布', '漏斗'],
+  relationship: ['chain', 'flow', 'sankey', 'network', 'orbit', 'ecosystem', 'map', '關係', '鏈', '流向', '生態', '網路'],
+  case: ['case', 'spotlight', 'profile', 'story', '案例', '聚焦', '檔案'],
+  image: ['image', 'gallery', 'mosaic', 'photo', 'film', 'album', 'poster', 'showcase', '影像', '圖景', '圖集', '圖片', '海報'],
+  process: ['process', 'roadmap', 'journey', 'steps', 'gantt', '路徑', '流程', '路線', '程序'],
+  risks: ['risk', 'faq', 'checklist', '風險', '異議', '問答', '清單'],
+  observation: ['quote', 'insight', 'takeaway', 'conclusion', 'statement', 'manifesto', '觀點', '洞察', '要點', '結論'],
+  actions: ['action', 'roadmap', 'plan', 'join', 'contact', 'next', '行動', '策略', '計劃', '套餐'],
+  result: ['result', 'outcome', 'score', 'closing', 'conclusion', '成果', '結果', '完成', '結論'],
+  team: ['team', 'roster', 'testimonial', 'voice', '團隊', '人物', '見證', '證言'],
+  closing: ['closing', 'contact', 'join', 'end', 'colophon', '結語', '封底', '行動'],
 };
 
 export const ROLE_ALIASES = {
@@ -87,7 +87,7 @@ export function composeDeck(spec = {}) {
   if (spec.schemaVersion != null && !expandedVariants) {
     throw new Error(`Unsupported deck schemaVersion "${spec.schemaVersion}".`);
   }
-  const goal = spec.goal || spec.title || '主题汇报';
+  const goal = spec.goal || spec.title || '主題彙報';
   const title = spec.title || goal;
   const randomSeed = spec.randomSeed || `${title}:${goal}`;
   const themePack = normalizeThemePack(spec.themePack) || DEFAULT_THEME_PACK;
@@ -440,9 +440,9 @@ function isVisualSlotCountControl(control) {
   const type = String(control.type || '').toLowerCase();
   const key = String(control.prop || control.key || '');
   const text = `${key} ${control.label || ''} ${control.desc || control.description || ''}`;
-  return /(count|数量)$/i.test(key)
+  return /(count|(?:数量|數量))$/i.test(key)
     && ['number', 'range', 'slider'].includes(type)
-    && /(frame|image|media|photo|picture|slot|gallery|画框|画格|图片|图像|媒体|照片|相册)/i.test(text);
+    && /(frame|image|media|photo|picture|slot|gallery|(?:画框|畫框)|(?:画格|畫格)|(?:图片|圖片)|(?:图像|圖像|影象)|(?:媒体|媒體)|照片|(?:相册|相冊|相簿))/i.test(text);
 }
 
 function isMediaControl(control) {
@@ -451,7 +451,7 @@ function isMediaControl(control) {
   const label = String(control.label || '').toLowerCase();
   if (['images', 'image', 'media', 'picture'].includes(type)) return true;
   if (isMediaArrayKey(key)) return true;
-  return /图片|图像|视频|媒体/.test(label) && !/^show/.test(key);
+  return /(?:图片|圖片)|(?:图像|圖像|影象)|(?:视频|視頻|影片)|(?:媒体|媒體)/.test(label) && !/^show/.test(key);
 }
 
 

@@ -1,5 +1,5 @@
 // @ts-check
-// layout-query 域:按 role/关键词/媒体需求筛选并打分候选版式(listLayouts 的实现)。
+// layout-query 域:按 role/關鍵詞/媒體需求篩選並打分候選版式(listLayouts 的實現)。
 import {
   THEME_PAGES,
   getLayoutRecord,
@@ -38,7 +38,7 @@ const ROLE_ALIASES = {
   summary: 'statement',
   insight: 'observation',
   quote: 'observation',
-  // 批测实证的直觉词(codex 多轮使用未命中):映射到最接近的既有 role。
+  // 批測實證的直覺詞(codex 多輪使用未命中):對映到最接近的既有 role。
   numbers: 'metrics',
   section: 'transition',
   chapter: 'transition',
@@ -52,9 +52,9 @@ const ROLE_ALIASES = {
   inner: 'content',
   interior: 'content',
   '正文': 'content',
-  '内容': 'content',
-  '主体': 'content',
-  '内页': 'content',
+  '內容': 'content',
+  '主體': 'content',
+  '內頁': 'content',
   chart: 'metrics',
   timeline: 'trend',
   compare: 'comparison',
@@ -186,9 +186,9 @@ function listLayoutsForMediaCount({ theme, normalizedRole, keywords, keywordText
     .filter(row => !contentPack || /** @type {any} */ (row).projectionPlan.requiredFits)
     .map(compactLayoutCandidate);
 
-  // 同分候选用 seed 随机打散:打分只表达"是否更匹配",同等匹配的页面之间没有天然
-  // 优先级。历史上并列项按页码稳定排序,所有调用方(Agent 与 goal:scaffold)都贪婪
-  // 取列表最前,导致不同用户生成的 deck 大量选中同一批"前面的页",成片雷同。
+  // 同分候選用 seed 隨機打散:打分只表達"是否更匹配",同等匹配的頁面之間沒有天然
+  // 優先順序。歷史上並列項按頁碼穩定排序,所有呼叫方(Agent 與 goal:scaffold)都貪婪
+  // 取列表最前,導致不同使用者生成的 deck 大量選中同一批"前面的頁",成片雷同。
   const tieBreakSeed = seed === null || seed === undefined || seed === '' ? String(Math.floor(Math.random() * 0xffffffff)) : String(seed);
   const scored = rows.map(row => ({
     ...row,
@@ -295,8 +295,8 @@ export function hashSeed(value) {
     hash ^= value.charCodeAt(i);
     hash = Math.imul(hash, 16777619);
   }
-  // FNV-1a 对仅末字符不同的 key(themeNN_page010/011…)雪崩不足,直接用会让"随机"
-  // 顺序呈现大片连续页码;补一轮 murmur3 终混(fmix32)打散。
+  // FNV-1a 對僅末字元不同的 key(themeNN_page010/011…)雪崩不足,直接用會讓"隨機"
+  // 順序呈現大片連續頁碼;補一輪 murmur3 終混(fmix32)打散。
   hash ^= hash >>> 16;
   hash = Math.imul(hash, 0x85ebca6b);
   hash ^= hash >>> 13;
@@ -1327,7 +1327,7 @@ function arrayMinimumCount(layout, field) {
 
 function isChartDataContainer(layout, field) {
   const text = `${layout?.slot || ''} ${layout?.label || ''} ${(layout?.roles || []).join(' ')} ${field?.key || ''}`.toLowerCase();
-  return /chart|trend|distribution|relationship|comparison|ranking|treemap|radar|donut|waterfall|sankey|scatter|plot|bar|line|area|图|趋势|分布|关系|对比|排行|矩形树|雷达|瀑布/.test(text);
+  return /chart|trend|distribution|relationship|comparison|ranking|treemap|radar|donut|waterfall|sankey|scatter|plot|bar|line|area|(?:图|圖)|(?:趋势|趨勢)|(?:分布|分佈)|(?:关系|關係)|(?:对比|對比)|排行|(?:矩形树|矩形樹)|(?:雷达|雷達)|瀑布/.test(text);
 }
 
 function arrayFieldAcceptsEmptyValue(layout, field) {
@@ -1410,13 +1410,13 @@ function structureFingerprint(layout, plan) {
   const primary = plan.primaryContentContainer;
   const label = `${layout?.slot || ''} ${layout?.label || ''} ${(layout?.roles || []).join(' ')}`.toLowerCase();
   let family = 'editorial';
-  if (/table|ranking|leaderboard|表|排行|清单/.test(label)) family = 'table';
-  else if (/matrix|quadrant|矩阵|象限/.test(label)) family = 'matrix';
-  else if (/timeline|roadmap|process|step|sequence|时间|路线|流程|阶段/.test(label)) family = 'sequence';
-  else if (/compare|versus|comparison|对比|竞品|差异/.test(label)) family = 'comparison';
-  else if (/chart|trend|radar|donut|waterfall|plot|图|趋势|雷达|瀑布/.test(label)) family = 'chart';
-  else if (/hero|statement|quote|封面|宣言|观点/.test(label)) family = 'hero';
-  else if (/card|grid|list|tile|卡|网格|列表/.test(label)) family = 'cards';
+  if (/table|ranking|leaderboard|表|排行|(?:清单|清單)/.test(label)) family = 'table';
+  else if (/matrix|quadrant|(?:矩阵|矩陣)|象限/.test(label)) family = 'matrix';
+  else if (/timeline|roadmap|process|step|sequence|(?:时间|時間)|(?:路线|路線)|流程|(?:阶段|階段)/.test(label)) family = 'sequence';
+  else if (/compare|versus|comparison|(?:对比|對比)|(?:竞品|競品)|(?:差异|差異)/.test(label)) family = 'comparison';
+  else if (/chart|trend|radar|donut|waterfall|plot|(?:图|圖)|(?:趋势|趨勢)|(?:雷达|雷達)|瀑布/.test(label)) family = 'chart';
+  else if (/hero|statement|quote|封面|宣言|(?:观点|觀點)/.test(label)) family = 'hero';
+  else if (/card|grid|list|tile|卡|(?:网格|網格)|列表/.test(label)) family = 'cards';
   else if (primary?.supportsValue) family = 'metrics';
   else if ((primary?.capacity || 0) >= 3) family = 'cards';
   else if (layout?.mediaSlots?.length) family = 'media';

@@ -1,8 +1,8 @@
-// 预览服务"编辑自动回写"的核心逻辑:纯函数 + 少量文件系统副作用,便于不起 HTTP 服务单测。
-// 调用方(scripts/serve-preview-https.mjs)只负责鉴权/HTTP 收发,这里只管三件事:
-//   1) 校验运行时上报的 state 形状(拒绝畸形请求)。
-//   2) 把 state.props 里的 data: 媒体解码落盘到 assets/user-media/,state 里替换成相对路径。
-//   3) 把新 state 原子写回 index.html 既有的 `#deck-view-model` script 块,不改其余字段。
+// 預覽服務"編輯自動回寫"的核心邏輯:純函式 + 少量檔案系統副作用,便於不起 HTTP 服務單測。
+// 呼叫方(scripts/serve-preview-https.mjs)只負責鑑權/HTTP 收發,這裡只管三件事:
+//   1) 校驗執行時上報的 state 形狀(拒絕畸形請求)。
+//   2) 把 state.props 裡的 data: 媒體解碼落盤到 assets/user-media/,state 裡替換成相對路徑。
+//   3) 把新 state 原子寫回 index.html 既有的 `#deck-view-model` script 塊,不改其餘欄位。
 import { createHash } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -11,8 +11,8 @@ import { mediaFormatForMime } from './media-formats.mjs';
 
 const DECK_VIEW_MODEL_BLOCK = /<script id="deck-view-model" type="application\/json">([\s\S]*?)<\/script>/;
 
-// 运行时上报的 state 只允许这几个已知字段,形状必须匹配;其余一律视为畸形请求直接拒绝,
-// 不做"尽量兼容"的静默丢弃——写坏 index.html 比拒绝一次自动保存代价更大。
+// 執行時上報的 state 只允許這幾個已知欄位,形狀必須匹配;其餘一律視為畸形請求直接拒絕,
+// 不做"儘量相容"的靜默丟棄——寫壞 index.html 比拒絕一次自動儲存代價更大。
 export function isValidDeckState(state) {
   if (!state || typeof state !== 'object' || Array.isArray(state)) return false;
   const arrayFields = ['slideOrder', 'skippedSlides', 'deletedSlides', 'duplicatedSlides'];
@@ -36,7 +36,7 @@ function isPlainObject(value) {
   return prototype === Object.prototype || prototype === null;
 }
 
-// data:<mime>;base64,<payload> 解码;非 image/* 或 video/* 一律返回 null(不落盘、原样保留)。
+// data:<mime>;base64,<payload> 解碼;非 image/* 或 video/* 一律返回 null(不落盤、原樣保留)。
 function decodeDataUrl(value) {
   if (typeof value !== 'string' || !value.startsWith('data:')) return null;
   const commaIndex = value.indexOf(',');
@@ -52,7 +52,7 @@ function decodeDataUrl(value) {
   }
 }
 
-// 深度遍历 state,把每个 data: 字符串交给 transform;非字符串/非 data: 值原样保留。
+// 深度遍歷 state,把每個 data: 字串交給 transform;非字串/非 data: 值原樣保留。
 function replaceDataUrlStrings(value, transform) {
   if (Array.isArray(value)) return value.map(item => replaceDataUrlStrings(item, transform));
   if (isPlainObject(value)) {
@@ -64,14 +64,14 @@ function replaceDataUrlStrings(value, transform) {
   return value;
 }
 
-// state 里所有 data: 媒体 → 落盘到 `<deckDir>/assets/user-media/<hash>.<ext>`,内容相同的
-// data URL 按哈希去重(同一媒体反复编辑不会重复写盘)。返回替换后的 state、本次新写入的文件名,
-// 以及 `mediaMap`(原始 data: URL → 相对路径,只含真正转换成功的条目)。
+// state 裡所有 data: 媒體 → 落盤到 `<deckDir>/assets/user-media/<hash>.<ext>`,內容相同的
+// data URL 按雜湊去重(同一媒體反覆編輯不會重複寫盤)。返回替換後的 state、本次新寫入的檔名,
+// 以及 `mediaMap`(原始 data: URL → 相對路徑,只含真正轉換成功的條目)。
 //
-// mediaMap 存在的理由:这次请求发出后、响应回来前,用户可能已经继续编辑(输入了更多文字、
-// 换了别的图)。调用方不能拿这里返回的整份 state 直接覆盖客户端当下的 vm.state——那会把等待
-// 期里发生的新编辑悄悄冲掉。正确做法是客户端只用 mediaMap 做"精确字符串替换"(把当下 state
-// 里仍等于某个原始 data: URL 的位置换成对应相对路径),不动其余字段;见 template-swiss.html 的
+// mediaMap 存在的理由:這次請求發出後、響應回來前,使用者可能已經繼續編輯(輸入了更多文字、
+// 換了別的圖)。呼叫方不能拿這裡返回的整份 state 直接覆蓋用戶端當下的 vm.state——那會把等待
+// 期裡發生的新編輯悄悄沖掉。正確做法是用戶端只用 mediaMap 做"精確字串替換"(把當下 state
+// 裡仍等於某個原始 data: URL 的位置換成對應相對路徑),不動其餘欄位;見 template-swiss.html 的
 // applyMediaMapReconciliation。
 export function extractDataUrlMedia(state, deckDir) {
   const mediaDir = path.join(deckDir, 'assets/user-media');
@@ -95,7 +95,7 @@ export function extractDataUrlMedia(state, deckDir) {
       fs.writeFileSync(target, decoded.buffer);
       written.push(filename);
       if (decoded.mime.startsWith('video/')) {
-        try { generateVideoPoster(target); } catch { /* 海报生成尽力而为,不阻塞保存 */ }
+        try { generateVideoPoster(target); } catch { /* 海報生成盡力而為,不阻塞儲存 */ }
       }
     }
     const relative = `assets/user-media/${filename}`;
@@ -106,8 +106,8 @@ export function extractDataUrlMedia(state, deckDir) {
   return { state: replaceDataUrlStrings(state, transform), written, mediaMap };
 }
 
-// 把新 state 写回既有 index.html 的 `#deck-view-model` script 块,只替换 `.state` 字段,
-// model/slides/options 等其余字段原样保留——这些字段的生成/维护职责在 renderDeck.jsx。
+// 把新 state 寫回既有 index.html 的 `#deck-view-model` script 塊,只替換 `.state` 欄位,
+// model/slides/options 等其餘欄位原樣保留——這些欄位的生成/維護職責在 renderDeck.jsx。
 export function mergeStateIntoIndexHtml(html, nextState) {
   const match = DECK_VIEW_MODEL_BLOCK.exec(html);
   if (!match) throw new Error('index.html is missing the #deck-view-model script block.');
@@ -129,8 +129,8 @@ function escapeScriptJson(value) {
     .replaceAll('\u2029', '\\u2029');
 }
 
-// 同目录临时文件 + rename:rename 在同一文件系统内是原子的,并发写以最后一次 rename 为准,
-// 不会让读者看到半份文件。
+// 同目錄臨時檔案 + rename:rename 在同一檔案系統內是原子的,併發寫以最後一次 rename 為準,
+// 不會讓讀者看到半份檔案。
 export function atomicWriteFileSync(filePath, content) {
   const dir = path.dirname(filePath);
   const tmp = path.join(dir, `.${path.basename(filePath)}.tmp-${process.pid}-${Date.now()}-${Math.random().toString(36).slice(2)}`);

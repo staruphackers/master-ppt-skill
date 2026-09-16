@@ -1,18 +1,18 @@
 #!/usr/bin/env node
-// dashi-ppt-skill 的 npx 安装器:把包内 skill/ 目录复制到本机技能目录。
+// dashi-ppt-skill 的 npx 安裝器:把包內 skill/ 目錄複製到本機技能目錄。
 // 用法:
-//   npx dashi-ppt-skill@latest                  # 自动选择唯一安装目录
-//   npx dashi-ppt-skill@latest --dir <path>     # 显式指定技能根目录
-//   npx dashi-ppt-skill@latest --all            # 安装/更新全部探测到的技能目录
-//   npx dashi-ppt-skill@latest --list           # 只列出探测到的候选目录
+//   npx dashi-ppt-skill@latest                  # 自動選擇唯一安裝目錄
+//   npx dashi-ppt-skill@latest --dir <path>     # 顯式指定技能根目錄
+//   npx dashi-ppt-skill@latest --all            # 安裝/更新全部探測到的技能目錄
+//   npx dashi-ppt-skill@latest --list           # 只列出探測到的候選目錄
 //
-// 关键行为:
-// - npm publish 会排除 .npmrc,包内以 project/npmrc.template 携带缺省镜像配置,
-//   安装时重建 .npmrc;用户通过 --registry=npmmirror 安装(npm_config_registry
-//   环境变量)即视为明确选择镜像,直接锁定并跳过后续探测。
-// - 更新时保留 project/node_modules 与已探测的 .npmrc;但新旧 package-lock.json
-//   内容不一致(依赖变化)时删除 node_modules/.package-lock.json 哨兵,强制
-//   渲染脚本重跑 npm install(mtime 在复制后不可信,不能作为依据)。
+// 關鍵行為:
+// - npm publish 會排除 .npmrc,包內以 project/npmrc.template 攜帶預設映象配置,
+//   安裝時重建 .npmrc;使用者透過 --registry=npmmirror 安裝(npm_config_registry
+//   環境變數)即視為明確選擇映象,直接鎖定並跳過後續探測。
+// - 更新時保留 project/node_modules 與已探測的 .npmrc;但新舊 package-lock.json
+//   內容不一致(依賴變化)時刪除 node_modules/.package-lock.json 哨兵,強制
+//   渲染指令碼重跑 npm install(mtime 在複製後不可信,不能作為依據)。
 import { cpSync, existsSync, mkdirSync, readFileSync, renameSync, rmSync, readdirSync, writeFileSync } from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -29,13 +29,13 @@ const args = process.argv.slice(2);
 const dirFlagIndex = args.indexOf('--dir');
 const explicitDir = dirFlagIndex >= 0 ? args[dirFlagIndex + 1] : null;
 if (dirFlagIndex >= 0 && (!explicitDir || explicitDir.startsWith('--'))) {
-  console.error('--dir 需要一个路径参数,例如 --dir ~/.claude/skills');
+  console.error('--dir 需要一個路徑引數,例如 --dir ~/.claude/skills');
   process.exit(2);
 }
 const listOnly = args.includes('--list');
 const installAll = args.includes('--all');
 if (explicitDir && installAll) {
-  console.error('--dir 与 --all 不能同时使用。');
+  console.error('--dir 與 --all 不能同時使用。');
   process.exit(2);
 }
 
@@ -65,10 +65,10 @@ function readFileOr(filePath, fallback = '') {
   }
 }
 
-// 安装后的 project/.npmrc 决策(优先级从高到低):
-// 1. 本次经镜像 registry 安装 → 锁镜像并打探测标(用户已明确选择,不再探测官方);
-// 2. 旧安装已有探测结果(带标) → 原样保留;
-// 3. 包内模板 → 重建缺省(npmmirror 保底,首次生成时由 ensure-registry 探测调整)。
+// 安裝後的 project/.npmrc 決策(優先順序從高到低):
+// 1. 本次經映象 registry 安裝 → 鎖映象並打探測標(使用者已明確選擇,不再探測官方);
+// 2. 舊安裝已有探測結果(帶標) → 原樣保留;
+// 3. 包內模板 → 重建預設(npmmirror 保底,首次生成時由 ensure-registry 探測調整)。
 function resolveNpmrc(previousNpmrc) {
   const chosenMirror = installerRegistryChoice();
   if (chosenMirror) return `registry=${chosenMirror}\n${PROBED_MARK}\n`;
@@ -80,9 +80,9 @@ function resolveNpmrc(previousNpmrc) {
 function installInto(targetRoot, version) {
   const dest = path.join(targetRoot, SKILL_NAME);
   const destProject = path.join(dest, 'project');
-  // 0.4.0 改名迁移:旧目录 dashiai-ppt 存在时,仅把旧依赖 node_modules
-  // rename 进新目录(同盘瞬时;后续正常安装流程会照常保留它),然后整体
-  // 移除旧目录,避免宿主把新旧两个目录双注册。
+  // 0.4.0 改名遷移:舊目錄 dashiai-ppt 存在時,僅把舊依賴 node_modules
+  // rename 進新目錄(同盤瞬時;後續正常安裝流程會照常保留它),然後整體
+  // 移除舊目錄,避免宿主把新舊兩個目錄雙註冊。
   const legacyDir = path.join(targetRoot, LEGACY_SKILL_NAME);
   if (existsSync(legacyDir) && legacyDir !== dest) {
     const legacyModules = path.join(legacyDir, 'project', 'node_modules');
@@ -92,11 +92,11 @@ function installInto(targetRoot, version) {
       renameSync(legacyModules, destModules);
     }
     rmSync(legacyDir, { recursive: true, force: true });
-    console.log(`已迁移并移除旧目录 ${legacyDir}(skill 改名 dashiai-ppt → dashi-ppt)。`);
+    console.log(`已遷移並移除舊目錄 ${legacyDir}(skill 改名 dashiai-ppt → dashi-ppt)。`);
   }
-  // 原子替换:在同一目录构建 staging,rename 交换新旧目录。任何一步中断,
-  // dest 要么是完整旧版要么是完整新版,最多留下带专属前缀的临时目录
-  // (下次安装开头清理),绝不出现半删半拷的残缺 skill。
+  // 原子替換:在同一目錄構建 staging,rename 交換新舊目錄。任何一步中斷,
+  // dest 要麼是完整舊版要麼是完整新版,最多留下帶專屬字首的臨時目錄
+  // (下次安裝開頭清理),絕不出現半刪半拷的殘缺 skill。
   const staging = path.join(targetRoot, `.${SKILL_NAME}-staging-${process.pid}`);
   const retired = path.join(targetRoot, `.${SKILL_NAME}-old-${process.pid}`);
   mkdirSync(targetRoot, { recursive: true });
@@ -110,7 +110,7 @@ function installInto(targetRoot, version) {
   const previousNpmrc = readFileOr(path.join(destProject, '.npmrc'));
   const hadModules = existsSync(path.join(destProject, 'node_modules'));
 
-  console.log(`安装 Dashi PPT Skill v${version} → ${dest}`);
+  console.log(`安裝 Dashi PPT Skill v${version} → ${dest}`);
   cpSync(SKILL_SOURCE, staging, { recursive: true });
   writeFileSync(path.join(staging, 'project', '.npmrc'), resolveNpmrc(previousNpmrc));
 
@@ -120,29 +120,29 @@ function installInto(targetRoot, version) {
   if (existsSync(dest)) renameSync(dest, retired);
   renameSync(staging, dest);
   if (hadModules) {
-    // 同一文件系统内 rename 移交 node_modules:瞬时且不产生拷贝。
+    // 同一檔案系統內 rename 移交 node_modules:瞬時且不產生複製。
     renameSync(path.join(retired, 'project', 'node_modules'), path.join(dest, 'project', 'node_modules'));
     if (dependenciesChanged) {
-      // 依赖清单变了:删除安装哨兵,渲染脚本会重跑 npm install 增量补齐。
+      // 依賴清單變了:刪除安裝哨兵,渲染指令碼會重跑 npm install 增量補齊。
       rmSync(path.join(dest, 'project', 'node_modules', '.package-lock.json'), { force: true });
-      console.log('依赖有更新:保留缓存并已标记,首次生成时将自动补齐安装。');
+      console.log('依賴有更新:保留快取並已標記,首次生成時將自動補齊安裝。');
     } else {
-      console.log('依赖未变化,保留原有 project/node_modules。');
+      console.log('依賴未變化,保留原有 project/node_modules。');
     }
   }
   rmSync(retired, { recursive: true, force: true });
   const installedEntries = readdirSync(dest).length;
-  console.log(`完成:${installedEntries} 个顶层条目。`);
+  console.log(`完成:${installedEntries} 個頂層條目。`);
 }
 
 function main() {
   if (!existsSync(SKILL_SOURCE)) {
-    console.error('损坏的安装包:缺少 skill/ 内容。请重新安装 dashi-ppt-skill。');
+    console.error('損壞的安裝包:缺少 skill/ 內容。請重新安裝 dashi-ppt-skill。');
     process.exit(1);
   }
   const detected = detectSkillRoots();
   if (listOnly) {
-    console.log(detected.length ? detected.join('\n') : '(未探测到常见技能目录,请用 --dir 指定)');
+    console.log(detected.length ? detected.join('\n') : '(未探測到常見技能目錄,請用 --dir 指定)');
     return;
   }
   let targetRoots = explicitDir ? [path.resolve(explicitDir)] : detected;
@@ -154,8 +154,8 @@ function main() {
     );
     const installedRoots = [...new Set(installedPaths.map(skillPath => path.dirname(skillPath)))];
     if (installedRoots.length > 1) {
-      console.error(`检测到多份 dashi-ppt 安装,本次未执行:\n  ${installedPaths.join('\n  ')}`);
-      console.error('请用 --dir <技能根目录> 选择一处更新,或用 --all 明确更新全部。');
+      console.error(`檢測到多份 dashi-ppt 安裝,本次未執行:\n  ${installedPaths.join('\n  ')}`);
+      console.error('請用 --dir <技能根目錄> 選擇一處更新,或用 --all 明確更新全部。');
       process.exit(2);
     }
     if (installedRoots.length === 1) {
@@ -163,15 +163,15 @@ function main() {
     } else if (detected.includes(sharedSkillRoot)) {
       targetRoots = [sharedSkillRoot];
     } else if (detected.length > 1) {
-      console.error(`检测到多个技能目录,本次未执行:\n  ${detected.join('\n  ')}`);
-      console.error('请用 --dir <技能根目录> 选择一处安装,或用 --all 明确安装到全部。');
+      console.error(`檢測到多個技能目錄,本次未執行:\n  ${detected.join('\n  ')}`);
+      console.error('請用 --dir <技能根目錄> 選擇一處安裝,或用 --all 明確安裝到全部。');
       process.exit(2);
     }
   }
   if (!targetRoots.length) {
-    console.error('未探测到技能目录。请显式指定,例如:');
+    console.error('未探測到技能目錄。請顯式指定,例如:');
     console.error('  npx dashi-ppt-skill --dir ~/.claude/skills');
-    console.error(`常见位置:\n  ${candidates.join('\n  ')}`);
+    console.error(`常見位置:\n  ${candidates.join('\n  ')}`);
     process.exit(2);
   }
 
@@ -179,7 +179,7 @@ function main() {
   for (const targetRoot of targetRoots) {
     installInto(targetRoot, version);
   }
-  console.log('重新打开会话后即可使用 dashi-ppt。');
+  console.log('重新開啟會話後即可使用 dashi-ppt。');
 }
 
 main();

@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
-  "title": "AI 融资年度回顾",
-  "goal": "面向投资团队汇报 AI 融资年度进展、关键变化和下一步判断",
-  "audience": "投资团队",
-  "owner": "研究团队",
+  "title": "AI 融資年度回顧",
+  "goal": "面向投資團隊彙報 AI 融資年度進展、關鍵變化和下一步判斷",
+  "audience": "投資團隊",
+  "owner": "研究團隊",
   "randomSeed": "theme08-example",
   "pageCount": 5,
   "themePack": "theme08",
@@ -13,17 +13,17 @@
       "id": "s1",
       "content": {
         "eyebrow": "示例封面",
-        "headlineLine1": "AI 融资年度回顾",
-        "headlineHl": "AI 融资年度回顾",
-        "subtitle": "面向投资团队汇报 AI 融资年度进展、关键变化和下一步判断",
+        "headlineLine1": "AI 融資年度回顧",
+        "headlineHl": "AI 融資年度回顧",
+        "subtitle": "面向投資團隊彙報 AI 融資年度進展、關鍵變化和下一步判斷",
         "yearTag": "2026",
-        "goldenLine": "AI 融资年度回顾",
-        "handNote": "投资团队 / 研究团队",
+        "goldenLine": "AI 融資年度回顧",
+        "handNote": "投資團隊 / 研究團隊",
         "kicker": "示例封面",
-        "bespokeTitle": "AI 融资年度回顾",
+        "bespokeTitle": "AI 融資年度回顧",
         "bespokePoints": [
-          "面向投资团队汇报 AI 融资年度进展、关键变化和下一步判断",
-          "投资团队 / 研究团队"
+          "面向投資團隊彙報 AI 融資年度進展、關鍵變化和下一步判斷",
+          "投資團隊 / 研究團隊"
         ]
       },
       "selectedVariant": "v1",
@@ -69,11 +69,11 @@
           "adjustable": false,
           "composition": {
             "designIntent": {
-              "objective": "建立AI 融资年度回顾的汇报范围",
-              "audience": "投资团队",
-              "narrativeRole": "封面定调",
-              "emphasis": "AI 融资年度回顾",
-              "rationale": "使用单一标题中心和两条关键信息建立清晰层级"
+              "objective": "建立AI 融資年度回顧的彙報範圍",
+              "audience": "投資團隊",
+              "narrativeRole": "封面定調",
+              "emphasis": "AI 融資年度回顧",
+              "rationale": "使用單一標題中心和兩條關鍵資訊建立清晰層級"
             },
             "background": "default",
             "elements": [
@@ -112,14 +112,14 @@
     {
       "id": "s2",
       "content": {
-        "eyebrow": "示例页面 2",
-        "headline": "AI 融资年度回顾 · 2",
-        "subheadline": "AI 融资年度回顾 · 2",
-        "summary": "面向投资团队汇报 AI 融资年度进展、关键变化和下一步判断 · 第 2 页",
-        "bespokeTitle": "AI 融资年度回顾 · 2",
+        "eyebrow": "示例頁面 2",
+        "headline": "AI 融資年度回顧 · 2",
+        "subheadline": "AI 融資年度回顧 · 2",
+        "summary": "面向投資團隊彙報 AI 融資年度進展、關鍵變化和下一步判斷 · 第 2 頁",
+        "bespokeTitle": "AI 融資年度回顧 · 2",
         "bespokePoints": [
-          "面向投资团队汇报 AI 融资年度进展、关键变化和下一步判断 · 第 2 页",
-          "投资团队 / 研究团队"
+          "面向投資團隊彙報 AI 融資年度進展、關鍵變化和下一步判斷 · 第 2 頁",
+          "投資團隊 / 研究團隊"
         ]
       },
       "selectedVariant": "v1",
@@ -165,11 +165,11 @@
           "adjustable": false,
           "composition": {
             "designIntent": {
-              "objective": "解释AI 融资年度回顾第 2 页的核心信息",
-              "audience": "投资团队",
-              "narrativeRole": "论证推进",
-              "emphasis": "面向投资团队汇报 AI 融资年度进展、关键变化和下一步判断",
-              "rationale": "使用单一标题中心和两条关键信息建立清晰层级"
+              "objective": "解釋AI 融資年度回顧第 2 頁的核心資訊",
+              "audience": "投資團隊",
+              "narrativeRole": "論證推進",
+              "emphasis": "面向投資團隊彙報 AI 融資年度進展、關鍵變化和下一步判斷",
+              "rationale": "使用單一標題中心和兩條關鍵資訊建立清晰層級"
             },
             "background": "default",
             "elements": [
@@ -208,14 +208,14 @@
     {
       "id": "s3",
       "content": {
-        "eyebrow": "示例页面 3",
-        "headline": "AI 融资年度回顾 · 3",
-        "subheadline": "AI 融资年度回顾 · 3",
-        "summary": "面向投资团队汇报 AI 融资年度进展、关键变化和下一步判断 · 第 3 页",
-        "bespokeTitle": "AI 融资年度回顾 · 3",
+        "eyebrow": "示例頁面 3",
+        "headline": "AI 融資年度回顧 · 3",
+        "subheadline": "AI 融資年度回顧 · 3",
+        "summary": "面向投資團隊彙報 AI 融資年度進展、關鍵變化和下一步判斷 · 第 3 頁",
+        "bespokeTitle": "AI 融資年度回顧 · 3",
         "bespokePoints": [
-          "面向投资团队汇报 AI 融资年度进展、关键变化和下一步判断 · 第 3 页",
-          "投资团队 / 研究团队"
+          "面向投資團隊彙報 AI 融資年度進展、關鍵變化和下一步判斷 · 第 3 頁",
+          "投資團隊 / 研究團隊"
         ]
       },
       "selectedVariant": "v1",
@@ -262,11 +262,11 @@
           "adjustable": false,
           "composition": {
             "designIntent": {
-              "objective": "解释AI 融资年度回顾第 3 页的核心信息",
-              "audience": "投资团队",
-              "narrativeRole": "论证推进",
-              "emphasis": "面向投资团队汇报 AI 融资年度进展、关键变化和下一步判断",
-              "rationale": "使用单一标题中心和两条关键信息建立清晰层级"
+              "objective": "解釋AI 融資年度回顧第 3 頁的核心資訊",
+              "audience": "投資團隊",
+              "narrativeRole": "論證推進",
+              "emphasis": "面向投資團隊彙報 AI 融資年度進展、關鍵變化和下一步判斷",
+              "rationale": "使用單一標題中心和兩條關鍵資訊建立清晰層級"
             },
             "background": "default",
             "elements": [
@@ -305,14 +305,14 @@
     {
       "id": "s4",
       "content": {
-        "eyebrow": "示例页面 4",
-        "headline": "AI 融资年度回顾 · 4",
-        "subheadline": "AI 融资年度回顾 · 4",
-        "summary": "面向投资团队汇报 AI 融资年度进展、关键变化和下一步判断 · 第 4 页",
-        "bespokeTitle": "AI 融资年度回顾 · 4",
+        "eyebrow": "示例頁面 4",
+        "headline": "AI 融資年度回顧 · 4",
+        "subheadline": "AI 融資年度回顧 · 4",
+        "summary": "面向投資團隊彙報 AI 融資年度進展、關鍵變化和下一步判斷 · 第 4 頁",
+        "bespokeTitle": "AI 融資年度回顧 · 4",
         "bespokePoints": [
-          "面向投资团队汇报 AI 融资年度进展、关键变化和下一步判断 · 第 4 页",
-          "投资团队 / 研究团队"
+          "面向投資團隊彙報 AI 融資年度進展、關鍵變化和下一步判斷 · 第 4 頁",
+          "投資團隊 / 研究團隊"
         ]
       },
       "selectedVariant": "v1",
@@ -359,11 +359,11 @@
           "adjustable": false,
           "composition": {
             "designIntent": {
-              "objective": "解释AI 融资年度回顾第 4 页的核心信息",
-              "audience": "投资团队",
-              "narrativeRole": "论证推进",
-              "emphasis": "面向投资团队汇报 AI 融资年度进展、关键变化和下一步判断",
-              "rationale": "使用单一标题中心和两条关键信息建立清晰层级"
+              "objective": "解釋AI 融資年度回顧第 4 頁的核心資訊",
+              "audience": "投資團隊",
+              "narrativeRole": "論證推進",
+              "emphasis": "面向投資團隊彙報 AI 融資年度進展、關鍵變化和下一步判斷",
+              "rationale": "使用單一標題中心和兩條關鍵資訊建立清晰層級"
             },
             "background": "default",
             "elements": [
@@ -402,19 +402,19 @@
     {
       "id": "s5",
       "content": {
-        "kicker": "示例页面 5",
-        "eyebrow": "示例页面 5",
-        "label": "示例页面",
+        "kicker": "示例頁面 5",
+        "eyebrow": "示例頁面 5",
+        "label": "示例頁面",
         "source": "Dashi PPT example",
         "sealTop": "DASHI",
         "sealBottom": "PPT",
-        "headline": "AI 融资年度回顾 · 5",
-        "subheadline": "AI 融资年度回顾 · 5",
-        "summary": "面向投资团队汇报 AI 融资年度进展、关键变化和下一步判断 · 第 5 页",
-        "bespokeTitle": "AI 融资年度回顾 · 5",
+        "headline": "AI 融資年度回顧 · 5",
+        "subheadline": "AI 融資年度回顧 · 5",
+        "summary": "面向投資團隊彙報 AI 融資年度進展、關鍵變化和下一步判斷 · 第 5 頁",
+        "bespokeTitle": "AI 融資年度回顧 · 5",
         "bespokePoints": [
-          "面向投资团队汇报 AI 融资年度进展、关键变化和下一步判断 · 第 5 页",
-          "投资团队 / 研究团队"
+          "面向投資團隊彙報 AI 融資年度進展、關鍵變化和下一步判斷 · 第 5 頁",
+          "投資團隊 / 研究團隊"
         ]
       },
       "selectedVariant": "v1",
@@ -463,11 +463,11 @@
           "adjustable": false,
           "composition": {
             "designIntent": {
-              "objective": "解释AI 融资年度回顾第 5 页的核心信息",
-              "audience": "投资团队",
-              "narrativeRole": "论证推进",
-              "emphasis": "面向投资团队汇报 AI 融资年度进展、关键变化和下一步判断",
-              "rationale": "使用单一标题中心和两条关键信息建立清晰层级"
+              "objective": "解釋AI 融資年度回顧第 5 頁的核心資訊",
+              "audience": "投資團隊",
+              "narrativeRole": "論證推進",
+              "emphasis": "面向投資團隊彙報 AI 融資年度進展、關鍵變化和下一步判斷",
+              "rationale": "使用單一標題中心和兩條關鍵資訊建立清晰層級"
             },
             "background": "default",
             "elements": [
