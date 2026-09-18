@@ -1,29 +1,27 @@
-# 繁體中文（台灣）版本
+# 繁體中文（台灣）維護說明
 
-本 fork 將可編輯文字轉為繁體中文並統一台灣介面用語。保留專案名稱、版本、授權、CLI 參數、英文程式識別名稱及外部素材網址。
+## 安裝與更新
 
-## 安裝此版本
+使用 `staruphackers/master-ppt-skill` 的 `main`，備份後安裝整個 `skills/dashi-ppt`。不要使用 `npx dashi-ppt-skill@latest`，它是上游套件。
 
-```bash
-git clone --branch localize/zh-tw --single-branch https://github.com/staruphackers/master-ppt-skill.git
-```
+## 範圍
 
-先備份原本的 skill，再將本專案的 `skills/dashi-ppt` 整個資料夾放入所用 Agent 的 skill 目錄，重新開啟工作階段。不要使用上游 `npx dashi-ppt-skill@latest` 更新此版本，否則繁體中文修改會被覆蓋。分支合併後可改從本 fork 的 `main` 安裝。
+本 fork 在原有繁中 PR 基礎上補齊 PowerShell 中文註解、修正「資料包告」轉換錯字、更新 README 與 fork 更新檢查，並從實際渲染結果重製主題總覽與繁中 README 圖片。既有英文介面保留。
 
-## 涵蓋範圍
+保留原始簡體字典鍵、正規表示式別名、測試輸入、英文識別名稱、schema、版型 key、套件名稱、版本、鎖定檔、授權與歷史提交。英文 README 中的上游示範圖已標為歷史素材，不宣稱是本 fork 的繁中截圖。
 
-已修改 126 個檔案；通過 161 項 JavaScript／JSX／TypeScript、JSON、YAML 或 HTML 內嵌腳本解析檢查。JavaScript 的程式結構、識別名稱、數值與運算子保持一致。中英字典新增 8204 個繁體查找別名，保留原有簡體鍵值及英文翻譯。另有 0 筆別名碰撞，採既有翻譯優先，完整記錄見 JSON 報告。
+## 驗證
 
-## 相容性與限制
+`tools/complete-zh-tw.cjs` 接續原轉換器，另以既有 Playwright／Chrome 檢查 12 套主題、語言切換、桌面與手機互動，並呼叫實際 CLI 匯出 PPTX／PDF。
 
-中文介面的內部代碼仍為 `zh`，避免破壞現有資料格式；輸出中的 `zh-CN` 標記改為 `zh-TW`。文字比對的正規表示式保留簡體相容別名，因此原始碼搜尋仍可能找到必要的簡體技術字串，這不代表介面未翻譯。
+驗證必須以成功的 GitHub Actions 執行及產物為準；尚未成功時，不可將計畫中的檢查寫成已通過。全 1,020 個版型的結構數量會驗證，但不等於全部人工視覺審查，也不等於 macOS／Windows／PowerPoint 實機全覆蓋。
 
-PNG／JPG／GIF／影片、圖示中的向量外框文字、遠端示範素材以及歷史 commit 不在文字翻譯範圍，沒有聲稱已重製。未修改套件鎖定檔、授權條款，也沒有發佈 npm 套件或新增付費模型 API。語法檢查不等於瀏覽器互動或 PPTX 匯出端到端測試；若沒有另外的測試證據，不能宣稱這些測試已通過。
+## 安全邊界
 
-## 維護與回復
+這是語言在地化，不是完整資安修復。保留既有執行依賴與匯出架構；預覽／匯出僅限本機與可信任內容，不應開放區網或公開網際網路。本次不修改 DNS、部署、帳密或 npm 發佈設定，也沒有新增模型 API 或排程。
 
-轉換工具為 `tools/localize-zh-tw.cjs`，只在維護期間使用 OpenCC 與解析器，不增加應用程式 runtime 依賴。完整檔案清單與檢查結果見 [JSON 報告](zh-TW-localization-report.json)。合併前回復只需切回 `main`；合併後以 Git revert 回復本次合併，不使用強制推送。
+## 備份與回復
 
-## 用語複核
+合併前 main 備份：`backup/pre-zh-tw-main-20260918`，基準提交 `21dc7e5fc8c3a0d7f6a94948153dd1ee954f4e64`。
 
-已額外統一「控制台、控制項、平台、復盤、像素」等用語，並將安裝文件中原指中國大陸的「國內」改為明確地區名稱。README 的文字徽章也已改為繁體中文；遠端示範影像網址維持不變。
+合併採 merge commit。回復時先建立修復分支，再對實際合併 SHA 執行 `git revert -m 1 <merge-sha>`，以 PR 回復；不執行強制推送。不要使用 PR 尚未合併時的測試合併 SHA。

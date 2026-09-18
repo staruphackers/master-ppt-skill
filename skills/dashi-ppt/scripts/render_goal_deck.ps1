@@ -66,7 +66,7 @@ $npx = (Get-Command npx.cmd -ErrorAction Stop).Source
 
 Push-Location $projectRoot
 try {
-    # .npmrc 缺失时从模板重建(npm publish 会剔除 .npmrc,个别安装路径可能丢失)。
+    # .npmrc 缺失時從模板重建(npm publish 會剔除 .npmrc,個別安裝路徑可能丟失)。
     if (-not (Test-Path -LiteralPath '.npmrc') -and (Test-Path -LiteralPath 'npmrc.template')) {
         Copy-Item -LiteralPath 'npmrc.template' -Destination '.npmrc'
     }
@@ -86,20 +86,20 @@ try {
     }
 
     if ($installRequired) {
-        # 首装前探测 npm 源:官方可达走官方,不可达锁 npmmirror;探测失败不阻塞
-        #(缺省 .npmrc 已指 npmmirror)。native 命令非零退出码在此不抛错,等价 .sh 的 || true。
+        # 首裝前探測 npm 源:官方可達走官方,不可達鎖 npmmirror;探測失敗不阻塞
+        #(預設 .npmrc 已指 npmmirror)。native 命令非零退出碼在此不拋錯,等價 .sh 的 || true。
         & $node 'scripts\ensure-registry.mjs'
         Invoke-Native $npm 'install'
     }
 
-    # 镜像模式下 playwright 浏览器二进制同样走 npmmirror,否则国内下载必败。
+    # 映象模式下 playwright 瀏覽器二進位制同樣走 npmmirror,否則國內下載必敗。
     if ((Test-Path -LiteralPath '.npmrc') -and (Select-String -LiteralPath '.npmrc' -SimpleMatch 'registry=https://registry.npmmirror.com' -Quiet)) {
         if (-not $env:PLAYWRIGHT_DOWNLOAD_HOST) {
             $env:PLAYWRIGHT_DOWNLOAD_HOST = 'https://cdn.npmmirror.com/binaries/playwright'
         }
     }
 
-    # chromium headless shell:幂等(已装秒过),下载失败不阻塞生成(导出回退系统 Chrome)。
+    # chromium headless shell:冪等(已裝秒過),下載失敗不阻塞生成(匯出回退系統 Chrome)。
     & $npx '--no-install' 'playwright-core' 'install' 'chromium-headless-shell' *> $null
 
     $outputDirectory = Split-Path -Parent $outputPath
@@ -111,7 +111,7 @@ try {
     Invoke-Native $npm 'run' 'validate:swiss' '--' $outputPath
     Invoke-Native $npm 'run' 'validate:goal-copy' '--' $goalPath $outputPath
 
-    # 缺省端口落在 SKILL.md 约定的 5200-5999 段(4178/4300/4400 为用户保留端口)。
+    # 預設埠落在 SKILL.md 約定的 5200-5999 段(4178/4300/4400 為使用者保留埠)。
     $previewPort = if ($env:DASHI_PPT_PREVIEW_PORT) { $env:DASHI_PPT_PREVIEW_PORT } else { '5200' }
     Invoke-Native $npm 'run' 'preview:start' '--' $outputDirectory $previewPort
 } finally {

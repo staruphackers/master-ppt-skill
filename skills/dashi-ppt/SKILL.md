@@ -4,9 +4,9 @@ description: 製作 PPT、簡報、投影片、彙報材料時使用。Dashi PPT
 ---
 
 <!-- zh-TW-output -->
-## 繁體中文（台灣）輸出規範
+## 繁體中文（臺灣）輸出規範
 
-除非使用者明確要求其他語言，回覆、簡報內容、按鈕、提示與交付說明一律使用台灣繁體中文。中文介面的內部相容代碼維持 `zh`，不要任意修改既有 schema、控制項 key 或 CLI 參數。引用使用者資料時保留姓名、商標、數字與明確要求逐字保留的原文。更新本 skill 時使用此繁體中文 fork，不要以未在地化的上游 npm 安裝覆蓋。
+除非使用者明確要求其他語言，回覆、簡報內容、按鈕、提示與交付說明一律使用臺灣繁體中文。中文介面的內部相容程式碼維持 `zh`，不要任意修改既有 schema、控制項 key 或 CLI 引數。引用使用者資料時保留姓名、商標、數字與明確要求逐字保留的原文。更新本 skill 時使用此繁體中文 fork，不要以未在地化的上游 npm 安裝覆蓋。
 
 # Dashi PPT
 
@@ -44,11 +44,11 @@ node <skill-root>/scripts/check_latest_version.mjs
 
 ## 生成原則
 
-本 Skill 為每個邏輯頁生成 3 個模板方案和 1 個 Agent 定製方案,輸出可離線開啟的 HTML PPT。
+本 Skill 為每個邏輯頁生成 3 個模板方案和 1 個 Agent 客製方案,輸出可離線開啟的 HTML PPT。
 
-前三個模板方案使用“鎖模板填文案”:保留所選頁面元件的原始視覺、結構、數量、顯隱、強調、配色、圖表型別和圖片槽位,只替換可見文字內容。除非使用者明確要求調整頁面屬性,不要改任何非文案 props。第四個方案由 Agent 在當前主題視覺語言內按本頁內容定製,不屬於模板候選。
+前三個模板方案使用“鎖模板填文案”:保留所選頁面元件的原始視覺、結構、數量、顯隱、強調、配色、圖表型別和圖片槽位,只替換可見文字內容。除非使用者明確要求調整頁面屬性,不要改任何非文案 props。第四個方案由 Agent 在當前主題視覺語言內按本頁內容客製,不屬於模板候選。
 
-成果驗收是預設流程。每次生成後都要判斷最終產物是否達到使用者目標;預設檢查目標、內容、結構、明顯可見問題和交付完整性,不做截圖審美精修,不因普通斷行反覆返工。使用者明確要求“視覺精修”“100% 檢查”“幫我調到滿意”時,再擴充套件為視覺 QA。
+成果驗收是預設流程。每次生成後都要判斷最終產物是否達到使用者目標;預設檢查目標、內容、結構、明顯可見問題和交付完整性,不做截圖審美精修,不因普通斷行反覆返工。使用者明確要求“視覺精修”“100% 檢查”“幫我調到滿意”時,再擴大為視覺 QA。
 
 ## 使用規則
 
@@ -63,24 +63,24 @@ node <skill-root>/scripts/check_latest_version.mjs
 - 當前可選風格: `theme01` 輕擬態風、`theme02` 炫光紫綠風、`theme03` 深淺程式碼風、`theme04` 玻璃糖果風、`theme05` 色譜圖表風、`theme06` 深色圖譜風、`theme07` 冷白調研風、`theme08` 黑金實驗風、`theme09` 深藍雜誌風、`theme10` 金色指數風、`theme11` 高能增長風、`theme12` 聲波霓虹風。
 - 普通自動選擇不選 `theme10`;只有使用者明確指定,或金融/投資指數內容強相關且 inspect 確認可填時才用。
 <!-- theme-choice-hints:start -->
-  - `theme01` 輕擬態風 | 適合: 產品介紹 / 企業彙報 | 人群: 創業團隊 / 產品經理
+  - `theme01` 輕擬態風 | 適合: 產品介紹 / 企業報告 | 人群: 創業團隊 / 產品經理
   - `theme02` 炫光紫綠風 | 適合: 科技釋出會 / AI/自動駕駛/機器人主題 | 人群: 科技公司創始人 / 技術負責人
   - `theme03` 深淺程式碼風 | 適合: 技術方案 / 開發者大會 | 人群: 工程師 / 技術管理者
   - `theme04` 玻璃糖果風 | 適合: 年輕化品牌 / 消費產品 | 人群: 品牌團隊 / 設計師
-  - `theme05` 色譜圖表風 | 適合: 資料包告 / 市場分析 | 人群: 資料分析師 / 諮詢顧問
+  - `theme05` 色譜圖表風 | 適合: 資料報告 / 市場分析 | 人群: 資料分析師 / 諮詢顧問
   - `theme06` 深色圖譜風 | 適合: 高密度資料展示 / 戰略分析 | 人群: 戰略團隊 / 投資人
-  - `theme07` 冷白調研風 | 適合: 調研報告 / 白皮書 | 人群: 研究機構 / 諮詢團隊
+  - `theme07` 冷白調研風 | 適合: 調查研究報告 / 白皮書 | 人群: 研究機構 / 諮詢團隊
   - `theme08` 黑金實驗風 | 適合: 高階釋出 / 品牌提案 | 人群: 高階品牌 / 創意總監
   - `theme09` 深藍雜誌風 | 適合: 品牌故事 / 人物訪談 | 人群: 公關團隊 / 媒體編輯
   - `theme10` 金色指數風 | 適合: 金融資料 / 投資報告 | 人群: 投資機構 / 金融分析師
-  - `theme11` 高能增長風 | 適合: 增長復盤 / 商業計劃 | 人群: 創業者 / 增長團隊
+  - `theme11` 高能增長風 | 適合: 成長回顧 / 商業計劃 | 人群: 創業者 / 增長團隊
   - `theme12` 聲波霓虹風 | 適合: 音樂娛樂 / 潮流活動 | 人群: 娛樂品牌 / 活動策劃
 <!-- theme-choice-hints:end -->
 - 不使用舊 token、舊主題、舊媒體槽、舊風格分支或舊入場動畫控制。
 - 選頁先用 `npm --prefix <skill-root>/project run layout:query -- --theme <themePack> --role <role> --limit 8 --seed <randomSeed>:slide-<n>`;每個邏輯頁的 3 個模板方案必須是結構指紋不同的 layout。相同 seed 和輸入必須穩定,也不要固定只用未打雜湊表的前三條。跨邏輯頁允許在候選稀缺時複用,由既有跨頁 layout/組合/family 軟懲罰降低重複。需要媒體槽時加 `--needs-media`、`--planned-images <n>`、`--provided-images <n>` 或 `--image-gen`。
 - 欄位不清楚、物件/陣列/count、圖片/媒體:先執行 `npm --prefix <skill-root>/project run inspect:layout -- --compact <layout...>` 檢查該頁 3 個模板方案;單 layout 寫 props 時執行 `props:safe`;schema v2 結構投影 goal 執行 goal spec 校驗,不要用 `props:safe --write` 回填 props。
 - 把 `layout:query` / `inspect:layout` 的 JSON 管道給程式解析時,改用 `node <skill-root>/project/scripts/layout-query.mjs` / `node <skill-root>/project/scripts/inspect-layout.mjs`:`npm run` 會在 stdout 前列印生命週期 banner,汙染 JSON。
-- 標準 3+1 deck:必須先逐頁寫 `output/<deck-name>/page-content-pack.json`,每頁使用穩定 id 和下列完整 PageContentPack 結構;再執行 `npm --prefix <skill-root>/project run goal:scaffold -- --title <title> --goal <goal> --theme <themePack> --pages <n> --layout-variants 3 --content-plan output/<deck-name>/page-content-pack.json --seed <randomSeed> --chunk-size 5 --out output/<deck-name>/goal.json`。schema v2 的 3 個模板方案和 v4 定製方案必須由該 content plan 生成;沒有 `--content-plan` 時不要使用 `--layout-variants 3`。
+- 標準 3+1 deck:必須先逐頁寫 `output/<deck-name>/page-content-pack.json`,每頁使用穩定 id 和下列完整 PageContentPack 結構;再執行 `npm --prefix <skill-root>/project run goal:scaffold -- --title <title> --goal <goal> --theme <themePack> --pages <n> --layout-variants 3 --content-plan output/<deck-name>/page-content-pack.json --seed <randomSeed> --chunk-size 5 --out output/<deck-name>/goal.json`。schema v2 的 3 個模板方案和 v4 客製方案必須由該 content plan 生成;沒有 `--content-plan` 時不要使用 `--layout-variants 3`。
   ```json
   {
     "pages": [{
@@ -252,7 +252,7 @@ Windows PowerShell:
 
 ## 交付能力
 
-生成後的預覽頁預設把 N 個邏輯頁展開為 4N 個方案頁。右側面板可在同組 4 頁之間跳轉或標記最終方案;前三個模板方案可調 props,v4 顯示為固定的 Agent 定製方案。`variantOutputMode:"comparison"` 匯出 4N 頁,`"selected-only"` 匯出 N 頁。面向使用者交付的頁面底部不顯示頁碼標識、翻頁引導、圓點導航或索引提示。
+生成後的預覽頁預設把 N 個邏輯頁展開為 4N 個方案頁。右側面板可在同組 4 頁之間跳轉或標記最終方案;前三個模板方案可調 props,v4 顯示為固定的 Agent 客製方案。`variantOutputMode:"comparison"` 匯出 4N 頁,`"selected-only"` 匯出 N 頁。面向使用者交付的頁面底部不顯示頁碼標識、翻頁引導、圓點導航或索引提示。
 
 ## 頁面屬性契約
 

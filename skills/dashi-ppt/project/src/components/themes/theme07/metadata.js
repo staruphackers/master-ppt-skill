@@ -1634,7 +1634,7 @@ export const pages = [
           "pos": "高熱度 · 高兌現",
           "dirs": [
             "基礎設施",
-            "資料平台"
+            "資料平臺"
           ],
           "tone": "accent",
           "col": 2,
@@ -1978,7 +1978,7 @@ export const pages = [
             },
             {
               "name": "基礎設施",
-              "note": "GPU 雲與資料平台，剛性預算"
+              "note": "GPU 雲與資料平臺，剛性預算"
             },
             {
               "name": "具身智慧",
@@ -6211,7 +6211,7 @@ export const pages = [
           "note": "感知到控制一體化"
         },
         {
-          "label": "模擬平台",
+          "label": "模擬平臺",
           "value": 9,
           "note": "資料閉環與虛擬測試"
         },
@@ -7299,12 +7299,12 @@ export const pages = [
     ],
     "defaultProps": {
       "eyebrow": "Low-Code AI",
-      "segment": "低程式碼 AI 平台",
+      "segment": "低程式碼 AI 平臺",
       "title": "企業流程嵌入",
-      "titleTail": "低程式碼 AI 平台",
-      "lead": "低程式碼 AI 平台幫助企業把模型能力嵌入內部流程；關鍵不是模型能力，而是交付速度和治理能力。",
+      "titleTail": "低程式碼 AI 平臺",
+      "lead": "低程式碼 AI 平臺幫助企業把模型能力嵌入內部流程；關鍵不是模型能力，而是交付速度和治理能力。",
       "statLine": "融資額 19 億美元 · 6 筆事件",
-      "closing": "能被業務團隊使用的平台更容易擴散。",
+      "closing": "能被業務團隊使用的平臺更容易擴散。",
       "badge": "低程式碼",
       "flowTitle": "流程編排 · Orchestration",
       "metricTitle": "客戶與留存 · Retention",
@@ -7440,7 +7440,7 @@ export const pages = [
         "options": [
           {
             "value": 0,
-            "label": "社羣影響力"
+            "label": "社群影響力"
           },
           {
             "value": 1,
@@ -7508,15 +7508,15 @@ export const pages = [
     "defaultProps": {
       "eyebrow": "Open-Source Models",
       "segment": "開源模型公司",
-      "title": "社羣影響力變現",
+      "title": "社群影響力變現",
       "titleTail": "開源模型公司",
-      "lead": "開源模型公司透過社羣影響力、託管服務和企業支援變現；開源能快速獲得開發者，但商業化仍需要企業級能力。",
+      "lead": "開源模型公司透過社群影響力、託管服務和企業支援變現；開源能快速獲得開發者，但商業化仍需要企業級能力。",
       "statLine": "融資額 28 億美元 · 7 筆事件",
       "closing": "開源是入口，不是完整商業模式。",
       "badge": "開源模型",
       "bridgeTitle": "影響力到收入 · 轉化路徑",
       "source": {
-        "kicker": "社羣影響力",
+        "kicker": "社群影響力",
         "value": "2.8",
         "unit": "億次",
         "caption": "累計模型下載量",
@@ -7699,7 +7699,7 @@ export const pages = [
       "shieldLabel": "可信 AI 防線",
       "segments": [
         {
-          "name": "評測平台",
+          "name": "評測平臺",
           "value": 8,
           "note": "能力與風險基準"
         },
@@ -8114,7 +8114,7 @@ export const pages = [
           "avg": 0.53,
           "themes": [
             "雲資源",
-            "平台卡位"
+            "平臺卡位"
           ],
           "note": "生態繫結"
         }
@@ -8339,7 +8339,7 @@ export const pages = [
         "max": 4,
         "step": 1,
         "publicKey": "segmentCount",
-        "desc": "分類型別分段數量（2–4）。"
+        "desc": "分型別別分段數量（2–4）。"
       },
       {
         "key": "focusEnabled",
@@ -8373,7 +8373,7 @@ export const pages = [
           }
         ],
         "publicKey": "focusIndex",
-        "desc": "選擇被高亮的分類型別。"
+        "desc": "選擇被高亮的分型別別。"
       },
       {
         "key": "showLegend",
@@ -8438,7 +8438,7 @@ export const pages = [
           }
         ],
         "publicKey": "accentColor",
-        "desc": "品牌強調色，作用於圖表、高亮分類型別與時間軸節點。"
+        "desc": "品牌強調色，作用於圖表、高亮分型別別與時間軸節點。"
       }
     ],
     "defaultProps": {
@@ -9492,7 +9492,7 @@ export const pages = [
             "開發者工具",
             "企業 AI",
             "雲服務",
-            "資料平台"
+            "資料平臺"
           ],
           "metrics": [
             {
@@ -11324,7 +11324,7 @@ export const pages = [
           "certainty": 92
         },
         {
-          "name": "資料平台",
+          "name": "資料平臺",
           "en": "Data Platform",
           "note": "訓練與評測的資料底座，複用性強。",
           "certainty": 84
@@ -11697,7 +11697,7 @@ export const pages = [
         },
         {
           "name": "Databricks",
-          "sector": "資料平台",
+          "sector": "資料平臺",
           "note": "老牌營收驗證 AI 溢價"
         },
         {
@@ -12155,7 +12155,7 @@ export const pages = [
         {
           "label": "基礎設施資本確定性",
           "value": 124,
-          "note": "GPU 雲與資料平台"
+          "note": "GPU 雲與資料平臺"
         },
         {
           "label": "平均單筆規模",

@@ -2482,7 +2482,7 @@ export const pages = [
           ]
         },
         {
-          "label": "情緒不干預",
+          "label": "情緒不幹預",
           "cells": [
             "no",
             "partial",
@@ -2871,7 +2871,7 @@ export const pages = [
         "label": "背景分段",
         "default": true,
         "publicKey": "showBands",
-        "desc": "襯托用的灰度分段（差/良/優）。"
+        "desc": "襯託用的灰度分段（差/良/優）。"
       },
       {
         "key": "showValue",
@@ -4298,7 +4298,7 @@ export const pages = [
         {
           "year": "2018",
           "label": "引擎成型",
-          "note": "自主再平衡演算法首次實盤驗證。"
+          "note": "自主再平衡演演算法首次實盤驗證。"
         },
         {
           "year": "2020",
@@ -5145,7 +5145,7 @@ export const pages = [
         },
         {
           "head": "時間是唯一的槓桿",
-          "body": "我們不追逐短期排名，而是把複利的主動權交還給時間，並儘可能減少對它的干擾。"
+          "body": "我們不追逐短期排名，而是把複利的主動權交還給時間，並儘可能減少對它的幹擾。"
         },
         {
           "head": "簡單優先於花哨",
@@ -5528,7 +5528,7 @@ export const pages = [
       "images": [],
       "kicker": "專欄 · IN PRACTICE",
       "headline": "把紀律，過成一種習慣",
-      "lede": "真正改變結果的，不是某一次聰明的擇時，而是日復一日、不被情緒干擾的執行。引擎把這件最難堅持的事，變成預設發生。",
+      "lede": "真正改變結果的，不是某一次聰明的擇時，而是日復一日、不被情緒幹擾的執行。引擎把這件最難堅持的事，變成預設發生。",
       "facts": [
         {
           "value": "0 次",
@@ -6595,7 +6595,7 @@ export const pages = [
       "overline": "現場 · ON LOCATION",
       "title": "把紀律，建在看得見的地方",
       "note": "從配置臺到風控屏，每一次再平衡都留痕、可回溯、可復盤。",
-      "insetCaption": "配置控制台 · 實時",
+      "insetCaption": "配置控制檯 · 實時",
       "idPrefix": "inset"
     }
   },
@@ -7295,7 +7295,7 @@ export const pages = [
       "prefix": "+",
       "figure": "218",
       "suffix": "%",
-      "descriptor": "自主指陣列合自成立以來的累計淨回報，跨越兩輪完整市場週期、零人工擇時干預。",
+      "descriptor": "自主指陣列合自成立以來的累計淨回報，跨越兩輪完整市場週期、零人工擇時幹預。",
       "stats": [
         {
           "value": "12.4%",
@@ -11386,10 +11386,10 @@ export const pages = [
       {
         "key": "showWeights",
         "type": "toggle",
-        "label": "托盤標記",
+        "label": "託盤標記",
         "default": true,
         "publicKey": "showWeights",
-        "desc": "托盤內顯示「重量」標籤（關則顯示名稱）。"
+        "desc": "託盤內顯示「重量」標籤（關則顯示名稱）。"
       },
       {
         "key": "showVerdict",
@@ -12261,7 +12261,7 @@ export const pages = [
         },
         {
           "name": "騰訊控股",
-          "role": "平台 · 現金流"
+          "role": "平臺 · 現金流"
         },
         {
           "name": "長江電力",

@@ -291,14 +291,14 @@ export const pages = [
       "kicker": "06 · BRAND MARKETING",
       "docId": "FY2026 / FULL-FUNNEL",
       "watermark": "2026",
-      "formal": "2026 年度全平台品牌整合行銷方案 · 覆蓋內容、投放、私域與活動的全鏈路打法。",
+      "formal": "2026 年度全平臺品牌整合行銷方案 · 覆蓋內容、投放、私域與活動的全鏈路打法。",
       "titleLine1": "內容驅動傳播",
       "titleLine2Pre": "創意",
       "titleLine2Em": "引爆",
       "titleLine2Suf": "市場",
       "tags": [
         {
-          "t": "全平台整合"
+          "t": "全平臺整合"
         },
         {
           "t": "內容驅動"
@@ -3651,7 +3651,7 @@ export const pages = [
         },
         {
           "name": "Databricks",
-          "tag": "資料平台 / PLATFORM",
+          "tag": "資料平臺 / PLATFORM",
           "value": 5
         },
         {
@@ -3946,7 +3946,7 @@ export const pages = [
         {
           "name": "xAI",
           "en": "REALTIME DATA",
-          "tag": "實時資料 / 多模態 / X 平台",
+          "tag": "實時資料 / 多模態 / X 平臺",
           "metrics": [
             {
               "k": "單筆融資",
@@ -3954,7 +3954,7 @@ export const pages = [
             },
             {
               "k": "資料入口",
-              "v": "X 平台"
+              "v": "X 平臺"
             },
             {
               "k": "協同",
@@ -4090,7 +4090,7 @@ export const pages = [
           "en": "STAR DELIVERY",
           "examples": [
             "基礎設施",
-            "資料平台"
+            "資料平臺"
           ]
         },
         {
@@ -4249,7 +4249,7 @@ export const pages = [
           "name": "大廠擠壓",
           "en": "BIG TECH",
           "level": 0.7,
-          "desc": "開源與平台生態壓縮初創公司的獨立空間。"
+          "desc": "開源與平臺生態壓縮初創公司的獨立空間。"
         },
         {
           "name": "算力成本",
@@ -4425,7 +4425,7 @@ export const pages = [
             {
               "name": "AI 包裝專案",
               "en": "AI WRAPPERS",
-              "note": "無壁壘，易被平台與開源能力替代。"
+              "note": "無壁壘，易被平臺與開源能力替代。"
             },
             {
               "name": "低壁壘消費應用",
@@ -5504,8 +5504,8 @@ export const pages = [
       "eyebrowId": "46",
       "eyebrowLabel": "LOW CODE AI",
       "title": "企業流程嵌入",
-      "subhead": "低程式碼 AI 平台 / LOW CODE",
-      "closing": "能被業務團隊使用的平台更容易擴散。",
+      "subhead": "低程式碼 AI 平臺 / LOW CODE",
+      "closing": "能被業務團隊使用的平臺更容易擴散。",
       "segTag": "低程式碼 AI 賽道 / LOW CODE",
       "hero": {
         "value": "19",
@@ -5574,7 +5574,7 @@ export const pages = [
     "pageNumber": 39,
     "layout": "THEME06-039",
     "slot": "opensource",
-    "label": "35 · 社羣影響力變現 / OPEN SOURCE",
+    "label": "35 · 社群影響力變現 / OPEN SOURCE",
     "bgClass": "",
     "controls": [
       {
@@ -5670,7 +5670,7 @@ export const pages = [
       "images": [],
       "eyebrowId": "47",
       "eyebrowLabel": "OPEN SOURCE MODELS",
-      "title": "社羣影響力變現",
+      "title": "社群影響力變現",
       "subhead": "開源模型公司 / OPEN SOURCE",
       "closing": "開源是入口，不是完整商業模式。",
       "convTag": "開源模型賽道 / OSS",
@@ -5692,10 +5692,10 @@ export const pages = [
       ],
       "poles": [
         {
-          "label": "社羣影響力 / REACH",
+          "label": "社群影響力 / REACH",
           "en": "COMMUNITY",
           "value": "2.8億次",
-          "sub": "社羣下載量 / DOWNLOADS"
+          "sub": "社群下載量 / DOWNLOADS"
         },
         {
           "label": "商業兌現 / MONETIZED",
@@ -5708,7 +5708,7 @@ export const pages = [
         "value": "37%",
         "label": "轉化為企業收入 / CONVERT"
       },
-      "mediaPlaceholder": "社羣到企業轉化圖 / DROP IMAGE",
+      "mediaPlaceholder": "社群到企業轉化圖 / DROP IMAGE",
       "mediaSlotCount": 1,
       "metricCount": 2,
       "focusEnabled": true,
@@ -5880,7 +5880,7 @@ export const pages = [
           "v": "4.2 億"
         },
         {
-          "k": "評測平台 / EVAL",
+          "k": "評測平臺 / EVAL",
           "v": "8 億"
         }
       ],
@@ -8636,7 +8636,7 @@ export const pages = [
         },
         {
           "k": "資料入口 / DATA",
-          "v": "X 平台"
+          "v": "X 平臺"
         },
         {
           "k": "協同 / SYNERGY",
@@ -8645,7 +8645,7 @@ export const pages = [
       ],
       "tags": [
         "實時資料 / REAL-TIME",
-        "X 平台 / PLATFORM",
+        "X 平臺 / PLATFORM",
         "多模態 / MULTIMODAL",
         "實時搜尋 / SEARCH"
       ],
@@ -8906,7 +8906,7 @@ export const pages = [
         "label": "案例徽標",
         "type": "toggle",
         "default": true,
-        "desc": "顯示/隱藏案例徽標占位（裝飾）",
+        "desc": "顯示/隱藏案例徽標佔位（裝飾）",
         "publicKey": "showTagBadge"
       },
       {
@@ -9215,7 +9215,7 @@ export const pages = [
     "pageNumber": 60,
     "layout": "THEME06-060",
     "slot": "databricks",
-    "label": "56 · 資料平台延展 / DATABRICKS",
+    "label": "56 · 資料平臺延展 / DATABRICKS",
     "bgClass": "",
     "controls": [
       {
@@ -9321,7 +9321,7 @@ export const pages = [
       "images": [],
       "eyebrowId": "68",
       "eyebrowLabel": "DATABRICKS CASE",
-      "title": "資料平台延展",
+      "title": "資料平臺延展",
       "subhead": "Databricks 案例 / DATA PLATFORM",
       "closing": "存量客戶基礎是 AI 商業化捷徑。",
       "company": "Databricks",
@@ -9329,7 +9329,7 @@ export const pages = [
       "caseTotal": 9,
       "caseTag": "CASE · DATABRICKS",
       "sigLabel": "標誌數字 / SIGNATURE",
-      "positioning": "已有資料平台更容易把 AI 能力賣給現有企業客戶——Databricks 是資料平台向 AI 平台延展的典型公司。",
+      "positioning": "已有資料平臺更容易把 AI 能力賣給現有企業客戶——Databricks 是資料平臺向 AI 平臺延展的典型公司。",
       "hero": {
         "value": "5.0",
         "unit": "億$",
@@ -9346,18 +9346,18 @@ export const pages = [
         },
         {
           "k": "賽道 / SEGMENT",
-          "v": "資料平台"
+          "v": "資料平臺"
         }
       ],
       "tags": [
-        "資料平台 / DATA",
-        "AI 平台 / AI PLATFORM",
+        "資料平臺 / DATA",
+        "AI 平臺 / AI PLATFORM",
         "存量客戶 / INSTALLED",
         "高留存 / NRR",
         "湖倉架構 / LAKEHOUSE",
         "企業 AI / ENTERPRISE AI"
       ],
-      "mediaPlaceholder": "Databricks 平台架構主視覺 / DROP IMAGE",
+      "mediaPlaceholder": "Databricks 平臺架構主視覺 / DROP IMAGE",
       "mediaSlotCount": 0,
       "metricCount": 3,
       "tagCount": 4,
@@ -10222,7 +10222,7 @@ export const pages = [
         "label": "案例徽標",
         "type": "toggle",
         "default": true,
-        "desc": "顯示/隱藏案例徽標占位（裝飾）",
+        "desc": "顯示/隱藏案例徽標佔位（裝飾）",
         "publicKey": "showTagBadge"
       },
       {
@@ -10666,7 +10666,7 @@ export const pages = [
           "en": "PRICE PRESSURE",
           "value": "61",
           "unit": "%",
-          "note": "同類能力被平台整合後，獨立產品定價承壓"
+          "note": "同類能力被平臺整合後，獨立產品定價承壓"
         }
       ],
       "maxValue": 100,
@@ -10844,7 +10844,7 @@ export const pages = [
           "tag": "算力供給"
         },
         {
-          "name": "資料平台",
+          "name": "資料平臺",
           "en": "DATA PLATFORM",
           "tag": "企業剛需"
         },
@@ -11326,7 +11326,7 @@ export const pages = [
           "when": "2026",
           "name": "集中上市",
           "en": "IPO WAVE",
-          "note": "模型與資料平台公司密集進入公開市場。"
+          "note": "模型與資料平臺公司密集進入公開市場。"
         },
         {
           "when": "2027",
@@ -11347,7 +11347,7 @@ export const pages = [
         },
         {
           "name": "Databricks",
-          "tag": "資料平台"
+          "tag": "資料平臺"
         },
         {
           "name": "CoreWeave",
@@ -12288,7 +12288,7 @@ export const pages = [
         "label": "案例徽標",
         "type": "toggle",
         "default": true,
-        "desc": "顯示/隱藏案例徽標占位（裝飾）",
+        "desc": "顯示/隱藏案例徽標佔位（裝飾）",
         "publicKey": "showTagBadge"
       },
       {
@@ -13179,7 +13179,7 @@ export const pages = [
         },
         {
           "name": "Databricks",
-          "tag": "資料平台"
+          "tag": "資料平臺"
         }
       ],
       "metricCaption": "觀察指標 / WATCH METRICS",

@@ -1838,7 +1838,7 @@ export const pages = [
         "12月 · +182%"
       ],
       "metaLeft": "IGNIS — 燃點 · 12 個月真實資料",
-      "metaMid": "讓 SEO 超越演算法，對齊真實意圖"
+      "metaMid": "讓 SEO 超越演演算法，對齊真實意圖"
     }
   },
   {
@@ -3829,7 +3829,7 @@ export const pages = [
         "label": "狀態度儀表",
         "default": true,
         "publicKey": "showGauge",
-        "desc": "左側的半環狀態度儀表；隱藏時右側指標占滿整行。"
+        "desc": "左側的半環狀態度儀表；隱藏時右側指標佔滿整行。"
       },
       {
         "key": "metricCount",
@@ -9637,7 +9637,7 @@ export const pages = [
       "eyebrowNo": "趨勢",
       "eyebrowEn": "12-month index",
       "headingHtml": "同一條起跰線，<br><span class=\"ign-ember-text\">跑出三種結局</span>。",
-      "lede": "把基期歸一為 100，看 12 個月後的走向——干預與否，差的是一整條曲線。",
+      "lede": "把基期歸一為 100，看 12 個月後的走向——幹預與否，差的是一整條曲線。",
       "cardTitle": "增長指數 · 基期 = 100",
       "cardNote": "越高越好",
       "series": [
@@ -13812,7 +13812,7 @@ export const pages = [
         },
         {
           "t": "鎖定首月路線",
-          "d": "挑出 2–3 個高槓杆動作，排進六個月節奏。"
+          "d": "挑出 2–3 個高槓桿動作，排進六個月節奏。"
         },
         {
           "t": "點火，開始複利",
@@ -13989,7 +13989,7 @@ export const pages = [
           "d": "成交當下入會，把一次性變成可複利。"
         },
         {
-          "t": "行為埋點回流",
+          "t": "行為埋點迴流",
           "d": "每次點選都回流，餵養下一輪投放與內容。"
         }
       ],
@@ -14543,7 +14543,7 @@ export const pages = [
           "x": 30,
           "y": 72,
           "t": "主行動按鈕",
-          "d": "高對比、零干擾的唯一出口。"
+          "d": "高對比、零幹擾的唯一出口。"
         },
         {
           "x": 66,

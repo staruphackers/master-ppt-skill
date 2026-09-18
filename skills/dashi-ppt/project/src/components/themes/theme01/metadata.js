@@ -1258,7 +1258,7 @@ export const pages = [
           }
         ],
         "publicKey": "operator",
-        "desc": "兩個維度之間的運算子號。"
+        "desc": "兩個維度之間的運運算元號。"
       },
       {
         "key": "tiltAngle",
@@ -4800,7 +4800,7 @@ export const pages = [
       "title": "從模型，走向物理世界",
       "en": "Embodied AI",
       "cn": "AI 的下一個戰場：讓智慧擁有身體",
-      "lead": "當大模型在螢幕裡日趨成熟，資本開始押注「具身智慧」——人形機器人把演算法裝進可以行動的軀體。",
+      "lead": "當大模型在螢幕裡日趨成熟，資本開始押注「具身智慧」——人形機器人把演演算法裝進可以行動的軀體。",
       "highlightWord": "具身智慧",
       "stats": [
         {
@@ -4916,7 +4916,7 @@ export const pages = [
           "title": "明星兌現區",
           "en": "PROVEN STARS",
           "tone": "green",
-          "desc": "算力雲、資料平台兼具融資熱度與收入確定性，“賣鏟子”邏輯，需求來自訓練與企業 AI 化。",
+          "desc": "算力雲、資料平臺兼具融資熱度與收入確定性，“賣鏟子”邏輯，需求來自訓練與企業 AI 化。",
           "chips": [
             "CoreWeave",
             "Databricks",
@@ -7272,7 +7272,7 @@ export const pages = [
       ],
       "points": [
         {
-          "h": "X 平台資料",
+          "h": "X 平臺資料",
           "d": "背靠 X（原 Twitter），擁有海量實時社交資料"
         },
         {
@@ -9233,7 +9233,7 @@ export const pages = [
       },
       {
         "key": "highlight",
-        "label": "熒游標籤",
+        "label": "熒遊標籤",
         "type": "boolean",
         "default": true,
         "publicKey": "highlight",
@@ -9298,7 +9298,7 @@ export const pages = [
           }
         ],
         "publicKey": "accentColor",
-        "desc": "熒游標籤、主數字與強調描邊的顏色。"
+        "desc": "熒遊標籤、主數字與強調描邊的顏色。"
       },
       {
         "key": "showCaption",
@@ -10090,7 +10090,7 @@ export const pages = [
           "span": 3,
           "status": "active",
           "milestone": "預計掛牌",
-          "meta": "資料 + AI 平台"
+          "meta": "資料 + AI 平臺"
         },
         {
           "label": "xAI",

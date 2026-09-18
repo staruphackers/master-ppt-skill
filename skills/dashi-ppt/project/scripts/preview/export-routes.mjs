@@ -206,11 +206,11 @@ export async function handlePdfExport(req, res) {
   }
 }
 
-// 瀏覽器端截圖 PDF 的伺服器端合成端點:沙箱型宿主(如豆包)裡,daemonize 的服務程序
+// 瀏覽器端截圖 PDF 的伺服器端合成端點:沙箱型宿主(如豆包)裡,daemonize 的服務程式
 // 無法啟動任何 Chromium(Mach 註冊/顯示服務被宿主 seatbelt 攔截,見
 // launch-export-browser.mjs 的分層說明)。此時前端把每頁用 html-to-image 在「使用者
 // 自己的瀏覽器」裡截成 dataURL 上傳,這裡用 pdf-lib(純 JS,無瀏覽器依賴)合成 PDF——
-// 使用者瀏覽器是正常桌面程序,不受宿主沙箱影響,這條兜底對任何沙箱形態免疫。
+// 使用者瀏覽器是正常桌面程式,不受宿主沙箱影響,這條兜底對任何沙箱形態免疫。
 // 瀏覽器端可編輯 PPTX 的落盤端點:前端在使用者瀏覽器裡完成採集/截圖/組裝後,把
 // PPTX 二進位制 POST 過來,這裡只做寫盤並返回與常規匯出一致的下載結構——伺服器端全程
 // 不需要瀏覽器,對宿主沙箱免疫(與 /api/export-pdf-assemble 同一架構)。

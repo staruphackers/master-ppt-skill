@@ -1956,7 +1956,7 @@ export const pages = [
           "badge": "看好象限",
           "items": [
             "基礎設施",
-            "資料平台"
+            "資料平臺"
           ]
         },
         {
@@ -2096,7 +2096,7 @@ export const pages = [
           },
           {
             "name": "基礎設施",
-            "note": "算力、資料平台、推理最佳化"
+            "note": "算力、資料平臺、推理最佳化"
           },
           {
             "name": "具身智慧",
@@ -7572,8 +7572,8 @@ export const pages = [
       "showDecor": true,
       "eyebrow": "Low Code AI",
       "headline": "企業流程嵌入",
-      "subheadline": "低程式碼 AI 平台",
-      "summary": "低程式碼平台把模型能力<b>嵌入企業內部流程</b>。",
+      "subheadline": "低程式碼 AI 平臺",
+      "summary": "低程式碼平臺把模型能力<b>嵌入企業內部流程</b>。",
       "badge": "Low Code · 流程編排",
       "hero": {
         "label": "賽道融資額",
@@ -7633,7 +7633,7 @@ export const pages = [
           "ratio": 1
         }
       ],
-      "closingLine": "能被業務團隊使用的平台更容易擴散。"
+      "closingLine": "能被業務團隊使用的平臺更容易擴散。"
     }
   },
   {
@@ -7642,7 +7642,7 @@ export const pages = [
     "pageNumber": 47,
     "layout": "THEME08-047",
     "slot": "p47",
-    "label": "㊼ 社羣變現 · Open Source",
+    "label": "㊼ 社群變現 · Open Source",
     "bgClass": "",
     "controls": [
       {
@@ -7671,7 +7671,7 @@ export const pages = [
         "max": 4,
         "step": 1,
         "label": "圖片數量",
-        "desc": "散落的社羣成員圖片卡數量(0–4)；佈局隨數量自動平衡，每槽按上傳圖片比例自適應",
+        "desc": "散落的社群成員圖片卡數量(0–4)；佈局隨數量自動平衡，每槽按上傳圖片比例自適應",
         "publicKey": "mediaCount"
       },
       {
@@ -7753,20 +7753,20 @@ export const pages = [
       "focusIndex": 2,
       "showDecor": true,
       "eyebrow": "Open Source Models",
-      "headline": "社羣影響力變現",
+      "headline": "社群影響力變現",
       "subheadline": "開源模型公司",
-      "summary": "開源公司靠<b>社羣影響力、託管服務與企業支援</b>變現。",
+      "summary": "開源公司靠<b>社群影響力、託管服務與企業支援</b>變現。",
       "badge": "Open Source · 變現路徑",
       "bigStat": {
-        "label": "社羣下載量",
+        "label": "社群下載量",
         "value": "2.8",
         "unit": "億次",
-        "note": "透過社羣影響力沉澱開發者，再向託管服務與企業支援轉化。"
+        "note": "透過社群影響力沉澱開發者，再向託管服務與企業支援轉化。"
       },
       "chainTitle": "變現路徑",
       "stages": [
         {
-          "k": "社羣影響力",
+          "k": "社群影響力",
           "en": "Community",
           "v": "2.8",
           "unit": "億"
@@ -7811,7 +7811,7 @@ export const pages = [
             "r": -3,
             "ratio": 1.2,
             "sr": 4,
-            "label": "社羣成員",
+            "label": "社群成員",
             "sub": "DEV"
           }
         ],
@@ -8054,7 +8054,7 @@ export const pages = [
       "valueUnit": "億",
       "rows": [
         {
-          "k": "評測平台",
+          "k": "評測平臺",
           "en": "Evaluation",
           "v": 8,
           "rate": 3
@@ -8490,7 +8490,7 @@ export const pages = [
         "max": 4,
         "step": 1,
         "label": "分段數量",
-        "desc": "分類型別分段的數量(3–4)",
+        "desc": "分型別別分段的數量(3–4)",
         "publicKey": "segmentCount"
       },
       {
@@ -9671,7 +9671,7 @@ export const pages = [
           "note": "內部流程嵌入"
         },
         {
-          "label": "資料平台",
+          "label": "資料平臺",
           "note": "RAG · 知識管理"
         },
         {
@@ -10450,7 +10450,7 @@ export const pages = [
       "hubSub": "Ecosystem hub · 生態中樞",
       "nodes": [
         {
-          "label": "X 平台",
+          "label": "X 平臺",
           "note": "實時資料入口"
         },
         {
@@ -10539,7 +10539,7 @@ export const pages = [
         },
         {
           "k": "資料入口",
-          "v": "X 平台"
+          "v": "X 平臺"
         }
       ],
       "closingLine": "獨特的資料入口，可以成為模型的差異化。",
@@ -11166,7 +11166,7 @@ export const pages = [
         "max": 5,
         "step": 1,
         "label": "層級數量",
-        "desc": "平台層帶數量(2–5)",
+        "desc": "平臺層帶數量(2–5)",
         "publicKey": "layerCount"
       },
       {
@@ -11204,7 +11204,7 @@ export const pages = [
         "type": "boolean",
         "default": true,
         "label": "重點強調",
-        "desc": "是否突出某一個平台層帶",
+        "desc": "是否突出某一個平臺層帶",
         "publicKey": "focusEnabled"
       },
       {
@@ -11240,10 +11240,10 @@ export const pages = [
       "showDecor": true,
       "eyebrow": "Databricks Case",
       "kicker": "案例卡",
-      "headline": "資料平台延展",
+      "headline": "資料平臺延展",
       "company": "Databricks",
-      "tag": "資料平台",
-      "caption": "Databricks 是資料平台向 AI 平台延展的典型——<b>存量客戶基礎</b>是 AI 商業化的捷徑。",
+      "tag": "資料平臺",
+      "caption": "Databricks 是資料平臺向 AI 平臺延展的典型——<b>存量客戶基礎</b>是 AI 商業化的捷徑。",
       "bigLabel": "淨收入留存 NRR",
       "bigNumber": "132",
       "bigUnit": "%",
@@ -11260,10 +11260,10 @@ export const pages = [
         },
         {
           "k": "賽道",
-          "v": "資料平台"
+          "v": "資料平臺"
         }
       ],
-      "layersTitle": "從資料平台到 AI 平台",
+      "layersTitle": "從資料平臺到 AI 平臺",
       "layers": [
         {
           "label": "資料湖倉",
@@ -11280,7 +11280,7 @@ export const pages = [
           "unit": "%"
         },
         {
-          "label": "機器學習平台",
+          "label": "機器學習平臺",
           "en": "ML Platform",
           "meter": 68,
           "value": "68",
@@ -12459,7 +12459,7 @@ export const pages = [
           "k": "渠道控制力",
           "v": "弱",
           "color": "var(--acl-pink)",
-          "text": "若獲客依賴平台分發，價格戰會更快傳導到收入端。"
+          "text": "若獲客依賴平臺分發，價格戰會更快傳導到收入端。"
         }
       ],
       "actions": [
@@ -12633,7 +12633,7 @@ export const pages = [
           "note": "訓練與推理雙重需求，資源鎖定即護城河。"
         },
         {
-          "title": "資料平台",
+          "title": "資料平臺",
           "en": "Data Platform",
           "note": "最接近企業剛性預算，存量客戶可複用。"
         },
@@ -13067,7 +13067,7 @@ export const pages = [
         },
         {
           "name": "Databricks",
-          "role": "資料平台",
+          "role": "資料平臺",
           "note": "存量客戶複用，毛利結構相對更穩。",
           "dir": "up",
           "tag": "毛利更穩"
@@ -13372,7 +13372,7 @@ export const pages = [
         {
           "name": "基礎設施兌現",
           "tag": "Infrastructure",
-          "desc": "算力、資料與平台從燒錢轉向計費交付。",
+          "desc": "算力、資料與平臺從燒錢轉向計費交付。",
           "value": "1240",
           "unit": "億投入"
         },

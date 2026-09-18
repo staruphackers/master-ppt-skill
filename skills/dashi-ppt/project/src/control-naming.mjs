@@ -22,7 +22,7 @@ const TEXT_REPLACEMENTS = [
   ['風險', '狀態'],
   ['投資人型別佔比', '分類佔比'],
   ['投資人型別數', '分類數量'],
-  ['投資人型別', '分類型別'],
+  ['投資人型別', '分型別別'],
   ['投資人說', '角色說'],
   ['投資人', '角色'],
   ['平均單筆融資金額', '平均指標'],
@@ -447,7 +447,7 @@ export function normalizeOptionLabel(label, value = label, index = 0) {
   return normalized
     .replace(/\bYES\b/g, '是')
     .replace(/\bNO\b/g, '否')
-    .replace(/\b8-bit\b/gi, '像素');
+    .replace(/\b8-bit\b/gi, '畫素');
 }
 
 function optionLabelForValue(value) {

@@ -1,3 +1,6 @@
+<!-- zh-TW-main-install -->
+> This is the Traditional Chinese (Taiwan) fork. Install `skills/dashi-ppt` from this repository on `main`. The upstream `npx dashi-ppt-skill@latest` command does not install this fork. Upstream screenshots below are historical demonstrations, not screenshots of the localized interface.
+
 # Dashi PPT Skill · Web Decks / Per-Page Console / Editable PPTX Export
 
 ![GitHub stars](https://img.shields.io/github/stars/chuspeeism/dashi-ppt-skill?style=flat-square)

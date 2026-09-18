@@ -334,10 +334,10 @@ async function isStalePortLock(lockFile, bindHost) {
   }
 }
 
-// 身份校驗:PID 存活只是必要條件——同一 PID 可能已被 OS 複用給完全無關的程序(觀測到的複用誤判)。
+// 身份校驗:PID 存活只是必要條件——同一 PID 可能已被 OS 複用給完全無關的程式(觀測到的複用誤判)。
 // 命令列含 start-preview-server.mjs 或 serve-preview-https.mjs 才認定為“屬於本預覽工具鏈”:
-// 覆蓋已提交的 serve-preview-https.mjs 守護程序,也覆蓋埠鎖 state:'starting' 階段(此時 pid
-// 是尚未 spawn 子程序的 start-preview-server.mjs 啟動器自身)。
+// 覆蓋已提交的 serve-preview-https.mjs 守護程式,也覆蓋埠鎖 state:'starting' 階段(此時 pid
+// 是尚未 spawn 子程式的 start-preview-server.mjs 啟動器自身)。
 export function isPidAlive(pid) {
   if (!isProcessAlive(pid)) return false;
   return isPreviewToolingCommandLine(processCommandLine(pid));
@@ -365,7 +365,7 @@ function isPreviewToolingCommandLine(commandLine) {
   return /(?:start-preview-server|serve-preview-https)\.mjs/.test(String(commandLine || ''));
 }
 
-// 啟動時全鎖目錄掃描回收:清理死 PID、PID 複用誤判(活著但不是本工具鏈程序)、
+// 啟動時全鎖目錄掃描回收:清理死 PID、PID 複用誤判(活著但不是本工具鏈程式)、
 // 或 serveRoot 已從磁碟消失的孤兒埠鎖(及同名 .log)。純函式,便於單測直接呼叫。
 export function reclaimStaleLockDir(targetLockDir) {
   const removed = [];

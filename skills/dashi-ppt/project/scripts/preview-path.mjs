@@ -11,7 +11,7 @@ export function safePathname(url) {
   try {
     decoded = decodeURIComponent(parsed.pathname);
   } catch {
-    // 畸形百分號編碼(如 /%、/%zz):返回 null 讓呼叫方回 400,而非拋錯崩潰程序。
+    // 畸形百分號編碼(如 /%、/%zz):返回 null 讓呼叫方回 400,而非拋錯崩潰程式。
     return null;
   }
   return decoded.split('/').filter((part) => part && part !== '..').join('/');

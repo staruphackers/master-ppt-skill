@@ -5866,7 +5866,7 @@ export const pages = [
         {
           "title": "模型即產品",
           "tag": "MODEL · 通用大模型",
-          "copy": "頭部模型公司以產品化速度構築生態繫結，單輪融資屢破紀錄，資本願意為“下一個平台”提前下注。",
+          "copy": "頭部模型公司以產品化速度構築生態繫結，單輪融資屢破紀錄，資本願意為“下一個平臺”提前下注。",
           "stat": {
             "value": "10",
             "unit": "億/筆"
@@ -6263,7 +6263,7 @@ export const pages = [
         "實時多模態",
         "算力雲",
         "資料標註",
-        "資料平台",
+        "資料平臺",
         "開源模型",
         "AI 搜尋"
       ],
@@ -7078,7 +7078,7 @@ export const pages = [
           ]
         },
         {
-          "label": "商用 API / 開放平台",
+          "label": "商用 API / 開放平臺",
           "cells": [
             "yes",
             "yes",
@@ -7933,7 +7933,7 @@ export const pages = [
           "x": 2.4,
           "y": 62,
           "r": 10,
-          "note": "資料平台"
+          "note": "資料平臺"
         },
         {
           "label": "xAI",
@@ -9371,7 +9371,7 @@ export const pages = [
         },
         {
           "lead": "基礎設施最確定",
-          "body": "算力、資料與平台層吃下最確定的紅利，應用層的分化將更加劇烈。"
+          "body": "算力、資料與平臺層吃下最確定的紅利，應用層的分化將更加劇烈。"
         },
         {
           "lead": "視窗正在收窄",
@@ -10461,7 +10461,7 @@ export const pages = [
         },
         {
           "company": "Databricks",
-          "sector": "資料平台",
+          "sector": "資料平臺",
           "round": "J 輪",
           "raise": "100",
           "valuation": "620",
@@ -10900,7 +10900,7 @@ export const pages = [
     "pageNumber": 53,
     "layout": "THEME02-053",
     "slot": "storyboard",
-    "label": "程序圖帶 · Storyboard",
+    "label": "程式圖帶 · Storyboard",
     "bgClass": "",
     "controls": [
       {
@@ -10994,7 +10994,7 @@ export const pages = [
         "step": 1,
         "max": 4,
         "publicKey": "stepCount",
-        "desc": "程序帶中的步驟數量"
+        "desc": "程式帶中的步驟數量"
       },
       {
         "key": "imageCount",
@@ -11038,7 +11038,7 @@ export const pages = [
       }
     ],
     "defaultProps": {
-      "kicker": "CASE · 融資程序",
+      "kicker": "CASE · 融資程式",
       "title": "Anthropic 一年內 ",
       "titleEm": "連續三輪躍遷",
       "lead": "2024 年 5 月、8 月、11 月連續完成大額融資，估值由 600 億一路抬升至 9650 億美元，並於 2026 年遞交 IPO 申請。",
@@ -13109,9 +13109,9 @@ export const pages = [
         {
           "label": "生態繫結",
           "en": "ECOSYSTEM",
-          "desc": "平台與開發者生態形成網路效應，抬高遷移成本。",
+          "desc": "平臺與開發者生態形成網路效應，抬高遷移成本。",
           "tags": [
-            "平台繫結",
+            "平臺繫結",
             "網路效應"
           ]
         },
@@ -14370,7 +14370,7 @@ export const pages = [
       "kicker": "BUMP · 名次變遷",
       "title": "四個季度 ",
       "titleEm": "賽道排位賽",
-      "lead": "按季度吸金額給五大賽道排名——算力底座在 Q3 一度登頂，資料平台則一路下滑，資本的注意力在持續換位。",
+      "lead": "按季度吸金額給五大賽道排名——算力底座在 Q3 一度登頂，資料平臺則一路下滑，資本的注意力在持續換位。",
       "periods": [
         "2024 · Q1",
         "2024 · Q2",
@@ -14397,7 +14397,7 @@ export const pages = [
           ]
         },
         {
-          "label": "資料平台",
+          "label": "資料平臺",
           "ranks": [
             2,
             4,
@@ -14613,7 +14613,7 @@ export const pages = [
         "xAI · 實時多模態",
         "CoreWeave · 算力雲",
         "Scale AI · 資料標註",
-        "Databricks · 資料平台",
+        "Databricks · 資料平臺",
         "Mistral · 開源模型",
         "Perplexity · AI 搜尋",
         "Cerebras · AI 晶片",

@@ -700,7 +700,7 @@ export const pages = [
       "chips": [
         {
           "v": "30+",
-          "lb": "分發平台"
+          "lb": "分發平臺"
         },
         {
           "v": "72h",
@@ -1433,21 +1433,21 @@ export const pages = [
           "num": "01",
           "cn": "一鍵發行",
           "en": "Release",
-          "body": "一次上傳，自動分發到全球 30+ 流媒體平台，後設資料與封面規格代為校驗。",
-          "tag": "30+ 平台"
+          "body": "一次上傳，自動分發到全球 30+ 流媒體平臺，後設資料與封面規格代為校驗。",
+          "tag": "30+ 平臺"
         },
         {
           "num": "02",
           "cn": "粉絲直連",
           "en": "Direct",
-          "body": "跳過演算法與中間商，用專屬頁面與會員把聽眾沉澱為可經營的資產。",
+          "body": "跳過演演算法與中間商，用專屬頁面與會員把聽眾沉澱為可經營的資產。",
           "tag": "0 中間商"
         },
         {
           "num": "03",
           "cn": "收益透明",
           "en": "Ledger",
-          "body": "實時結算面板，按平台、地區、單曲拆解每一筆版稅，路徑可追溯。",
+          "body": "實時結算面板，按平臺、地區、單曲拆解每一筆版稅，路徑可追溯。",
           "tag": "72h 到賬"
         },
         {
@@ -1569,20 +1569,20 @@ export const pages = [
       "title": "一個工作臺，[[全鏈路]]覆蓋。",
       "lede": "從母帶到結算，從聽眾到維權——把分散在十幾個後臺裡的事，收進同一塊面板。",
       "heroTags": [
-        "30+ 平台",
+        "30+ 平臺",
         "0 中間商"
       ],
       "tiles": [
         {
           "cn": "一鍵發行",
           "en": "Release",
-          "d": "一次上傳，自動分發到全球 30+ 流媒體平台，後設資料代為校驗。",
+          "d": "一次上傳，自動分發到全球 30+ 流媒體平臺，後設資料代為校驗。",
           "kind": "hero"
         },
         {
           "cn": "透明結算",
           "en": "Ledger",
-          "d": "按平台拆解每一筆版稅。",
+          "d": "按平臺拆解每一筆版稅。",
           "kind": "kpi",
           "kpi": "72h"
         },
@@ -1743,7 +1743,7 @@ export const pages = [
         {
           "cn": "透明結算",
           "en": "Settle",
-          "d": "版稅按平台拆解，最快 72 小時到賬。"
+          "d": "版稅按平臺拆解，最快 72 小時到賬。"
         },
         {
           "cn": "經營聽眾",
@@ -1998,7 +1998,7 @@ export const pages = [
           "leaves": [
             [
               "發行",
-              "一鍵多平台"
+              "一鍵多平臺"
             ],
             [
               "結算",
@@ -2042,7 +2042,7 @@ export const pages = [
           "c": "#c44ee0",
           "leaves": [
             [
-              "平台",
+              "平臺",
               "30+ 渠道"
             ],
             [
@@ -3048,7 +3048,7 @@ export const pages = [
       "chips": [
         {
           "v": "30+",
-          "lb": "分發平台"
+          "lb": "分發平臺"
         },
         {
           "v": "72h",
@@ -4782,13 +4782,13 @@ export const pages = [
           "en": "Self-managed"
         },
         {
-          "name": "平台直營",
+          "name": "平臺直營",
           "en": "Platform"
         }
       ],
       "rows": [
         {
-          "cn": "平台分成",
+          "cn": "平臺分成",
           "en": "Commission",
           "vals": [
             "0–15%",
@@ -4838,7 +4838,7 @@ export const pages = [
           ]
         },
         {
-          "cn": "一鍵多平台",
+          "cn": "一鍵多平臺",
           "en": "Distribution",
           "vals": [
             true,
@@ -5004,11 +5004,11 @@ export const pages = [
           "g": "發行 / Distribution",
           "rows": [
             {
-              "k": "上線平台",
+              "k": "上線平臺",
               "v": "50+"
             },
             {
-              "k": "稽覈時長",
+              "k": "稽核時長",
               "v": "當日"
             },
             {
@@ -5510,7 +5510,7 @@ export const pages = [
       ],
       "lanes": [
         {
-          "t": "平台 Platform",
+          "t": "平臺 Platform",
           "s": "CORE",
           "c": "#3bb6ec",
           "bars": [
@@ -5571,7 +5571,7 @@ export const pages = [
             {
               "s": 0,
               "e": 2,
-              "t": "30+ 平台同步"
+              "t": "30+ 平臺同步"
             },
             {
               "s": 3,
@@ -5995,7 +5995,7 @@ export const pages = [
         "points": [
           "作品散落在十幾個後臺",
           "版稅要等一整個季度",
-          "聽眾資料握在平台手裡",
+          "聽眾資料握在平臺手裡",
           "盜用翻唱無從追蹤"
         ]
       },
@@ -6145,10 +6145,10 @@ export const pages = [
         },
         {
           "q": "結算到底有多快？",
-          "a": "版稅按平台拆解，最快 72 小時到賬，路徑全程可追溯。"
+          "a": "版稅按平臺拆解，最快 72 小時到賬，路徑全程可追溯。"
         },
         {
-          "q": "能分發到哪些平台？",
+          "q": "能分發到哪些平臺？",
           "a": "一次上傳，自動推送到全球 30+ 主流流媒體與商店。"
         },
         {
@@ -6298,9 +6298,9 @@ export const pages = [
           "note": "永久免費",
           "desc": "適合剛起步的創作者",
           "feats": [
-            "全球 30+ 平台分發",
+            "全球 30+ 平臺分發",
             "基礎結算面板",
-            "社羣支援"
+            "社群支援"
           ]
         },
         {
@@ -6337,7 +6337,7 @@ export const pages = [
           "m": null,
           "yearly": null,
           "note": "定製報價",
-          "desc": "平台級整合需求",
+          "desc": "平臺級整合需求",
           "feats": [
             "一切「廠牌」功能",
             "開放 API 接入",
@@ -6603,7 +6603,7 @@ export const pages = [
       "title": "獨立發行的拐點，\n已經到來。",
       "intro": "流媒體把聽眾帶到每個人面前，卻把分成層層稀釋。當工具足夠成熟、成本足夠低，[[音樂人不必再讓渡主動權]]——聲浪要做的，是把這件事徹底變簡單。",
       "problemLabel": "現狀 / The Problem",
-      "problemText": "作品散落在數個後臺，版稅要等一個季度，盜用難以追蹤，聽眾資料握在平台手裡。**你創造了價值，卻看不清、也拿不全。**",
+      "problemText": "作品散落在數個後臺，版稅要等一個季度，盜用難以追蹤，聽眾資料握在平臺手裡。**你創造了價值，卻看不清、也拿不全。**",
       "fixLabel": "我們的解法 / The Fix",
       "fixText": "一個入口管完發行、結算與版權，資料回到你手中，分賬全程透明。**把複雜留給系統，把主動權留給你。**",
       "stats": [
@@ -6611,7 +6611,7 @@ export const pages = [
           "v": "30",
           "u": "+",
           "lb": "Platforms",
-          "ds": "一次上傳，同步觸達全球平台。",
+          "ds": "一次上傳，同步觸達全球平臺。",
           "pct": 0.86
         },
         {
@@ -7078,7 +7078,7 @@ export const pages = [
           "c": "#1f6b2a"
         },
         {
-          "t": "平台運營",
+          "t": "平臺運營",
           "s": "Platform",
           "v": 14,
           "c": "#3bb6ec"
@@ -8487,7 +8487,7 @@ export const pages = [
     "pageNumber": 55,
     "layout": "THEME12-055",
     "slot": "ranking",
-    "label": "平台排行 / Ranking",
+    "label": "平臺排行 / Ranking",
     "bgClass": "",
     "controls": [
       {
@@ -8498,7 +8498,7 @@ export const pages = [
         "min": 2,
         "max": 7,
         "step": 1,
-        "desc": "排行展示的平台條目數量",
+        "desc": "排行展示的平臺條目數量",
         "publicKey": "itemCount"
       },
       {
@@ -8592,7 +8592,7 @@ export const pages = [
       "focusIndex": 1,
       "barMeta": "51 — Ranking",
       "brandLabel": "CREATIVE SYSTEM",
-      "kicker": "平台排行 / By Platform",
+      "kicker": "平臺排行 / By Platform",
       "title": "收入來自[[哪裡]]，一目瞭然。",
       "caption": "近 12 個月\n版稅佔比",
       "ghost": "37",
@@ -8736,7 +8736,7 @@ export const pages = [
       "brandLabel": "CREATIVE SYSTEM",
       "kicker": "健康度 / Health",
       "title": "幾個我們[[最在意]]的數。",
-      "lede": "不是越大越好，而是越透明越好——這些環，量的是創作者對平台的信任。",
+      "lede": "不是越大越好，而是越透明越好——這些環，量的是創作者對平臺的信任。",
       "gauges": [
         {
           "pct": 94,
@@ -8754,7 +8754,7 @@ export const pages = [
           "pct": 72,
           "cn": "收入來自直連",
           "en": "Direct income",
-          "note": "非平台抽成部分"
+          "note": "非平臺抽成部分"
         },
         {
           "pct": 65,
@@ -9354,7 +9354,7 @@ export const pages = [
       "title": "把創作者放回\n[[座標原點]]。",
       "intro": "越往右上，越透明、越屬於創作者本人。大多數方案擠在左下——而聲浪，獨自站在那個理應屬於你的象限。",
       "quadrantTop": "創作者主權 · 透明",
-      "quadrantBottom": "平台主導 · 不透明",
+      "quadrantBottom": "平臺主導 · 不透明",
       "axisX": "結算透明度 →",
       "axisY": "創作者掌控力 →",
       "ownLegend": "聲浪 · 創作者主權象限",
@@ -9531,7 +9531,7 @@ export const pages = [
           "s": "代理制"
         },
         {
-          "t": "自助平台",
+          "t": "自助平臺",
           "s": "DIY"
         },
         {
@@ -9728,7 +9728,7 @@ export const pages = [
         {
           "v": "30+",
           "lb": "Platforms",
-          "ds": "同步分發平台"
+          "ds": "同步分發平臺"
         },
         {
           "v": "72h",
@@ -10025,7 +10025,7 @@ export const pages = [
         },
         {
           "big": "30+",
-          "unit": "一鍵分發平台",
+          "unit": "一鍵分發平臺",
           "en": "Distribution targets",
           "delta": "+9",
           "up": true,
@@ -11370,7 +11370,7 @@ export const pages = [
       "brandLabel": "CREATIVE SYSTEM",
       "kicker": "分發網路 / Everywhere",
       "title": "一次上傳，[[處處可聽]]。",
-      "lede": "聲浪已接入全球主流平台——你的作品，會出現在聽眾本來就在的地方。",
+      "lede": "聲浪已接入全球主流平臺——你的作品，會出現在聽眾本來就在的地方。",
       "names": [
         "Spotify",
         "Apple Music",
@@ -11608,7 +11608,7 @@ export const pages = [
         {
           "cn": "實時結算",
           "en": "Live Ledger",
-          "d": "每一筆版稅按平台、地區即時拆解。",
+          "d": "每一筆版稅按平臺、地區即時拆解。",
           "pin": {
             "top": "18%",
             "left": "22%"
@@ -11617,7 +11617,7 @@ export const pages = [
         {
           "cn": "一鍵分發",
           "en": "Distribute",
-          "d": "同步上架全球 30+ 流媒體平台。",
+          "d": "同步上架全球 30+ 流媒體平臺。",
           "pin": {
             "top": "40%",
             "left": "70%"
@@ -11781,7 +11781,7 @@ export const pages = [
         {
           "y": "2025",
           "t": "十萬創作者",
-          "d": "平台服務的音樂人，突破十萬。"
+          "d": "平臺服務的音樂人，突破十萬。"
         },
         {
           "y": "2026",
@@ -12605,7 +12605,7 @@ export const pages = [
         {
           "t": "直連聽眾",
           "en": "Direct",
-          "s": "不被演算法隔開，把關係握在自己手裡。"
+          "s": "不被演演算法隔開，把關係握在自己手裡。"
         },
         {
           "t": "即時回報",
@@ -13033,7 +13033,7 @@ export const pages = [
           "sub": "#1c5b82"
         },
         {
-          "q": "海外平台同步分發，讓我們第一次拿到了真正的全球收入。",
+          "q": "海外平臺同步分發，讓我們第一次拿到了真正的全球收入。",
           "n": "Mira K.",
           "r": "電子製作人 / 柏林",
           "m": "M",
@@ -13196,7 +13196,7 @@ export const pages = [
           ]
         },
         {
-          "h": "社羣 / Community",
+          "h": "社群 / Community",
           "links": [
             "創作者計劃",
             "論壇 Forum",

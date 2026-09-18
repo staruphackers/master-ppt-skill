@@ -69,8 +69,8 @@ function replaceDataUrlStrings(value, transform) {
 // 以及 `mediaMap`(原始 data: URL → 相對路徑,只含真正轉換成功的條目)。
 //
 // mediaMap 存在的理由:這次請求發出後、響應回來前,使用者可能已經繼續編輯(輸入了更多文字、
-// 換了別的圖)。呼叫方不能拿這裡返回的整份 state 直接覆蓋用戶端當下的 vm.state——那會把等待
-// 期裡發生的新編輯悄悄沖掉。正確做法是用戶端只用 mediaMap 做"精確字串替換"(把當下 state
+// 換了別的圖)。呼叫方不能拿這裡返回的整份 state 直接覆蓋使用者端當下的 vm.state——那會把等待
+// 期裡發生的新編輯悄悄沖掉。正確做法是使用者端只用 mediaMap 做"精確字串替換"(把當下 state
 // 裡仍等於某個原始 data: URL 的位置換成對應相對路徑),不動其餘欄位;見 template-swiss.html 的
 // applyMediaMapReconciliation。
 export function extractDataUrlMedia(state, deckDir) {

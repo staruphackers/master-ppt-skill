@@ -51,7 +51,7 @@ const INTERNAL_PREVIEW_FILES = new Set(['.preview-server.json', '.preview-server
 const LEXICAL_SERVE_ROOT = path.resolve(SERVE_ROOT);
 const LEXICAL_EXPORT_DIR = path.resolve(EXPORT_DIR);
 
-// 空閒自退:長期無人訪問的預覽服務不應無限期佔用埠/程序。有進行中匯出任務時不退。
+// 空閒自退:長期無人訪問的預覽服務不應無限期佔用埠/程式。有進行中匯出任務時不退。
 // DASHI_PPT_PREVIEW_IDLE_MS 是僅測試用的毫秒級後門,優先於 DASHI_PPT_PREVIEW_IDLE_HOURS。
 // DASHI_PPT_PREVIEW_IDLE_CHECK_MS 同樣僅測試用,覆蓋檢查間隔以加速回歸測試。
 const IDLE_LIMIT_MS = resolveIdleLimitMs();
@@ -219,7 +219,7 @@ const serveRequest = async (req, res) => {
   createReadStream(file).pipe(res);
 };
 
-// 頂層兜底:任何處理異常都不得讓程序崩潰(請求監聽器是 async,未捕獲即 unhandledRejection)。
+// 頂層兜底:任何處理異常都不得讓程式崩潰(請求監聽器是 async,未捕獲即 unhandledRejection)。
 const requestHandler = async (req, res) => {
   noteActivity();
   try {
@@ -258,7 +258,7 @@ server.listen(PORT, HOST, () => {
   }
 });
 
-// unref:空閒檢查定時器不應阻止程序在其他條件下正常退出(例如收到訊號)。
+// unref:空閒檢查定時器不應阻止程式在其他條件下正常退出(例如收到訊號)。
 const idleCheckTimer = IDLE_LIMIT_MS > 0 ? setInterval(checkIdleExit, IDLE_CHECK_INTERVAL_MS) : null;
 idleCheckTimer?.unref?.();
 

@@ -70,7 +70,7 @@ export const ROLE_KEYWORDS = {
   relationship: ['chain', 'flow', 'sankey', 'network', 'orbit', 'ecosystem', 'map', '關係', '鏈', '流向', '生態', '網路'],
   case: ['case', 'spotlight', 'profile', 'story', '案例', '聚焦', '檔案'],
   image: ['image', 'gallery', 'mosaic', 'photo', 'film', 'album', 'poster', 'showcase', '影像', '圖景', '圖集', '圖片', '海報'],
-  process: ['process', 'roadmap', 'journey', 'steps', 'gantt', '路徑', '流程', '路線', '程序'],
+  process: ['process', 'roadmap', 'journey', 'steps', 'gantt', '路徑', '流程', '路線', '程式'],
   risks: ['risk', 'faq', 'checklist', '風險', '異議', '問答', '清單'],
   observation: ['quote', 'insight', 'takeaway', 'conclusion', 'statement', 'manifesto', '觀點', '洞察', '要點', '結論'],
   ambient: ['ambient', 'atmosphere', 'background', 'immersive', 'poster', 'hero', '氛圍', '背景', '沉浸', '海報'],

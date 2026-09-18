@@ -15,6 +15,7 @@ const files = cp.execFileSync('git', ['ls-files', '-z'], { encoding: 'utf8' }).s
 const basic = OpenCC.Converter({ from: 'cn', to: 'tw' });
 const taiwan = OpenCC.Converter({ from: 'cn', to: 'twp' });
 const terms = Object.entries({
+  '資料包告': '資料報告', '社羣': '社群',
   '簡體中文': '繁體中文', '默認': '預設', '導出': '匯出', '導入': '匯入',
   '界面': '介面', '視頻': '影片', '文件夾': '資料夾', '文件': '檔案',
   '文檔': '文件', '代碼': '程式碼', '源碼': '原始碼', '源代碼': '原始碼',
@@ -210,7 +211,7 @@ for (const file of files) {
   if (/^(tools\/|\.github\/workflows\/|docs\/zh-TW-localization)/.test(file)) continue;
   if (/(^|\/)(package-lock\.json|yarn\.lock|pnpm-lock\.yaml|LICENSE|NOTICE)$/.test(file)) continue;
   const ext = path.extname(file).toLowerCase();
-  if (!['.md','.mdx','.json','.js','.mjs','.cjs','.jsx','.ts','.tsx','.html','.htm','.css','.svg','.yml','.yaml','.txt','.sh','.py','.toml','.template'].includes(ext)) {
+  if (!['.md','.mdx','.json','.js','.mjs','.cjs','.jsx','.ts','.tsx','.html','.htm','.css','.svg','.yml','.yaml','.txt','.sh','.py','.toml','.template','.ps1'].includes(ext)) {
     report.binaryFilesNotTranslated.push(file); continue;
   }
   if (fs.lstatSync(file).isSymbolicLink()) continue;
