@@ -212,7 +212,7 @@ for (const file of files) {
   // License/NOTICE text is intentionally not modified; all other supported tracked text files are localized.
   if (/(^|\/)(package-lock\.json|yarn\.lock|pnpm-lock\.yaml|LICENSE|NOTICE)$/.test(file)) continue;
   const ext = path.extname(file).toLowerCase();
-  if (!['.md','.mdx','.json','.js','.mjs','.cjs','.jsx','.ts','.tsx','.html','.htm','.css','.svg','.yml','.yaml','.txt','.sh','.py','.toml','.template','.ps1','.ps1'].includes(ext)) {
+  if (!['.md','.mdx','.json','.js','.mjs','.cjs','.jsx','.ts','.tsx','.html','.htm','.css','.svg','.yml','.yaml','.txt','.sh','.py','.toml','.template','.ps1','.ps1','.ps1'].includes(ext)) {
     report.binaryFilesNotTranslated.push(file); continue;
   }
   if (fs.lstatSync(file).isSymbolicLink()) continue;

@@ -13078,7 +13078,7 @@ export const pages = [
           "en": "TECHNOLOGICAL",
           "accent": "#b04a2f",
           "items": [
-            "演演演算法能力突破",
+            "演演演演算法能力突破",
             "算力成本曲線",
             "開源生態演進",
             "專利與標準之爭"

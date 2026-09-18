@@ -4914,7 +4914,7 @@ export const GENERATED_THEME_PAGES = [
       "title": "從模型，走向物理世界",
       "en": "Embodied AI",
       "cn": "AI 的下一個戰場：讓智慧擁有身體",
-      "lead": "當大模型在螢幕裡日趨成熟，資本開始押注「具身智慧」——人形機器人把演演演算法裝進可以行動的軀體。",
+      "lead": "當大模型在螢幕裡日趨成熟，資本開始押注「具身智慧」——人形機器人把演演演演算法裝進可以行動的軀體。",
       "highlightWord": "具身智慧",
       "stats": [
         {
@@ -42939,7 +42939,7 @@ export const GENERATED_THEME_PAGES = [
           "en": "TECHNOLOGICAL",
           "accent": "#b04a2f",
           "items": [
-            "演演演算法能力突破",
+            "演演演演算法能力突破",
             "算力成本曲線",
             "開源生態演進",
             "專利與標準之爭"
@@ -143816,7 +143816,7 @@ export const GENERATED_THEME_PAGES = [
         {
           "year": "2018",
           "label": "引擎成型",
-          "note": "自主再平衡演演演算法首次實盤驗證。"
+          "note": "自主再平衡演演演演算法首次實盤驗證。"
         },
         {
           "year": "2020",
@@ -153851,7 +153851,7 @@ export const GENERATED_THEME_PAGES = [
         "12月 · +182%"
       ],
       "metaLeft": "IGNIS — 燃點 · 12 個月真實資料",
-      "metaMid": "讓 SEO 超越演演演算法，對齊真實意圖"
+      "metaMid": "讓 SEO 超越演演演演算法，對齊真實意圖"
     }
   },
   {
@@ -169090,7 +169090,7 @@ export const GENERATED_THEME_PAGES = [
           "num": "02",
           "cn": "粉絲直連",
           "en": "Direct",
-          "body": "跳過演演演算法與中間商，用專屬頁面與會員把聽眾沉澱為可經營的資產。",
+          "body": "跳過演演演演算法與中間商，用專屬頁面與會員把聽眾沉澱為可經營的資產。",
           "tag": "0 中間商"
         },
         {
@@ -180255,7 +180255,7 @@ export const GENERATED_THEME_PAGES = [
         {
           "t": "直連聽眾",
           "en": "Direct",
-          "s": "不被演演演算法隔開，把關係握在自己手裡。"
+          "s": "不被演演演演算法隔開，把關係握在自己手裡。"
         },
         {
           "t": "即時回報",

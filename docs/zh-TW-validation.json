@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "workflowRun": "https://github.com/staruphackers/master-ppt-skill/actions/runs/35297451380",
-  "workflowHead": "eb0624781851e3453793354142af3d4f821b6d56",
-  "testedSkillTreeSHA256": "05bf0ebd03e08b29ed81bc2b91ead00c323d7befbffcadc38b657d461b7542c2",
+  "workflowRun": "https://github.com/staruphackers/master-ppt-skill/actions/runs/35298171234",
+  "workflowHead": "95d95a32721dbd9c50a48478de2d96731ca29cb4",
+  "testedSkillTreeSHA256": "16da317aab0074a36a2acd87a02891cc15b94fc01b194093ab859c7aec8f36df",
   "environment": "Ubuntu; preinstalled Chrome; Noto CJK fonts installed only in the test runner",
   "viewports": [
     {
@@ -161,11 +161,11 @@
   "englishBrowserMode": true,
   "mobilePanelCollapse": true,
   "powershell": {
-    "scriptsParsed": 8,
+    "runtimeExecution": false,
     "status": "passed",
-    "runtimeExecution": false
+    "scriptsParsed": 8
   },
-  "syntaxChecks": 154,
+  "syntaxChecks": 162,
   "pptx": [
     {
       "file": "english.pptx",
@@ -190,7 +190,7 @@
     {
       "file": "theme01.pdf",
       "pages": 2,
-      "bytes": 1663488
+      "bytes": 1663490
     },
     {
       "file": "theme05.pdf",
@@ -200,7 +200,7 @@
     {
       "file": "english.pdf",
       "pages": 2,
-      "bytes": 1663490
+      "bytes": 1663493
     }
   ],
   "exportWarnings": {
@@ -546,13 +546,13 @@
     ],
     "theme05-pptx": []
   },
-  "proprietaryEngine": "Restored byte-for-byte to upstream base 21dc7e5; excluded from localization.",
+  "proprietaryEngine": "Chinese strings in editable source may be localized; LICENSE text remains unchanged.",
   "limitations": [
     "Two layouts per theme are sampled, not all 1020 layouts.",
     "PPTX/PDF CLI exports are sampled; Microsoft PowerPoint/Keynote visual round-trip is not tested.",
     "Browser smoke blocks external requests; export uses only trusted generated fixtures.",
     "English fixture tests UI language, not automatic translation of slide copy.",
-    "CLI copy adds warning logging only; exporter implementation remains original.",
+    "CLI copy adds warning logging only.",
     "No Microsoft PowerPoint or Windows/macOS runtime round-trip.",
     "Not a full security audit."
   ]

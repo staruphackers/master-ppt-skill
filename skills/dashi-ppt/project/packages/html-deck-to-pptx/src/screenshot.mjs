@@ -1,2 +1,2 @@
-// 专有组件(见包内 LICENSE):安装版仅分发构建产物,实现见 ../dist/screenshot.min.mjs
+// 專有元件(見包內 LICENSE):安裝版僅分發構建產物,實現見 ../dist/screenshot.min.mjs
 export * from '../dist/screenshot.min.mjs';
