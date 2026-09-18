@@ -1,0 +1,559 @@
+{
+  "status": "passed",
+  "workflowRun": "https://github.com/staruphackers/master-ppt-skill/actions/runs/35297451380",
+  "workflowHead": "eb0624781851e3453793354142af3d4f821b6d56",
+  "testedSkillTreeSHA256": "05bf0ebd03e08b29ed81bc2b91ead00c323d7befbffcadc38b657d461b7542c2",
+  "environment": "Ubuntu; preinstalled Chrome; Noto CJK fonts installed only in the test runner",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "themes": 12,
+  "layouts": 1020,
+  "controls": 8576,
+  "dictionaryEntries": 16174,
+  "browserChecks": [
+    {
+      "theme": "theme01",
+      "sampledLayouts": 2,
+      "language": "zh-TW",
+      "nonBlank": true,
+      "noCommonSimplifiedUI": true,
+      "pageErrors": [],
+      "unexpectedConsoleErrors": [],
+      "ignoredResourceErrors": 0,
+      "nextSlide": true
+    },
+    {
+      "theme": "theme02",
+      "sampledLayouts": 2,
+      "language": "zh-TW",
+      "nonBlank": true,
+      "noCommonSimplifiedUI": true,
+      "pageErrors": [],
+      "unexpectedConsoleErrors": [],
+      "ignoredResourceErrors": 0,
+      "nextSlide": true
+    },
+    {
+      "theme": "theme03",
+      "sampledLayouts": 2,
+      "language": "zh-TW",
+      "nonBlank": true,
+      "noCommonSimplifiedUI": true,
+      "pageErrors": [],
+      "unexpectedConsoleErrors": [],
+      "ignoredResourceErrors": 0,
+      "nextSlide": true
+    },
+    {
+      "theme": "theme04",
+      "sampledLayouts": 2,
+      "language": "zh-TW",
+      "nonBlank": true,
+      "noCommonSimplifiedUI": true,
+      "pageErrors": [],
+      "unexpectedConsoleErrors": [],
+      "ignoredResourceErrors": 0,
+      "nextSlide": true
+    },
+    {
+      "theme": "theme05",
+      "sampledLayouts": 2,
+      "language": "zh-TW",
+      "nonBlank": true,
+      "noCommonSimplifiedUI": true,
+      "pageErrors": [],
+      "unexpectedConsoleErrors": [],
+      "ignoredResourceErrors": 0,
+      "nextSlide": true
+    },
+    {
+      "theme": "theme06",
+      "sampledLayouts": 2,
+      "language": "zh-TW",
+      "nonBlank": true,
+      "noCommonSimplifiedUI": true,
+      "pageErrors": [],
+      "unexpectedConsoleErrors": [],
+      "ignoredResourceErrors": 0,
+      "nextSlide": true
+    },
+    {
+      "theme": "theme07",
+      "sampledLayouts": 2,
+      "language": "zh-TW",
+      "nonBlank": true,
+      "noCommonSimplifiedUI": true,
+      "pageErrors": [],
+      "unexpectedConsoleErrors": [],
+      "ignoredResourceErrors": 0,
+      "nextSlide": true
+    },
+    {
+      "theme": "theme08",
+      "sampledLayouts": 2,
+      "language": "zh-TW",
+      "nonBlank": true,
+      "noCommonSimplifiedUI": true,
+      "pageErrors": [],
+      "unexpectedConsoleErrors": [],
+      "ignoredResourceErrors": 0,
+      "nextSlide": true
+    },
+    {
+      "theme": "theme09",
+      "sampledLayouts": 2,
+      "language": "zh-TW",
+      "nonBlank": true,
+      "noCommonSimplifiedUI": true,
+      "pageErrors": [],
+      "unexpectedConsoleErrors": [],
+      "ignoredResourceErrors": 0,
+      "nextSlide": true
+    },
+    {
+      "theme": "theme10",
+      "sampledLayouts": 2,
+      "language": "zh-TW",
+      "nonBlank": true,
+      "noCommonSimplifiedUI": true,
+      "pageErrors": [],
+      "unexpectedConsoleErrors": [],
+      "ignoredResourceErrors": 0,
+      "nextSlide": true
+    },
+    {
+      "theme": "theme11",
+      "sampledLayouts": 2,
+      "language": "zh-TW",
+      "nonBlank": true,
+      "noCommonSimplifiedUI": true,
+      "pageErrors": [],
+      "unexpectedConsoleErrors": [],
+      "ignoredResourceErrors": 0,
+      "nextSlide": true
+    },
+    {
+      "theme": "theme12",
+      "sampledLayouts": 2,
+      "language": "zh-TW",
+      "nonBlank": true,
+      "noCommonSimplifiedUI": true,
+      "pageErrors": [],
+      "unexpectedConsoleErrors": [],
+      "ignoredResourceErrors": 0,
+      "nextSlide": true
+    }
+  ],
+  "languageToggle": {
+    "toEnglish": true,
+    "englishThemeLabel": true,
+    "persistedAcrossReload": true,
+    "backToTraditional": true
+  },
+  "englishBrowserMode": true,
+  "mobilePanelCollapse": true,
+  "powershell": {
+    "scriptsParsed": 8,
+    "status": "passed",
+    "runtimeExecution": false
+  },
+  "syntaxChecks": 154,
+  "pptx": [
+    {
+      "file": "english.pptx",
+      "slides": 2,
+      "editableTextRuns": 30,
+      "status": "passed"
+    },
+    {
+      "file": "theme01.pptx",
+      "slides": 2,
+      "editableTextRuns": 30,
+      "status": "passed"
+    },
+    {
+      "file": "theme05.pptx",
+      "slides": 2,
+      "editableTextRuns": 35,
+      "status": "passed"
+    }
+  ],
+  "pdf": [
+    {
+      "file": "theme01.pdf",
+      "pages": 2,
+      "bytes": 1663488
+    },
+    {
+      "file": "theme05.pdf",
+      "pages": 2,
+      "bytes": 155690
+    },
+    {
+      "file": "english.pdf",
+      "pages": 2,
+      "bytes": 1663490
+    }
+  ],
+  "exportWarnings": {
+    "theme01-pptx": [
+      {
+        "slide": 1,
+        "type": "node-image-fallback-text-extracted",
+        "node": "effect-background",
+        "textCount": 19,
+        "sample": "年度報告 · VOL.07 新消費趨勢 年度報告 Annual Consumer Trends Report 橫縱雙維，解碼一年的消費遷徙與品牌機會。 消費遷徙 品牌機會 增長訊號 REPORT · 2026 07 EDITION Vol. 07 RELEASE 2026 · 06 ISSUED BY 燈塔研究院 */"
+      },
+      {
+        "slide": 1,
+        "type": "node-image-fallback",
+        "node": "effect-background",
+        "count": 1,
+        "source": "browser-visual-effect"
+      },
+      {
+        "slide": 1,
+        "type": "node-image-fallback-text-extracted",
+        "node": "effect-background",
+        "textCount": 19,
+        "sample": "年度報告 · VOL.07 新消費趨勢 年度報告 Annual Consumer Trends Report 橫縱雙維，解碼一年的消費遷徙與品牌機會。 消費遷徙 品牌機會 增長訊號 REPORT · 2026 07 EDITION Vol. 07 RELEASE 2026 · 06 ISSUED BY 燈塔研究院 */"
+      },
+      {
+        "slide": 1,
+        "type": "node-image-fallback",
+        "node": "effect-background",
+        "count": 1,
+        "source": "browser-visual-effect"
+      },
+      {
+        "slide": 1,
+        "type": "node-image-fallback-text-extracted",
+        "node": "effect-background",
+        "textCount": 3,
+        "sample": "增長訊號 燈塔研究院 · 橫縱雙維洞察 · 2026 編制 /*"
+      },
+      {
+        "slide": 1,
+        "type": "node-image-fallback",
+        "node": "effect-background",
+        "count": 1,
+        "source": "browser-visual-effect"
+      },
+      {
+        "slide": 1,
+        "type": "node-image-fallback-text-extracted",
+        "node": "effect-background",
+        "textCount": 17,
+        "sample": "年度報告 · VOL.07 新消費趨勢 年度報告 Annual Consumer Trends Report 橫縱雙維，解碼一年的消費遷徙與品牌機會。 品牌機會 增長訊號 REPORT · 2026 07 EDITION Vol. 07 RELEASE 2026 · 06 ISSUED BY 燈塔研究院 燈塔研究院 ·"
+      },
+      {
+        "slide": 1,
+        "type": "node-image-fallback",
+        "node": "effect-background",
+        "count": 1,
+        "source": "browser-visual-effect"
+      },
+      {
+        "slide": 1,
+        "type": "node-image-fallback-text-extracted",
+        "node": "material-background",
+        "textCount": 17,
+        "sample": "年度報告"
+      },
+      {
+        "slide": 1,
+        "type": "node-image-fallback",
+        "node": "material-background",
+        "count": 1,
+        "source": "browser-local-material"
+      },
+      {
+        "slide": 1,
+        "type": "node-image-fallback-text-extracted",
+        "node": "masked-element",
+        "textCount": 8,
+        "sample": "REPORT · 2026 07 EDITION Vol. 07 RELEASE 2026 · 06 ISSUED BY 燈塔研究院"
+      },
+      {
+        "slide": 1,
+        "type": "node-image-fallback",
+        "node": "masked-element",
+        "count": 1,
+        "source": "browser-visual-effect"
+      },
+      {
+        "slide": 2,
+        "type": "node-image-fallback-text-extracted",
+        "node": "effect-background",
+        "textCount": 11,
+        "sample": "GLOBAL BRAND GROWTH 全球品牌 增長白皮書 從規模擴張到價值深耕 增長飛輪 價值複利 長期主義 2026 年度版 · 燈塔研究院 */ 燈塔研究院 · 全球品牌增長研究 · 2026 /*"
+      },
+      {
+        "slide": 2,
+        "type": "node-image-fallback",
+        "node": "effect-background",
+        "count": 1,
+        "source": "browser-visual-effect"
+      },
+      {
+        "slide": 2,
+        "type": "node-image-fallback-text-extracted",
+        "node": "effect-background",
+        "textCount": 11,
+        "sample": "GLOBAL BRAND GROWTH 全球品牌 增長白皮書 從規模擴張到價值深耕 增長飛輪 價值複利 長期主義 2026 年度版 · 燈塔研究院 */ 燈塔研究院 · 全球品牌增長研究 · 2026 /*"
+      },
+      {
+        "slide": 2,
+        "type": "node-image-fallback",
+        "node": "effect-background",
+        "count": 1,
+        "source": "browser-visual-effect"
+      },
+      {
+        "slide": 2,
+        "type": "node-image-fallback",
+        "node": "effect-background",
+        "count": 1,
+        "source": "browser-visual-effect"
+      },
+      {
+        "slide": 2,
+        "type": "node-image-fallback",
+        "node": "effect-background",
+        "count": 1,
+        "source": "browser-visual-effect"
+      },
+      {
+        "slide": 2,
+        "type": "node-image-fallback-text-extracted",
+        "node": "effect-background",
+        "textCount": 6,
+        "sample": "增長飛輪 價值複利 長期主義 2026 年度版 · 燈塔研究院 燈塔研究院 · 全球品牌增長研究 · 2026 /*"
+      },
+      {
+        "slide": 2,
+        "type": "node-image-fallback",
+        "node": "effect-background",
+        "count": 1,
+        "source": "browser-visual-effect"
+      },
+      {
+        "slide": 2,
+        "type": "node-image-fallback-text-extracted",
+        "node": "masked-element",
+        "textCount": 8,
+        "sample": "GLOBAL BRAND GROWTH 全球品牌 增長白皮書 從規模擴張到價值深耕 增長飛輪 價值複利 長期主義 2026 年度版 · 燈塔研究院"
+      },
+      {
+        "slide": 2,
+        "type": "node-image-fallback",
+        "node": "masked-element",
+        "count": 1,
+        "source": "browser-visual-effect"
+      },
+      {
+        "slide": 2,
+        "type": "node-image-fallback-text-extracted",
+        "node": "material-background",
+        "textCount": 9,
+        "sample": "增長白皮書"
+      },
+      {
+        "slide": 2,
+        "type": "node-image-fallback",
+        "node": "material-background",
+        "count": 1,
+        "source": "browser-local-material"
+      }
+    ],
+    "english-pptx": [
+      {
+        "slide": 1,
+        "type": "node-image-fallback-text-extracted",
+        "node": "effect-background",
+        "textCount": 19,
+        "sample": "年度報告 · VOL.07 新消費趨勢 年度報告 Annual Consumer Trends Report 橫縱雙維，解碼一年的消費遷徙與品牌機會。 消費遷徙 品牌機會 增長訊號 REPORT · 2026 07 EDITION Vol. 07 RELEASE 2026 · 06 ISSUED BY 燈塔研究院 */"
+      },
+      {
+        "slide": 1,
+        "type": "node-image-fallback",
+        "node": "effect-background",
+        "count": 1,
+        "source": "browser-visual-effect"
+      },
+      {
+        "slide": 1,
+        "type": "node-image-fallback-text-extracted",
+        "node": "effect-background",
+        "textCount": 19,
+        "sample": "年度報告 · VOL.07 新消費趨勢 年度報告 Annual Consumer Trends Report 橫縱雙維，解碼一年的消費遷徙與品牌機會。 消費遷徙 品牌機會 增長訊號 REPORT · 2026 07 EDITION Vol. 07 RELEASE 2026 · 06 ISSUED BY 燈塔研究院 */"
+      },
+      {
+        "slide": 1,
+        "type": "node-image-fallback",
+        "node": "effect-background",
+        "count": 1,
+        "source": "browser-visual-effect"
+      },
+      {
+        "slide": 1,
+        "type": "node-image-fallback-text-extracted",
+        "node": "effect-background",
+        "textCount": 3,
+        "sample": "增長訊號 燈塔研究院 · 橫縱雙維洞察 · 2026 編制 /*"
+      },
+      {
+        "slide": 1,
+        "type": "node-image-fallback",
+        "node": "effect-background",
+        "count": 1,
+        "source": "browser-visual-effect"
+      },
+      {
+        "slide": 1,
+        "type": "node-image-fallback-text-extracted",
+        "node": "effect-background",
+        "textCount": 17,
+        "sample": "年度報告 · VOL.07 新消費趨勢 年度報告 Annual Consumer Trends Report 橫縱雙維，解碼一年的消費遷徙與品牌機會。 品牌機會 增長訊號 REPORT · 2026 07 EDITION Vol. 07 RELEASE 2026 · 06 ISSUED BY 燈塔研究院 燈塔研究院 ·"
+      },
+      {
+        "slide": 1,
+        "type": "node-image-fallback",
+        "node": "effect-background",
+        "count": 1,
+        "source": "browser-visual-effect"
+      },
+      {
+        "slide": 1,
+        "type": "node-image-fallback-text-extracted",
+        "node": "material-background",
+        "textCount": 17,
+        "sample": "年度報告"
+      },
+      {
+        "slide": 1,
+        "type": "node-image-fallback",
+        "node": "material-background",
+        "count": 1,
+        "source": "browser-local-material"
+      },
+      {
+        "slide": 1,
+        "type": "node-image-fallback-text-extracted",
+        "node": "masked-element",
+        "textCount": 8,
+        "sample": "REPORT · 2026 07 EDITION Vol. 07 RELEASE 2026 · 06 ISSUED BY 燈塔研究院"
+      },
+      {
+        "slide": 1,
+        "type": "node-image-fallback",
+        "node": "masked-element",
+        "count": 1,
+        "source": "browser-visual-effect"
+      },
+      {
+        "slide": 2,
+        "type": "node-image-fallback-text-extracted",
+        "node": "effect-background",
+        "textCount": 11,
+        "sample": "GLOBAL BRAND GROWTH 全球品牌 增長白皮書 從規模擴張到價值深耕 增長飛輪 價值複利 長期主義 2026 年度版 · 燈塔研究院 */ 燈塔研究院 · 全球品牌增長研究 · 2026 /*"
+      },
+      {
+        "slide": 2,
+        "type": "node-image-fallback",
+        "node": "effect-background",
+        "count": 1,
+        "source": "browser-visual-effect"
+      },
+      {
+        "slide": 2,
+        "type": "node-image-fallback-text-extracted",
+        "node": "effect-background",
+        "textCount": 11,
+        "sample": "GLOBAL BRAND GROWTH 全球品牌 增長白皮書 從規模擴張到價值深耕 增長飛輪 價值複利 長期主義 2026 年度版 · 燈塔研究院 */ 燈塔研究院 · 全球品牌增長研究 · 2026 /*"
+      },
+      {
+        "slide": 2,
+        "type": "node-image-fallback",
+        "node": "effect-background",
+        "count": 1,
+        "source": "browser-visual-effect"
+      },
+      {
+        "slide": 2,
+        "type": "node-image-fallback",
+        "node": "effect-background",
+        "count": 1,
+        "source": "browser-visual-effect"
+      },
+      {
+        "slide": 2,
+        "type": "node-image-fallback",
+        "node": "effect-background",
+        "count": 1,
+        "source": "browser-visual-effect"
+      },
+      {
+        "slide": 2,
+        "type": "node-image-fallback-text-extracted",
+        "node": "effect-background",
+        "textCount": 6,
+        "sample": "增長飛輪 價值複利 長期主義 2026 年度版 · 燈塔研究院 燈塔研究院 · 全球品牌增長研究 · 2026 /*"
+      },
+      {
+        "slide": 2,
+        "type": "node-image-fallback",
+        "node": "effect-background",
+        "count": 1,
+        "source": "browser-visual-effect"
+      },
+      {
+        "slide": 2,
+        "type": "node-image-fallback-text-extracted",
+        "node": "masked-element",
+        "textCount": 8,
+        "sample": "GLOBAL BRAND GROWTH 全球品牌 增長白皮書 從規模擴張到價值深耕 增長飛輪 價值複利 長期主義 2026 年度版 · 燈塔研究院"
+      },
+      {
+        "slide": 2,
+        "type": "node-image-fallback",
+        "node": "masked-element",
+        "count": 1,
+        "source": "browser-visual-effect"
+      },
+      {
+        "slide": 2,
+        "type": "node-image-fallback-text-extracted",
+        "node": "material-background",
+        "textCount": 9,
+        "sample": "增長白皮書"
+      },
+      {
+        "slide": 2,
+        "type": "node-image-fallback",
+        "node": "material-background",
+        "count": 1,
+        "source": "browser-local-material"
+      }
+    ],
+    "theme05-pptx": []
+  },
+  "proprietaryEngine": "Restored byte-for-byte to upstream base 21dc7e5; excluded from localization.",
+  "limitations": [
+    "Two layouts per theme are sampled, not all 1020 layouts.",
+    "PPTX/PDF CLI exports are sampled; Microsoft PowerPoint/Keynote visual round-trip is not tested.",
+    "Browser smoke blocks external requests; export uses only trusted generated fixtures.",
+    "English fixture tests UI language, not automatic translation of slide copy.",
+    "CLI copy adds warning logging only; exporter implementation remains original.",
+    "No Microsoft PowerPoint or Windows/macOS runtime round-trip.",
+    "Not a full security audit."
+  ]
+}

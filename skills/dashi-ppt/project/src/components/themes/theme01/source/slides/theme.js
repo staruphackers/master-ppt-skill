@@ -4,7 +4,7 @@
 // All CSS is scoped under `.aip-root` (never :root), and every class carries
 // the `aip-` prefix, so dropping these components into another React app can
 // not leak styles into the host. Import THEME for token values and THEME_CSS
-// for the raw stylesheet string. Fonts (Noto Sans SC / Space Mono) are
+// for the raw stylesheet string. Fonts (Noto Sans TC / Space Mono) are
 // provided by the host document — no runtime webfont injection here.
 
 export const THEME = {
@@ -37,7 +37,7 @@ export const THEME_CSS = `
   --aip-ink:#2b2b30; --aip-ink-2:#56565c; --aip-ink-3:#9a9ba4;
   --aip-red:#e8503a; --aip-blue:#5b8def; --aip-green:#46b083; --aip-amber:#e0a23a; --aip-violet:#7a5ae0;
   position:relative; width:100%; height:100%; overflow:hidden;
-  font-family:'Noto Sans SC',system-ui,sans-serif; color:var(--aip-ink);
+  font-family:'Noto Sans TC',system-ui,sans-serif; color:var(--aip-ink);
   -webkit-font-smoothing:antialiased;
 }
 .aip-root *{box-sizing:border-box;}

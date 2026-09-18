@@ -28,11 +28,11 @@ import { ensureUsableTmpdir } from './preview/ensure-tmpdir.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 
-// 启动即校验一次 tmpdir(宿主沙箱环境启动的场景);运行中被清理的场景由导出路由再兜一次。
+// 啟動即校驗一次 tmpdir(宿主沙箱環境啟動的場景);執行中被清理的場景由匯出路由再兜一次。
 ensureUsableTmpdir(message => console.warn(message));
-// 相对路径按调用方目录解析:npm run(含 --prefix)会把脚本 cwd 切到项目根,INIT_CWD 才是用户所在目录。
-// 未显式传参时的默认值仍锚定项目根(内部调试预览目录),不随调用方目录漂移;绝对路径入参(常见于
-// start-preview-server.mjs 已完成解析后 spawn 传入)不受 CALLER_CWD 影响。
+// 相對路徑按呼叫方目錄解析:npm run(含 --prefix)會把指令碼 cwd 切到專案根,INIT_CWD 才是使用者所在目錄。
+// 未顯式傳參時的預設值仍錨定專案根(內部除錯預覽目錄),不隨呼叫方目錄漂移;絕對路徑入參(常見於
+// start-preview-server.mjs 已完成解析後 spawn 傳入)不受 CALLER_CWD 影響。
 const CALLER_CWD = process.env.INIT_CWD || process.cwd();
 const SERVE_ROOT_ARG = process.argv[2];
 const SERVE_ROOT = SERVE_ROOT_ARG
@@ -51,9 +51,9 @@ const INTERNAL_PREVIEW_FILES = new Set(['.preview-server.json', '.preview-server
 const LEXICAL_SERVE_ROOT = path.resolve(SERVE_ROOT);
 const LEXICAL_EXPORT_DIR = path.resolve(EXPORT_DIR);
 
-// 空闲自退:长期无人访问的预览服务不应无限期占用端口/进程。有进行中导出任务时不退。
-// DASHI_PPT_PREVIEW_IDLE_MS 是仅测试用的毫秒级后门,优先于 DASHI_PPT_PREVIEW_IDLE_HOURS。
-// DASHI_PPT_PREVIEW_IDLE_CHECK_MS 同样仅测试用,覆盖检查间隔以加速回归测试。
+// 空閒自退:長期無人訪問的預覽服務不應無限期佔用埠/程式。有進行中匯出任務時不退。
+// DASHI_PPT_PREVIEW_IDLE_MS 是僅測試用的毫秒級後門,優先於 DASHI_PPT_PREVIEW_IDLE_HOURS。
+// DASHI_PPT_PREVIEW_IDLE_CHECK_MS 同樣僅測試用,覆蓋檢查間隔以加速回歸測試。
 const IDLE_LIMIT_MS = resolveIdleLimitMs();
 const IDLE_CHECK_INTERVAL_MS = resolveIdleCheckIntervalMs(IDLE_LIMIT_MS);
 let lastActivityAt = Date.now();
@@ -200,7 +200,7 @@ const serveRequest = async (req, res) => {
     return;
   }
 
-  // 文本资产按需 gzip:index.html/imported-theme-runtime.js 等可省 70%+ 传输量;字体/图片/视频不压。
+  // 文字資產按需 gzip:index.html/imported-theme-runtime.js 等可省 70%+ 傳輸量;字型/圖片/影片不壓。
   const compressible = /\.(html|js|mjs|json|css|svg|txt)$/i.test(file);
   if (compressible && /\bgzip\b/i.test(String(req.headers['accept-encoding'] || ''))) {
     res.writeHead(200, {
@@ -219,7 +219,7 @@ const serveRequest = async (req, res) => {
   createReadStream(file).pipe(res);
 };
 
-// 顶层兜底:任何处理异常都不得让进程崩溃(请求监听器是 async,未捕获即 unhandledRejection)。
+// 頂層兜底:任何處理異常都不得讓程式崩潰(請求監聽器是 async,未捕獲即 unhandledRejection)。
 const requestHandler = async (req, res) => {
   noteActivity();
   try {
@@ -251,14 +251,14 @@ server.listen(PORT, HOST, () => {
   console.log(`HTTP/HTTPS preview serving ${displayPath(SERVE_ROOT)}`);
   console.log(`Open: ${urls.join(' or ')}`);
   if (!isLoopbackHost(HOST)) {
-    console.warn(`[preview] 警告:绑定在 ${HOST}(非回环),预览/导出对局域网可达。导出端点要求请求带允许的 Origin。`);
+    console.warn(`[preview] 警告:繫結在 ${HOST}(非迴環),預覽/匯出對區域網可達。匯出端點要求請求帶允許的 Origin。`);
   }
   if (IDLE_LIMIT_MS > 0) {
     console.log(`[preview] idle auto-exit enabled: ${(IDLE_LIMIT_MS / 60000).toFixed(1)}m`);
   }
 });
 
-// unref:空闲检查定时器不应阻止进程在其他条件下正常退出(例如收到信号)。
+// unref:空閒檢查定時器不應阻止程式在其他條件下正常退出(例如收到訊號)。
 const idleCheckTimer = IDLE_LIMIT_MS > 0 ? setInterval(checkIdleExit, IDLE_CHECK_INTERVAL_MS) : null;
 idleCheckTimer?.unref?.();
 

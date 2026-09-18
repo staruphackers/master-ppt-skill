@@ -6,7 +6,7 @@ import {
   REQUIRED_OUTPUT_ASSETS,
 } from '../src/runtime-assets.mjs';
 
-// 相对路径按调用方目录解析:npm run(含 --prefix)会把脚本 cwd 切到项目根,INIT_CWD 才是用户所在目录。
+// 相對路徑按呼叫方目錄解析:npm run(含 --prefix)會把指令碼 cwd 切到專案根,INIT_CWD 才是使用者所在目錄。
 const CALLER_CWD = process.env.INIT_CWD || process.cwd();
 
 const fileArg = process.argv[2];
@@ -238,8 +238,8 @@ const previewAuthorSource = previewAuthorIndex >= 0
   : '';
 if (!previewPanelSource) {
   errors.push('Preview console is missing the preview-panel container.');
-} else if (previewAuthorIndex < 0 || !previewAuthorSource.includes('@大师的AI小灶')) {
-  errors.push('Preview console footer must show @大师的AI小灶 author info above the action buttons.');
+} else if (previewAuthorIndex < 0 || !previewAuthorSource.includes('@大師的AI小灶')) {
+  errors.push('Preview console footer must show @大師的AI小灶 author info above the action buttons.');
 } else {
   if (previewActionsIndex >= 0 && previewAuthorIndex > previewActionsIndex) {
     errors.push('Preview console author info must be placed above the footer action buttons.');
@@ -248,7 +248,7 @@ if (!previewPanelSource) {
   const requiredSocialLinks = [
     ['github', 'GitHub', 'assets/social-icons/github.svg'],
     ['douyin', '抖音', 'assets/social-icons/douyin.svg'],
-    ['xiaohongshu', '小红书', 'assets/social-icons/redbook.svg'],
+    ['xiaohongshu', '小紅書', 'assets/social-icons/redbook.svg'],
     ['bilibili', 'Bilibili', 'assets/social-icons/bilibili.svg'],
   ];
   const missingSocialLinks = requiredSocialLinks
@@ -270,14 +270,14 @@ if (!previewPanelSource) {
     }
   }
 
-  // 无查询参数的裸 profile URL:xsec_token 是小红书分享链路的高熵反爬参数,直接访问
-  // profile 不需要它;带上会被安全扫描(Snyk W008)判为泄露凭证。
+  // 無查詢引數的裸 profile URL:xsec_token 是小紅書分享鏈路的高熵反爬引數,直接訪問
+  // profile 不需要它;帶上會被安全掃描(Snyk W008)判為洩露憑證。
   const expectedXiaohongshuHref = 'https://www.xiaohongshu.com/user/profile/62e0c2bb000000001501408c';
   const xiaohongshuAnchor = socialAnchors.find(([, , platform]) => platform === 'xiaohongshu');
   const xiaohongshuAttrs = xiaohongshuAnchor ? `${xiaohongshuAnchor[1]} ${xiaohongshuAnchor[3]}` : '';
   const xiaohongshuHref = xiaohongshuAttrs.match(/\bhref="([^"]+)"/)?.[1] || '';
   if (xiaohongshuHref && xiaohongshuHref !== expectedXiaohongshuHref) {
-    errors.push('Preview console 小红书 href must match the exact profile URL.');
+    errors.push('Preview console 小紅書 href must match the exact profile URL.');
   }
 }
 
@@ -573,7 +573,7 @@ if (!/activeThemePack/.test(overviewCacheKeySource) || !/(getSlideVmId|dataset\.
   errors.push('Overview thumbnail cache key must include theme pack, stable slide id, and thumbnail size.');
 }
 
-// revision 不进 key(旧图先上屏、后台刷新),但过期判定机制必须存在。
+// revision 不進 key(舊圖先上屏、後臺重新整理),但過期判定機制必須存在。
 if (!/getOverviewThumbRevision/.test(html) || !/bumpOverviewThumbRevision/.test(html)) {
   errors.push('Overview thumbnail staleness must be tracked via thumb revisions (getOverviewThumbRevision/bumpOverviewThumbRevision).');
 }

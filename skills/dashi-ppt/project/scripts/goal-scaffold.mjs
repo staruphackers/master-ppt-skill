@@ -34,7 +34,7 @@ const BESPOKE_MEDIA_LIMITS = { statement: 0, metric: 0, ledger: 0, chart: 4, med
 let lastAllocationDiagnostics = null;
 let lastGenerationMetrics = null;
 
-// 相对路径按调用方目录解析:npm run(含 --prefix)会把脚本 cwd 切到项目根,INIT_CWD 才是用户所在目录。
+// 相對路徑按呼叫方目錄解析:npm run(含 --prefix)會把指令碼 cwd 切到專案根,INIT_CWD 才是使用者所在目錄。
 const CALLER_CWD = process.env.INIT_CWD || process.cwd();
 
 const DEFAULT_BODY_ROLES = [
@@ -122,8 +122,8 @@ function run() {
   const { roles, explicit: rolesExplicit } = contentPlan
     ? { roles: [], explicit: false }
     : parseRoles(args.roles, Math.max(0, pageCount - 2));
-  // 选页 seed:同分候选随机打散,让不同用户/不同次 scaffold 的骨架不再成片雷同;
-  // --seed 显式传入时可复现同一份骨架。
+  // 選頁 seed:同分候選隨機打散,讓不同使用者/不同次 scaffold 的骨架不再成片雷同;
+  // --seed 顯式傳入時可復現同一份骨架。
   const seed = args.seed !== undefined && args.seed !== true ? String(args.seed) : String(Math.floor(Math.random() * 0xffffffff));
   const slides = buildSlides({
     themePack,
@@ -499,11 +499,11 @@ function buildBespokeFamily(presentation, { pageIndex = 0, family = 'ledger', lo
     adjustable: false,
     composition: {
       designIntent: {
-        objective: '呈现单页核心信息',
-        audience: '当前演示文稿受众',
-        narrativeRole: '推进单页叙事',
-        emphasis: '突出内容层级与证据关系',
-        rationale: `${family}-${compositionIndex + 1} 结构投影`,
+        objective: '呈現單頁核心資訊',
+        audience: '當前簡報受眾',
+        narrativeRole: '推進單頁敘事',
+        emphasis: '突出內容層級與證據關係',
+        rationale: `${family}-${compositionIndex + 1} 結構投影`,
       },
       background: 'default',
       elements,
@@ -612,9 +612,9 @@ function pickLayout({ themePack, role, used, body, mediaIntent = null, seed = nu
         : isCoverCandidate(layout)
     ));
   if (!candidates.length) throw new Error(`No unused ${body ? 'body' : 'cover'} layout available for role "${role}" in ${themePack}`);
-  // 从前 5 名合格候选里 seeded 随机挑:打分只有一两个精确命中时,永远取第一会让
-  // 不同用户的骨架在这些 role 上完全一致;候选都已通过过滤(均"符合"),前几名之间
-  // 的分差只是相关性排序,随机采样是多样性与相关性的折衷。
+  // 從前 5 名合格候選裡 seeded 隨機挑:打分只有一兩個精確命中時,永遠取第一會讓
+  // 不同使用者的骨架在這些 role 上完全一致;候選都已透過過濾(均"符合"),前幾名之間
+  // 的分差只是相關性排序,隨機取樣是多樣性與相關性的折衷。
   const pool = candidates.slice(0, 5);
   const layout = pool[hashSeed(`${seed}:${role}:${used.size}`) % pool.length];
   return layout;
@@ -740,7 +740,7 @@ function inspectFillPlan(slide) {
       adjustable: false,
       designTask: {
         status: 'generated',
-        instruction: '保留 scaffold 生成的 composition 结构与 projection bindings；业务值只修改 slide.content.presentation，不写回 composition。',
+        instruction: '保留 scaffold 生成的 composition 結構與 projection bindings；業務值只修改 slide.content.presentation，不寫回 composition。',
       },
     };
   }

@@ -1,4 +1,4 @@
-// 静态文件解析/边界检查/MIME 判定。从 scripts/serve-preview-https.mjs 拆出,逻辑逐字节保留。
+// 靜態檔案解析/邊界檢查/MIME 判定。從 scripts/serve-preview-https.mjs 拆出,邏輯逐位元組保留。
 import { contentType } from './mime.mjs';
 export { contentType };
 import { realpathSync, statSync } from 'node:fs';

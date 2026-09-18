@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// 本地准备: npm run skill:prepare -- <目录>。两个 publisher 用 --prepared <目录> 复用。
+// 本地準備: npm run skill:prepare -- <目錄>。兩個 publisher 用 --prepared <目錄> 複用。
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import fs from 'node:fs';
@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(import.meta.dirname, '..');
 export const SKILL_SUBDIR = path.join('skills', 'dashi-ppt');
 const SOURCE_RECORD = 'project/distribution-source.json';
-// npm 不分发这两个点文件; .npmrc 在安装时由 npmrc.template 恢复。
+// npm 不分發這兩個點檔案; .npmrc 在安裝時由 npmrc.template 恢復。
 const FINGERPRINT_EXCLUDES = [SOURCE_RECORD, '.gitignore', 'project/.npmrc'];
 const SOURCE_DIRS = ['src/', 'scripts/', 'packages/', 'assets/', 'references/', 'i18n/'];
 const SOURCE_FILES = new Set(['package.json', 'package-lock.json', 'SKILL.md', 'README.md', 'layout-manifest.json', 'LICENSE']);
@@ -59,7 +59,7 @@ export function readPreparedSkill(directory) {
   const version = JSON.parse(fs.readFileSync(path.join(skillRoot, 'project/package.json'), 'utf8')).version;
   if (source.version !== version || source.contentSha256 !== skillFingerprint(skillRoot)
     || source.npmFilesSha256 !== hashFiles(root, ['npm-dist/install.mjs', 'LICENSE'])) {
-    throw new Error(`准备目录内容与来源记录不符,请重新运行 skill:prepare: ${root}`);
+    throw new Error(`準備目錄內容與來源記錄不符,請重新執行 skill:prepare: ${root}`);
   }
   return { root, skillRoot, version, source };
 }
@@ -110,7 +110,7 @@ export function prepareSkill(directory) {
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const directory = process.argv[2];
   if (!directory || directory.startsWith('-') || process.argv.length > 3) {
-    throw new Error('用法: npm run skill:prepare -- <准备目录>');
+    throw new Error('用法: npm run skill:prepare -- <準備目錄>');
   }
   prepareSkill(directory);
 }

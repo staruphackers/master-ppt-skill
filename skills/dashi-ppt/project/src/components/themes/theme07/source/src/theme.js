@@ -32,8 +32,8 @@ export const THEME = {
   neg:  '#E8443B',
   warn: '#EFA63A',
   // type
-  fontDisplay: "'Space Grotesk','Noto Sans SC',system-ui,sans-serif",
-  fontText:    "'Noto Sans SC','Space Grotesk',system-ui,sans-serif",
+  fontDisplay: "'Space Grotesk','Noto Sans TC',system-ui,sans-serif",
+  fontText:    "'Noto Sans TC','Space Grotesk',system-ui,sans-serif",
 };
 
 let _fontsDone = false;

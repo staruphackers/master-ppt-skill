@@ -1,5 +1,5 @@
 // @ts-check
-// 契约消费共享域:主题登记表/清单缓存/getLayoutRecord 契约装配/count 绑定数组解析等基础能力,供其余模块复用。
+// 契約消費共享域:主題登記表/清單快取/getLayoutRecord 契約裝配/count 繫結陣列解析等基礎能力,供其餘模組複用。
 import path from 'node:path';
 import { existsSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -159,12 +159,12 @@ function isClosingLikePage(page) {
   const text = `${slot} ${label}`;
   return /(^|[\s_-])(closing|contact|join|end|endcap|colophon|appendix)([\s_-]|$)/.test(text)
     || label.startsWith('封底')
-    || label.startsWith('结语')
-    || label.startsWith('致谢')
-    || label.startsWith('谢谢');
+    || label.startsWith('結語')
+    || label.startsWith('致謝')
+    || label.startsWith('謝謝');
 }
 
-// defaultProps 中实际承载内容的数组键(排除媒体数组与纯色板数组)。
+// defaultProps 中實際承載內容的陣列鍵(排除媒體陣列與純色板陣列)。
 function contentArrayKeys(defaultProps = {}) {
   return Object.keys(defaultProps || {})
     .filter(key => Array.isArray(defaultProps[key]) && !isMediaArrayKey(key) && isContractContentArray(key, defaultProps[key]));
@@ -174,7 +174,7 @@ function arrayHeadExists(defaultProps, pathName) {
   return Array.isArray(valueAtPath(defaultProps, pathName));
 }
 
-// 把 count 控件解析到 defaultProps 里真实存在的数组键;命不中时只保留可由命名或长度证明的数组。
+// 把 count 控制項解析到 defaultProps 裡真實存在的陣列鍵;命不中時只保留可由命名或長度證明的陣列。
 export function resolveBindingArrays(binding, defaultProps = {}, controls = []) {
   const explicit = explicitCountArraysForBinding(binding, controls);
   if (explicit.length) {
@@ -248,11 +248,11 @@ function isMediaArrayPath(pathName) {
 export function isMediaCountBinding(binding) {
   const text = `${binding?.key || ''} ${binding?.publicKey || ''} ${binding?.label || ''}`;
   return isMediaCountText(text)
-    && /(count|数量)/i.test(text);
+    && /(count|(?:数量|數量))/i.test(text);
 }
 
 export function isMediaCountText(text) {
-  return /image|media|photo|picture|video|logo|slot|图片|图像|视频|媒体|照片|徽标|标志|槽/i.test(String(text || ''));
+  return /image|media|photo|picture|video|logo|slot|(?:图片|圖片)|(?:图像|圖像|影象)|(?:视频|視頻|影片)|(?:媒体|媒體)|照片|(?:徽标|徽標)|(?:标志|標誌)|槽/i.test(String(text || ''));
 }
 
 function isVisualSlotCountBinding(binding, controls = []) {
@@ -262,8 +262,8 @@ function isVisualSlotCountBinding(binding, controls = []) {
     item?.publicKey && (item.publicKey === binding?.key || item.publicKey === binding?.publicKey)
   ));
   const text = `${binding?.key || ''} ${binding?.publicKey || ''} ${binding?.label || ''} ${control?.label || ''}`;
-  return /(count|数量)$/i.test(String(binding?.key || control?.key || ''))
-    && /(frame|image|media|photo|picture|slot|gallery|画框|画格|图片|图像|媒体|照片|相册)/i.test(text);
+  return /(count|(?:数量|數量))$/i.test(String(binding?.key || control?.key || ''))
+    && /(frame|image|media|photo|picture|slot|gallery|(?:画框|畫框)|(?:画格|畫格)|(?:图片|圖片)|(?:图像|圖像|影象)|(?:媒体|媒體)|照片|(?:相册|相冊|相簿))/i.test(text);
 }
 
 function preferredMediaBindingArray(binding, mediaArrays = []) {
@@ -324,7 +324,7 @@ export function arrayFieldName(pathName) {
   return String(pathName || '').split('.').at(-1).replace(/\[\]$/, '').toLowerCase();
 }
 
-// 承载内容的数组路径:顶层数组 + copy 等对象内的一层嵌套数组(排除媒体/纯色板)。
+// 承載內容的陣列路徑:頂層陣列 + copy 等物件內的一層巢狀陣列(排除媒體/純色板)。
 export function discoverContentArrayPaths(defaultProps = {}) {
   const out = [];
   for (const [key, value] of Object.entries(defaultProps || {})) {
@@ -391,10 +391,10 @@ export function isPlainObject(value) {
   return !!value && typeof value === 'object' && !Array.isArray(value);
 }
 
-// layout-manifest.json 只是 `contracts`(createLazyLayoutContracts,见上方 103 行)的缓存层——
-// getLayoutRecord 里 manifestLayout.controls/countBindings/lengthBindings 缺失时都会回退到
-// baseContract。所以文件缺失或损坏时不应崩栈:给出可行动提示(如何重新生成),照常返回空
-// manifest,让唯一的调用点 getLayoutRecord() 走 baseContract 实时回退。
+// layout-manifest.json 只是 `contracts`(createLazyLayoutContracts,見上方 103 行)的快取層——
+// getLayoutRecord 裡 manifestLayout.controls/countBindings/lengthBindings 缺失時都會回退到
+// baseContract。所以檔案缺失或損壞時不應崩棧:給出可行動提示(如何重新生成),照常返回空
+// manifest,讓唯一的呼叫點 getLayoutRecord() 走 baseContract 實時回退。
 function readManifest() {
   const file = path.join(ROOT, 'layout-manifest.json');
   if (!existsSync(file)) {

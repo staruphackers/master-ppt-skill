@@ -1,11 +1,11 @@
 // @ts-check
-// 门面文件(纯 re-export):真正实现按域拆分到 scripts/workflow/ 下:
-//   theme-registry.mjs  — 契约消费共享域(主题登记表、getLayoutRecord、count 绑定数组解析)
-//   media-slots.mjs     — 媒体判定域(媒体 slot 发现/容量/可写性)
-//   copy-contract.mjs   — copy 预算与角色词表域(文案密度/字符预算/可填文案叶子判定)
-//   inspect-fillplan.mjs— inspect + fillPlan 域(inspectLayout/normalizeProps/数组元数据/fillPlan)
+// 門面檔案(純 re-export):真正實現按域拆分到 scripts/workflow/ 下:
+//   theme-registry.mjs  — 契約消費共享域(主題登記表、getLayoutRecord、count 繫結陣列解析)
+//   media-slots.mjs     — 媒體判定域(媒體 slot 發現/容量/可寫性)
+//   copy-contract.mjs   — copy 預算與角色詞表域(文案密度/字元預算/可填文案葉子判定)
+//   inspect-fillplan.mjs— inspect + fillPlan 域(inspectLayout/normalizeProps/陣列後設資料/fillPlan)
 //   layout-query.mjs    — layout-query 域(listLayouts 及打分)
-// 所有既有 import 路径('../scripts/skill-workflow-utils.mjs' 等)保持不变;不要在这里新增实现。
+// 所有既有 import 路徑('../scripts/skill-workflow-utils.mjs' 等)保持不變;不要在這裡新增實現。
 export {
   ROOT,
   THEME_PACKS,

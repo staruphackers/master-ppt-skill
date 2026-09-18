@@ -5,7 +5,7 @@ import { isMediaArrayKey } from '../src/prop-contract-core.mjs';
 import { isBespokeVariant, resolveContentMap } from '../src/variant-contract.mjs';
 import { inspectLayout } from './skill-workflow-utils.mjs';
 
-// 相对路径按调用方目录解析:npm run(含 --prefix)会把脚本 cwd 切到项目根,INIT_CWD 才是用户所在目录。
+// 相對路徑按呼叫方目錄解析:npm run(含 --prefix)會把指令碼 cwd 切到專案根,INIT_CWD 才是使用者所在目錄。
 const CALLER_CWD = process.env.INIT_CWD || process.cwd();
 
 const [, , specArg, htmlArg] = process.argv;
@@ -47,29 +47,29 @@ const COUNT_ARRAY_CANDIDATES = {
   seriesCount: ['series'],
   segmentCount: ['segments'],
 };
-const NEUTRAL_PLACEHOLDERS = ['请输入文本', '请输入', '请输'];
+const NEUTRAL_PLACEHOLDERS = ['請輸入文字', '請輸入', '請輸'];
 const visibleText = extractSlideText(html, undefined, errors);
 const COMMON_TERMS = new Set([
-  '一个',
+  '一個',
   '一份',
-  '制作',
+  '製作',
   '生成',
-  '演示',
-  '页面',
-  '主题',
-  '用户',
-  '目标',
-  '受众',
-  '团队',
+  '展示',
+  '頁面',
+  '主題',
+  '使用者',
+  '目標',
+  '受眾',
+  '團隊',
   '重要',
   '展示',
-  '呈现',
+  '呈現',
 ]);
 
 const groups = [
   {
-    name: 'AI Capital / 投融资默认文案',
-    allowWhen: /人工智能|资本|投资|融资|风投|估值|美元|\b(AI|VC|venture|OpenAI|xAI)\b/i,
+    name: 'AI Capital / 投融資預設文案',
+    allowWhen: /(?:人工智能|人工智慧)|(?:资本|資本)|(?:投资|投資)|(?:融资|融資)|(?:风投|風投)|估值|美元|\b(AI|VC|venture|OpenAI|xAI)\b/i,
     terms: [
       'AI CAPITAL',
       'AI Capital',
@@ -78,29 +78,29 @@ const groups = [
       'Anthropic',
       'Databricks',
       'Scale AI',
-      '融资',
-      '风投',
-      '资本',
-      '亿美元',
+      '融資',
+      '風投',
+      '資本',
+      '億美元',
       '估值',
       '大模型',
-      '投资判断',
+      '投資判斷',
     ],
   },
   {
-    name: 'SoundWave / 声浪默认文案',
-    allowWhen: /SoundWave|声浪|音乐|歌曲|歌手|乐队|创作者|发行|结算|版权|巡演|唱片/i,
+    name: 'SoundWave / 聲浪預設文案',
+    allowWhen: /SoundWave|(?:声浪|聲浪)|(?:音乐|音樂)|歌曲|歌手|(?:乐队|樂隊)|(?:创作者|創作者)|(?:发行|發行)|(?:结算|結算)|(?:版权|版權)|巡演|唱片/i,
     terms: [
       'SoundWave',
-      '声浪',
+      '聲浪',
       'Independent Music',
-      '音乐人',
-      '创作者',
-      '发行',
-      '结算',
-      '版权',
+      '音樂人',
+      '創作者',
+      '發行',
+      '結算',
+      '版權',
       '巡演',
-      '录音棚',
+      '錄音棚',
     ],
   },
 ];
@@ -109,31 +109,31 @@ for (const group of groups) {
   if (group.allowWhen.test(specText)) continue;
   const hits = group.terms.filter(term => visibleText.includes(term));
   if (hits.length) {
-    errors.push(`${group.name}残留: ${hits.join(', ')}`);
+    errors.push(`${group.name}殘留: ${hits.join(', ')}`);
   }
 }
 
 const unexpectedDefaultTerms = [
   'Key Metrics',
-  '关键指标',
-  '全景速览',
+  '關鍵指標',
+  '全景速覽',
   'Roadmap',
-  '布局路线',
-  '阶段推进',
+  '佈局路線',
+  '階段推進',
   'End of Report',
 ].filter(term => visibleText.includes(term) && !specText.includes(term));
 if (unexpectedDefaultTerms.length) {
-  errors.push(`未在 goal.json 中声明的模板默认文案残留: ${unexpectedDefaultTerms.join(', ')}`);
+  errors.push(`未在 goal.json 中宣告的模板預設文案殘留: ${unexpectedDefaultTerms.join(', ')}`);
 }
 
 const neutralPlaceholders = findNeutralPlaceholders(visibleText);
 if (neutralPlaceholders.length) {
-  errors.push(`中性占位文案残留: ${neutralPlaceholders.join(', ')}`);
+  errors.push(`中性佔位文案殘留: ${neutralPlaceholders.join(', ')}`);
 }
 
 const requestedTerms = pickRequestedTerms(spec);
 if (requestedTerms.length && !requestedTerms.some(term => visibleText.includes(term))) {
-  errors.push(`输出正文没有命中用户目标关键词: ${requestedTerms.join(', ')}`);
+  errors.push(`輸出正文沒有命中使用者目標關鍵詞: ${requestedTerms.join(', ')}`);
 }
 
 validateCountControls(html, errors);
@@ -156,7 +156,7 @@ function pickRequestedTerms(spec) {
     spec.owner,
   ].filter(Boolean).join(' ');
   const terms = new Set();
-  for (const match of raw.matchAll(/[\u4e00-\u9fa5]{2,}/g)) {
+  for (const match of raw.matchAll(/[一-龥]{2,}/g)) {
     const value = match[0];
     if (value.length <= 2) terms.add(value);
     else {
@@ -366,7 +366,7 @@ function validateCoverCandidateUsage(html, errors) {
         .map(candidate => candidate.layout)
         .filter(layout => /^theme\d+_page00[1-5]$/.test(layout))
     ));
-    errors.push(`同一个 deck 只能使用 1 个封面候选页,当前使用了 ${coverSlides.length} 个: ${layouts.join(', ')}`);
+    errors.push(`同一個 deck 只能使用 1 個封面候選頁,當前使用了 ${coverSlides.length} 個: ${layouts.join(', ')}`);
   }
 }
 
@@ -414,8 +414,8 @@ function validateVariantCopyCompleteness(html, errors) {
       if (missing.length) {
         const label = candidate.label || candidate.id || candidate.layout;
         const preview = missing.slice(0, 8).join(', ');
-        const suffix = missing.length > 8 ? ` 等 ${missing.length} 项` : '';
-        errors.push(`${label}: 未覆写模板文案槽: ${preview}${suffix}`);
+        const suffix = missing.length > 8 ? ` 等 ${missing.length} 項` : '';
+        errors.push(`${label}: 未覆寫模板文案槽: ${preview}${suffix}`);
       }
     }
   }
@@ -551,7 +551,7 @@ function resolveCandidateRenderData(logicalSlide, candidate, base, field, errors
     return resolveContentMap(logicalSlide?.content, candidate.contentMap, base || {});
   } catch (error) {
     const label = candidate.label || candidate.id || candidate.layout || 'variant';
-    pushUniqueError(errors, `${label}: contentMap 无法从 sourceSlideId ${logicalSlide?.id || '<missing>'} 解析 ${field}: ${error.message}`);
+    pushUniqueError(errors, `${label}: contentMap 無法從 sourceSlideId ${logicalSlide?.id || '<missing>'} 解析 ${field}: ${error.message}`);
     return base || {};
   }
 }
@@ -626,7 +626,7 @@ function isNestedArrayPath(pathName) {
 function collapseCounts(counts) {
   const unique = [...new Set(counts.map(item => item.count))];
   if (unique.length > 1) {
-    return { error: `${counts.map(item => `${item.source}=${item.count}`).join(', ')} 数量不一致` };
+    return { error: `${counts.map(item => `${item.source}=${item.count}`).join(', ')} 數量不一致` };
   }
   return {
     count: unique[0],
@@ -644,19 +644,19 @@ function collapseNestedCounts(counts) {
 function validateCountValue(slide, control, derived, props, errors) {
   const current = Number(props[control.key]);
   if (!Number.isFinite(current)) {
-    errors.push(`${slide.label || slide.layout}: ${control.key} 缺失或不是有效数字,但 ${derived.source} 有 ${derived.count} 条`);
+    errors.push(`${slide.label || slide.layout}: ${control.key} 缺失或不是有效數字,但 ${derived.source} 有 ${derived.count} 條`);
     return;
   }
   if (current > derived.count) {
-    errors.push(`${slide.label || slide.layout}: ${control.key}=${current},但 ${derived.source} 只有 ${derived.count} 条`);
+    errors.push(`${slide.label || slide.layout}: ${control.key}=${current},但 ${derived.source} 只有 ${derived.count} 條`);
   }
   const min = Number(control.min);
   const max = Number(control.max);
   if (Number.isFinite(min) && current < min) {
-    errors.push(`${slide.label || slide.layout}: ${control.key}=${current} 小于最小值 ${min}`);
+    errors.push(`${slide.label || slide.layout}: ${control.key}=${current} 小於最小值 ${min}`);
   }
   if (Number.isFinite(max) && current > max) {
-    errors.push(`${slide.label || slide.layout}: ${control.key}=${current} 大于最大值 ${max}`);
+    errors.push(`${slide.label || slide.layout}: ${control.key}=${current} 大於最大值 ${max}`);
   }
 }
 

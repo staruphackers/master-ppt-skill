@@ -46,8 +46,8 @@ export function BespokeSlide({ composition = {} }) {
       data-theme-pack={themePack}
       data-bespoke-family={family || undefined}
       data-logical-slide={viewModel.logicalIndex}
-      data-label={viewModel.label || 'Agent 定制方案'}
-      aria-label={viewModel.label || 'Agent 定制方案'}
+      data-label={viewModel.label || 'Agent 定製方案'}
+      aria-label={viewModel.label || 'Agent 定製方案'}
     >
       <div className="bespoke-root" style={rootStyle(profile)}>
         {!profile.editorial && <>

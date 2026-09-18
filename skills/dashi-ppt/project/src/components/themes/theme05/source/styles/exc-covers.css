@@ -10,8 +10,8 @@
   --exc-green: #2F9450;
   --exc-blue: #2742C2;
   --exc-purple: #7A3C9A;
-  --exc-hel: "Helvetica Neue", Helvetica, Arial, "Noto Sans SC", sans-serif;
-  --exc-cjk: "Noto Sans SC", "Helvetica Neue", sans-serif;
+  --exc-hel: "Helvetica Neue", Helvetica, Arial, "Noto Sans TC", sans-serif;
+  --exc-cjk: "Noto Sans TC", "Helvetica Neue", sans-serif;
   --exc-mono: "Space Mono", ui-monospace, monospace;
 }
 
@@ -34,7 +34,7 @@
 .exc-spectrum > i:nth-child(6) { background: var(--exc-blue); }
 .exc-spectrum > i:nth-child(7) { background: var(--exc-purple); }
 
-/* ===== COVER 1 — 精益智造 提质增效 ===== */
+/* ===== COVER 1 — 精益智造 提質增效 ===== */
 .exc1 { background: var(--exc-paper); }
 .exc1-topbar {
   position: absolute; top: 0; left: 0; right: 0; height: 78px;
@@ -70,7 +70,7 @@
 .exc1-fl { width: 360px; background: var(--exc-ink); color: #8d8979; font-family: var(--exc-mono); font-size: 12px; display: flex; align-items: center; padding-left: 38px; letter-spacing: .04em; }
 .exc1-fr { flex: 1; }
 
-/* ===== COVER 2 — 创意破圈 流量赋能 ===== */
+/* ===== COVER 2 — 創意破圈 流量賦能 ===== */
 .exc2 { background: var(--exc-yellow); color: var(--exc-ink); }
 .exc2-top { position: absolute; top: 50px; left: 64px; right: 64px; display: flex; align-items: center; gap: 26px; }
 .exc2-ln { flex: 1; height: 3px; background: var(--exc-ink); display: block; }
@@ -96,7 +96,7 @@
 .exc2-big { font-size: 44px; font-weight: 900; letter-spacing: .05em; }
 .exc2-en { font-family: var(--exc-hel); font-weight: 700; font-size: 14px; letter-spacing: .26em; color: #9b968a; text-transform: uppercase; }
 
-/* ===== COVER 3 — 链通全国 高效履约 ===== */
+/* ===== COVER 3 — 鏈通全國 高效履約 ===== */
 .exc3 { background: var(--exc-ink); color: var(--exc-paper); }
 .exc3-topbar { position: absolute; top: 0; left: 0; right: 0; height: 74px; border-bottom: 1px solid #2d2b23; display: flex; align-items: center; padding: 0 56px; gap: 28px; }
 .exc3-brand { font-family: var(--exc-hel); font-weight: 900; font-size: 24px; }
@@ -114,7 +114,7 @@
 .exc3-sub { font-size: 25px; font-weight: 500; color: #9a968a; margin-top: 26px; letter-spacing: .03em; font-family: var(--exc-hel); }
 .exc3-botbar { position: absolute; left: 0; right: 0; bottom: 0; height: 34px; display: flex; }
 
-/* ===== COVER 4 — 把握消费趋势 激活终端潜力 ===== */
+/* ===== COVER 4 — 把握消費趨勢 啟用終端潛力 ===== */
 .exc4 { background: var(--exc-blue); color: #EAF0FF; }
 .exc4-frame { position: absolute; inset: 34px; border: 3px solid #6f86e8; }
 .exc4-menubar { position: absolute; top: 34px; left: 34px; right: 34px; height: 62px; background: #16267e; display: flex; align-items: center; justify-content: center; }

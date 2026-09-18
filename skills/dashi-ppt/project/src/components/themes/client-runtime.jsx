@@ -20,8 +20,8 @@ import {
 import { SlideViewModelProvider } from '../../view-model/context.jsx';
 import { BespokeSlide } from '../bespoke/BespokeSlide.jsx';
 import { canonicalizeThemePageRuntime } from './canonical-metadata.mjs';
-// JAD-201:主题注册表(runtimePages + 图片槽 Provider 包裹)从可注入模块取。
-// renderDeck 打包时把 `@dashi/theme-registry` 别名指向「全主题」或「按 deck 实际用到的主题裁剪版」。
+// JAD-201:主題登入檔(runtimePages + 圖片槽 Provider 包裹)從可注入模組取。
+// renderDeck 打包時把 `@dashi/theme-registry` 別名指向「全主題」或「按 deck 實際用到的主題裁剪版」。
 import { runtimePages, themeOverrides, wrapThemeImageProviders } from '@dashi/theme-registry';
 
 const mountedRoots = new WeakMap();
@@ -733,9 +733,9 @@ function getEntryContract(entry) {
   return contract;
 }
 
-// 把一批待应用的外部改动喂给契约校验;超出边界(如 count 超出数组长度)时不整体作废这次
-// 编辑,而是逐字段回退到"改动前"的取值,把真正违规的那个字段单独丢弃——用户拖坏一个滑杆
-// 不该连坐同一页的其它控件,也不该让这次渲染直接抛出、把上层调用链的收尾代码一起冲掉。
+// 把一批待應用的外部改動餵給契約校驗;超出邊界(如 count 超出陣列長度)時不整體作廢這次
+// 編輯,而是逐欄位回退到"改動前"的取值,把真正違規的那個欄位單獨丟棄——使用者拖壞一個滑桿
+// 不該連坐同一頁的其它控制項,也不該讓這次渲染直接丟擲、把上層呼叫鏈的收尾程式碼一起沖掉。
 function safeNormalizeContractValues(entry, contract, contractValues, baselineAuthored) {
   try {
     return { values: normalizeSlidePropsForContract(entry.key, contractValues, contract) };
@@ -746,7 +746,7 @@ function safeNormalizeContractValues(entry, contract, contractValues, baselineAu
         normalizeSlidePropsForContract(entry.key, { ...baselineAuthored, [key]: value }, contract);
         safe[key] = value;
       } catch {
-        // 该字段单独校验也不通过(如 count 超出当前数组长度):丢弃它,保留其余改动。
+        // 該欄位單獨校驗也不透過(如 count 超出當前陣列長度):丟棄它,保留其餘改動。
       }
     }
     try {
@@ -816,16 +816,16 @@ function normalizeExternalValues(entry, defaults, values) {
   return { ...normalizedValues, ...passthroughValues };
 }
 
-// contractValues 只装「与 baseline 不同」的字段(见 changedExternalValues)。一个 count 控件
-// 拖到和当页 baseline(布局设计默认值)恰好相同的档位时(常见于拖到静态 max——很多页面的
-// defaultProps 数组长度正好等于 max),count 字段本身会被判定为"没变"而被这里漏掉,只留下
-// 真正变了的内容数组。normalizeSlidePropsForContract 一旦发现 count 字段缺失,会按"未显式
-// 设置"处理、从(此刻已变短的)数组长度反推 count——把用户刚选的档位悄悄改回数组长度。
+// contractValues 只裝「與 baseline 不同」的欄位(見 changedExternalValues)。一個 count 控制項
+// 拖到和當頁 baseline(佈局設計預設值)恰好相同的檔位時(常見於拖到靜態 max——很多頁面的
+// defaultProps 陣列長度正好等於 max),count 欄位本身會被判定為"沒變"而被這裡漏掉,只留下
+// 真正變了的內容陣列。normalizeSlidePropsForContract 一旦發現 count 欄位缺失,會按"未顯式
+// 設定"處理、從(此刻已變短的)陣列長度反推 count——把使用者剛選的檔位悄悄改回陣列長度。
 //
-// 只在调用方这次确实显式带了这个 count 字段(hasOwnProperty,不只是"凑巧等于 baseline")时才
-// 把它带回 contractValues;从不退回 baseline——只 authored 了数组、从没提过 count 的场景(如
-// goal.json 只写了内容数组)必须继续让 normalizeSlidePropsForContract 按数组长度自动推导,
-// 不能被这里意外钉死成布局设计默认值。
+// 只在呼叫方這次確實顯式帶了這個 count 欄位(hasOwnProperty,不只是"湊巧等於 baseline")時才
+// 把它帶回 contractValues;從不退回 baseline——只 authored 了陣列、從沒提過 count 的場景(如
+// goal.json 只寫了內容陣列)必須繼續讓 normalizeSlidePropsForContract 按陣列長度自動推導,
+// 不能被這裡意外釘死成佈局設計預設值。
 function carryCountKeysForChangedArrays(contract, contractValues, authoredValues) {
   for (const binding of contract.countBindings || []) {
     if (!binding?.key || Object.prototype.hasOwnProperty.call(contractValues, binding.key)) continue;
@@ -1033,12 +1033,12 @@ function isPlainObject(value) {
   return !!value && typeof value === 'object' && !Array.isArray(value);
 }
 
-// count 控件的静态 max 是布局设计的完整档位(参见 prop-contract-core.mjs 的
-// clampCountControlLimits——它保证 max 永远不超过该 layout defaultProps 里对应数组的长度),
-// 所以把 count 拖到比当前 authored 数组长时,defaultProps 同名数组里永远有足够的条目可以
-// 补足。这里只补渲染用的 props,不改 entry/view-model 本身——用户没编辑过的补足条目因此不会
-// 被持久化;补足条目取自 defaultProps 的同下标内容,和这些下标平时默认渲染出来的文案 ID 一致,
-// 侧栏按 `text:<slideKey>:<slot>` 编辑这些条目和编辑普通默认条目没有区别。
+// count 控制項的靜態 max 是佈局設計的完整檔位(參見 prop-contract-core.mjs 的
+// clampCountControlLimits——它保證 max 永遠不超過該 layout defaultProps 裡對應陣列的長度),
+// 所以把 count 拖到比當前 authored 陣列長時,defaultProps 同名陣列裡永遠有足夠的條目可以
+// 補足。這裡只補渲染用的 props,不改 entry/view-model 本身——使用者沒編輯過的補足條目因此不會
+// 被持久化;補足條目取自 defaultProps 的同下標內容,和這些下標平時預設渲染出來的文案 ID 一致,
+// 側欄按 `text:<slideKey>:<slot>` 編輯這些條目和編輯普通預設條目沒有區別。
 function withPaddedCountArrays(entry, props) {
   const contract = getEntryContract(entry);
   if (!contract) return props;
@@ -1047,14 +1047,14 @@ function withPaddedCountArrays(entry, props) {
     const count = Number(next[binding.key]);
     if (!Number.isFinite(count) || count <= 0) continue;
     for (const arrayPath of binding.arrays || []) {
-      if (isMediaArrayPath(arrayPath)) continue; // 媒体数组靠上传增长，容量上限已在契约里放行。
+      if (isMediaArrayPath(arrayPath)) continue; // 媒體陣列靠上傳增長，容量上限已在契約裡放行。
       next = padArrayAtPath(next, entry.defaultProps, arrayPath, count);
     }
   }
-  // 同长绑定组(如图表 series[].values 必须和 categories 同长):count 补足只直接触达
-  // countBindings.arrays 里登记的数组,anchor 数组补长之后,单靠 lengthBindings 关联、自己不
-  // 挂 count 控件的 dependent 数组不会跟着变——这里按 anchor 补足后的实际长度再补一次 dependent,
-  // 避免"categories 变长了但 values 还是老长度"这种渲染期错位。
+  // 同長繫結組(如圖表 series[].values 必須和 categories 同長):count 補足只直接觸達
+  // countBindings.arrays 裡登記的陣列,anchor 陣列補長之後,單靠 lengthBindings 關聯、自己不
+  // 掛 count 控制項的 dependent 陣列不會跟著變——這裡按 anchor 補足後的實際長度再補一次 dependent,
+  // 避免"categories 變長了但 values 還是老長度"這種渲染期錯位。
   for (const binding of contract.lengthBindings || []) {
     if ((binding.relation || 'same-length') !== 'same-length' || !binding.anchor || !binding.dependent) continue;
     const anchorLength = readArrayLengthAtPath(next, binding.anchor);
@@ -1064,8 +1064,8 @@ function withPaddedCountArrays(entry, props) {
   return next;
 }
 
-// 读 `a.b` / `a[].b` 路径上第一个数组的长度,用来给 lengthBindings 的 dependent 数组定补足
-// 目标——语义上与 prop-contract-core.mjs 的 collectArrayCounts 一致,但只取长度、不聚合多条。
+// 讀 `a.b` / `a[].b` 路徑上第一個陣列的長度,用來給 lengthBindings 的 dependent 陣列定補足
+// 目標——語義上與 prop-contract-core.mjs 的 collectArrayCounts 一致,但只取長度、不聚合多條。
 function readArrayLengthAtPath(container, pathName) {
   if (!container || typeof container !== 'object') return NaN;
   const [segment, ...restParts] = String(pathName || '').split('.');
@@ -1086,8 +1086,8 @@ function readArrayLengthAtPath(container, pathName) {
   return readArrayLengthAtPath(current, rest);
 }
 
-// 与 prop-contract-core.mjs 的 collectArrayCounts 用同一套路径语法：`a.b` 逐层取值，
-// `a[].b` 表示先取数组 a，再逐项钻进每项的 b。只在需要补足的节点上浅拷贝，其余引用原样保留。
+// 與 prop-contract-core.mjs 的 collectArrayCounts 用同一套路徑語法：`a.b` 逐層取值，
+// `a[].b` 表示先取陣列 a，再逐項鑽進每項的 b。只在需要補足的節點上淺複製，其餘引用原樣保留。
 function padArrayAtPath(container, defaultContainer, pathName, count) {
   if (!container || typeof container !== 'object') return container;
   const [segment, ...restParts] = String(pathName || '').split('.');
@@ -1123,8 +1123,8 @@ function renderRuntimeThemeSlide(slide, values = {}, options = {}) {
   if (!root) return false;
   const entry = entriesByKey.get(root.dataset.pageKey);
   if (!entry?.Component) return false;
-  // 整段渲染尝试(含契约校验、React 渲染)都不允许把异常抛给调用方——一页坏 props 不该
-  // 冲断 template-swiss.html 里 go()/commitSlideIndex 的收尾代码,导致导航锁永远释放不掉。
+  // 整段渲染嘗試(含契約校驗、React 渲染)都不允許把異常拋給呼叫方——一頁壞 props 不該
+  // 沖斷 template-swiss.html 裡 go()/commitSlideIndex 的收尾程式碼,導致導航鎖永遠釋放不掉。
   try {
     const defaults = readJson(root.dataset.propDefaults, {});
     const externalProps = options.trusted
@@ -1192,7 +1192,7 @@ function renderRuntimeBespokeSlide(slide) {
       variantCount: position.count,
       key: model.variant.key || model.variant.stateId,
       index: Number(slide.dataset.vmIndex || 0),
-      label: model.variant.label || 'Agent 定制方案',
+      label: model.variant.label || 'Agent 定製方案',
       dataLayout: 'bespoke',
       themePack: model.variant.themePack || slide.dataset.themePack || 'theme01',
       logicalIndex: Number(slide.dataset.logicalSlide || 0),
@@ -1330,7 +1330,7 @@ function materializeRuntimeSlideVariant(slide, variant) {
     delete slide.dataset.layout;
     delete slide.dataset.vmLayout;
     slide.dataset.themePack = variant.themePack || slide.dataset.themePack || 'theme01';
-    slide.dataset.label = variant.label || 'Agent 定制方案';
+    slide.dataset.label = variant.label || 'Agent 定製方案';
     runtimeBespokeVariants.set(slide, {
       variant,
       composition: prepared.composition,

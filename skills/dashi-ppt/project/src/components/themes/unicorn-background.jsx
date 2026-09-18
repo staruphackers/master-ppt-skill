@@ -2,8 +2,8 @@ import React from 'react';
 
 export const UNICORN_SCENES = [
   { value: 'tech', label: '科技', file: 'assets/unicorn/tech_background_remix_scene.json' },
-  { value: 'automations', label: '自动化', file: 'assets/unicorn/automations_remix_scene.json' },
-  { value: 'moving', label: '流动', file: 'assets/unicorn/moving_into_remix_scene.json' },
+  { value: 'automations', label: '自動化', file: 'assets/unicorn/automations_remix_scene.json' },
+  { value: 'moving', label: '流動', file: 'assets/unicorn/moving_into_remix_scene.json' },
   { value: 'goey', label: '黏球', file: 'assets/unicorn/goey_balls_remix_scene.json' },
 ];
 
@@ -11,25 +11,25 @@ export const DEFAULT_UNICORN_SCENE = 'tech';
 
 export const UNICORN_BACKGROUND_CONTROL = {
   key: 'backgroundMode',
-  label: '背景替换',
+  label: '背景替換',
   type: 'segment',
   def: 'unicorn',
   options: [
-    { value: 'unicorn', label: '动态' },
-    { value: 'media', label: '上传' },
+    { value: 'unicorn', label: '動態' },
+    { value: 'media', label: '上傳' },
   ],
-  desc: '动态 shader 或自定义背景媒体',
+  desc: '動態 shader 或自訂背景媒體',
 };
 
 export const UNICORN_SCENE_CONTROL = {
   key: 'unicornScene',
-  label: '动态场景',
+  label: '動態場景',
   type: 'segment',
   def: DEFAULT_UNICORN_SCENE,
   options: UNICORN_SCENES.map(({ value, label }) => ({ value, label })),
   dependsOn: 'backgroundMode',
   dependsOnValue: 'unicorn',
-  desc: '选择固定 Unicorn shader 场景',
+  desc: '選擇固定 Unicorn shader 場景',
 };
 
 export function createUnicornSceneControl(def = DEFAULT_UNICORN_SCENE) {

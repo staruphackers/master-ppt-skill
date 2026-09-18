@@ -19,7 +19,7 @@ import {
   materializeTemplateVariantProps,
 } from '../src/variant-materializer.mjs';
 import { materializeTemplateProjection, validateMaterializedTemplateProjection } from './workflow/layout-query.mjs';
-// 与预算生成同一把尺:视觉宽度折算(全角=1、半角=0.5),见 copy-contract.mjs(issue #15)。
+// 與預算生成同一把尺:視覺寬度折算(全形=1、半形=0.5),見 copy-contract.mjs(issue #15)。
 import { charLength } from './workflow/copy-contract.mjs';
 import {
   NEUTRAL_PLACEHOLDERS,
@@ -1106,9 +1106,9 @@ function validateCopyBudgets(layout, props, slideNumber, layoutLabel, errors) {
   });
 }
 
-// 「文案超长」曾只给一句泛泛的 choose a denser layout,用户只能在 90+ 个布局里盲试
-// (issue #16 用户换了 3 次 layout 才放下内容;issue #17 的多轮返工也多由换布局引发)。
-// 这里直接扫同主题里同名字段预算能容纳该长度的布局,附 3 个具体候选与其预算上限。
+// 「文案超長」曾只給一句泛泛的 choose a denser layout,使用者只能在 90+ 個佈局裡盲試
+// (issue #16 使用者換了 3 次 layout 才放下內容;issue #17 的多輪返工也多由換佈局引發)。
+// 這裡直接掃同主題裡同名欄位預算能容納該長度的佈局,附 3 個具體候選與其預算上限。
 function alternativeLayoutsForBudget(layout, budgetKey, requiredLength) {
   const themeKey = layout.split('_')[0];
   const candidates = [];
@@ -1121,7 +1121,7 @@ function alternativeLayoutsForBudget(layout, budgetKey, requiredLength) {
     }
   }
   if (!candidates.length) return '';
-  return `压缩文案,或换同主题可容纳的布局: ${candidates.join('、')}`;
+  return `壓縮文案,或換同主題可容納的佈局: ${candidates.join('、')}`;
 }
 
 function validateArrayCapacities(layout, props, slideNumber, layoutLabel, errors) {
@@ -1224,7 +1224,7 @@ function validateVisibleDirtyCopy(layout, props, authoredProps, slideNumber, lay
 function dirtyVisibleCopyReason(value) {
   const text = String(value || '');
   const placeholder = NEUTRAL_PLACEHOLDERS.find(item => text.includes(item));
-  if (placeholder) return `中性占位文案 "${placeholder}" 不允许出现在可见文案`;
+  if (placeholder) return `中性佔位文案 "${placeholder}" 不允許出現在可見文案`;
   if (text.includes('[object Object]')) return 'object placeholder "[object Object]" is not allowed in visible copy';
   if (/\bundefined\b/i.test(text)) return 'undefined literal is not allowed in visible copy';
   return '';
@@ -1240,8 +1240,8 @@ function validateCountBindingConsistency(layout, props, slideNumber, layoutLabel
     const count = numberOrNull(rawCount);
     if (count == null) continue;
 
-    // count 比 authored 数组长(渲染合成层会用 defaultProps 补足到 count 再显示)不再是硬
-    // 错误——只有数组比 count 还长(多余的已写数据不会被渲染,大概率是笔误)仍然拦下来。
+    // count 比 authored 陣列長(渲染合成層會用 defaultProps 補足到 count 再顯示)不再是硬
+    // 錯誤——只有陣列比 count 還長(多餘的已寫資料不會被渲染,大機率是筆誤)仍然攔下來。
     const mismatches = [];
     for (const arrayPath of binding.arrays || []) {
       if (isMediaArrayKey(rootArrayKey(arrayPath))) continue;
@@ -1754,11 +1754,11 @@ function isNumericLike(value) {
 }
 
 function isPageLabel(value) {
-  return /^(?:p\.?\s*)?\d{1,3}$|^第\s*\d{1,3}\s*页$/i.test(String(value || '').trim());
+  return /^(?:p\.?\s*)?\d{1,3}$|^第\s*\d{1,3}\s*(?:页|頁)$/i.test(String(value || '').trim());
 }
 
 function isUploadPlaceholderText(value) {
-  return /上传|upload/i.test(String(value || '').trim());
+  return /(?:上传|上傳)|upload/i.test(String(value || '').trim());
 }
 
 
@@ -1774,7 +1774,7 @@ function runCli() {
     process.exit(2);
   }
 
-  // 相对路径按调用方目录解析:npm run(含 --prefix)会把脚本 cwd 切到项目根,INIT_CWD 才是用户所在目录。
+  // 相對路徑按呼叫方目錄解析:npm run(含 --prefix)會把指令碼 cwd 切到專案根,INIT_CWD 才是使用者所在目錄。
   const callerCwd = process.env.INIT_CWD || process.cwd();
   const spec = JSON.parse(readFileSync(path.resolve(callerCwd, parsed.file), 'utf8'));
   const errors = validateGoalSpec(spec);

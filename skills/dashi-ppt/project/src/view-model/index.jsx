@@ -574,7 +574,7 @@ function buildBespokeSlideViewModel(
     slide.projection,
   );
   const themePack = slide.themePack || defaultThemePack;
-  const label = slide.label || 'Agent 定制方案';
+  const label = slide.label || 'Agent 定製方案';
   return {
     id: stateId,
     stateId,
@@ -692,7 +692,7 @@ function inferSlideLabel(slide, index) {
     props.bigWord,
     props.brand,
   ];
-  return candidates.find(value => typeof value === 'string' && value.trim()) || `第 ${index + 1} 页`;
+  return candidates.find(value => typeof value === 'string' && value.trim()) || `第 ${index + 1} 頁`;
 }
 
 function createSlideKeys(slides, layoutAliases = {}) {

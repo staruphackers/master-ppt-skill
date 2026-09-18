@@ -22,7 +22,7 @@ const result = {
   mediaKind,
   requireInitialMedia,
   limit: Number(args.limit || 12),
-  // 候选同分随机:未显式给 --seed 时每次调用生成新 seed(输出里回显,便于复现)。
+  // 候選同分隨機:未顯式給 --seed 時每次呼叫生成新 seed(輸出裡回顯,便於復現)。
   seed: args.seed !== undefined && args.seed !== true ? String(args.seed) : String(Math.floor(Math.random() * 0xffffffff)),
 };
 const themeMetadata = result.theme ? getThemePackMetadata(result.theme) : null;
@@ -51,11 +51,11 @@ process.stdout.write(compactJson({
   themeAudience: themeMetadata?.audience || null,
   count: layouts.length,
   layouts,
-  // 零结果时给可行动提示:列出可用 role,避免调用方退化为全量翻页。
+  // 零結果時給可行動提示:列出可用 role,避免呼叫方退化為全量翻頁。
   ...(layouts.length === 0 ? {
     hint: result.role
-      ? `role "${result.role}" 在该条件下无候选;可用 role 见 availableRoles,或去掉 --role 用 --keyword 搜索`
-      : '无候选;试试更换 --keyword 或去掉媒体条件',
+      ? `role "${result.role}" 在該條件下無候選;可用 role 見 availableRoles,或去掉 --role 用 --keyword 搜尋`
+      : '無候選;試試更換 --keyword 或去掉媒體條件',
     availableRoles: Object.keys(ROLE_KEYWORDS),
   } : {}),
 }));

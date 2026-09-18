@@ -1,5 +1,5 @@
-// node scripts/publish-npm-skill.mjs [--prepared <目录>] [--dry-run [--output <目录>]]
-// dry-run 生成本地 tarball,不查询或写入 registry。已发布版本在准备之前跳过。
+// node scripts/publish-npm-skill.mjs [--prepared <目錄>] [--dry-run [--output <目錄>]]
+// dry-run 生成本地 tarball,不查詢或寫入 registry。已釋出版本在準備之前跳過。
 import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import os from 'node:os';
@@ -16,9 +16,9 @@ for (let index = 2; index < process.argv.length; index += 1) {
   if (arg === '--dry-run') dryRun = true;
   else if (arg === '--prepared' && process.argv[index + 1]) preparedDirectory = path.resolve(process.argv[++index]);
   else if (arg === '--output' && process.argv[index + 1]) outputDirectory = path.resolve(process.argv[++index]);
-  else throw new Error(`未知参数或缺少参数值: ${arg}`);
+  else throw new Error(`未知引數或缺少引數值: ${arg}`);
 }
-if (outputDirectory && !dryRun) throw new Error('--output 仅用于 --dry-run');
+if (outputDirectory && !dryRun) throw new Error('--output 僅用於 --dry-run');
 
 function run(cmd, args, options = {}) {
   return execFileSync(cmd, args, { encoding: 'utf8', ...options });
@@ -36,9 +36,9 @@ function isPublished(version) {
 function main() {
   let prepared = preparedDirectory ? readPreparedSkill(preparedDirectory) : null;
   const version = prepared?.version || JSON.parse(fs.readFileSync(path.join(ROOT, 'package.json'), 'utf8')).version;
-  if (!/^\d+\.\d+\.\d+$/.test(version)) throw new Error(`非法版本号: ${version}`);
+  if (!/^\d+\.\d+\.\d+$/.test(version)) throw new Error(`非法版本號: ${version}`);
   if (!dryRun && isPublished(version)) {
-    console.log(`npm 包 ${PACKAGE_NAME}@${version} 已发布,跳过。`);
+    console.log(`npm 包 ${PACKAGE_NAME}@${version} 已釋出,跳過。`);
     return;
   }
 
@@ -53,7 +53,7 @@ function main() {
     fs.writeFileSync(path.join(staging, 'package.json'), `${JSON.stringify({
       name: PACKAGE_NAME,
       version,
-      description: 'Dashi PPT skill installer — offline-editable HTML decks with PPTX/PDF export. 国内可经 npmmirror 安装。',
+      description: 'Dashi PPT skill installer — offline-editable HTML decks with PPTX/PDF export. 國內可經 npmmirror 安裝。',
       bin: { 'dashi-ppt-skill': 'bin/install.mjs' },
       files: ['bin', 'skill', 'LICENSE'],
       license: 'AGPL-3.0-only',
@@ -70,7 +70,7 @@ function main() {
       '```bash',
       '# International',
       'npx dashi-ppt-skill',
-      '# 中国大陆(走 npmmirror 镜像)',
+      '# 中國大陸(走 npmmirror 映象)',
       'npx --registry=https://registry.npmmirror.com dashi-ppt-skill',
       '```',
       '',
@@ -94,10 +94,10 @@ function main() {
 
     const output = run('npm', ['publish', '--access', 'public', '--registry=https://registry.npmjs.org'], { cwd: staging, stdio: 'pipe' });
     console.log(output.trim().split('\n').slice(-3).join('\n'));
-    console.log(`npm 包 ${PACKAGE_NAME}@${version} 发布完成; Skill SHA-256 ${prepared.source.contentSha256}。`);
+    console.log(`npm 包 ${PACKAGE_NAME}@${version} 釋出完成; Skill SHA-256 ${prepared.source.contentSha256}。`);
     fetch(`https://registry-direct.npmmirror.com/-/package/${PACKAGE_NAME}/syncs`, { method: 'PUT' })
-      .then((res) => console.log(`npmmirror 同步已触发(${res.status})`))
-      .catch(() => console.log('npmmirror 同步触发失败(将由镜像定时同步)'));
+      .then((res) => console.log(`npmmirror 同步已觸發(${res.status})`))
+      .catch(() => console.log('npmmirror 同步觸發失敗(將由映象定時同步)'));
   } finally {
     fs.rmSync(tempRoot, { recursive: true, force: true });
   }

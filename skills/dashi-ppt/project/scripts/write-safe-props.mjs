@@ -22,7 +22,7 @@ import { getVariantKind, resolveContentMap } from '../src/variant-contract.mjs';
 
 const ALLOWED_MEDIA_ITEM_FIELDS = new Set(['src', 'kind', 'type', 'ar', 'ratio', 'poster']);
 
-// 相对路径按调用方目录解析:npm run(含 --prefix)会把脚本 cwd 切到项目根,INIT_CWD 才是用户所在目录。
+// 相對路徑按呼叫方目錄解析:npm run(含 --prefix)會把指令碼 cwd 切到專案根,INIT_CWD 才是使用者所在目錄。
 const CALLER_CWD = process.env.INIT_CWD || process.cwd();
 
 const argv = process.argv.slice(2);
@@ -160,9 +160,9 @@ function runGoal(goalArg, options = {}) {
         }))
       : [{ slide, content: slide?.content || {}, slideIndex, variantIndex: null, variantId: null }]
   ));
-  // JAD-workflow-friction:layout 容量确定放不下作者媒体数组时(仅此一种、可客观判定的场景),
-  // 换用同主题内能容纳的候选 layout,而不是把无解的媒体错误抛回作者。每次替换都记入
-  // layoutChanges,绝不无声改写——调用方必须能在输出里看到 from/to/reason。
+  // JAD-workflow-friction:layout 容量確定放不下作者媒體陣列時(僅此一種、可客觀判定的場景),
+  // 換用同主題內能容納的候選 layout,而不是把無解的媒體錯誤拋回作者。每次替換都記入
+  // layoutChanges,絕不無聲改寫——呼叫方必須能在輸出裡看到 from/to/reason。
   const usedLayouts = new Set(entries.map(item => item.slide?.layout).filter(Boolean));
   const layoutChanges = [];
   const normalizedEntries = entries.map((entry) => {
@@ -174,7 +174,7 @@ function runGoal(goalArg, options = {}) {
       variantId,
     } = entry;
     const kind = getVariantKind(slide);
-    // 结构投影的 props 由目标校验临时计算,不写回目标。
+    // 結構投影的 props 由目標校驗臨時計算,不寫回目標。
     if (kind === 'bespoke' || slide?.projection?.structure) {
       return {
         ...entry,
@@ -215,7 +215,7 @@ function runGoal(goalArg, options = {}) {
           ...(variantIndex == null ? {} : { variant: variantId }),
           from: layout,
           to: safe.layout,
-          reason: `props.${safe.mismatch.key} 有 ${safe.mismatch.count} 项媒体,"${layout}" 没有能容纳的媒体槽位,已换为 "${safe.layout}"`,
+          reason: `props.${safe.mismatch.key} 有 ${safe.mismatch.count} 項媒體,"${layout}" 沒有能容納的媒體槽位,已換為 "${safe.layout}"`,
         });
         usedLayouts.delete(layout);
         usedLayouts.add(safe.layout);
@@ -224,8 +224,8 @@ function runGoal(goalArg, options = {}) {
         unresolvedMediaMismatch = null;
       }
     }
-    // 字段级抢救:此前任何一个字段报错都会丢弃整页 props(整页回退演示文案,正是用户
-    // 反馈的「几乎每页都残留」);现在仅剔除无法通过契约的根键,其余字段保留并写回。
+    // 欄位級搶救:此前任何一個欄位報錯都會丟棄整頁 props(整頁回退展示文案,正是使用者
+    // 反饋的「幾乎每頁都殘留」);現在僅剔除無法透過契約的根鍵,其餘欄位保留並寫回。
     if (layout && normalized.errors?.length && !unresolvedMediaMismatch && !contentMapError && !Object.keys(contentMap).length) {
       const salvaged = salvageSlideProps(layout, effectiveProps);
       if (salvaged && Object.keys(salvaged.props || {}).length) {
@@ -234,7 +234,7 @@ function runGoal(goalArg, options = {}) {
           errors: [],
           warnings: [
             ...(normalized.warnings || []),
-            `已剔除无法通过契约的字段并保留其余覆盖:${salvaged.dropped.join(', ')}(被剔除字段回退默认值,建议修正后重试)`,
+            `已剔除無法透過契約的欄位並保留其餘覆蓋:${salvaged.dropped.join(', ')}(被剔除欄位回退預設值,建議修正後重試)`,
           ],
         };
       }
@@ -291,7 +291,7 @@ function runGoal(goalArg, options = {}) {
   };
   process.stdout.write(compactJson(result));
   if (layoutChanges.length) {
-    console.error(`${layoutChanges.length} 处 layout 被替换(核对输出 JSON 的 layoutChanges,不认可就改回并换页)`);
+    console.error(`${layoutChanges.length} 處 layout 被替換(核對輸出 JSON 的 layoutChanges,不認可就改回並換頁)`);
   }
   if (!result.ok) process.exit(1);
 }
@@ -344,8 +344,8 @@ function deleteContentMapTarget(root, tokens) {
   delete parent[key];
 }
 
-// 仅在“作者媒体数组长度超出该 layout 所有媒体槽位容量”这一可客观判定的场景下触发候选查找;
-// 其余任何 normalizeProps 错误(未知字段、文案越界等)一律原样报错,不做 layout 替换。
+// 僅在“作者媒體陣列長度超出該 layout 所有媒體槽位容量”這一可客觀判定的場景下觸發候選查詢;
+// 其餘任何 normalizeProps 錯誤(未知欄位、文案越界等)一律原樣報錯,不做 layout 替換。
 function salvageSlideProps(layout, props = {}) {
   const current = { ...(props || {}) };
   const dropped = [];

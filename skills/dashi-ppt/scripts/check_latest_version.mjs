@@ -1,95 +1,30 @@
 #!/usr/bin/env node
-import fs from 'node:fs';
-import https from 'node:https';
+// 繁中 fork 更新檢查：唯讀、不下載套件、不修改工作目錄、不查詢上游 npm。
+import { execFileSync } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-
-const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
-const SKILL_ROOT = path.resolve(SCRIPT_DIR, '..');
-const INSTALLED_PACKAGE = path.join(SKILL_ROOT, 'project/package.json');
-const SOURCE_PACKAGE = path.join(SKILL_ROOT, 'package.json');
-// 端点按国内可达性排序:npmmirror(国内可达)→ npm 官方 → GitHub raw(兜底,
-// 兼容 npm 包尚未发布的过渡期)。任一端点拿到版本即停,全部失败保持静默。
-const REMOTE_VERSION_ENDPOINTS = [
-  { url: 'https://registry.npmmirror.com/dashi-ppt-skill/latest', pick: (json) => json.version },
-  { url: 'https://registry.npmjs.org/dashi-ppt-skill/latest', pick: (json) => json.version },
-  { url: 'https://raw.githubusercontent.com/chuspeeism/dashi-ppt-skill/main/skills/dashi-ppt/project/package.json', pick: (json) => json.version },
-];
-const REQUEST_TIMEOUT_MS = 5000;
-
-main().catch(() => {});
-
-async function main() {
-  const localVersion = readLocalVersion();
-  if (!localVersion) return;
-  const remoteVersion = await readRemoteVersion();
-  if (!remoteVersion) return;
-  if (compareVersions(remoteVersion, localVersion) <= 0) return;
-  process.stdout.write(
-    `发现 Dashi PPT 新版本 ${remoteVersion}（当前 ${localVersion}）。更新方式：npx dashi-ppt-skill@latest（国内加 --registry=https://registry.npmmirror.com），或重新拉取 https://github.com/chuspeeism/dashi-ppt-skill。\n`
-  );
+const cwd = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+function git(args) {
+  return execFileSync('git', ['-C', cwd, ...args], {
+    encoding: 'utf8', timeout: 5000, maxBuffer: 65536,
+    stdio: ['ignore', 'pipe', 'ignore'],
+    env: { ...process.env, GIT_TERMINAL_PROMPT: '0' },
+  }).trim();
 }
-
-function readLocalVersion() {
-  const packagePath = fs.existsSync(INSTALLED_PACKAGE) ? INSTALLED_PACKAGE : SOURCE_PACKAGE;
-  try {
-    return JSON.parse(fs.readFileSync(packagePath, 'utf8')).version || '';
-  } catch {
-    return '';
+try {
+  const origin = git(['remote', 'get-url', 'origin']);
+  const allowed = new Set([
+    'https://github.com/staruphackers/master-ppt-skill',
+    'https://github.com/staruphackers/master-ppt-skill.git',
+    'git@github.com:staruphackers/master-ppt-skill.git',
+  ]);
+  if (allowed.has(origin) && git(['branch', '--show-current']) === 'main') {
+    const local = git(['rev-parse', 'HEAD']);
+    const remote = git(['ls-remote', '--exit-code', 'origin', 'refs/heads/main']).split(/\s+/)[0];
+    if (/^[0-9a-f]{40}$/.test(remote) && remote !== local) {
+      process.stdout.write('繁體中文 fork 的 main 與本機提交不同。請先備份並檢查差異，再從 staruphackers/master-ppt-skill 更新；不要使用上游 npx 安裝覆蓋。\n');
+    }
   }
-}
-
-async function readRemoteVersion() {
-  for (const endpoint of REMOTE_VERSION_ENDPOINTS) {
-    const version = await fetchVersion(endpoint);
-    if (version) return version;
-  }
-  return '';
-}
-
-function fetchVersion({ url, pick }) {
-  return new Promise(resolve => {
-    const request = https.get(url, { timeout: REQUEST_TIMEOUT_MS }, response => {
-      if (response.statusCode !== 200) {
-        response.resume();
-        resolve('');
-        return;
-      }
-      let body = '';
-      response.setEncoding('utf8');
-      response.on('data', chunk => {
-        body += chunk;
-      });
-      response.on('end', () => {
-        try {
-          resolve(pick(JSON.parse(body)) || '');
-        } catch {
-          resolve('');
-        }
-      });
-    });
-    request.on('timeout', () => {
-      request.destroy();
-      resolve('');
-    });
-    request.on('error', () => resolve(''));
-  });
-}
-
-function compareVersions(a, b) {
-  const left = parseVersion(a);
-  const right = parseVersion(b);
-  for (let index = 0; index < Math.max(left.length, right.length); index += 1) {
-    const delta = (left[index] || 0) - (right[index] || 0);
-    if (delta !== 0) return delta;
-  }
-  return 0;
-}
-
-function parseVersion(version) {
-  return String(version)
-    .replace(/^v/i, '')
-    .split(/[.-]/)
-    .map(part => Number.parseInt(part, 10))
-    .filter(Number.isFinite);
+} catch {
+  // 複製安裝、離線、無 Git 或無權限：不修改任何檔案，也不阻擋簡報生成。
 }

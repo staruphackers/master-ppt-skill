@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
-  "title": "AI 产品组合策略",
-  "goal": "面向管理层说明 AI 产品组合的优先级、投入节奏和落地路径",
-  "audience": "管理层",
-  "owner": "产品策略团队",
+  "title": "AI 產品組合策略",
+  "goal": "面向管理層說明 AI 產品組合的優先順序、投入節奏和落地路徑",
+  "audience": "管理層",
+  "owner": "產品策略團隊",
   "randomSeed": "theme02-example",
   "pageCount": 5,
   "themePack": "theme02",
@@ -13,12 +13,12 @@
       "id": "s1",
       "content": {
         "kicker": "示例封面",
-        "title": "AI 产品组合策略",
-        "subtitle": "面向管理层说明 AI 产品组合的优先级、投入节奏和落地路径",
-        "bespokeTitle": "AI 产品组合策略",
+        "title": "AI 產品組合策略",
+        "subtitle": "面向管理層說明 AI 產品組合的優先順序、投入節奏和落地路徑",
+        "bespokeTitle": "AI 產品組合策略",
         "bespokePoints": [
-          "面向管理层说明 AI 产品组合的优先级、投入节奏和落地路径",
-          "管理层 / 产品策略团队"
+          "面向管理層說明 AI 產品組合的優先順序、投入節奏和落地路徑",
+          "管理層 / 產品策略團隊"
         ]
       },
       "selectedVariant": "v1",
@@ -62,11 +62,11 @@
           "adjustable": false,
           "composition": {
             "designIntent": {
-              "objective": "建立AI 产品组合策略的汇报范围",
-              "audience": "管理层",
-              "narrativeRole": "封面定调",
-              "emphasis": "AI 产品组合策略",
-              "rationale": "使用单一标题中心和两条关键信息建立清晰层级"
+              "objective": "建立AI 產品組合策略的彙報範圍",
+              "audience": "管理層",
+              "narrativeRole": "封面定調",
+              "emphasis": "AI 產品組合策略",
+              "rationale": "使用單一標題中心和兩條關鍵資訊建立清晰層級"
             },
             "background": "default",
             "elements": [
@@ -105,13 +105,13 @@
     {
       "id": "s2",
       "content": {
-        "kicker": "示例页面 2",
-        "title": "AI 产品组合策略 · 2",
-        "lead": "面向管理层说明 AI 产品组合的优先级、投入节奏和落地路径 · 第 2 页",
-        "bespokeTitle": "AI 产品组合策略 · 2",
+        "kicker": "示例頁面 2",
+        "title": "AI 產品組合策略 · 2",
+        "lead": "面向管理層說明 AI 產品組合的優先順序、投入節奏和落地路徑 · 第 2 頁",
+        "bespokeTitle": "AI 產品組合策略 · 2",
         "bespokePoints": [
-          "面向管理层说明 AI 产品组合的优先级、投入节奏和落地路径 · 第 2 页",
-          "管理层 / 产品策略团队"
+          "面向管理層說明 AI 產品組合的優先順序、投入節奏和落地路徑 · 第 2 頁",
+          "管理層 / 產品策略團隊"
         ]
       },
       "selectedVariant": "v1",
@@ -153,11 +153,11 @@
           "adjustable": false,
           "composition": {
             "designIntent": {
-              "objective": "解释AI 产品组合策略第 2 页的核心信息",
-              "audience": "管理层",
-              "narrativeRole": "论证推进",
-              "emphasis": "面向管理层说明 AI 产品组合的优先级、投入节奏和落地路径",
-              "rationale": "使用单一标题中心和两条关键信息建立清晰层级"
+              "objective": "解釋AI 產品組合策略第 2 頁的核心資訊",
+              "audience": "管理層",
+              "narrativeRole": "論證推進",
+              "emphasis": "面向管理層說明 AI 產品組合的優先順序、投入節奏和落地路徑",
+              "rationale": "使用單一標題中心和兩條關鍵資訊建立清晰層級"
             },
             "background": "default",
             "elements": [
@@ -196,13 +196,13 @@
     {
       "id": "s3",
       "content": {
-        "kicker": "示例页面 3",
-        "lead": "面向管理层说明 AI 产品组合的优先级、投入节奏和落地路径 · 第 3 页",
-        "title": "AI 产品组合策略 · 3",
-        "bespokeTitle": "AI 产品组合策略 · 3",
+        "kicker": "示例頁面 3",
+        "lead": "面向管理層說明 AI 產品組合的優先順序、投入節奏和落地路徑 · 第 3 頁",
+        "title": "AI 產品組合策略 · 3",
+        "bespokeTitle": "AI 產品組合策略 · 3",
         "bespokePoints": [
-          "面向管理层说明 AI 产品组合的优先级、投入节奏和落地路径 · 第 3 页",
-          "管理层 / 产品策略团队"
+          "面向管理層說明 AI 產品組合的優先順序、投入節奏和落地路徑 · 第 3 頁",
+          "管理層 / 產品策略團隊"
         ]
       },
       "selectedVariant": "v1",
@@ -242,11 +242,11 @@
           "adjustable": false,
           "composition": {
             "designIntent": {
-              "objective": "解释AI 产品组合策略第 3 页的核心信息",
-              "audience": "管理层",
-              "narrativeRole": "论证推进",
-              "emphasis": "面向管理层说明 AI 产品组合的优先级、投入节奏和落地路径",
-              "rationale": "使用单一标题中心和两条关键信息建立清晰层级"
+              "objective": "解釋AI 產品組合策略第 3 頁的核心資訊",
+              "audience": "管理層",
+              "narrativeRole": "論證推進",
+              "emphasis": "面向管理層說明 AI 產品組合的優先順序、投入節奏和落地路徑",
+              "rationale": "使用單一標題中心和兩條關鍵資訊建立清晰層級"
             },
             "background": "default",
             "elements": [
@@ -285,12 +285,12 @@
     {
       "id": "s4",
       "content": {
-        "kicker": "示例页面 4",
-        "title": "AI 产品组合策略 · 4",
-        "bespokeTitle": "AI 产品组合策略 · 4",
+        "kicker": "示例頁面 4",
+        "title": "AI 產品組合策略 · 4",
+        "bespokeTitle": "AI 產品組合策略 · 4",
         "bespokePoints": [
-          "面向管理层说明 AI 产品组合的优先级、投入节奏和落地路径 · 第 4 页",
-          "管理层 / 产品策略团队"
+          "面向管理層說明 AI 產品組合的優先順序、投入節奏和落地路徑 · 第 4 頁",
+          "管理層 / 產品策略團隊"
         ]
       },
       "selectedVariant": "v1",
@@ -331,11 +331,11 @@
           "adjustable": false,
           "composition": {
             "designIntent": {
-              "objective": "解释AI 产品组合策略第 4 页的核心信息",
-              "audience": "管理层",
-              "narrativeRole": "论证推进",
-              "emphasis": "面向管理层说明 AI 产品组合的优先级、投入节奏和落地路径",
-              "rationale": "使用单一标题中心和两条关键信息建立清晰层级"
+              "objective": "解釋AI 產品組合策略第 4 頁的核心資訊",
+              "audience": "管理層",
+              "narrativeRole": "論證推進",
+              "emphasis": "面向管理層說明 AI 產品組合的優先順序、投入節奏和落地路徑",
+              "rationale": "使用單一標題中心和兩條關鍵資訊建立清晰層級"
             },
             "background": "default",
             "elements": [
@@ -374,13 +374,13 @@
     {
       "id": "s5",
       "content": {
-        "kicker": "示例页面 5",
-        "title": "AI 产品组合策略 · 5",
-        "lead": "面向管理层说明 AI 产品组合的优先级、投入节奏和落地路径 · 第 5 页",
-        "bespokeTitle": "AI 产品组合策略 · 5",
+        "kicker": "示例頁面 5",
+        "title": "AI 產品組合策略 · 5",
+        "lead": "面向管理層說明 AI 產品組合的優先順序、投入節奏和落地路徑 · 第 5 頁",
+        "bespokeTitle": "AI 產品組合策略 · 5",
         "bespokePoints": [
-          "面向管理层说明 AI 产品组合的优先级、投入节奏和落地路径 · 第 5 页",
-          "管理层 / 产品策略团队"
+          "面向管理層說明 AI 產品組合的優先順序、投入節奏和落地路徑 · 第 5 頁",
+          "管理層 / 產品策略團隊"
         ]
       },
       "selectedVariant": "v1",
@@ -422,11 +422,11 @@
           "adjustable": false,
           "composition": {
             "designIntent": {
-              "objective": "解释AI 产品组合策略第 5 页的核心信息",
-              "audience": "管理层",
-              "narrativeRole": "论证推进",
-              "emphasis": "面向管理层说明 AI 产品组合的优先级、投入节奏和落地路径",
-              "rationale": "使用单一标题中心和两条关键信息建立清晰层级"
+              "objective": "解釋AI 產品組合策略第 5 頁的核心資訊",
+              "audience": "管理層",
+              "narrativeRole": "論證推進",
+              "emphasis": "面向管理層說明 AI 產品組合的優先順序、投入節奏和落地路徑",
+              "rationale": "使用單一標題中心和兩條關鍵資訊建立清晰層級"
             },
             "background": "default",
             "elements": [

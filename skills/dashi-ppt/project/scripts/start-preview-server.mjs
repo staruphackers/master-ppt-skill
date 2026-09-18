@@ -11,8 +11,8 @@ import { ensureThemePreviewFresh } from './preview-freshness.mjs';
 import { isLoopbackHost } from './preview-export-auth.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
-// 相对路径按调用方目录解析:npm run(含 --prefix)会把脚本 cwd 切到项目根,INIT_CWD 才是用户所在目录。
-// 未显式传参时的默认值仍锚定项目根(内部调试预览目录),不随调用方目录漂移。
+// 相對路徑按呼叫方目錄解析:npm run(含 --prefix)會把指令碼 cwd 切到專案根,INIT_CWD 才是使用者所在目錄。
+// 未顯式傳參時的預設值仍錨定專案根(內部除錯預覽目錄),不隨呼叫方目錄漂移。
 const CALLER_CWD = process.env.INIT_CWD || process.cwd();
 const serveRootArg = process.argv[2];
 const serveRoot = serveRootArg
@@ -55,10 +55,10 @@ async function main() {
     mkdirSync(serveRoot, { recursive: true });
     mkdirSync(path.dirname(logFile), { recursive: true });
     const output = openSync(logFile, 'a');
-    // 常驻服务不得继承宿主会话的临时目录:沙箱型 Agent App(如豆包)的 TMPDIR 指向
-    // 自己的沙箱,会话结束目录即被清理,而 daemonize 的服务还活着——之后导出时
-    // Playwright launch 的 mkdtemp 直接 ENOENT。这里出生即剥离,让服务用系统默认
-    // /tmp;serve-preview-https.mjs 内部另有运行时保险丝兜「绕过本包装直接启动」的场景。
+    // 常駐服務不得繼承宿主會話的臨時目錄:沙箱型 Agent App(如豆包)的 TMPDIR 指向
+    // 自己的沙箱,會話結束目錄即被清理,而 daemonize 的服務還活著——之後匯出時
+    // Playwright launch 的 mkdtemp 直接 ENOENT。這裡出生即剝離,讓服務用系統預設
+    // /tmp;serve-preview-https.mjs 內部另有執行時保險絲兜「繞過本包裝直接啟動」的場景。
     const daemonEnv = { ...process.env, HOST: host };
     for (const key of ['TMPDIR', 'TMP', 'TEMP']) delete daemonEnv[key];
     const child = spawn(process.execPath, [
@@ -334,10 +334,10 @@ async function isStalePortLock(lockFile, bindHost) {
   }
 }
 
-// 身份校验:PID 存活只是必要条件——同一 PID 可能已被 OS 复用给完全无关的进程(观测到的复用误判)。
-// 命令行含 start-preview-server.mjs 或 serve-preview-https.mjs 才认定为“属于本预览工具链”:
-// 覆盖已提交的 serve-preview-https.mjs 守护进程,也覆盖端口锁 state:'starting' 阶段(此时 pid
-// 是尚未 spawn 子进程的 start-preview-server.mjs 启动器自身)。
+// 身份校驗:PID 存活只是必要條件——同一 PID 可能已被 OS 複用給完全無關的程式(觀測到的複用誤判)。
+// 命令列含 start-preview-server.mjs 或 serve-preview-https.mjs 才認定為“屬於本預覽工具鏈”:
+// 覆蓋已提交的 serve-preview-https.mjs 守護程式,也覆蓋埠鎖 state:'starting' 階段(此時 pid
+// 是尚未 spawn 子程式的 start-preview-server.mjs 啟動器自身)。
 export function isPidAlive(pid) {
   if (!isProcessAlive(pid)) return false;
   return isPreviewToolingCommandLine(processCommandLine(pid));
@@ -365,8 +365,8 @@ function isPreviewToolingCommandLine(commandLine) {
   return /(?:start-preview-server|serve-preview-https)\.mjs/.test(String(commandLine || ''));
 }
 
-// 启动时全锁目录扫描回收:清理死 PID、PID 复用误判(活着但不是本工具链进程)、
-// 或 serveRoot 已从磁盘消失的孤儿端口锁(及同名 .log)。纯函数,便于单测直接调用。
+// 啟動時全鎖目錄掃描回收:清理死 PID、PID 複用誤判(活著但不是本工具鏈程式)、
+// 或 serveRoot 已從磁碟消失的孤兒埠鎖(及同名 .log)。純函式,便於單測直接呼叫。
 export function reclaimStaleLockDir(targetLockDir) {
   const removed = [];
   let entries = [];

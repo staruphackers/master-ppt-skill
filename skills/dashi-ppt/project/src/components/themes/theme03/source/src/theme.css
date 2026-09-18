@@ -9,7 +9,7 @@
    - Every class is prefixed `.rd-` so it can't collide after migration.
    - Slides are pure: they only use these classes + inline styles. The deck
      navigation chrome (deck-stage) and the Tweaks panel are separate.
-   Fonts (Archivo, Space Mono, Noto Sans SC) are self-hosted by the host
+   Fonts (Archivo, Space Mono, Noto Sans TC) are self-hosted by the host
    document — no runtime webfont import here.
    ========================================================================== */
 
@@ -28,7 +28,7 @@
   --rd-panel:   #1a1916;     /* dark surface */
 
   /* type families */
-  --rd-sans: "Archivo","Noto Sans SC",system-ui,sans-serif;
+  --rd-sans: "Archivo","Noto Sans TC",system-ui,sans-serif;
   --rd-mono: "Space Mono",ui-monospace,"SFMono-Regular",monospace;
 
   /* type scale (1920×1080 canvas) */

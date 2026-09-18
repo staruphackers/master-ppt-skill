@@ -1,206 +1,102 @@
-# Dashi PPT Skill · 大师 PPT / 网页 PPT / 可编辑 PPTX
+# Dashi PPT Skill · 大師 PPT／網頁 PPT／可編輯 PPTX
 
-![GitHub stars](https://img.shields.io/github/stars/chuspeeism/dashi-ppt-skill?style=flat-square)
-![Skill](https://img.shields.io/badge/Skill-Agent-111111?style=flat-square)
-![HTML Deck](https://img.shields.io/badge/HTML-Deck-0A7CFF?style=flat-square)
-![PPTX Export](https://img.shields.io/badge/PPTX-%E5%8F%AF%E7%BC%96%E8%BE%91%E5%AF%BC%E5%87%BA-D24726?style=flat-square)
-![Claude Code](https://img.shields.io/badge/Claude%20Code-Supported-6B5B95?style=flat-square)
-![Codex](https://img.shields.io/badge/Codex-Supported-222222?style=flat-square)
-![豆包](https://img.shields.io/badge/%E8%B1%86%E5%8C%85-Supported-3370FF?style=flat-square)
-![Marvis](https://img.shields.io/badge/Marvis-Supported-FF5A5F?style=flat-square)
-![Workbuddy](https://img.shields.io/badge/Workbuddy-Supported-2EA44F?style=flat-square)
-![Dumate](https://img.shields.io/badge/Dumate-Supported-F59E0B?style=flat-square)
-![Qclaw](https://img.shields.io/badge/Qclaw-Supported-14B8A6?style=flat-square)
-[![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue?style=flat-square)](./LICENSE)
+<!-- zh-TW-fork -->
+> **繁體中文（台灣）版本**：此 fork 的主要文件、Skill 指示、編輯介面、主題資料、Windows 腳本及預編譯執行檔採繁體中文。請從本儲存庫的 **main** 安裝；不要使用上游 npm 套件覆蓋。英文介面與相容性資料保留。
 
-[English](./README.en.md) · [简体中文](README.md)
+[English](README.en.md) · [繁體中文](README.md) · [在地化與維護說明](docs/zh-TW-localization.md) · [AGPL-3.0 授權](LICENSE)
 
-一个真正适合职场人的 PPT Skill。把文档丢给你的 AI Agent，每一页都自带编辑控制台的 PPT Skill——不满意的地方直接在浏览器里改，改完还能一键导出成真实的、可编辑的 PPTX。
+把內容交給 AI Agent，產生可在瀏覽器編輯的簡報，再匯出 HTML、PDF 或可編輯的 PPTX。原有 **12 套視覺主題、1,020 個版型、8,576 個控制項**維持不變。
 
-- 12 套视觉主题
-- 1020 个版式页面
-- 8576 个可调控件
+![繁體中文編輯介面實際截圖](docs/assets/zh-TW/editor.png)
 
-![生成效果演示](https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/hero-result.gif)
-
-## 12 套内置视觉主题
-
-Skill 会展示预览让你选择主题，可以随时让 Agent 整套换掉。下面每套主题的预览，都是从它自己的版式库里挑出的 4 个正文版式（图表、分析模型、卡片、目录等），全部由这个 Skill 真实渲染，非示意图：
-
-|  |  |
-|---|---|
-| <img src="https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/theme01.jpg" width="440" alt="轻拟态风内页预览"><br>**theme01**<br> | <img src="https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/theme02.jpg" width="440" alt="炫光紫绿风内页预览"><br>**theme02**<br> |
-| <img src="https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/theme03.jpg" width="440" alt="深浅代码风内页预览"><br>**theme03**<br> | <img src="https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/theme04.jpg" width="440" alt="玻璃糖果风内页预览"><br>**theme04**<br> |
-| <img src="https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/theme05.jpg" width="440" alt="色谱图表风内页预览"><br>**theme05**<br> | <img src="https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/theme06.jpg" width="440" alt="深色图谱风内页预览"><br>**theme06**<br> |
-| <img src="https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/theme07.jpg" width="440" alt="冷白调研风内页预览"><br>**theme07**<br> | <img src="https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/theme08.jpg" width="440" alt="黑金实验风内页预览"><br>**theme08**<br> |
-| <img src="https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/theme09.jpg" width="440" alt="深蓝杂志风内页预览"><br>**theme09**<br> | <img src="https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/theme10.jpg" width="440" alt="金色指数风内页预览"><br>**theme10**<br> |
-| <img src="https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/theme11.jpg" width="440" alt="高能增长风内页预览"><br>**theme11**<br> | <img src="https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/theme12.jpg" width="440" alt="声波霓虹风内页预览"><br>**theme12**<br> |
-
-## 快速开始
-
-**一键安装/更新**：
+## 安裝繁體中文版本
 
 ```bash
-npx dashi-ppt-skill@latest
+git clone --branch main --single-branch https://github.com/staruphackers/master-ppt-skill.git
 ```
-国内网络:
+
+先備份既有 Skill，再將本專案的整個 `skills/dashi-ppt` 資料夾放入所用 Agent 的 Skill 目錄，重新開啟工作階段。請保留原始 clone，後續也從同一個 fork 更新。
+
+**不要使用 `npx dashi-ppt-skill@latest` 安裝或更新這個版本**：該名稱指向上游 npm 套件，不包含本 fork 的繁中修改。本次沒有發佈新的 npm 套件。
+
+環境需求：Node.js 20+、npm；匯出 PDF／PPTX 需要本機 Chrome／Chromium／Edge。首次執行會準備專案依賴。生成內容的模型額度由所用 Agent 方案決定，本 Skill 不附帶模型額度或付費 API。
+
+### 更新
+
+在原始 clone 中先確認 `git status`，保留自己的變更並備份安裝目錄，再於 `main` 執行：
+
 ```bash
-npx --registry=https://registry.npmmirror.com dashi-ppt-skill@latest
-```
-安装和更新是同一条命令,重跑即原地更新(已装依赖自动保留)。
-让 AI Agent 帮你安装：
-
-```text
-帮我安装 skill：npx dashi-ppt-skill@latest，国内镜像 npx --registry=https://registry.npmmirror.com dashi-ppt-skill@latest
+git pull --ff-only origin main
 ```
 
-环境要求：Node.js 20+ 和 npm；导出 PPTX / PDF 需要本机装有 Chrome / Chromium / Edge。
-
-## 效果
-
-- **12套主题**：覆盖多种 PPT 使用场景和风格
-- **1020个版式**：每套主题独立的页面结构和视觉语言，20 种页面角色（封面、目录、指标、趋势、对比、流程、风险、结尾……）
-- **图表与分析模型**：雷达图、瀑布图、矩形树图、漏斗、热力图、桑基图、甘特图，以及 SWOT、波特五力、PEST、商业模式画布、双钻模型等分析模型版式
-- **自带控制台**：滑杆、开关、下拉——换布局、调模块数量、换配色、换页面重点
-- **文字可编辑**：点击任意文字就地修改
-- **媒体替换**：点击或拖拽替换媒体槽，文字资料也会自动预留图片占位符
-- **一键导出**：HTML离线包 / PDF / 可编辑 PPTX
-
-## 适用场景
-
-**合适**：行业研究 / 融资复盘 / 竞品分析 / 趋势报告 / 项目汇报 / 方案展示 / 路演材料 / 内部培训——需要快速形成结构完整、视觉统一、还能继续改的演示文稿
-
-**不合适**：需要逐像素手工定制视觉的场景
-
-## HTML 与导出能力
-
-- **适配 Agent 能力**：HTML / Agent 能直接读、改、校验；每一页由"版式 + 文案字段"构成
-- **表现力更高**：入场动画、翻页动画、交互控件、明暗模式切换等
-- **产物即编辑器**：结果为网页版 PPT 编辑器——翻页、改字、换图、调版式，打开就能用
-- **导出PPTX**：一键导出成真实的 PPTX——逐节点还原、文字保持可编辑
-
-HTML 版与导出 PPTX 版的逐页对比：
-
-![HTML 与导出 PPTX 逐页对比](https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/html-vs-pptx.gif)
-
-## 平台支持
-
-> 下表只列出已实测的平台，不代表"仅限这些"。
-
-| 平台 | 状态 | 说明 |
-|------|------|------|
-| Claude Code | 支持 ||
-| Codex | 支持 | 可调用生图能力补充配图 |
-| 豆包 | 支持 | 需要启动办公模式 |
-| Marvis / Workbuddy / Dumate / Qclaw | 支持 | skill 文件放在任意位置、读取 `SKILL.md` 即可 |
-| Cursor / 其他本地 Agent | 可用 | 需要能读写文件并执行 shell 命令 |
-| 普通网页 Chatbot | 不推荐 | 生成器需要本地 Node.js 环境 |
+更新後重新複製 `skills/dashi-ppt`。有本機修改或非快轉更新時，先處理差異，不使用強制推送或直接覆蓋。版本檢查不會再推薦上游 npm 更新。
 
 ## 使用流程
 
-把手头的文档丢进去，直接说要做 PPT，等待几分钟就能生成一份完整的 PPT：
+1. 告訴 Agent 主題、受眾、頁數、內容與主要結論，指定使用 `dashi-ppt`。
+2. 選擇主題，確認圖片／影片需求；預設中文文案使用台灣繁體中文。
+3. 產生 HTML 簡報，在瀏覽器改文字、換媒體、調版型與配色。
+4. 驗收內容後，匯出需要的格式。
 
-1. 描述需求 — 主题、受众、页数、想突出的结论
-2. 选风格 — Skill 会展示 12 套风格预览让你选择；同时确认是否需要图片 / 视频
-3. 自动组稿 — Skill 把需求整理成结构化的内容，并设计对应的 PPT 方案
-4. 随手编辑 — 改文字、换图片、调模块数量、换配色，改动自动保存
-5. 交付 — 可以选择让 Agent 换风格调细节；满意导出需要的格式
+範例：
 
-![图片占位符一键填图](https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/image-placeholder.gif)
-
-## 生成后编辑
-
-> 生成之后如何编辑，比生成本身更重要
-
-设计调节：每页都附带一个控制台，20 多个维度的编辑空间——内容、布局、模块数量、页面重点、预设配色、翻页动画；
-文字编辑:任意文本点击即可编辑；
-图片、视频槽：点击或拖拽即可替换，上传自动压缩。
-
-| 点击任意文字就地编辑 | 加图片 |
-|---|---|
-| ![点击文字就地编辑，装饰元素随字数自适应](https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/text-edit.gif) | ![向页面插入图片](https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/add-image.gif) |
-
-### 控制台改：布局、模块数量、图表、配色
-
-拖动控制台右侧的滑杆，就能自定义页面中模块的数量；页面的逻辑重点也可以通过滑杆调换，帮你把握演讲节奏。
-
-| 拖滑杆增减模块 | 换布局 |
-|---|---|
-| ![拖动滑杆调节目录、表格、多项式、图片数量](https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/slider-edit.gif) | ![一句话切换页面布局](https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/layout-switch.gif) |
-
-| 换图表 | 风格内配色切换 |
-|---|---|
-| ![一句话更换图表类型](https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/chart-switch.gif) | ![每套风格内支持局部配色调换](https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/palette-switch.gif) |
-
-### 翻页动画
-
-9种切换动画可以随意选择
-
-![翻页过渡动画效果](https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/transitions.gif)
-
-### 其他
-
-- 左侧缩略图目录支持拖拽重排页面，页面可跳过 / 删除 / 复制
-- 顶栏一键进入放映模式、切换明暗主题、重置全部改动
-
-图表版式：
-
-![多种图表版式展示](https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/layouts-tour.gif)
-
-分析模型与专业版式
-
-![内置分析模型版式](https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/analysis-models.png)
-
-高频使用的目录页、表格页、数字海报页、图文页：
-
-![常用版式](https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/common-layouts.png)
-
-## 导出
-
-![一键导出可编辑 PPT](https://github.com/chuspeeism/dashi-ppt-skill/releases/download/readme-assets-v1/export-pptx.gif)
-
-可以跨过 HTML 的中间态，直接跟 Agent 说"用这个 skill 生成 PPT 格式的文件"，从提示词一步到 PPTX。
-
-命令行导出：
-
-```bash
-npm --prefix <project目录> run export:pptx -- <PPT输出目录>/ppt 输出.pptx
-npm --prefix <project目录> run export:pdf  -- <PPT输出目录>/ppt
+```text
+使用 dashi-ppt，將這份內容製作為 10 頁繁體中文簡報。
+受眾是企業主管，保留原始數字與來源，不新增未提供的事實。
+先展示可選主題，完成後交付可編輯 HTML 與 PPTX。
 ```
 
-## FAQ
+## 功能
 
-**能导出可编辑的 PPTX 吗？**
-> 能。虽然 PPT 无法拥有 HTML 的全量能力，但我们尽最大可能保留了可编辑性。
+- **版型與分析工具**：封面、目錄、指標、趨勢、比較、流程、風險與結尾；含 SWOT、波特五力、PEST、商業模式圖等。
+- **圖表**：雷達圖、瀑布圖、矩形樹圖、漏斗圖、熱圖、桑基圖、甘特圖等。
+- **編輯器**：直接改字、拖曳替換媒體、調整控制項、切換配色與明暗模式、重排／跳過／刪除／複製頁面。
+- **匯出**：HTML 離線包、PDF、可編輯 PPTX；HTML 的動畫與部分視覺效果不保證等同 PowerPoint。
 
-**生成一套 PPT 大概消耗多少 token？**
-> 一套 10 页的 PPT 实测约 10 万 token（随文档长度和往返修改次数浮动）。按 Codex 5 小时额度窗口粗算，大约够生成 10 套
+適合產業研究、競品分析、趨勢報告、企業提案、品牌介紹與內部訓練。不以逐像素客製設計為目標。
 
-**可以自定义xxx？**
-> 当前自定义样式仅限于特定范围。这是有意为之：稳定的产出比自由的选色更重要。
+## 12 套內建視覺主題
 
-**需要联网吗？我的内容安全吗？**
+以下圖片由本 fork 的繁中版實際渲染並擷取，不再嵌入上游簡體示範 GIF。每張只代表抽測版型，並非全部版型均經人工視覺審查。
 
-> 内容层面零上传：你的文档和 PPT 内容不会发送到任何服务器，生成、编辑、导出都在本机完成，成品离线可开。会联网的只有两件事：首次生成时 npm 自动安装依赖；完成任务后的静默版本检查（只拉取最新版本号，不上传任何内容）。另外本地预览服务默认在同一局域网内可访问，仅供浏览，导出接口只对本机开放。
+| 主題 | 繁體中文實際畫面 |
+|---|---|
+| theme01｜輕擬態風 | ![輕擬態風繁體中文實際畫面](docs/assets/zh-TW/theme01.png) |
+| theme02｜炫光紫綠風 | ![炫光紫綠風繁體中文實際畫面](docs/assets/zh-TW/theme02.png) |
+| theme03｜深淺程式碼風 | ![深淺程式碼風繁體中文實際畫面](docs/assets/zh-TW/theme03.png) |
+| theme04｜玻璃糖果風 | ![玻璃糖果風繁體中文實際畫面](docs/assets/zh-TW/theme04.png) |
+| theme05｜色譜圖表風 | ![色譜圖表風繁體中文實際畫面](docs/assets/zh-TW/theme05.png) |
+| theme06｜深色圖譜風 | ![深色圖譜風繁體中文實際畫面](docs/assets/zh-TW/theme06.png) |
+| theme07｜冷白調研風 | ![冷白調研風繁體中文實際畫面](docs/assets/zh-TW/theme07.png) |
+| theme08｜黑金實驗風 | ![黑金實驗風繁體中文實際畫面](docs/assets/zh-TW/theme08.png) |
+| theme09｜深藍雜誌風 | ![深藍雜誌風繁體中文實際畫面](docs/assets/zh-TW/theme09.png) |
+| theme10｜金色指數風 | ![金色指數風繁體中文實際畫面](docs/assets/zh-TW/theme10.png) |
+| theme11｜高能增長風 | ![高能增長風繁體中文實際畫面](docs/assets/zh-TW/theme11.png) |
+| theme12｜聲波霓虹風 | ![聲波霓虹風繁體中文實際畫面](docs/assets/zh-TW/theme12.png) |
 
-**无法导出 PPTX？**
+## 匯出
 
-> 导出 PPTX / PDF 需要本机 Chrome / Chromium / Edge（可用 `CHROME_PATH` 环境变量指定）。
+```bash
+npm --prefix <project目錄> run export:pptx -- <含index.html的簡報目錄> <輸出.pptx>
+npm --prefix <project目錄> run export:pdf -- <含index.html的簡報目錄> <輸出.pdf>
+```
 
-## 开源协议 License
+`project目錄` 指 `skills/dashi-ppt/project`；路徑有空白時請加上引號。不要將不信任的 HTML、外部 URL 或素材交給本機匯出服務。預覽與匯出服務僅建議綁定本機，不應直接公開到網際網路。
 
-本项目采用 **GNU Affero General Public License v3.0（AGPL-3.0）** 开源——这是 OSI 认证开源协议中 copyleft 效力最强的一个。你可以自由使用、修改、分发本项目（包括商业用途）；但如果你分发修改版，或基于本项目及其修改版通过网络对外提供服务（如 SaaS），必须以 AGPL-3.0 向用户公开完整的对应源代码。
+## 語言與相容性
 
-**例外**：子包 `project/packages/html-deck-to-pptx`（导出引擎）为**专有组件**，仅授权作为本 skill 的组成部分使用，不得单独提取、复制或再分发（详见该目录下的 LICENSE；其 v0.2.7 及之前的历史版本曾以 MIT 发布，该授权仅对历史版本有效）。
+文件、預設中文內容與介面採台灣繁體中文；英文介面與語言切換保留。內部中文代碼仍使用 `zh`，HTML 標記為 `zh-TW`。套件名稱、CLI 參數、英文識別名稱、版型 key、schema 與授權不變。
 
-Copyright (c) 2026 [chuspeeism](https://github.com/chuspeeism)。完整协议文本见根目录 [LICENSE](LICENSE) 文件。如需 AGPL-3.0 之外的商业授权，请联系作者。
+原始簡體字典鍵、簡繁比對規則及測試輸入會保留，以免舊資料或英文翻譯失效；它們不是使用者可見的漏翻。英文 README 保留並標明上游歷史示範素材；歷史 Git 提交與第三方商標不重寫。
 
-## Star History
+## 驗證與維護
 
-<a href="https://www.star-history.com/?repos=chuspeeism%2Fdashi-ppt-skill&type=date&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=chuspeeism/dashi-ppt-skill&type=date&theme=dark&legend=top-left&sealed_token=MpgO76zZLzPPs8bi8jDFZyG1b8gYNbtA8RQhnghNJ0wtwmM9UwUwNiBiy0rtx1stNTntfSl1TJCqxLCMvnTKnj6He8CPK9MYawX-G8i4x4HabmaLVCC0gg" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=chuspeeism/dashi-ppt-skill&type=date&legend=top-left&sealed_token=MpgO76zZLzPPs8bi8jDFZyG1b8gYNbtA8RQhnghNJ0wtwmM9UwUwNiBiy0rtx1stNTntfSl1TJCqxLCMvnTKnj6He8CPK9MYawX-G8i4x4HabmaLVCC0gg" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=chuspeeism/dashi-ppt-skill&type=date&legend=top-left&sealed_token=MpgO76zZLzPPs8bi8jDFZyG1b8gYNbtA8RQhnghNJ0wtwmM9UwUwNiBiy0rtx1stNTntfSl1TJCqxLCMvnTKnj6He8CPK9MYawX-G8i4x4HabmaLVCC0gg" />
- </picture>
-</a>
+[繁中維護說明](docs/zh-TW-localization.md) 說明轉換範圍與回復方式。首次轉換的逐檔記錄見 [原始稽核報告](docs/zh-TW-localization-report.json)。瀏覽器、PowerShell 語法及 PPTX／PDF 匯出結果由 GitHub Actions 留存，沒有證據的檢查不宣稱通過。
+
+## 授權與致謝
+
+基於 [chuspeeism/dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill) 修改。Copyright (c) 2026 chuspeeism。主要專案採 [GNU AGPL-3.0](LICENSE)，並保留所有原作者與第三方著作權資訊。
+
+**重要例外**：內含匯出引擎 html-deck-to-pptx 是**專有元件**，不是 AGPL 開源部分；請閱讀 [匯出引擎 LICENSE](skills/dashi-ppt/project/packages/html-deck-to-pptx/LICENSE)。條文限制修改、拆出、複製、再散布與用於其他產品／服務。本 fork 將引擎子套件與其瀏覽器配套檔恢復為上游原檔並排除自動翻譯，只在外層介面與文件進行繁中化。舊版 v0.2.7 以前的 MIT 授權不能直接套用到目前版本。
+
+本次不變更授權原文；商業使用或散布前，請確認各元件適用條款及所需權利。

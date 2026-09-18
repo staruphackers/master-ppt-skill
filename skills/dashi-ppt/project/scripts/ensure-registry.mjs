@@ -1,8 +1,8 @@
-// 首装前的 npm registry 探测选源(安装版 skill 的 project/scripts/ 随包分发):
-// 官方源可达 → 移除项目级 registry 锁定,走 npm 默认(尊重外网用户与其全局镜像配置);
-// 官方源不可达且 npmmirror 可达 → 锁定 npmmirror(国内环境)。
-// 结果持久化进 project/.npmrc 并打标,只探测一次;缺省 .npmrc 已是 npmmirror,
-// 本脚本没跑到/没跑成时任何网络仍保底可装。约定:绝不抛错阻塞安装。
+// 首裝前的 npm registry 探測選源(安裝版 skill 的 project/scripts/ 隨包分發):
+// 官方源可達 → 移除專案級 registry 鎖定,走 npm 預設(尊重外網使用者與其全域性映象配置);
+// 官方源不可達且 npmmirror 可達 → 鎖定 npmmirror(國內環境)。
+// 結果持久化進 project/.npmrc 並打標,只探測一次;預設 .npmrc 已是 npmmirror,
+// 本指令碼沒跑到/沒跑成時任何網路仍保底可裝。約定:絕不拋錯阻塞安裝。
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -19,8 +19,8 @@ async function reachable(base, timeoutMs = 3000) {
     const timer = setTimeout(() => controller.abort(), timeoutMs);
     const res = await fetch(`${base}/-/ping`, { signal: controller.signal, redirect: 'follow' });
     clearTimeout(timer);
-    // 必须 2xx 才算可达:403/5xx(企业代理拦截页、镜像故障)下 npm install
-    // 实际会失败,不能据此选源。
+    // 必須 2xx 才算可達:403/5xx(企業代理攔截頁、映象故障)下 npm install
+    // 實際會失敗,不能據此選源。
     return res.ok;
   } catch {
     return false;
@@ -35,11 +35,11 @@ async function main() {
     .filter((line) => line.trim() && !line.trim().startsWith('registry=') && !line.includes(PROBED_MARK));
 
   if (await reachable(OFFICIAL)) {
-    // 官方可达:去掉项目级 registry 锁定(npm 走默认或用户全局配置)。
+    // 官方可達:去掉專案級 registry 鎖定(npm 走預設或使用者全域性配置)。
   } else if (await reachable(MIRROR)) {
     kept.push(`registry=${MIRROR}`);
   } else {
-    // 两个源都探不到:保持现状不打标(下次安装再探),失败信息交给 npm 呈现。
+    // 兩個源都探不到:保持現狀不打標(下次安裝再探),失敗資訊交給 npm 呈現。
     return;
   }
   kept.push(PROBED_MARK);

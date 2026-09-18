@@ -47,11 +47,11 @@
   /* ---- Fonts ----
      Latin & numerals: Arimo (libre Helvetica/Arial metric clone) so the
      reference's grotesque numerals reproduce identically on any machine.
-     CJK falls through to Noto Sans SC automatically (Arimo has no CJK glyphs). */
-  --pulse-sans: "Arimo", "Helvetica Neue", Helvetica, "Noto Sans SC", "PingFang SC",
-                "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
-  --pulse-cjk:  "Noto Sans SC", "PingFang SC", "Hiragino Sans GB",
-                "Microsoft YaHei", sans-serif;
+     CJK falls through to Noto Sans TC automatically (Arimo has no CJK glyphs). */
+  --pulse-sans: "Arimo", "Helvetica Neue", Helvetica, "Noto Sans TC", "PingFang TC",
+                "Hiragino Sans GB", "Microsoft JhengHei", Arial, sans-serif;
+  --pulse-cjk:  "Noto Sans TC", "PingFang TC", "Hiragino Sans GB",
+                "Microsoft JhengHei", sans-serif;
   --pulse-mono-font: ui-monospace, "SF Mono", "JetBrains Mono", Menlo,
                 Consolas, monospace;
 }

@@ -7,9 +7,9 @@ export const TOTAL_VARIANT_COUNT = 4;
 const TEMPLATE_KIND = 'template';
 const BESPOKE_KIND = 'bespoke';
 const PAGE_INTENT_ALIASES = new Map([
-  ...['cover', 'title', 'opening', 'opener', '封面', '首页', '开场'].map(value => [value, 'cover']),
-  ...['closing', 'close', 'ending', 'end', '封底', '结尾', '结束', '收尾'].map(value => [value, 'closing']),
-  ...['body', 'content', 'main', 'interior', '正文', '内容', '主体', '内页'].map(value => [value, 'body']),
+  ...['cover', 'title', 'opening', 'opener', '封面', '首頁', '開場'].map(value => [value, 'cover']),
+  ...['closing', 'close', 'ending', 'end', '封底', '結尾', '結束', '收尾'].map(value => [value, 'closing']),
+  ...['body', 'content', 'main', 'interior', '正文', '內容', '主體', '內頁'].map(value => [value, 'body']),
 ]);
 const UNSAFE_KEYS = new Set(['__proto__', 'prototype', 'constructor']);
 const FORBIDDEN_COMPOSITION_KEYS = new Set(['html', 'jsx', 'style', 'classname', 'controls']);
@@ -253,7 +253,7 @@ export function summarizePageChartData(value) {
   const points = pack.chartData || [];
   if (!points.length) return '';
   const ordered = [...points].sort((left, right) => left.value - right.value || left.label.localeCompare(right.label));
-  return `${points.length}点｜${formatPageContentValue(ordered[0])}–${formatPageContentValue(ordered.at(-1))}`;
+  return `${points.length}點｜${formatPageContentValue(ordered[0])}–${formatPageContentValue(ordered.at(-1))}`;
 }
 
 export function requiredPageContentFacts(value) {

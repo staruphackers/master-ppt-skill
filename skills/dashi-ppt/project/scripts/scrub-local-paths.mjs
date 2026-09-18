@@ -1,5 +1,5 @@
-// 本机路径脱敏:错误输出/日志给用户前抹掉绝对路径(单一实现;此前 5 个文件各持副本,
-// render CLI 的副本漏了 /tmp,在 Linux CI 上把临时目录原样泄漏进错误消息)。
+// 本機路徑脫敏:錯誤輸出/日誌給使用者前抹掉絕對路徑(單一實現;此前 5 個檔案各持副本,
+// render CLI 的副本漏了 /tmp,在 Linux CI 上把臨時目錄原樣洩漏進錯誤訊息)。
 export function scrubLocalPaths(value) {
   return String(value || '')
     .replace(/file:\/\/\/?[^\s"'`<>),;]*/gi, '<local-path>')
