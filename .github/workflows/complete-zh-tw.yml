@@ -1,7 +1,7 @@
 name: Complete Traditional Chinese Localization
 on:
   push:
-    branches: [localize/zh-tw]
+    branches: [localize/zh-tw-strings]
     paths: [tools/complete-zh-tw.cjs, tools/zh-tw-license-boundary.cjs, .github/workflows/complete-zh-tw.yml]
 permissions:
   contents: read
@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   complete:
-    if: github.repository == 'staruphackers/master-ppt-skill' && github.ref == 'refs/heads/localize/zh-tw'
+    if: github.repository == 'staruphackers/master-ppt-skill' && github.ref == 'refs/heads/localize/zh-tw-strings'
     runs-on: ubuntu-latest
     timeout-minutes: 25
     permissions:
@@ -148,7 +148,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          test "$GITHUB_REF" = 'refs/heads/localize/zh-tw'
+          test "$GITHUB_REF" = 'refs/heads/localize/zh-tw-strings'
           test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
           git add -u
           git add docs/assets/zh-TW docs/zh-TW-validation.json
@@ -157,5 +157,5 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git commit -m 'fix(i18n): preserve original proprietary engine and verify Traditional Chinese delivery'
           HEADER="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
-          git -c "http.https://github.com/.extraheader=$HEADER" push origin HEAD:refs/heads/localize/zh-tw
+          git -c "http.https://github.com/.extraheader=$HEADER" push origin HEAD:refs/heads/localize/zh-tw-strings-strings
           echo "Verified localization commit: $(git rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"
