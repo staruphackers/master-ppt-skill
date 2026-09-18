@@ -208,10 +208,8 @@ assert(new RegExp(rp).exec('影片42')[2] === '42', 'TC regex capture compatibil
 assert(regexAliases(rp) === rp, 'Regex alias idempotence');
 assert(text(text('默认界面：导出视频文件')) === text('默认界面：导出视频文件'), 'Text idempotence');
 for (const file of files) {
-  // zh-TW-license-boundary: proprietary engine and bundled browser adapter stay byte-identical to upstream.
-  if (file.startsWith('skills/dashi-ppt/project/packages/html-deck-to-pptx/') || file === 'skills/dashi-ppt/project/assets/vendor/editable-pptx-browser.js') continue;
-
   if (/^(tools\/|\.github\/workflows\/|docs\/zh-TW-localization)/.test(file)) continue;
+  // License/NOTICE text is intentionally not modified; all other supported tracked text files are localized.
   if (/(^|\/)(package-lock\.json|yarn\.lock|pnpm-lock\.yaml|LICENSE|NOTICE)$/.test(file)) continue;
   const ext = path.extname(file).toLowerCase();
   if (!['.md','.mdx','.json','.js','.mjs','.cjs','.jsx','.ts','.tsx','.html','.htm','.css','.svg','.yml','.yaml','.txt','.sh','.py','.toml','.template','.ps1','.ps1'].includes(ext)) {
