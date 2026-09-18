@@ -1,19 +1,13 @@
 name: Complete Traditional Chinese Localization
-
 on:
   push:
     branches: [localize/zh-tw]
-    paths:
-      - tools/complete-zh-tw.cjs
-      - .github/workflows/complete-zh-tw.yml
-
+    paths: [tools/complete-zh-tw.cjs, .github/workflows/complete-zh-tw.yml]
 permissions:
   contents: read
-
 concurrency:
   group: complete-zh-tw
   cancel-in-progress: false
-
 jobs:
   complete:
     if: github.repository == 'staruphackers/master-ppt-skill' && github.ref == 'refs/heads/localize/zh-tw'
@@ -23,13 +17,12 @@ jobs:
       contents: write
     env:
       PROJECT: ${{ github.workspace }}/skills/dashi-ppt/project
-      QA_OUTPUT: ${{ runner.temp }}/zh-tw-complete
-      ZH_TW_TOOLS: ${{ runner.temp }}/zh-tw-tools
+      QA_OUTPUT: /tmp/zh-tw-complete
+      ZH_TW_TOOLS: /tmp/zh-tw-tools
       DASHI_PPT_THEME_RUNTIME: prebuilt
       NODE_OPTIONS: --max-old-space-size=6144
     steps:
-      - name: Check out the exact reviewed branch revision
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           persist-credentials: false
       - name: Install isolated test tools without lifecycle scripts
@@ -49,7 +42,7 @@ jobs:
           node --check skills/dashi-ppt/scripts/check_latest_version.mjs
           node --check "$QA_OUTPUT/check.mjs"
           git diff --check
-      - name: Parse all Windows PowerShell scripts without executing them
+      - name: Parse Windows PowerShell scripts without executing them
         shell: pwsh
         run: |
           $ErrorActionPreference = 'Stop'
@@ -63,12 +56,12 @@ jobs:
           }
           if ($checked -lt 1) { throw 'No PowerShell scripts found.' }
           @{ scriptsParsed = $checked; status = 'passed'; runtimeExecution = $false } | ConvertTo-Json | Set-Content "$env:QA_OUTPUT/powershell.json"
-      - name: Exercise all themes and language controls, then export real files
+      - name: Exercise themes and language controls then export real files
         shell: bash
         run: |
           set -euo pipefail
           "$PROJECT/node_modules/.bin/tsx" "$QA_OUTPUT/check.mjs"
-      - name: Inspect editable PPTX XML and localization delivery boundaries
+      - name: Inspect editable PPTX XML and localization boundaries
         shell: bash
         run: |
           set -euo pipefail
@@ -106,20 +99,20 @@ jobs:
           PY
           git diff --quiet -- LICENSE skills/dashi-ppt/project/package.json skills/dashi-ppt/project/package-lock.json
           git diff --check
-      - name: Preserve test evidence, without credentials, source bundles or fonts
+      - name: Preserve evidence without credentials source bundles or fonts
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: zh-TW-completion-evidence
           path: |
-            ${{ runner.temp }}/zh-tw-complete/*.json
-            ${{ runner.temp }}/zh-tw-complete/*.png
-            ${{ runner.temp }}/zh-tw-complete/*.pptx
-            ${{ runner.temp }}/zh-tw-complete/*.pdf
-            ${{ runner.temp }}/zh-tw-complete/*.log
+            /tmp/zh-tw-complete/*.json
+            /tmp/zh-tw-complete/*.png
+            /tmp/zh-tw-complete/*.pptx
+            /tmp/zh-tw-complete/*.pdf
+            /tmp/zh-tw-complete/*.log
           retention-days: 14
           if-no-files-found: warn
-      - name: Commit only verified localization changes to the translation branch
+      - name: Commit only verified changes to the translation branch
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
