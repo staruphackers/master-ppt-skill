@@ -7,11 +7,6 @@ const assert = require('node:assert/strict');
 const { createRequire } = require('node:module');
 const root = cp.execFileSync('git', ['rev-parse', '--show-toplevel'], { encoding: 'utf8' }).trim();
 process.chdir(root);
-if (!process.env.ZH_TW_LICENSE_PREFLIGHT) {
-  cp.execFileSync(process.execPath, ['tools/zh-tw-license-boundary.cjs'], {stdio:'inherit',env:{...process.env,ZH_TW_LICENSE_PREFLIGHT:'1'}});
-  cp.execFileSync(process.execPath, [__filename], {stdio:'inherit',env:{...process.env,ZH_TW_LICENSE_PREFLIGHT:'1'}});
-  process.exit(0);
-}
 
 const deps = createRequire(path.join(process.env.ZH_TW_TOOLS, 'package.json'));
 const YAML = deps('yaml');

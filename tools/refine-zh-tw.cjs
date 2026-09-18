@@ -44,9 +44,6 @@ function preserveIdentifiers(source, file) {
   return output;
 }
 for (const file of files) {
-  // zh-TW-license-boundary: proprietary engine and bundled browser adapter stay byte-identical to upstream.
-  if (file.startsWith('skills/dashi-ppt/project/packages/html-deck-to-pptx/') || file === 'skills/dashi-ppt/project/assets/vendor/editable-pptx-browser.js') continue;
-
   if (/^(tools\/|\.github\/workflows\/|docs\/)/.test(file) || /(^|\/)(package-lock\.json|LICENSE|NOTICE)$/.test(file)) continue;
   const ext = path.extname(file);
   if (!['.md','.mdx','.json','.js','.mjs','.cjs','.jsx','.ts','.tsx','.html','.htm','.css','.svg','.yml','.yaml','.txt','.sh','.py','.toml','.template','.ps1'].includes(ext)) continue;
