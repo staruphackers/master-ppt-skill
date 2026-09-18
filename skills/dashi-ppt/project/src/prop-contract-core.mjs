@@ -1614,7 +1614,7 @@ function resolveControlValue(value, defaults) {
 
 export function serializeValue(value) {
   // 數值統一 12 位有效數字:Math.sin/cos 生成的 defaults 在 macOS/Linux libm 上
-  // 最後一位 ulp 不同,會讓生成物平臺不確定(CI committed-artifacts 校驗失敗)。
+  // 最後一位 ulp 不同,會讓生成物平台不確定(CI committed-artifacts 校驗失敗)。
   if (typeof value === 'number') return Number.isFinite(value) ? Number(value.toPrecision(12)) : value;
   if (value == null || ['string', 'boolean'].includes(typeof value)) return value;
   if (isSerializedReactElementLike(value)) return reactElementText(value);

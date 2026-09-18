@@ -4298,7 +4298,7 @@ export const pages = [
         {
           "year": "2018",
           "label": "引擎成型",
-          "note": "自主再平衡演演算法首次實盤驗證。"
+          "note": "自主再平衡演演演算法首次實盤驗證。"
         },
         {
           "year": "2020",
@@ -6595,7 +6595,7 @@ export const pages = [
       "overline": "現場 · ON LOCATION",
       "title": "把紀律，建在看得見的地方",
       "note": "從配置臺到風控屏，每一次再平衡都留痕、可回溯、可復盤。",
-      "insetCaption": "配置控制檯 · 實時",
+      "insetCaption": "配置控制台 · 實時",
       "idPrefix": "inset"
     }
   },
@@ -12261,7 +12261,7 @@ export const pages = [
         },
         {
           "name": "騰訊控股",
-          "role": "平臺 · 現金流"
+          "role": "平台 · 現金流"
         },
         {
           "name": "長江電力",

@@ -4914,7 +4914,7 @@ export const GENERATED_THEME_PAGES = [
       "title": "從模型，走向物理世界",
       "en": "Embodied AI",
       "cn": "AI 的下一個戰場：讓智慧擁有身體",
-      "lead": "當大模型在螢幕裡日趨成熟，資本開始押注「具身智慧」——人形機器人把演演算法裝進可以行動的軀體。",
+      "lead": "當大模型在螢幕裡日趨成熟，資本開始押注「具身智慧」——人形機器人把演演演算法裝進可以行動的軀體。",
       "highlightWord": "具身智慧",
       "stats": [
         {
@@ -5030,7 +5030,7 @@ export const GENERATED_THEME_PAGES = [
           "title": "明星兌現區",
           "en": "PROVEN STARS",
           "tone": "green",
-          "desc": "算力雲、資料平臺兼具融資熱度與收入確定性，“賣鏟子”邏輯，需求來自訓練與企業 AI 化。",
+          "desc": "算力雲、資料平台兼具融資熱度與收入確定性，“賣鏟子”邏輯，需求來自訓練與企業 AI 化。",
           "chips": [
             "CoreWeave",
             "Databricks",
@@ -7386,7 +7386,7 @@ export const GENERATED_THEME_PAGES = [
       ],
       "points": [
         {
-          "h": "X 平臺資料",
+          "h": "X 平台資料",
           "d": "背靠 X（原 Twitter），擁有海量實時社交資料"
         },
         {
@@ -10204,7 +10204,7 @@ export const GENERATED_THEME_PAGES = [
           "span": 3,
           "status": "active",
           "milestone": "預計掛牌",
-          "meta": "資料 + AI 平臺"
+          "meta": "資料 + AI 平台"
         },
         {
           "label": "xAI",
@@ -20164,7 +20164,7 @@ export const GENERATED_THEME_PAGES = [
         {
           "title": "模型即產品",
           "tag": "MODEL · 通用大模型",
-          "copy": "頭部模型公司以產品化速度構築生態繫結，單輪融資屢破紀錄，資本願意為“下一個平臺”提前下注。",
+          "copy": "頭部模型公司以產品化速度構築生態繫結，單輪融資屢破紀錄，資本願意為“下一個平台”提前下注。",
           "stat": {
             "value": "10",
             "unit": "億/筆"
@@ -20561,7 +20561,7 @@ export const GENERATED_THEME_PAGES = [
         "實時多模態",
         "算力雲",
         "資料標註",
-        "資料平臺",
+        "資料平台",
         "開源模型",
         "AI 搜尋"
       ],
@@ -21376,7 +21376,7 @@ export const GENERATED_THEME_PAGES = [
           ]
         },
         {
-          "label": "商用 API / 開放平臺",
+          "label": "商用 API / 開放平台",
           "cells": [
             "yes",
             "yes",
@@ -22231,7 +22231,7 @@ export const GENERATED_THEME_PAGES = [
           "x": 2.4,
           "y": 62,
           "r": 10,
-          "note": "資料平臺"
+          "note": "資料平台"
         },
         {
           "label": "xAI",
@@ -23669,7 +23669,7 @@ export const GENERATED_THEME_PAGES = [
         },
         {
           "lead": "基礎設施最確定",
-          "body": "算力、資料與平臺層吃下最確定的紅利，應用層的分化將更加劇烈。"
+          "body": "算力、資料與平台層吃下最確定的紅利，應用層的分化將更加劇烈。"
         },
         {
           "lead": "視窗正在收窄",
@@ -24759,7 +24759,7 @@ export const GENERATED_THEME_PAGES = [
         },
         {
           "company": "Databricks",
-          "sector": "資料平臺",
+          "sector": "資料平台",
           "round": "J 輪",
           "raise": "100",
           "valuation": "620",
@@ -27407,9 +27407,9 @@ export const GENERATED_THEME_PAGES = [
         {
           "label": "生態繫結",
           "en": "ECOSYSTEM",
-          "desc": "平臺與開發者生態形成網路效應，抬高遷移成本。",
+          "desc": "平台與開發者生態形成網路效應，抬高遷移成本。",
           "tags": [
-            "平臺繫結",
+            "平台繫結",
             "網路效應"
           ]
         },
@@ -28668,7 +28668,7 @@ export const GENERATED_THEME_PAGES = [
       "kicker": "BUMP · 名次變遷",
       "title": "四個季度 ",
       "titleEm": "賽道排位賽",
-      "lead": "按季度吸金額給五大賽道排名——算力底座在 Q3 一度登頂，資料平臺則一路下滑，資本的注意力在持續換位。",
+      "lead": "按季度吸金額給五大賽道排名——算力底座在 Q3 一度登頂，資料平台則一路下滑，資本的注意力在持續換位。",
       "periods": [
         "2024 · Q1",
         "2024 · Q2",
@@ -28695,7 +28695,7 @@ export const GENERATED_THEME_PAGES = [
           ]
         },
         {
-          "label": "資料平臺",
+          "label": "資料平台",
           "ranks": [
             2,
             4,
@@ -28911,7 +28911,7 @@ export const GENERATED_THEME_PAGES = [
         "xAI · 實時多模態",
         "CoreWeave · 算力雲",
         "Scale AI · 資料標註",
-        "Databricks · 資料平臺",
+        "Databricks · 資料平台",
         "Mistral · 開源模型",
         "Perplexity · AI 搜尋",
         "Cerebras · AI 晶片",
@@ -29972,7 +29972,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -29987,7 +29987,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -30154,7 +30154,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -30169,7 +30169,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -30417,7 +30417,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -30432,7 +30432,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -30635,7 +30635,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -30650,7 +30650,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -30878,7 +30878,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -30893,7 +30893,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -31108,7 +31108,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -31123,7 +31123,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -31454,7 +31454,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -31469,7 +31469,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -31694,7 +31694,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -31709,7 +31709,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -31928,7 +31928,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -31943,7 +31943,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -32202,7 +32202,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -32217,7 +32217,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -32449,7 +32449,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -32464,7 +32464,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -32708,7 +32708,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -32723,7 +32723,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -32839,7 +32839,7 @@ export const GENERATED_THEME_PAGES = [
         {
           "co": "Databricks",
           "amt": 5,
-          "sector": "AI 基礎設施 · 資料平臺",
+          "sector": "AI 基礎設施 · 資料平台",
           "layer": "下游"
         },
         {
@@ -32973,7 +32973,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -32988,7 +32988,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -33222,7 +33222,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -33237,7 +33237,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -33312,7 +33312,7 @@ export const GENERATED_THEME_PAGES = [
         {
           "name": "明星兌現區",
           "tag": "熱度高 · 兌現高",
-          "desc": "基礎設施、算力雲、資料平臺兼具融資熱度與收入確定性，典型的「賣鏟子」邏輯。",
+          "desc": "基礎設施、算力雲、資料平台兼具融資熱度與收入確定性，典型的「賣鏟子」邏輯。",
           "chips": [
             "CoreWeave",
             "Databricks",
@@ -33458,7 +33458,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -33473,7 +33473,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -33732,7 +33732,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -33747,7 +33747,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -34047,7 +34047,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -34062,7 +34062,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -34131,7 +34131,7 @@ export const GENERATED_THEME_PAGES = [
         "t013Placeholder": "應用 / 產品介面配圖 / DROP IMAGE",
         "t014Placeholder": "應用 / 產品介面配圖 / DROP IMAGE",
         "t015Placeholder": "純文字版式 · 無配圖",
-        "t016": "↗ 企業搜尋 · 工作流 · 資料平臺介面"
+        "t016": "↗ 企業搜尋 · 工作流 · 資料平台介面"
       },
       "chips": [
         "落地路徑清晰 · 已驗證 PMF",
@@ -34264,7 +34264,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -34279,7 +34279,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -34509,7 +34509,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -34524,7 +34524,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -34586,7 +34586,7 @@ export const GENERATED_THEME_PAGES = [
         "t005": "「第三次創業」",
         "t006": "2023 年由埃隆·馬斯克創立，2024 年 11 月完成 50 億美元融資、估值達 500 億美元。 體量雖不及 OpenAI / Anthropic，但增速驚人——從成立到躋身頭部梯隊僅用 18 個月。",
         "t007": "↳ 差異化優勢",
-        "t008": "背靠 X（原 Twitter）平臺的海量實時社交資料，並與特斯拉自動駕駛團隊協同； Grok 模型主打「幽默 · 實時 · 無審查」，差異化定位明顯。",
+        "t008": "背靠 X（原 Twitter）平台的海量實時社交資料，並與特斯拉自動駕駛團隊協同； Grok 模型主打「幽默 · 實時 · 無審查」，差異化定位明顯。",
         "t009Placeholder": "案例配圖 / DROP IMAGE",
         "t010Placeholder": "案例配圖 / DROP IMAGE",
         "t011Placeholder": "純文字案例 · 無配圖",
@@ -34764,7 +34764,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -34779,7 +34779,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -35000,7 +35000,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -35015,7 +35015,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -35249,7 +35249,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -35264,7 +35264,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -35476,7 +35476,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -35491,7 +35491,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -35732,7 +35732,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -35747,7 +35747,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -35995,7 +35995,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -36010,7 +36010,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -36216,7 +36216,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -36231,7 +36231,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -36503,7 +36503,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -36518,7 +36518,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -36734,7 +36734,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -36749,7 +36749,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -36974,7 +36974,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -36989,7 +36989,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -37197,7 +37197,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -37212,7 +37212,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -37447,7 +37447,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -37462,7 +37462,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -37649,7 +37649,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -37664,7 +37664,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -37900,7 +37900,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -37915,7 +37915,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -38129,7 +38129,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -38144,7 +38144,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -38365,7 +38365,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -38380,7 +38380,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -38614,7 +38614,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -38629,7 +38629,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -38843,7 +38843,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -38858,7 +38858,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -39115,7 +39115,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -39130,7 +39130,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -39327,7 +39327,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -39342,7 +39342,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -39542,7 +39542,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -39557,7 +39557,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -39797,7 +39797,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -39812,7 +39812,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -40099,7 +40099,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -40114,7 +40114,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -40403,7 +40403,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -40418,7 +40418,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -40688,7 +40688,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -40703,7 +40703,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -40937,7 +40937,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -40952,7 +40952,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -41207,7 +41207,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -41222,7 +41222,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -41453,7 +41453,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -41468,7 +41468,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -41544,7 +41544,7 @@ export const GENERATED_THEME_PAGES = [
           "en": "KEY ACTIVITIES",
           "g": 0,
           "items": [
-            "平臺研發",
+            "平台研發",
             "運營履約"
           ]
         },
@@ -41757,7 +41757,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -41772,7 +41772,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -42012,7 +42012,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -42027,7 +42027,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -42263,7 +42263,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -42278,7 +42278,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -42569,7 +42569,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -42584,7 +42584,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -42818,7 +42818,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -42833,7 +42833,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -42939,7 +42939,7 @@ export const GENERATED_THEME_PAGES = [
           "en": "TECHNOLOGICAL",
           "accent": "#b04a2f",
           "items": [
-            "演演算法能力突破",
+            "演演演算法能力突破",
             "算力成本曲線",
             "開源生態演進",
             "專利與標準之爭"
@@ -43120,7 +43120,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -43135,7 +43135,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -43387,7 +43387,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -43402,7 +43402,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -43638,7 +43638,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -43653,7 +43653,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -43877,7 +43877,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -43892,7 +43892,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -44141,7 +44141,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -44156,7 +44156,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -44447,7 +44447,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -44462,7 +44462,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -44535,7 +44535,7 @@ export const GENERATED_THEME_PAGES = [
         },
         {
           "name": "Databricks",
-          "note": "資料平臺",
+          "note": "資料平台",
           "gx": 0.78,
           "gy": 0.83,
           "w": 0.82
@@ -44722,7 +44722,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -44737,7 +44737,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -44969,7 +44969,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -44984,7 +44984,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -45211,7 +45211,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -45226,7 +45226,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -45462,7 +45462,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -45477,7 +45477,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -45723,7 +45723,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -45738,7 +45738,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -45953,7 +45953,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -45968,7 +45968,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -46235,7 +46235,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -46250,7 +46250,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -46329,7 +46329,7 @@ export const GENERATED_THEME_PAGES = [
         },
         {
           "name": "Databricks",
-          "seg": "下游 · 資料平臺",
+          "seg": "下游 · 資料平台",
           "heat": 5,
           "deliver": 5,
           "moat": 4,
@@ -46511,7 +46511,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -46526,7 +46526,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -46765,7 +46765,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -46780,7 +46780,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -46987,7 +46987,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -47002,7 +47002,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -47226,7 +47226,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -47241,7 +47241,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -47478,7 +47478,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -47493,7 +47493,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -47744,7 +47744,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -47759,7 +47759,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -47962,7 +47962,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -47977,7 +47977,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -48213,7 +48213,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -48228,7 +48228,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -48313,7 +48313,7 @@ export const GENERATED_THEME_PAGES = [
           "type": "資料 × 協同",
           "depth": 3,
           "points": [
-            "背靠 X 平臺海量實時社交資料",
+            "背靠 X 平台海量實時社交資料",
             "與特斯拉自動駕駛團隊協同多模態感知",
             "Grok 主打「幽默 · 實時 · 無審查」差異化"
           ]
@@ -48464,7 +48464,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -48479,7 +48479,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -48703,7 +48703,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -48718,7 +48718,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -48927,7 +48927,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -48942,7 +48942,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -49122,7 +49122,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/04.png",
-            "label": "畫素 幽靈",
+            "label": "像素 幽靈",
             "image": "assets/3d/04.png"
           },
           {
@@ -49137,7 +49137,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "value": "assets/3d/07.png",
-            "label": "畫素顯示器",
+            "label": "像素顯示器",
             "image": "assets/3d/07.png"
           },
           {
@@ -50699,7 +50699,7 @@ export const GENERATED_THEME_PAGES = [
           "title": "AI 基礎設施",
           "amount": "158 億",
           "share": "16.3%",
-          "note": "「賣鏟子」邏輯，算力雲與資料平臺稀缺。",
+          "note": "「賣鏟子」邏輯，算力雲與資料平台稀缺。",
           "tags": [
             "確定性強",
             "賣鏟子"
@@ -59473,7 +59473,7 @@ export const GENERATED_THEME_PAGES = [
       "taglineLead": "馬斯克的",
       "taglineKeyword": "第三次創業",
       "taglineTail": "",
-      "body": "背靠 X 平臺海量實時社交資料，協同特斯拉自動駕駛團隊——Grok 主打「幽默、實時、無審查」，從成立到躋身頭部梯隊僅用 18 個月。",
+      "body": "背靠 X 平台海量實時社交資料，協同特斯拉自動駕駛團隊——Grok 主打「幽默、實時、無審查」，從成立到躋身頭部梯隊僅用 18 個月。",
       "mediaPlaceholder": "拖入整屏背景圖",
       "stats": [
         {
@@ -61117,7 +61117,7 @@ export const GENERATED_THEME_PAGES = [
           "等高"
         ],
         "default": "ascend",
-        "desc": "逐級抬高 / 等高平臺",
+        "desc": "逐級抬高 / 等高平台",
         "publicKey": "layoutVariant"
       },
       {
@@ -62735,7 +62735,7 @@ export const GENERATED_THEME_PAGES = [
       "copy": {
         "top": "PULSE® BRAND LAB · FULL-FUNNEL MARKETING",
         "number": "NO. 02",
-        "caption": "2026 年度全平臺品牌整合行銷方案",
+        "caption": "2026 年度全平台品牌整合行銷方案",
         "titleTop": "創意破圈",
         "titleBottom": "流量賦能",
         "banner": "內容驅動傳播 · 創意引爆市場",
@@ -64524,7 +64524,7 @@ export const GENERATED_THEME_PAGES = [
               ],
               [
                 "資料",
-                "X 平臺"
+                "X 平台"
               ],
               [
                 "方向",
@@ -65003,7 +65003,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "name": "Databricks",
-            "cat": "資料平臺",
+            "cat": "資料平台",
             "v": 5
           },
           {
@@ -65157,7 +65157,7 @@ export const GENERATED_THEME_PAGES = [
             "note": "高熱度 · 高兌現",
             "items": [
               "基礎設施",
-              "資料平臺"
+              "資料平台"
             ],
             "dots": [
               [
@@ -65686,7 +65686,7 @@ export const GENERATED_THEME_PAGES = [
                 "note": "長週期硬科技，看供應鏈與量產能力"
               },
               {
-                "name": "資料平臺",
+                "name": "資料平台",
                 "note": "存量客戶優勢，商業化路徑更短"
               }
             ]
@@ -71170,7 +71170,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "en": "SIMULATION",
-            "zh": "模擬平臺",
+            "zh": "模擬平台",
             "num": "9",
             "unit": "億美元",
             "c": "#3c9a52"
@@ -72514,7 +72514,7 @@ export const GENERATED_THEME_PAGES = [
         "number": "118",
         "unit": "%",
         "caption": "淨收入留存 · NRR",
-        "message": "低程式碼 AI 平臺幫助企業把模型能力嵌入內部流程。",
+        "message": "低程式碼 AI 平台幫助企業把模型能力嵌入內部流程。",
         "aux": [
           [
             "融資額",
@@ -72532,9 +72532,9 @@ export const GENERATED_THEME_PAGES = [
             "家"
           ]
         ],
-        "galleryCap": "平臺圖示",
+        "galleryCap": "平台圖示",
         "galleryUnit": "DROP IMAGES",
-        "conclusion": "能被業務團隊使用的平臺更容易擴散。"
+        "conclusion": "能被業務團隊使用的平台更容易擴散。"
       }
     }
   },
@@ -72892,7 +72892,7 @@ export const GENERATED_THEME_PAGES = [
         "stages": [
           {
             "en": "EVALUATION",
-            "zh": "評測平臺",
+            "zh": "評測平台",
             "v": 8,
             "c": "#2c44a0"
           },
@@ -76332,7 +76332,7 @@ export const GENERATED_THEME_PAGES = [
         "hubNote": "以實時資料與馬斯克生態為差異化中樞",
         "nodes": [
           {
-            "zh": "X 平臺",
+            "zh": "X 平台",
             "en": "DATA GATEWAY",
             "role": "資料入口",
             "c": "#d8402e"
@@ -77135,7 +77135,7 @@ export const GENERATED_THEME_PAGES = [
         "max": 4,
         "step": 1,
         "publicKey": "tierCount",
-        "desc": "平臺架構的層級（tier）數量。"
+        "desc": "平台架構的層級（tier）數量。"
       },
       {
         "key": "focusEnabled",
@@ -77282,12 +77282,12 @@ export const GENERATED_THEME_PAGES = [
       "showSheetLabel": true,
       "copy": {
         "eyebrow": "DATABRICKS CASE",
-        "title": "資料平臺延展",
+        "title": "資料平台延展",
         "sheet": "CASE · 68 / 80",
         "en": "DATABRICKS",
-        "zh": "資料平臺 → AI 平臺",
+        "zh": "資料平台 → AI 平台",
         "sub": "Databricks 案例",
-        "lead": "已有資料平臺更容易把 AI 能力賣給現有企業客戶 —— 存量客戶基礎是 AI 商業化捷徑。",
+        "lead": "已有資料平台更容易把 AI 能力賣給現有企業客戶 —— 存量客戶基礎是 AI 商業化捷徑。",
         "ledger": [
           [
             "最大單筆融資",
@@ -77306,11 +77306,11 @@ export const GENERATED_THEME_PAGES = [
           ],
           [
             "賽道",
-            "資料平臺",
+            "資料平台",
             ""
           ]
         ],
-        "stackCap": "平臺架構",
+        "stackCap": "平台架構",
         "stackUnit": "DATA → AI EXTENSION",
         "tiers": [
           {
@@ -77323,7 +77323,7 @@ export const GENERATED_THEME_PAGES = [
             ]
           },
           {
-            "zh": "ML / AI 平臺",
+            "zh": "ML / AI 平台",
             "en": "ML PLATFORM",
             "items": [
               "模型訓練",
@@ -79379,7 +79379,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "en": "DATA",
-            "k": "資料平臺",
+            "k": "資料平台",
             "tag": "資料治理 · 長期鎖定",
             "color": "#2c44a0"
           },
@@ -82607,14 +82607,14 @@ export const GENERATED_THEME_PAGES = [
       "kicker": "06 · BRAND MARKETING",
       "docId": "FY2026 / FULL-FUNNEL",
       "watermark": "2026",
-      "formal": "2026 年度全平臺品牌整合行銷方案 · 覆蓋內容、投放、私域與活動的全鏈路打法。",
+      "formal": "2026 年度全平台品牌整合行銷方案 · 覆蓋內容、投放、私域與活動的全鏈路打法。",
       "titleLine1": "內容驅動傳播",
       "titleLine2Pre": "創意",
       "titleLine2Em": "引爆",
       "titleLine2Suf": "市場",
       "tags": [
         {
-          "t": "全平臺整合"
+          "t": "全平台整合"
         },
         {
           "t": "內容驅動"
@@ -85967,7 +85967,7 @@ export const GENERATED_THEME_PAGES = [
         },
         {
           "name": "Databricks",
-          "tag": "資料平臺 / PLATFORM",
+          "tag": "資料平台 / PLATFORM",
           "value": 5
         },
         {
@@ -86262,7 +86262,7 @@ export const GENERATED_THEME_PAGES = [
         {
           "name": "xAI",
           "en": "REALTIME DATA",
-          "tag": "實時資料 / 多模態 / X 平臺",
+          "tag": "實時資料 / 多模態 / X 平台",
           "metrics": [
             {
               "k": "單筆融資",
@@ -86270,7 +86270,7 @@ export const GENERATED_THEME_PAGES = [
             },
             {
               "k": "資料入口",
-              "v": "X 平臺"
+              "v": "X 平台"
             },
             {
               "k": "協同",
@@ -86406,7 +86406,7 @@ export const GENERATED_THEME_PAGES = [
           "en": "STAR DELIVERY",
           "examples": [
             "基礎設施",
-            "資料平臺"
+            "資料平台"
           ]
         },
         {
@@ -86565,7 +86565,7 @@ export const GENERATED_THEME_PAGES = [
           "name": "大廠擠壓",
           "en": "BIG TECH",
           "level": 0.7,
-          "desc": "開源與平臺生態壓縮初創公司的獨立空間。"
+          "desc": "開源與平台生態壓縮初創公司的獨立空間。"
         },
         {
           "name": "算力成本",
@@ -86741,7 +86741,7 @@ export const GENERATED_THEME_PAGES = [
             {
               "name": "AI 包裝專案",
               "en": "AI WRAPPERS",
-              "note": "無壁壘，易被平臺與開源能力替代。"
+              "note": "無壁壘，易被平台與開源能力替代。"
             },
             {
               "name": "低壁壘消費應用",
@@ -87820,8 +87820,8 @@ export const GENERATED_THEME_PAGES = [
       "eyebrowId": "46",
       "eyebrowLabel": "LOW CODE AI",
       "title": "企業流程嵌入",
-      "subhead": "低程式碼 AI 平臺 / LOW CODE",
-      "closing": "能被業務團隊使用的平臺更容易擴散。",
+      "subhead": "低程式碼 AI 平台 / LOW CODE",
+      "closing": "能被業務團隊使用的平台更容易擴散。",
       "segTag": "低程式碼 AI 賽道 / LOW CODE",
       "hero": {
         "value": "19",
@@ -88196,7 +88196,7 @@ export const GENERATED_THEME_PAGES = [
           "v": "4.2 億"
         },
         {
-          "k": "評測平臺 / EVAL",
+          "k": "評測平台 / EVAL",
           "v": "8 億"
         }
       ],
@@ -90952,7 +90952,7 @@ export const GENERATED_THEME_PAGES = [
         },
         {
           "k": "資料入口 / DATA",
-          "v": "X 平臺"
+          "v": "X 平台"
         },
         {
           "k": "協同 / SYNERGY",
@@ -90961,7 +90961,7 @@ export const GENERATED_THEME_PAGES = [
       ],
       "tags": [
         "實時資料 / REAL-TIME",
-        "X 平臺 / PLATFORM",
+        "X 平台 / PLATFORM",
         "多模態 / MULTIMODAL",
         "實時搜尋 / SEARCH"
       ],
@@ -91531,7 +91531,7 @@ export const GENERATED_THEME_PAGES = [
     "pageNumber": 60,
     "layout": "THEME06-060",
     "slot": "databricks",
-    "label": "56 · 資料平臺延展 / DATABRICKS",
+    "label": "56 · 資料平台延展 / DATABRICKS",
     "bgClass": "",
     "controls": [
       {
@@ -91637,7 +91637,7 @@ export const GENERATED_THEME_PAGES = [
       "images": [],
       "eyebrowId": "68",
       "eyebrowLabel": "DATABRICKS CASE",
-      "title": "資料平臺延展",
+      "title": "資料平台延展",
       "subhead": "Databricks 案例 / DATA PLATFORM",
       "closing": "存量客戶基礎是 AI 商業化捷徑。",
       "company": "Databricks",
@@ -91645,7 +91645,7 @@ export const GENERATED_THEME_PAGES = [
       "caseTotal": 9,
       "caseTag": "CASE · DATABRICKS",
       "sigLabel": "標誌數字 / SIGNATURE",
-      "positioning": "已有資料平臺更容易把 AI 能力賣給現有企業客戶——Databricks 是資料平臺向 AI 平臺延展的典型公司。",
+      "positioning": "已有資料平台更容易把 AI 能力賣給現有企業客戶——Databricks 是資料平台向 AI 平台延展的典型公司。",
       "hero": {
         "value": "5.0",
         "unit": "億$",
@@ -91662,18 +91662,18 @@ export const GENERATED_THEME_PAGES = [
         },
         {
           "k": "賽道 / SEGMENT",
-          "v": "資料平臺"
+          "v": "資料平台"
         }
       ],
       "tags": [
-        "資料平臺 / DATA",
-        "AI 平臺 / AI PLATFORM",
+        "資料平台 / DATA",
+        "AI 平台 / AI PLATFORM",
         "存量客戶 / INSTALLED",
         "高留存 / NRR",
         "湖倉架構 / LAKEHOUSE",
         "企業 AI / ENTERPRISE AI"
       ],
-      "mediaPlaceholder": "Databricks 平臺架構主視覺 / DROP IMAGE",
+      "mediaPlaceholder": "Databricks 平台架構主視覺 / DROP IMAGE",
       "mediaSlotCount": 0,
       "metricCount": 3,
       "tagCount": 4,
@@ -92982,7 +92982,7 @@ export const GENERATED_THEME_PAGES = [
           "en": "PRICE PRESSURE",
           "value": "61",
           "unit": "%",
-          "note": "同類能力被平臺整合後，獨立產品定價承壓"
+          "note": "同類能力被平台整合後，獨立產品定價承壓"
         }
       ],
       "maxValue": 100,
@@ -93160,7 +93160,7 @@ export const GENERATED_THEME_PAGES = [
           "tag": "算力供給"
         },
         {
-          "name": "資料平臺",
+          "name": "資料平台",
           "en": "DATA PLATFORM",
           "tag": "企業剛需"
         },
@@ -93642,7 +93642,7 @@ export const GENERATED_THEME_PAGES = [
           "when": "2026",
           "name": "集中上市",
           "en": "IPO WAVE",
-          "note": "模型與資料平臺公司密集進入公開市場。"
+          "note": "模型與資料平台公司密集進入公開市場。"
         },
         {
           "when": "2027",
@@ -93663,7 +93663,7 @@ export const GENERATED_THEME_PAGES = [
         },
         {
           "name": "Databricks",
-          "tag": "資料平臺"
+          "tag": "資料平台"
         },
         {
           "name": "CoreWeave",
@@ -95495,7 +95495,7 @@ export const GENERATED_THEME_PAGES = [
         },
         {
           "name": "Databricks",
-          "tag": "資料平臺"
+          "tag": "資料平台"
         }
       ],
       "metricCaption": "觀察指標 / WATCH METRICS",
@@ -97153,7 +97153,7 @@ export const GENERATED_THEME_PAGES = [
           "pos": "高熱度 · 高兌現",
           "dirs": [
             "基礎設施",
-            "資料平臺"
+            "資料平台"
           ],
           "tone": "accent",
           "col": 2,
@@ -97497,7 +97497,7 @@ export const GENERATED_THEME_PAGES = [
             },
             {
               "name": "基礎設施",
-              "note": "GPU 雲與資料平臺，剛性預算"
+              "note": "GPU 雲與資料平台，剛性預算"
             },
             {
               "name": "具身智慧",
@@ -101730,7 +101730,7 @@ export const GENERATED_THEME_PAGES = [
           "note": "感知到控制一體化"
         },
         {
-          "label": "模擬平臺",
+          "label": "模擬平台",
           "value": 9,
           "note": "資料閉環與虛擬測試"
         },
@@ -102818,12 +102818,12 @@ export const GENERATED_THEME_PAGES = [
     ],
     "defaultProps": {
       "eyebrow": "Low-Code AI",
-      "segment": "低程式碼 AI 平臺",
+      "segment": "低程式碼 AI 平台",
       "title": "企業流程嵌入",
-      "titleTail": "低程式碼 AI 平臺",
-      "lead": "低程式碼 AI 平臺幫助企業把模型能力嵌入內部流程；關鍵不是模型能力，而是交付速度和治理能力。",
+      "titleTail": "低程式碼 AI 平台",
+      "lead": "低程式碼 AI 平台幫助企業把模型能力嵌入內部流程；關鍵不是模型能力，而是交付速度和治理能力。",
       "statLine": "融資額 19 億美元 · 6 筆事件",
-      "closing": "能被業務團隊使用的平臺更容易擴散。",
+      "closing": "能被業務團隊使用的平台更容易擴散。",
       "badge": "低程式碼",
       "flowTitle": "流程編排 · Orchestration",
       "metricTitle": "客戶與留存 · Retention",
@@ -103218,7 +103218,7 @@ export const GENERATED_THEME_PAGES = [
       "shieldLabel": "可信 AI 防線",
       "segments": [
         {
-          "name": "評測平臺",
+          "name": "評測平台",
           "value": 8,
           "note": "能力與風險基準"
         },
@@ -103633,7 +103633,7 @@ export const GENERATED_THEME_PAGES = [
           "avg": 0.53,
           "themes": [
             "雲資源",
-            "平臺卡位"
+            "平台卡位"
           ],
           "note": "生態繫結"
         }
@@ -105011,7 +105011,7 @@ export const GENERATED_THEME_PAGES = [
             "開發者工具",
             "企業 AI",
             "雲服務",
-            "資料平臺"
+            "資料平台"
           ],
           "metrics": [
             {
@@ -106843,7 +106843,7 @@ export const GENERATED_THEME_PAGES = [
           "certainty": 92
         },
         {
-          "name": "資料平臺",
+          "name": "資料平台",
           "en": "Data Platform",
           "note": "訓練與評測的資料底座，複用性強。",
           "certainty": 84
@@ -107216,7 +107216,7 @@ export const GENERATED_THEME_PAGES = [
         },
         {
           "name": "Databricks",
-          "sector": "資料平臺",
+          "sector": "資料平台",
           "note": "老牌營收驗證 AI 溢價"
         },
         {
@@ -107674,7 +107674,7 @@ export const GENERATED_THEME_PAGES = [
         {
           "label": "基礎設施資本確定性",
           "value": 124,
-          "note": "GPU 雲與資料平臺"
+          "note": "GPU 雲與資料平台"
         },
         {
           "label": "平均單筆規模",
@@ -110039,7 +110039,7 @@ export const GENERATED_THEME_PAGES = [
           "badge": "看好象限",
           "items": [
             "基礎設施",
-            "資料平臺"
+            "資料平台"
           ]
         },
         {
@@ -110179,7 +110179,7 @@ export const GENERATED_THEME_PAGES = [
           },
           {
             "name": "基礎設施",
-            "note": "算力、資料平臺、推理最佳化"
+            "note": "算力、資料平台、推理最佳化"
           },
           {
             "name": "具身智慧",
@@ -115655,8 +115655,8 @@ export const GENERATED_THEME_PAGES = [
       "showDecor": true,
       "eyebrow": "Low Code AI",
       "headline": "企業流程嵌入",
-      "subheadline": "低程式碼 AI 平臺",
-      "summary": "低程式碼平臺把模型能力<b>嵌入企業內部流程</b>。",
+      "subheadline": "低程式碼 AI 平台",
+      "summary": "低程式碼平台把模型能力<b>嵌入企業內部流程</b>。",
       "badge": "Low Code · 流程編排",
       "hero": {
         "label": "賽道融資額",
@@ -115716,7 +115716,7 @@ export const GENERATED_THEME_PAGES = [
           "ratio": 1
         }
       ],
-      "closingLine": "能被業務團隊使用的平臺更容易擴散。"
+      "closingLine": "能被業務團隊使用的平台更容易擴散。"
     }
   },
   {
@@ -116137,7 +116137,7 @@ export const GENERATED_THEME_PAGES = [
       "valueUnit": "億",
       "rows": [
         {
-          "k": "評測平臺",
+          "k": "評測平台",
           "en": "Evaluation",
           "v": 8,
           "rate": 3
@@ -117754,7 +117754,7 @@ export const GENERATED_THEME_PAGES = [
           "note": "內部流程嵌入"
         },
         {
-          "label": "資料平臺",
+          "label": "資料平台",
           "note": "RAG · 知識管理"
         },
         {
@@ -118533,7 +118533,7 @@ export const GENERATED_THEME_PAGES = [
       "hubSub": "Ecosystem hub · 生態中樞",
       "nodes": [
         {
-          "label": "X 平臺",
+          "label": "X 平台",
           "note": "實時資料入口"
         },
         {
@@ -118622,7 +118622,7 @@ export const GENERATED_THEME_PAGES = [
         },
         {
           "k": "資料入口",
-          "v": "X 平臺"
+          "v": "X 平台"
         }
       ],
       "closingLine": "獨特的資料入口，可以成為模型的差異化。",
@@ -119249,7 +119249,7 @@ export const GENERATED_THEME_PAGES = [
         "max": 5,
         "step": 1,
         "label": "層級數量",
-        "desc": "平臺層帶數量(2–5)",
+        "desc": "平台層帶數量(2–5)",
         "publicKey": "layerCount"
       },
       {
@@ -119287,7 +119287,7 @@ export const GENERATED_THEME_PAGES = [
         "type": "boolean",
         "default": true,
         "label": "重點強調",
-        "desc": "是否突出某一個平臺層帶",
+        "desc": "是否突出某一個平台層帶",
         "publicKey": "focusEnabled"
       },
       {
@@ -119323,10 +119323,10 @@ export const GENERATED_THEME_PAGES = [
       "showDecor": true,
       "eyebrow": "Databricks Case",
       "kicker": "案例卡",
-      "headline": "資料平臺延展",
+      "headline": "資料平台延展",
       "company": "Databricks",
-      "tag": "資料平臺",
-      "caption": "Databricks 是資料平臺向 AI 平臺延展的典型——<b>存量客戶基礎</b>是 AI 商業化的捷徑。",
+      "tag": "資料平台",
+      "caption": "Databricks 是資料平台向 AI 平台延展的典型——<b>存量客戶基礎</b>是 AI 商業化的捷徑。",
       "bigLabel": "淨收入留存 NRR",
       "bigNumber": "132",
       "bigUnit": "%",
@@ -119343,10 +119343,10 @@ export const GENERATED_THEME_PAGES = [
         },
         {
           "k": "賽道",
-          "v": "資料平臺"
+          "v": "資料平台"
         }
       ],
-      "layersTitle": "從資料平臺到 AI 平臺",
+      "layersTitle": "從資料平台到 AI 平台",
       "layers": [
         {
           "label": "資料湖倉",
@@ -119363,7 +119363,7 @@ export const GENERATED_THEME_PAGES = [
           "unit": "%"
         },
         {
-          "label": "機器學習平臺",
+          "label": "機器學習平台",
           "en": "ML Platform",
           "meter": 68,
           "value": "68",
@@ -120542,7 +120542,7 @@ export const GENERATED_THEME_PAGES = [
           "k": "渠道控制力",
           "v": "弱",
           "color": "var(--acl-pink)",
-          "text": "若獲客依賴平臺分發，價格戰會更快傳導到收入端。"
+          "text": "若獲客依賴平台分發，價格戰會更快傳導到收入端。"
         }
       ],
       "actions": [
@@ -120716,7 +120716,7 @@ export const GENERATED_THEME_PAGES = [
           "note": "訓練與推理雙重需求，資源鎖定即護城河。"
         },
         {
-          "title": "資料平臺",
+          "title": "資料平台",
           "en": "Data Platform",
           "note": "最接近企業剛性預算，存量客戶可複用。"
         },
@@ -121150,7 +121150,7 @@ export const GENERATED_THEME_PAGES = [
         },
         {
           "name": "Databricks",
-          "role": "資料平臺",
+          "role": "資料平台",
           "note": "存量客戶複用，毛利結構相對更穩。",
           "dir": "up",
           "tag": "毛利更穩"
@@ -121455,7 +121455,7 @@ export const GENERATED_THEME_PAGES = [
         {
           "name": "基礎設施兌現",
           "tag": "Infrastructure",
-          "desc": "算力、資料與平臺從燒錢轉向計費交付。",
+          "desc": "算力、資料與平台從燒錢轉向計費交付。",
           "value": "1240",
           "unit": "億投入"
         },
@@ -125146,7 +125146,7 @@ export const GENERATED_THEME_PAGES = [
           "sub": "Enterprise"
         },
         {
-          "label": "資料平臺",
+          "label": "資料平台",
           "sub": "Data"
         },
         {
@@ -125976,7 +125976,7 @@ export const GENERATED_THEME_PAGES = [
             "Grok"
           ],
           "accent": "#7aa0ff",
-          "quote": "背靠 X 平臺海量實時資料，與特斯拉自動駕駛協同。",
+          "quote": "背靠 X 平台海量實時資料，與特斯拉自動駕駛協同。",
           "who": "Grok · 實時 · 差異化"
         },
         {
@@ -127770,7 +127770,7 @@ export const GENERATED_THEME_PAGES = [
         },
         {
           "name": "Databricks",
-          "en": "Data + AI 平臺",
+          "en": "Data + AI 平台",
           "value": 100,
           "meta": "J 輪",
           "tag": "基礎設施"
@@ -127815,7 +127815,7 @@ export const GENERATED_THEME_PAGES = [
       "headCn": "資本排行榜 · 頭部玩家",
       "concentrationLabel": "頭部集中度",
       "concentrationCaption": "資本流向榜單前三",
-      "insightText": "融資額呈現極端「馬太效應」—— 少數大模型與資料平臺公司虹吸了絕大多數資金，長尾標的獲取資本難度顯著上升。"
+      "insightText": "融資額呈現極端「馬太效應」—— 少數大模型與資料平台公司虹吸了絕大多數資金，長尾標的獲取資本難度顯著上升。"
     }
   },
   {
@@ -127995,7 +127995,7 @@ export const GENERATED_THEME_PAGES = [
           ]
         },
         {
-          "label": "資料平臺",
+          "label": "資料平台",
           "ranks": [
             6,
             5,
@@ -132264,7 +132264,7 @@ export const GENERATED_THEME_PAGES = [
           "value": 120
         },
         {
-          "label": "資料平臺",
+          "label": "資料平台",
           "sub": "Data",
           "value": 90
         },
@@ -133790,7 +133790,7 @@ export const GENERATED_THEME_PAGES = [
         },
         {
           "name": "Databricks",
-          "sector": "資料平臺",
+          "sector": "資料平台",
           "val": 620,
           "round": "Series J"
         },
@@ -133826,7 +133826,7 @@ export const GENERATED_THEME_PAGES = [
         },
         {
           "name": "Scale AI",
-          "sector": "資料平臺",
+          "sector": "資料平台",
           "val": 138,
           "round": "戰略融資"
         },
@@ -133849,7 +133849,7 @@ export const GENERATED_THEME_PAGES = [
       "shareLabel": "佔樣本總估值",
       "asideTag": "版圖讀法",
       "insightPre": "方塊面積代表估值體量 —— 少數",
-      "insightBold": "基礎模型與資料平臺",
+      "insightBold": "基礎模型與資料平台",
       "insightPost": "公司幾乎佔滿整張版圖，應用層公司數量多但單體面積小，「頭部吞噬版圖」的格局一目瞭然。估值取年內最新公開口徑。"
     }
   },
@@ -143816,7 +143816,7 @@ export const GENERATED_THEME_PAGES = [
         {
           "year": "2018",
           "label": "引擎成型",
-          "note": "自主再平衡演演算法首次實盤驗證。"
+          "note": "自主再平衡演演演算法首次實盤驗證。"
         },
         {
           "year": "2020",
@@ -146113,7 +146113,7 @@ export const GENERATED_THEME_PAGES = [
       "overline": "現場 · ON LOCATION",
       "title": "把紀律，建在看得見的地方",
       "note": "從配置臺到風控屏，每一次再平衡都留痕、可回溯、可復盤。",
-      "insetCaption": "配置控制檯 · 實時",
+      "insetCaption": "配置控制台 · 實時",
       "idPrefix": "inset"
     }
   },
@@ -151779,7 +151779,7 @@ export const GENERATED_THEME_PAGES = [
         },
         {
           "name": "騰訊控股",
-          "role": "平臺 · 現金流"
+          "role": "平台 · 現金流"
         },
         {
           "name": "長江電力",
@@ -153851,7 +153851,7 @@ export const GENERATED_THEME_PAGES = [
         "12月 · +182%"
       ],
       "metaLeft": "IGNIS — 燃點 · 12 個月真實資料",
-      "metaMid": "讓 SEO 超越演演算法，對齊真實意圖"
+      "metaMid": "讓 SEO 超越演演演算法，對齊真實意圖"
     }
   },
   {
@@ -168350,7 +168350,7 @@ export const GENERATED_THEME_PAGES = [
       "chips": [
         {
           "v": "30+",
-          "lb": "分發平臺"
+          "lb": "分發平台"
         },
         {
           "v": "72h",
@@ -169083,21 +169083,21 @@ export const GENERATED_THEME_PAGES = [
           "num": "01",
           "cn": "一鍵發行",
           "en": "Release",
-          "body": "一次上傳，自動分發到全球 30+ 流媒體平臺，後設資料與封面規格代為校驗。",
-          "tag": "30+ 平臺"
+          "body": "一次上傳，自動分發到全球 30+ 流媒體平台，後設資料與封面規格代為校驗。",
+          "tag": "30+ 平台"
         },
         {
           "num": "02",
           "cn": "粉絲直連",
           "en": "Direct",
-          "body": "跳過演演算法與中間商，用專屬頁面與會員把聽眾沉澱為可經營的資產。",
+          "body": "跳過演演演算法與中間商，用專屬頁面與會員把聽眾沉澱為可經營的資產。",
           "tag": "0 中間商"
         },
         {
           "num": "03",
           "cn": "收益透明",
           "en": "Ledger",
-          "body": "實時結算面板，按平臺、地區、單曲拆解每一筆版稅，路徑可追溯。",
+          "body": "實時結算面板，按平台、地區、單曲拆解每一筆版稅，路徑可追溯。",
           "tag": "72h 到賬"
         },
         {
@@ -169219,20 +169219,20 @@ export const GENERATED_THEME_PAGES = [
       "title": "一個工作臺，[[全鏈路]]覆蓋。",
       "lede": "從母帶到結算，從聽眾到維權——把分散在十幾個後臺裡的事，收進同一塊面板。",
       "heroTags": [
-        "30+ 平臺",
+        "30+ 平台",
         "0 中間商"
       ],
       "tiles": [
         {
           "cn": "一鍵發行",
           "en": "Release",
-          "d": "一次上傳，自動分發到全球 30+ 流媒體平臺，後設資料代為校驗。",
+          "d": "一次上傳，自動分發到全球 30+ 流媒體平台，後設資料代為校驗。",
           "kind": "hero"
         },
         {
           "cn": "透明結算",
           "en": "Ledger",
-          "d": "按平臺拆解每一筆版稅。",
+          "d": "按平台拆解每一筆版稅。",
           "kind": "kpi",
           "kpi": "72h"
         },
@@ -169393,7 +169393,7 @@ export const GENERATED_THEME_PAGES = [
         {
           "cn": "透明結算",
           "en": "Settle",
-          "d": "版稅按平臺拆解，最快 72 小時到賬。"
+          "d": "版稅按平台拆解，最快 72 小時到賬。"
         },
         {
           "cn": "經營聽眾",
@@ -169648,7 +169648,7 @@ export const GENERATED_THEME_PAGES = [
           "leaves": [
             [
               "發行",
-              "一鍵多平臺"
+              "一鍵多平台"
             ],
             [
               "結算",
@@ -169692,7 +169692,7 @@ export const GENERATED_THEME_PAGES = [
           "c": "#c44ee0",
           "leaves": [
             [
-              "平臺",
+              "平台",
               "30+ 渠道"
             ],
             [
@@ -170698,7 +170698,7 @@ export const GENERATED_THEME_PAGES = [
       "chips": [
         {
           "v": "30+",
-          "lb": "分發平臺"
+          "lb": "分發平台"
         },
         {
           "v": "72h",
@@ -172432,13 +172432,13 @@ export const GENERATED_THEME_PAGES = [
           "en": "Self-managed"
         },
         {
-          "name": "平臺直營",
+          "name": "平台直營",
           "en": "Platform"
         }
       ],
       "rows": [
         {
-          "cn": "平臺分成",
+          "cn": "平台分成",
           "en": "Commission",
           "vals": [
             "0–15%",
@@ -172488,7 +172488,7 @@ export const GENERATED_THEME_PAGES = [
           ]
         },
         {
-          "cn": "一鍵多平臺",
+          "cn": "一鍵多平台",
           "en": "Distribution",
           "vals": [
             true,
@@ -172654,7 +172654,7 @@ export const GENERATED_THEME_PAGES = [
           "g": "發行 / Distribution",
           "rows": [
             {
-              "k": "上線平臺",
+              "k": "上線平台",
               "v": "50+"
             },
             {
@@ -173160,7 +173160,7 @@ export const GENERATED_THEME_PAGES = [
       ],
       "lanes": [
         {
-          "t": "平臺 Platform",
+          "t": "平台 Platform",
           "s": "CORE",
           "c": "#3bb6ec",
           "bars": [
@@ -173221,7 +173221,7 @@ export const GENERATED_THEME_PAGES = [
             {
               "s": 0,
               "e": 2,
-              "t": "30+ 平臺同步"
+              "t": "30+ 平台同步"
             },
             {
               "s": 3,
@@ -173645,7 +173645,7 @@ export const GENERATED_THEME_PAGES = [
         "points": [
           "作品散落在十幾個後臺",
           "版稅要等一整個季度",
-          "聽眾資料握在平臺手裡",
+          "聽眾資料握在平台手裡",
           "盜用翻唱無從追蹤"
         ]
       },
@@ -173795,10 +173795,10 @@ export const GENERATED_THEME_PAGES = [
         },
         {
           "q": "結算到底有多快？",
-          "a": "版稅按平臺拆解，最快 72 小時到賬，路徑全程可追溯。"
+          "a": "版稅按平台拆解，最快 72 小時到賬，路徑全程可追溯。"
         },
         {
-          "q": "能分發到哪些平臺？",
+          "q": "能分發到哪些平台？",
           "a": "一次上傳，自動推送到全球 30+ 主流流媒體與商店。"
         },
         {
@@ -173948,7 +173948,7 @@ export const GENERATED_THEME_PAGES = [
           "note": "永久免費",
           "desc": "適合剛起步的創作者",
           "feats": [
-            "全球 30+ 平臺分發",
+            "全球 30+ 平台分發",
             "基礎結算面板",
             "社群支援"
           ]
@@ -173987,7 +173987,7 @@ export const GENERATED_THEME_PAGES = [
           "m": null,
           "yearly": null,
           "note": "定製報價",
-          "desc": "平臺級整合需求",
+          "desc": "平台級整合需求",
           "feats": [
             "一切「廠牌」功能",
             "開放 API 接入",
@@ -174253,7 +174253,7 @@ export const GENERATED_THEME_PAGES = [
       "title": "獨立發行的拐點，\n已經到來。",
       "intro": "流媒體把聽眾帶到每個人面前，卻把分成層層稀釋。當工具足夠成熟、成本足夠低，[[音樂人不必再讓渡主動權]]——聲浪要做的，是把這件事徹底變簡單。",
       "problemLabel": "現狀 / The Problem",
-      "problemText": "作品散落在數個後臺，版稅要等一個季度，盜用難以追蹤，聽眾資料握在平臺手裡。**你創造了價值，卻看不清、也拿不全。**",
+      "problemText": "作品散落在數個後臺，版稅要等一個季度，盜用難以追蹤，聽眾資料握在平台手裡。**你創造了價值，卻看不清、也拿不全。**",
       "fixLabel": "我們的解法 / The Fix",
       "fixText": "一個入口管完發行、結算與版權，資料回到你手中，分賬全程透明。**把複雜留給系統，把主動權留給你。**",
       "stats": [
@@ -174261,7 +174261,7 @@ export const GENERATED_THEME_PAGES = [
           "v": "30",
           "u": "+",
           "lb": "Platforms",
-          "ds": "一次上傳，同步觸達全球平臺。",
+          "ds": "一次上傳，同步觸達全球平台。",
           "pct": 0.86
         },
         {
@@ -174728,7 +174728,7 @@ export const GENERATED_THEME_PAGES = [
           "c": "#1f6b2a"
         },
         {
-          "t": "平臺運營",
+          "t": "平台運營",
           "s": "Platform",
           "v": 14,
           "c": "#3bb6ec"
@@ -176137,7 +176137,7 @@ export const GENERATED_THEME_PAGES = [
     "pageNumber": 55,
     "layout": "THEME12-055",
     "slot": "ranking",
-    "label": "平臺排行 / Ranking",
+    "label": "平台排行 / Ranking",
     "bgClass": "",
     "controls": [
       {
@@ -176148,7 +176148,7 @@ export const GENERATED_THEME_PAGES = [
         "min": 2,
         "max": 7,
         "step": 1,
-        "desc": "排行展示的平臺條目數量",
+        "desc": "排行展示的平台條目數量",
         "publicKey": "itemCount"
       },
       {
@@ -176242,7 +176242,7 @@ export const GENERATED_THEME_PAGES = [
       "focusIndex": 1,
       "barMeta": "51 — Ranking",
       "brandLabel": "CREATIVE SYSTEM",
-      "kicker": "平臺排行 / By Platform",
+      "kicker": "平台排行 / By Platform",
       "title": "收入來自[[哪裡]]，一目瞭然。",
       "caption": "近 12 個月\n版稅佔比",
       "ghost": "37",
@@ -176386,7 +176386,7 @@ export const GENERATED_THEME_PAGES = [
       "brandLabel": "CREATIVE SYSTEM",
       "kicker": "健康度 / Health",
       "title": "幾個我們[[最在意]]的數。",
-      "lede": "不是越大越好，而是越透明越好——這些環，量的是創作者對平臺的信任。",
+      "lede": "不是越大越好，而是越透明越好——這些環，量的是創作者對平台的信任。",
       "gauges": [
         {
           "pct": 94,
@@ -176404,7 +176404,7 @@ export const GENERATED_THEME_PAGES = [
           "pct": 72,
           "cn": "收入來自直連",
           "en": "Direct income",
-          "note": "非平臺抽成部分"
+          "note": "非平台抽成部分"
         },
         {
           "pct": 65,
@@ -177004,7 +177004,7 @@ export const GENERATED_THEME_PAGES = [
       "title": "把創作者放回\n[[座標原點]]。",
       "intro": "越往右上，越透明、越屬於創作者本人。大多數方案擠在左下——而聲浪，獨自站在那個理應屬於你的象限。",
       "quadrantTop": "創作者主權 · 透明",
-      "quadrantBottom": "平臺主導 · 不透明",
+      "quadrantBottom": "平台主導 · 不透明",
       "axisX": "結算透明度 →",
       "axisY": "創作者掌控力 →",
       "ownLegend": "聲浪 · 創作者主權象限",
@@ -177181,7 +177181,7 @@ export const GENERATED_THEME_PAGES = [
           "s": "代理制"
         },
         {
-          "t": "自助平臺",
+          "t": "自助平台",
           "s": "DIY"
         },
         {
@@ -177378,7 +177378,7 @@ export const GENERATED_THEME_PAGES = [
         {
           "v": "30+",
           "lb": "Platforms",
-          "ds": "同步分發平臺"
+          "ds": "同步分發平台"
         },
         {
           "v": "72h",
@@ -177675,7 +177675,7 @@ export const GENERATED_THEME_PAGES = [
         },
         {
           "big": "30+",
-          "unit": "一鍵分發平臺",
+          "unit": "一鍵分發平台",
           "en": "Distribution targets",
           "delta": "+9",
           "up": true,
@@ -179020,7 +179020,7 @@ export const GENERATED_THEME_PAGES = [
       "brandLabel": "CREATIVE SYSTEM",
       "kicker": "分發網路 / Everywhere",
       "title": "一次上傳，[[處處可聽]]。",
-      "lede": "聲浪已接入全球主流平臺——你的作品，會出現在聽眾本來就在的地方。",
+      "lede": "聲浪已接入全球主流平台——你的作品，會出現在聽眾本來就在的地方。",
       "names": [
         "Spotify",
         "Apple Music",
@@ -179258,7 +179258,7 @@ export const GENERATED_THEME_PAGES = [
         {
           "cn": "實時結算",
           "en": "Live Ledger",
-          "d": "每一筆版稅按平臺、地區即時拆解。",
+          "d": "每一筆版稅按平台、地區即時拆解。",
           "pin": {
             "top": "18%",
             "left": "22%"
@@ -179267,7 +179267,7 @@ export const GENERATED_THEME_PAGES = [
         {
           "cn": "一鍵分發",
           "en": "Distribute",
-          "d": "同步上架全球 30+ 流媒體平臺。",
+          "d": "同步上架全球 30+ 流媒體平台。",
           "pin": {
             "top": "40%",
             "left": "70%"
@@ -179431,7 +179431,7 @@ export const GENERATED_THEME_PAGES = [
         {
           "y": "2025",
           "t": "十萬創作者",
-          "d": "平臺服務的音樂人，突破十萬。"
+          "d": "平台服務的音樂人，突破十萬。"
         },
         {
           "y": "2026",
@@ -180255,7 +180255,7 @@ export const GENERATED_THEME_PAGES = [
         {
           "t": "直連聽眾",
           "en": "Direct",
-          "s": "不被演演算法隔開，把關係握在自己手裡。"
+          "s": "不被演演演算法隔開，把關係握在自己手裡。"
         },
         {
           "t": "即時回報",
@@ -180683,7 +180683,7 @@ export const GENERATED_THEME_PAGES = [
           "sub": "#1c5b82"
         },
         {
-          "q": "海外平臺同步分發，讓我們第一次拿到了真正的全球收入。",
+          "q": "海外平台同步分發，讓我們第一次拿到了真正的全球收入。",
           "n": "Mira K.",
           "r": "電子製作人 / 柏林",
           "m": "M",

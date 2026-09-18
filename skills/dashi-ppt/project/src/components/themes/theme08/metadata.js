@@ -1956,7 +1956,7 @@ export const pages = [
           "badge": "看好象限",
           "items": [
             "基礎設施",
-            "資料平臺"
+            "資料平台"
           ]
         },
         {
@@ -2096,7 +2096,7 @@ export const pages = [
           },
           {
             "name": "基礎設施",
-            "note": "算力、資料平臺、推理最佳化"
+            "note": "算力、資料平台、推理最佳化"
           },
           {
             "name": "具身智慧",
@@ -7572,8 +7572,8 @@ export const pages = [
       "showDecor": true,
       "eyebrow": "Low Code AI",
       "headline": "企業流程嵌入",
-      "subheadline": "低程式碼 AI 平臺",
-      "summary": "低程式碼平臺把模型能力<b>嵌入企業內部流程</b>。",
+      "subheadline": "低程式碼 AI 平台",
+      "summary": "低程式碼平台把模型能力<b>嵌入企業內部流程</b>。",
       "badge": "Low Code · 流程編排",
       "hero": {
         "label": "賽道融資額",
@@ -7633,7 +7633,7 @@ export const pages = [
           "ratio": 1
         }
       ],
-      "closingLine": "能被業務團隊使用的平臺更容易擴散。"
+      "closingLine": "能被業務團隊使用的平台更容易擴散。"
     }
   },
   {
@@ -8054,7 +8054,7 @@ export const pages = [
       "valueUnit": "億",
       "rows": [
         {
-          "k": "評測平臺",
+          "k": "評測平台",
           "en": "Evaluation",
           "v": 8,
           "rate": 3
@@ -9671,7 +9671,7 @@ export const pages = [
           "note": "內部流程嵌入"
         },
         {
-          "label": "資料平臺",
+          "label": "資料平台",
           "note": "RAG · 知識管理"
         },
         {
@@ -10450,7 +10450,7 @@ export const pages = [
       "hubSub": "Ecosystem hub · 生態中樞",
       "nodes": [
         {
-          "label": "X 平臺",
+          "label": "X 平台",
           "note": "實時資料入口"
         },
         {
@@ -10539,7 +10539,7 @@ export const pages = [
         },
         {
           "k": "資料入口",
-          "v": "X 平臺"
+          "v": "X 平台"
         }
       ],
       "closingLine": "獨特的資料入口，可以成為模型的差異化。",
@@ -11166,7 +11166,7 @@ export const pages = [
         "max": 5,
         "step": 1,
         "label": "層級數量",
-        "desc": "平臺層帶數量(2–5)",
+        "desc": "平台層帶數量(2–5)",
         "publicKey": "layerCount"
       },
       {
@@ -11204,7 +11204,7 @@ export const pages = [
         "type": "boolean",
         "default": true,
         "label": "重點強調",
-        "desc": "是否突出某一個平臺層帶",
+        "desc": "是否突出某一個平台層帶",
         "publicKey": "focusEnabled"
       },
       {
@@ -11240,10 +11240,10 @@ export const pages = [
       "showDecor": true,
       "eyebrow": "Databricks Case",
       "kicker": "案例卡",
-      "headline": "資料平臺延展",
+      "headline": "資料平台延展",
       "company": "Databricks",
-      "tag": "資料平臺",
-      "caption": "Databricks 是資料平臺向 AI 平臺延展的典型——<b>存量客戶基礎</b>是 AI 商業化的捷徑。",
+      "tag": "資料平台",
+      "caption": "Databricks 是資料平台向 AI 平台延展的典型——<b>存量客戶基礎</b>是 AI 商業化的捷徑。",
       "bigLabel": "淨收入留存 NRR",
       "bigNumber": "132",
       "bigUnit": "%",
@@ -11260,10 +11260,10 @@ export const pages = [
         },
         {
           "k": "賽道",
-          "v": "資料平臺"
+          "v": "資料平台"
         }
       ],
-      "layersTitle": "從資料平臺到 AI 平臺",
+      "layersTitle": "從資料平台到 AI 平台",
       "layers": [
         {
           "label": "資料湖倉",
@@ -11280,7 +11280,7 @@ export const pages = [
           "unit": "%"
         },
         {
-          "label": "機器學習平臺",
+          "label": "機器學習平台",
           "en": "ML Platform",
           "meter": 68,
           "value": "68",
@@ -12459,7 +12459,7 @@ export const pages = [
           "k": "渠道控制力",
           "v": "弱",
           "color": "var(--acl-pink)",
-          "text": "若獲客依賴平臺分發，價格戰會更快傳導到收入端。"
+          "text": "若獲客依賴平台分發，價格戰會更快傳導到收入端。"
         }
       ],
       "actions": [
@@ -12633,7 +12633,7 @@ export const pages = [
           "note": "訓練與推理雙重需求，資源鎖定即護城河。"
         },
         {
-          "title": "資料平臺",
+          "title": "資料平台",
           "en": "Data Platform",
           "note": "最接近企業剛性預算，存量客戶可複用。"
         },
@@ -13067,7 +13067,7 @@ export const pages = [
         },
         {
           "name": "Databricks",
-          "role": "資料平臺",
+          "role": "資料平台",
           "note": "存量客戶複用，毛利結構相對更穩。",
           "dir": "up",
           "tag": "毛利更穩"
@@ -13372,7 +13372,7 @@ export const pages = [
         {
           "name": "基礎設施兌現",
           "tag": "Infrastructure",
-          "desc": "算力、資料與平臺從燒錢轉向計費交付。",
+          "desc": "算力、資料與平台從燒錢轉向計費交付。",
           "value": "1240",
           "unit": "億投入"
         },

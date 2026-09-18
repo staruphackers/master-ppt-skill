@@ -7,6 +7,12 @@ const assert = require('node:assert/strict');
 const { createRequire } = require('node:module');
 const root = cp.execFileSync('git', ['rev-parse', '--show-toplevel'], { encoding: 'utf8' }).trim();
 process.chdir(root);
+if (!process.env.ZH_TW_LICENSE_PREFLIGHT) {
+  cp.execFileSync(process.execPath, ['tools/zh-tw-license-boundary.cjs'], {stdio:'inherit',env:{...process.env,ZH_TW_LICENSE_PREFLIGHT:'1'}});
+  cp.execFileSync(process.execPath, [__filename], {stdio:'inherit',env:{...process.env,ZH_TW_LICENSE_PREFLIGHT:'1'}});
+  process.exit(0);
+}
+
 const deps = createRequire(path.join(process.env.ZH_TW_TOOLS, 'package.json'));
 const YAML = deps('yaml');
 const output = process.env.QA_OUTPUT;
@@ -17,12 +23,13 @@ const write = (f, s) => { fs.mkdirSync(path.dirname(f), { recursive: true }); fs
 
 // Extend the existing syntax-preserving converter rather than replacing identifiers.
 let converter = read('tools/localize-zh-tw.cjs');
-converter = converter.replace("const terms = Object.entries({", "const terms = Object.entries({\n  '資料包告': '資料報告', '社羣': '社群',");
+if (!converter.includes("'資料包告': '資料報告'")) converter = converter.replace("const terms = Object.entries({", "const terms = Object.entries({\n  '資料包告': '資料報告', '社羣': '社群',");
 converter = converter.replace("'.toml','.template'", "'.toml','.template','.ps1'");
 // Preserve the first-pass audit trail; subsequent passes have separate reports.
 const originalReport = read('docs/zh-TW-localization-report.json');
 write('tools/localize-zh-tw.cjs', converter);
 cp.execFileSync(process.execPath, ['tools/localize-zh-tw.cjs'], { stdio: 'inherit' });
+cp.execFileSync(process.execPath, ['tools/refine-zh-tw.cjs'], { stdio: 'inherit' });
 write(path.join(output, 'second-pass-localization.json'), read('docs/zh-TW-localization-report.json'));
 write('docs/zh-TW-localization-report.json', originalReport);
 
@@ -158,7 +165,11 @@ npm --prefix <project目錄> run export:pdf -- <含index.html的簡報目錄> <�
 
 ## 授權與致謝
 
-基於 [chuspeeism/dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill) 修改，保留原作者及第三方著作權資訊。依 [GNU AGPL-3.0](LICENSE) 授權；本 fork 的翻譯與維護不變更原授權。使用或散布前請閱讀授權原文。
+基於 [chuspeeism/dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill) 修改。Copyright (c) 2026 chuspeeism。主要專案採 [GNU AGPL-3.0](LICENSE)，並保留所有原作者與第三方著作權資訊。
+
+**重要例外**：內含匯出引擎 html-deck-to-pptx 是**專有元件**，不是 AGPL 開源部分；請閱讀 [匯出引擎 LICENSE](skills/dashi-ppt/project/packages/html-deck-to-pptx/LICENSE)。條文限制修改、拆出、複製、再散布與用於其他產品／服務。本 fork 將引擎子套件與其瀏覽器配套檔恢復為上游原檔並排除自動翻譯，只在外層介面與文件進行繁中化。舊版 v0.2.7 以前的 MIT 授權不能直接套用到目前版本。
+
+本次不變更授權原文；商業使用或散布前，請確認各元件適用條款及所需權利。
 `);
 write('docs/zh-TW-localization.md', `# 繁體中文（台灣）維護說明
 
@@ -179,6 +190,8 @@ write('docs/zh-TW-localization.md', `# 繁體中文（台灣）維護說明
 驗證必須以成功的 GitHub Actions 執行及產物為準；尚未成功時，不可將計畫中的檢查寫成已通過。全 1,020 個版型的結構數量會驗證，但不等於全部人工視覺審查，也不等於 macOS／Windows／PowerPoint 實機全覆蓋。
 
 ## 安全邊界
+
+專有引擎原檔可能保留原始簡體或英文訊息；授權原文與第三方識別不翻譯。不要將此 fork 描述成沒有例外的全檔案轉換，也不要宣稱整個匯出引擎是開源軟體。
 
 這是語言在地化，不是完整資安修復。保留既有執行依賴與匯出架構；預覽／匯出僅限本機與可信任內容，不應開放區網或公開網際網路。本次不修改 DNS、部署、帳密或 npm 發佈設定，也沒有新增模型 API 或排程。
 

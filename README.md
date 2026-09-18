@@ -95,4 +95,8 @@ npm --prefix <project目錄> run export:pdf -- <含index.html的簡報目錄> <�
 
 ## 授權與致謝
 
-基於 [chuspeeism/dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill) 修改，保留原作者及第三方著作權資訊。依 [GNU AGPL-3.0](LICENSE) 授權；本 fork 的翻譯與維護不變更原授權。使用或散布前請閱讀授權原文。
+基於 [chuspeeism/dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill) 修改。Copyright (c) 2026 chuspeeism。主要專案採 [GNU AGPL-3.0](LICENSE)，並保留所有原作者與第三方著作權資訊。
+
+**重要例外**：內含匯出引擎 html-deck-to-pptx 是**專有元件**，不是 AGPL 開源部分；請閱讀 [匯出引擎 LICENSE](skills/dashi-ppt/project/packages/html-deck-to-pptx/LICENSE)。條文限制修改、拆出、複製、再散布與用於其他產品／服務。本 fork 將引擎子套件與其瀏覽器配套檔恢復為上游原檔並排除自動翻譯，只在外層介面與文件進行繁中化。舊版 v0.2.7 以前的 MIT 授權不能直接套用到目前版本。
+
+本次不變更授權原文；商業使用或散布前，請確認各元件適用條款及所需權利。

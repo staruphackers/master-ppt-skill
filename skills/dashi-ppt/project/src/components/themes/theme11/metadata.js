@@ -1838,7 +1838,7 @@ export const pages = [
         "12月 · +182%"
       ],
       "metaLeft": "IGNIS — 燃點 · 12 個月真實資料",
-      "metaMid": "讓 SEO 超越演演算法，對齊真實意圖"
+      "metaMid": "讓 SEO 超越演演演算法，對齊真實意圖"
     }
   },
   {

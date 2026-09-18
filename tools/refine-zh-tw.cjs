@@ -44,9 +44,12 @@ function preserveIdentifiers(source, file) {
   return output;
 }
 for (const file of files) {
+  // zh-TW-license-boundary: proprietary engine and bundled browser adapter stay byte-identical to upstream.
+  if (file.startsWith('skills/dashi-ppt/project/packages/html-deck-to-pptx/') || file === 'skills/dashi-ppt/project/assets/vendor/editable-pptx-browser.js') continue;
+
   if (/^(tools\/|\.github\/workflows\/|docs\/)/.test(file) || /(^|\/)(package-lock\.json|LICENSE|NOTICE)$/.test(file)) continue;
   const ext = path.extname(file);
-  if (!['.md','.mdx','.json','.js','.mjs','.cjs','.jsx','.ts','.tsx','.html','.htm','.css','.svg','.yml','.yaml','.txt','.sh','.py','.toml','.template'].includes(ext)) continue;
+  if (!['.md','.mdx','.json','.js','.mjs','.cjs','.jsx','.ts','.tsx','.html','.htm','.css','.svg','.yml','.yaml','.txt','.sh','.py','.toml','.template','.ps1'].includes(ext)) continue;
   if (fs.lstatSync(file).isSymbolicLink()) continue;
   const before = fs.readFileSync(file, 'utf8');
   let after;
@@ -73,7 +76,7 @@ for (const file of files) {
   if (file === 'README.md') {
     const oldBadge = '%E5%8F%AF%E7%BC%96%E8%BE%91%E5%AF%BC%E5%87%BA';
     after = after.replace(oldBadge, encodeURIComponent('可編輯匯出'));
-    after = after.replace('**一鍵安裝/更新**：', '**安裝此繁體中文 fork（建議）**：\n\n```bash\ngit clone --branch localize/zh-tw --single-branch https://github.com/staruphackers/master-ppt-skill.git\n```\n\n先備份既有 skill，再將本專案的 `skills/dashi-ppt` 資料夾放入 Agent 使用的 skill 目錄，重新開啟工作階段。請保留同一個 fork 作為更新來源。\n\n**以下為上游原版的安裝方式，不會安裝此繁體中文 fork**：');
+    after = after.replace('**一鍵安裝/更新**：', '**安裝此繁體中文 fork（建議）**：\n\n```bash\ngit clone --branch main --single-branch https://github.com/staruphackers/master-ppt-skill.git\n```\n\n先備份既有 skill，再將本專案的 `skills/dashi-ppt` 資料夾放入 Agent 使用的 skill 目錄，重新開啟工作階段。請保留同一個 fork 作為更新來源。\n\n**以下為上游原版的安裝方式，不會安裝此繁體中文 fork**：');
     after = after.replace('**適用 Agent 能力**', '**方便 Agent 操作**');
   }
   if (after !== before) { fs.writeFileSync(file, after); changed.push(file); }

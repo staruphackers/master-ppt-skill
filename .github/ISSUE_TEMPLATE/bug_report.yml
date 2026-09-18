@@ -40,7 +40,7 @@ body:
     id: logs
     attributes:
       label: 報錯資訊/截圖 / Error messages / screenshots
-      description: 頁面彈窗文字、瀏覽器控制檯(F12)的紅色報錯、或終端輸出;截圖直接拖進來 / Text from an on-page dialog, red errors in the browser console (F12), or terminal output; you can drag screenshots directly into this box
+      description: 頁面彈窗文字、瀏覽器控制台(F12)的紅色報錯、或終端輸出;截圖直接拖進來 / Text from an on-page dialog, red errors in the browser console (F12), or terminal output; you can drag screenshots directly into this box
   - type: checkboxes
     id: checklist
     attributes:
